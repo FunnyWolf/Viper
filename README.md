@@ -27,3 +27,8 @@ metasploit-framework图形界面工具
 # WIKI
 
 - [WIKI](https://github.com/FunnyWolf/Viper/wiki)
+
+# 更新日志
+
+- [WIKI](https://github.com/FunnyWolf/Viper/ChangeLog.md)
+
