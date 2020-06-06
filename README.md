@@ -34,5 +34,5 @@ metasploit-framework图形界面工具
 
 # 更新日志
 
-- [CHANGELOG](https://github.com/FunnyWolf/Viper/ChangeLog.md)
+- [CHANGELOG](https://github.com/FunnyWolf/Viper/blob/master/ChangeLog.md)
 
