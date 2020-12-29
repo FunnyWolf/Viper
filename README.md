@@ -11,7 +11,7 @@ metasploit-framework图形界面工具
 - VIPER当前已集成55个模块,覆盖初始访问/持久化/权限提升/防御绕过/凭证访问/信息收集/横向移动等大类.
 - VIPER目标是帮助红队工程师提高攻击效率,简化操作,降低技术门槛.
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/159259/1609217643743-4bdb0829-d5fa-46d3-9ba9-43f403666d4e.png#align=left&display=inline&height=511&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1022&originWidth=2028&size=309523&status=done&style=none&width=1014)
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/159259/1609217643743-4bdb0829-d5fa-46d3-9ba9-43f403666d4e.png)
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/159259/1609217703998-8bebe969-7a26-4f75-b2cb-6dca34a39951.png#align=left&display=inline&height=511&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1022&originWidth=2028&size=191127&status=done&style=none&width=1014)
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/159259/1609217723155-f57417f1-2229-4386-888a-c8608449643c.png#align=left&display=inline&height=511&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1022&originWidth=2028&size=296317&status=done&style=none&width=1014)
 
