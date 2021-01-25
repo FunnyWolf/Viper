@@ -2,7 +2,7 @@
    <img width="200" src="https://cdn.nlark.com/yuque/0/2020/svg/159259/1590851265515-f865560b-ba50-4ca3-b2f6-5e8db3268da1.svg#align=left&display=inline&height=200&margin=%5Bobject%20Object%5D&name=logo.svg&originHeight=200&originWidth=200&size=1378&status=done&style=none&width=200">
 </p>
 
-- VIPER是一款图形化红队评估工具,将红队评估过程中常用的战术及技术进行模块化及武器化.
+- VIPER是一款图形化内网渗透工具,将内网渗透过程中常用的战术及技术进行模块化及武器化.
 - VIPER集成杀软绕过,内网隧道,文件管理,命令行等基础功能.
 - VIPER当前已集成55个模块,覆盖初始访问/持久化/权限提升/防御绕过/凭证访问/信息收集/横向移动等大类.
 - VIPER目标是帮助红队工程师提高攻击效率,简化操作,降低技术门槛.
