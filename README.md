@@ -38,3 +38,7 @@
 ## vipermsf (渗透服务)
 
 [https://github.com/FunnyWolf/vipermsf](https://github.com/FunnyWolf/vipermsf)
+
+# 问题反馈
+- github issues : [https://github.com/FunnyWolf/Viper/issues](https://github.com/FunnyWolf/Viper/issues)
+- 微信群 : [Viper问题反馈](https://www.yuque.com/funnywolfdoc/viperdoc/qmanm1)
