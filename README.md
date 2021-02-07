@@ -17,9 +17,9 @@
 
 - [安装](https://www.yuque.com/funnywolfdoc/viperdoc/cdibqn)
 
-# WIKI
+# 使用手册
 
-- [WIKI](https://www.yuque.com/funnywolfdoc/viperdoc)
+- [使用手册](https://www.yuque.com/funnywolfdoc/viperdoc)
 
 # 更新日志
 
