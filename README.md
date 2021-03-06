@@ -47,8 +47,20 @@
 
 
 # 更新日志
+## v1.2.4 20210306
+- 新增`迁移权限到CobaltStrike`模块
+- 新增`SweetPotato提权`模块
+- 新增`Ladon7.0 C#插件`模块
+- 新增`Callback免杀(CreateThreadpoolWait)`模块
+- 新增`Callback免杀(CreateTimerQueue)`模块
+- 新增`Callback免杀(EnumChildWindows)`模块
+- 新增`Callback免杀(EnumWindows)`模块
+- 优化`文件列表`功能
+- 修复`主机信息`显示错位问题
+- 修复启动后无法获取模块列表问题
+- 更新metasploit-framework到6.0.34版本
 
-## v1.2.3 20210228 (Beta)
+## v1.2.3 20210228
 - 新增`内存执行C#可执行文件`模块接口
 - 新增`内存执行C#可执行文件`模块接口样例模块
 - 新增`获取浏览器密码模块(C#)`(基于`内存执行C#可执行文件`模块接口)
