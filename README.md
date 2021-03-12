@@ -46,6 +46,18 @@
 [https://github.com/FunnyWolf/vipermsf](https://github.com/FunnyWolf/vipermsf)
 
 
+# 致谢
+Edward_Snowdeng
+exp
+[qingyun00](https://github.com/qingyun00)
+脸谱
+NoobFTW
+Somd5-小宇
+[timwhitez](https://github.com/timwhitez)
+[xiaobei97](https://github.com/xiaobei97)
+[yumusb](https://github.com/yumusb)
+
+
 # 更新日志
 ## v1.2.4 20210306
 - 新增`迁移权限到CobaltStrike`模块
