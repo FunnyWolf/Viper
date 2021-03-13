@@ -54,6 +54,7 @@ exp
 NoobFTW
 Somd5-小宇
 [timwhitez](https://github.com/timwhitez)
+[ViCrack](https://github.com/ViCrack)
 [xiaobei97](https://github.com/xiaobei97)
 [yumusb](https://github.com/yumusb)
 
