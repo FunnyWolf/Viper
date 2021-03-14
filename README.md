@@ -15,12 +15,12 @@
 
 # 安装
 
-- [安装](https://www.yuque.com/funnywolfdoc/viperdoc/cdibqn)
+- [安装(语雀)](https://www.yuque.com/funnywolfdoc/viperdoc/cdibqn)
+- [安装(github wiki)](https://github.com/FunnyWolf/Viper/wiki/%E5%AE%89%E8%A3%85)
 
 # 使用手册
 
 - [使用手册](https://www.yuque.com/funnywolfdoc/viperdoc)
-
 
 # 常见问题
 
@@ -60,6 +60,13 @@ Somd5-小宇
 
 
 # 更新日志
+## v1.2.5 20210314
+- 新增`Windows注册表Run键值持久化(C#)`模块
+- 新增模块文档,当前可在模块说明中直接打开当前模块的使用文档
+- 新增修改Nginx证书及端口功能
+- 优化免杀模块,适配x86
+- 优化运行模块前端UI
+
 ## v1.2.4 20210306
 - 新增`迁移权限到CobaltStrike`模块
 - 新增`SweetPotato提权`模块
