@@ -65,6 +65,8 @@ Somd5-小宇
 - 新增`内存执行C#可执行文件(Bypass)`模块
 - 新增`Reverse_https直连免杀`模块
 - 新增`Reverse_TCP_RC4直连免杀`模块
+- 优化reverse_http/reverse_https类型载荷的稳定性
+- 优化reverse_http/reverse_https类型载荷的隐蔽性
 - 优化reverse_https监听逻辑,当前不在默认使用偏执模式
 - 优化reverse_http/reverse_http监听载荷,LURI默认使用随机路径
 - 优化reverse_tcp_rc4监听载荷,rc4密码默认使用随机字符串
