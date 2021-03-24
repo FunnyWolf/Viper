@@ -13,23 +13,26 @@
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/159259/1609217723155-f57417f1-2229-4386-888a-c8608449643c.png#align=left&display=inline&height=511&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1022&originWidth=2028&size=296317&status=done&style=none&width=1014)
 
+# 官方网站
+
+- [https://www.yuque.com/vipersec](https://www.yuque.com/vipersec)
+
 # 安装
 
-- [安装(语雀)](https://www.yuque.com/funnywolfdoc/viperdoc/cdibqn)
-- [安装(github wiki)](https://github.com/FunnyWolf/Viper/wiki/%E5%AE%89%E8%A3%85)
-
-# 使用手册
-
-- [使用手册](https://www.yuque.com/funnywolfdoc/viperdoc)
+- [安装](https://www.yuque.com/vipersec/help/olg1ua)
 
 # 常见问题
 
-- [FAQ](https://www.yuque.com/funnywolfdoc/viperdoc/kqx061)
+- [FAQ](https://www.yuque.com/vipersec/faq)
 
 # 问题反馈
 
 - github issues : [https://github.com/FunnyWolf/Viper/issues](https://github.com/FunnyWolf/Viper/issues)
-- 微信群 : [Viper问题反馈](https://www.yuque.com/funnywolfdoc/viperdoc/qmanm1)
+- [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
+
+# 联系我们
+
+- [vipersec members](https://www.yuque.com/vipersec/members)
 
 # 源代码
 
