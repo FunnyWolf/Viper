@@ -9,6 +9,8 @@
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/159259/1609217643743-4bdb0829-d5fa-46d3-9ba9-43f403666d4e.png)
 
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1616893007637-af0e7673-20e0-433d-bb9b-e3db29a06915.png#align=left&display=inline&height=746&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1491&originWidth=2859&size=378265&status=done&style=none&width=1429.5)
+
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/159259/1609217703998-8bebe969-7a26-4f75-b2cb-6dca34a39951.png#align=left&display=inline&height=511&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1022&originWidth=2028&size=191127&status=done&style=none&width=1014)
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/159259/1609217723155-f57417f1-2229-4386-888a-c8608449643c.png#align=left&display=inline&height=511&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1022&originWidth=2028&size=296317&status=done&style=none&width=1014)
@@ -63,6 +65,17 @@ Somd5-小宇
 
 
 # 更新日志
+## v1.3.0 20210328
+### 新功能
+- 新增`网络拓扑`功能
+### 优化
+- 免杀类型模块归类到`执行`类别
+- Session列表中新增Pid信息
+- 优化主机信息管理部分代码
+### Bugfix
+- 修复Session心跳超时显示效果错误问题
+- 合并metasploit-framework 6.0.38版本
+
 ## v1.2.6 20210321
 - 新增`获取向日葵密码`模块(by Somd5-小宇)
 - 新增`内存执行C#可执行文件(Bypass)`模块
