@@ -75,6 +75,7 @@ Somd5-小宇
 - `网络拓扑`新增权限类型节点
 - gencert.sh当前可检查用户输入是否有效
 - 优化模块相关部分代码
+- 合并metasploit-framework 6.0.39版本
 ### Bugfix
 - 修复免杀模块运行错误问题
 - 修复gencert.sh脚本不能强制替换问题
