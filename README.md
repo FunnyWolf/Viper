@@ -78,6 +78,7 @@ Somd5-小宇
 - 合并metasploit-framework 6.0.39版本
 ### Bugfix
 - 修复免杀模块运行错误问题
+- 修复`端口扫描`及`端口扫描与服务识别`模块在Linux类型权限下运行失败问题
 - 修复gencert.sh脚本不能强制替换问题
 - 修复os.path.join任意文件读取问题
 
