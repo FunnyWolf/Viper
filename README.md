@@ -54,6 +54,7 @@
 # 致谢
 Edward_Snowdeng
 exp
+[Fnzer0](https://github.com/Fnzer0)
 [qingyun00](https://github.com/qingyun00)
 脸谱
 NoobFTW
@@ -65,12 +66,19 @@ Somd5-小宇
 
 
 # 更新日志
-## v1.3.0a 20210330
+
+## v1.3.1 20210330
 ### 新功能
 - 新增`反溯源配置`
 ### 优化
 - redis及msfrpc使用动态密码
-
+- `网络拓扑`新增权限类型节点
+- gencert.sh当前可检查用户输入是否有效
+- 优化模块相关部分代码
+### Bugfix
+- 修复免杀模块运行错误问题
+- 修复gencert.sh脚本不能强制替换问题
+- 修复os.path.join任意文件读取问题
 
 ## v1.3.0 20210328
 ### 新功能
