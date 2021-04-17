@@ -2,10 +2,10 @@
    <img width="200" src="https://cdn.nlark.com/yuque/0/2020/svg/159259/1590851265515-f865560b-ba50-4ca3-b2f6-5e8db3268da1.svg#align=left&display=inline&height=200&margin=%5Bobject%20Object%5D&name=logo.svg&originHeight=200&originWidth=200&size=1378&status=done&style=none&width=200">
 </p>
 
-- VIPER是一款图形化内网渗透工具,将内网渗透过程中常用的战术及技术进行模块化及武器化.
-- VIPER集成杀软绕过,内网隧道,文件管理,命令行等基础功能.
-- VIPER当前已集成60+个模块,覆盖初始访问/持久化/权限提升/防御绕过/凭证访问/信息收集/横向移动等大类.
-- VIPER目标是帮助红队工程师提高攻击效率,简化操作,降低技术门槛.
+- Viper(炫彩蛇)是一款图形化内网渗透工具,将内网渗透过程中常用的战术及技术进行模块化及武器化.
+- Viper(炫彩蛇)集成杀软绕过,内网隧道,文件管理,命令行等基础功能.
+- Viper(炫彩蛇)当前已集成60+个模块,覆盖初始访问/持久化/权限提升/防御绕过/凭证访问/信息收集/横向移动等大类.
+- Viper(炫彩蛇)目标是帮助红队工程师提高攻击效率,简化操作,降低技术门槛.
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/159259/1609217643743-4bdb0829-d5fa-46d3-9ba9-43f403666d4e.png)
 
@@ -66,9 +66,22 @@ Somd5-小宇
 
 
 # 更新日志
+
+## v1.3.3 20210418
+### 新功能
+- Viper(炫彩蛇)当前已支持自定义mettle
+- 所有免杀模块支持导出C++源码(VS工程),方便用户自定义修改
+
+### 优化
+- 支持Linux类型Sesison的pid显示(mettle定制)
+- 合并metasploit-framework 6.0.41版本
+
+### Bugfix
+- 修复一次性删除大量主机时返回502错误码问题
+
 ## v1.3.2 20210411
 ### 新功能
-- Viper被暴力破解时发送消息提示
+- Viper(炫彩蛇)被暴力破解时发送消息提示
 - `reverse_https`监听添加心跳抖动,规避流量检测
 - 新增`父进程PID伪装规避检测`模块
 
@@ -125,7 +138,7 @@ Somd5-小宇
 - 优化载荷生成,当前可直接生成适配python代码的shellcode
 - 优化心跳展示逻辑,当前直接展示心跳秒数
 - 修复浏览器缓存导致页面加载失败问题
-- 修复Viper同时执行多个操作时排队阻塞问题
+- 修复同时执行多个操作时排队阻塞问题
 - 更新metasploit-framework到6.0.37版本
 
 ## v1.2.5 20210314
@@ -202,7 +215,7 @@ Somd5-小宇
 ## v1.1.6 20201219
 
 - 优化payload生成功能(适配隐藏C2功能)
-- 简化Viper模块编写,简化API接口
+- 简化模块编写,简化API接口
 - 新增内存执行pe文件模块
 - 修改SSL默认秘钥为2048位
 - Payload加入HttpHostHeader参数
@@ -289,6 +302,6 @@ Somd5-小宇
 # 404StarLink 2.0 - Galaxy
 ![](https://github.com/knownsec/404StarLink-Project/raw/master/logo.png)
 
-Viper 是 404Team [星链计划2.0](https://github.com/knownsec/404StarLink2.0-Galaxy)中的一环，如果对Viper  有任何疑问又或是想要找小伙伴交流，可以参考星链计划的加群方式。
+Viper(炫彩蛇) 是 404Team [星链计划2.0](https://github.com/knownsec/404StarLink2.0-Galaxy)中的一环，如果对Viper(炫彩蛇)  有任何疑问又或是想要找小伙伴交流，可以参考星链计划的加群方式。
 
 - [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
