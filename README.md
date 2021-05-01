@@ -46,6 +46,10 @@
 
 - [vipersec members](https://www.yuque.com/vipersec/members)
 
+# 开发手册
+
+- [开发手册](https://www.yuque.com/vipersec/code)
+
 # 源代码
 
 - viperjs (前端)
