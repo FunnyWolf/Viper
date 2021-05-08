@@ -80,6 +80,20 @@ Somd5-小宇
 
 
 # 更新日志
+## v1.3.6 20210509
+### 新功能
+- 新增`上传并执行可执行文件`模块,用于`自动编排`场景
+
+### 优化
+- 优化`网络拓扑`前端UI
+- 优化`关于VIPER`跳转提示
+- 优化Websocket心跳机制,token失效时自动跳转到登录页
+- 合并metasploit-framework 6.0.44版本
+
+### Bugfix
+- 修复reverse_http类型Session网络连接显示127.0.0.1问题(MSF原生BUG)
+- 修复模块中使用cmd_exec时超时无法处理问题(MSF原生BUG)
+
 ## v1.3.5 20210503
 ### 新功能
 - 新增`自动编排`功能,用于自动持久化,自动信息收集等
@@ -133,7 +147,7 @@ Somd5-小宇
 - 合并metasploit-framework 6.0.40版本
 
 ### Bugfix
-- 修复`reverse_https`类型监听非法请求TCP连接无法释放问题(官方BUG)
+- 修复`reverse_https`类型监听非法请求TCP连接无法释放问题(MSF原生BUG)
 
 
 ## v1.3.1 20210404
