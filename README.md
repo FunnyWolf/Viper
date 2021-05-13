@@ -348,6 +348,10 @@ Somd5-小宇
 - 优化前端UI细节
 - 优化上传/下载Session文件操作
 
+# Stargazers
+
+[![Stargazers over time](https://starchart.cc/FunnyWolf/Viper.svg)](https://starchart.cc/FunnyWolf/Viper)
+
 # 404StarLink 2.0 - Galaxy
 ![](https://github.com/knownsec/404StarLink-Project/raw/master/logo.png)
 
