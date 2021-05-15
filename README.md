@@ -42,7 +42,6 @@
 - github issues : [https://github.com/FunnyWolf/Viper/issues](https://github.com/FunnyWolf/Viper/issues)
 - [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
 
-
 # 开发手册
 
 - [开发手册](https://www.yuque.com/vipersec/code)
@@ -61,52 +60,72 @@
 
 [https://github.com/FunnyWolf/vipermsf](https://github.com/FunnyWolf/vipermsf)
 
-
 # 致谢
-Edward_Snowdeng
-exp
+
+Edward_Snowdeng exp
 [Fnzer0](https://github.com/Fnzer0)
 [qingyun00](https://github.com/qingyun00)
-脸谱
-NoobFTW
-Somd5-小宇
+脸谱 NoobFTW Somd5-小宇
 [timwhitez](https://github.com/timwhitez)
 [ViCrack](https://github.com/ViCrack)
 [xiaobei97](https://github.com/xiaobei97)
 [yumusb](https://github.com/yumusb)
 
-
 # 更新日志
-## v1.3.6 20210509
+
+## v1.3.7 20210516
+
 ### 新功能
+
+- 新增`基础ShellcodeLoader免杀(Linux)`模块
+- 新增`监听载荷`-`源码免杀elf`选项
+
+### 优化
+
+- Linux监听`生成载荷`默认调用`源码免杀elf`
+- bind_tcp载荷rhost参数自动填充
+- 合并metasploit-framework 6.0.45版本
+
+## v1.3.6 20210509
+
+### 新功能
+
 - 新增`上传并执行可执行文件`模块,用于`自动编排`场景
 
 ### 优化
+
 - 优化`网络拓扑`前端UI
 - 优化`关于VIPER`跳转提示
 - 优化Websocket心跳机制,token失效时自动跳转到登录页
 - 合并metasploit-framework 6.0.44版本
 
 ### Bugfix
+
 - 修复reverse_http类型Session网络连接显示127.0.0.1问题(MSF原生BUG)
 - 修复模块中使用cmd_exec时超时无法处理问题(MSF原生BUG)
 
 ## v1.3.5 20210503
+
 ### 新功能
+
 - 新增`自动编排`功能,用于自动持久化,自动信息收集等
 - 监听配置新增`自动unhook`配置
 
 ### 优化
+
 - 优化`session监控`功能,通知中包含权限详细信息
 - 合并metasploit-framework 6.0.43版本
 
 ## v1.3.4 20210425
+
 ### 新功能
+
 - 新增"获取Windows补丁列表"模块,用于演示模块开发
 - `全网扫描`新增360Quake接口
 - `全网扫描`添加Mock数据,用于模块开发调试
 
 ### 优化
+
 - 优化`全网扫描`前端UI
 - 优化`全网扫描`模块框架,无需修改MSF代码即可开发模块
 - 优化reverse_tcp,socks代理DDos提示
@@ -114,27 +133,35 @@ Somd5-小宇
 - 合并metasploit-framework 6.0.42版本
 
 ### Bugfix
+
 - 修复session_host异常导致主界面无法显示问题
 
 ## v1.3.3 20210418
+
 ### 新功能
+
 - Viper(炫彩蛇)当前已支持自定义mettle
 - 所有免杀模块支持导出C++源码(VS工程),方便用户自定义修改
 
 ### 优化
+
 - 支持Linux类型Sesison的pid显示(mettle定制)
 - 合并metasploit-framework 6.0.41版本
 
 ### Bugfix
+
 - 修复一次性删除大量主机时返回502错误码问题
 
 ## v1.3.2 20210411
+
 ### 新功能
+
 - Viper(炫彩蛇)被暴力破解时发送消息提示
 - `reverse_https`监听添加心跳抖动,规避流量检测
 - 新增`父进程PID伪装规避检测`模块
 
 ### 优化
+
 - 优化主界面网络状态展示
 - 优化`网络拓扑` `监听载荷` `Console`前端UI
 - 更新`平台设置`相关链接
@@ -144,36 +171,49 @@ Somd5-小宇
 - 合并metasploit-framework 6.0.40版本
 
 ### Bugfix
+
 - 修复`reverse_https`类型监听非法请求TCP连接无法释放问题(MSF原生BUG)
 
-
 ## v1.3.1 20210404
+
 ### 新功能
+
 - 新增`反溯源配置`
+
 ### 优化
+
 - redis及msfrpc使用动态密码
 - `网络拓扑`新增权限类型节点
 - gencert.sh当前可检查用户输入是否有效
 - 优化模块相关部分代码
 - 合并metasploit-framework 6.0.39版本
+
 ### Bugfix
+
 - 修复免杀模块运行错误问题
 - 修复`端口扫描`及`端口扫描与服务识别`模块在Linux类型权限下运行失败问题
 - 修复gencert.sh脚本不能强制替换问题
 - 修复os.path.join任意文件读取问题
 
 ## v1.3.0 20210328
+
 ### 新功能
+
 - 新增`网络拓扑`功能
+
 ### 优化
+
 - 免杀类型模块归类到`执行`类别
 - Session列表中新增Pid信息
 - 优化主机信息管理部分代码
+
 ### Bugfix
+
 - 修复Session心跳超时显示效果错误问题
 - 合并metasploit-framework 6.0.38版本
 
 ## v1.2.6 20210321
+
 - 新增`获取向日葵密码`模块(by Somd5-小宇)
 - 新增`内存执行C#可执行文件(Bypass)`模块
 - 新增`Reverse_https直连免杀`模块
@@ -191,6 +231,7 @@ Somd5-小宇
 - 更新metasploit-framework到6.0.37版本
 
 ## v1.2.5 20210314
+
 - 新增`Windows注册表Run键值持久化(C#)`模块
 - 新增模块文档,可在模块说明中直接打开当前模块的使用文档
 - 新增修改Nginx证书及端口功能
@@ -198,6 +239,7 @@ Somd5-小宇
 - 优化运行模块前端UI
 
 ## v1.2.4 20210306
+
 - 新增`迁移权限到CobaltStrike`模块
 - 新增`SweetPotato提权`模块
 - 新增`Ladon7.0 C#插件`模块
@@ -211,6 +253,7 @@ Somd5-小宇
 - 更新metasploit-framework到6.0.34版本
 
 ## v1.2.3 20210228
+
 - 新增`内存执行C#可执行文件`模块接口
 - 新增`内存执行C#可执行文件`模块接口样例模块
 - 新增`获取浏览器密码模块(C#)`(基于`内存执行C#可执行文件`模块接口)
@@ -223,15 +266,17 @@ Somd5-小宇
 - 更新metasploit-framework到6.0.33版本
 
 ## v1.2.2 20210221
+
 - 增加自动化迁移进程功能
 - 增加Server酱通知Bot
-- 优化Session监控功能  
+- 优化Session监控功能
 - 优化运行模块前端UI
-- 修复`内网端口扫描`模块参数校验错误问题 
+- 修复`内网端口扫描`模块参数校验错误问题
 - 修复`获取Windows浏览器密码`模块执行失败问题
 - 更新metasploit-framework到6.0.32版本
 
 ## v1.2.1 20210131
+
 - 优化主控台UI,操作主机及权限更便捷
 - 修复当前任务数量不显示问题
 - 修复部分前端组件重复渲染问题
@@ -240,6 +285,7 @@ Somd5-小宇
 - 更新metasploit-framework到6.0.29版本
 
 ## v1.2.0 20210124
+
 - 修复首次使用无法获取token导致黑屏问题
 - 修复通知列表及模块结果列表时间不更新问题
 - 修复浏览器时间与VPS时间不一致导致Session心跳显示异常问题
@@ -250,6 +296,7 @@ Somd5-小宇
 - 优化自定义模块功能
 
 ## v1.1.8 20210117
+
 - 数据库文件挂载本地目录,容器重启/容器删除/镜像更新后数据不丢失
 - 容器重启/容器删除/镜像更新后自动恢复上次运行的监听
 - 使用react hooks重构前端,提升开发与运行效率
@@ -353,8 +400,10 @@ Somd5-小宇
 [![Stargazers over time](https://starchart.cc/FunnyWolf/Viper.svg)](https://starchart.cc/FunnyWolf/Viper)
 
 # 404StarLink 2.0 - Galaxy
+
 ![](https://github.com/knownsec/404StarLink-Project/raw/master/logo.png)
 
-Viper(炫彩蛇) 是 404Team [星链计划2.0](https://github.com/knownsec/404StarLink2.0-Galaxy)中的一环，如果对Viper(炫彩蛇)  有任何疑问又或是想要找小伙伴交流，可以参考星链计划的加群方式。
+Viper(炫彩蛇) 是 404Team [星链计划2.0](https://github.com/knownsec/404StarLink2.0-Galaxy)中的一环，如果对Viper(炫彩蛇)
+有任何疑问又或是想要找小伙伴交流，可以参考星链计划的加群方式。
 
 - [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
