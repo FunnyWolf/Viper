@@ -73,6 +73,22 @@ Edward_Snowdeng exp
 
 # 更新日志
 
+## v1.3.9 20210530
+
+### 优化
+
+- 主控台新增文档链接
+- 切换到`监听载荷`自动更新数据
+- 设置SessionExpirationTimeout默认时间为1年
+- 优化7个持久化模块,由`分离免杀`载荷修改为`源码免杀`载荷
+- 新增`源码免杀DLL`功能C++源码
+- 合并metasploit-framework 6.0.47版本
+
+### Bugfix
+
+- 修复`Callback免杀(EnumChildWindows)`源码缺失问题
+- 修复`Callback免杀(EnumWindows)`源码typo
+
 ## v1.3.8 20210523
 
 ### 新功能
