@@ -73,6 +73,25 @@ Edward_Snowdeng exp
 
 # 更新日志
 
+## v1.3.10 20210606
+
+### 新功能
+
+- 新增`Docker HealthCheck`功能,检查Viper运行状态
+
+### 优化
+
+- 优化`生成载荷`调用的代码模板
+- 优化`源码免杀elf`依赖,当前静态加载glibc2.5,适配所有主流Linux系统
+- 优化持久化模块loader代码,功能解耦合
+- 新增base64的shellcode编码
+- 合并metasploit-framework 6.0.48版本
+
+### Bugfix
+
+- 删除`一句话下载`中powershell相关命令
+
+
 ## v1.3.9 20210530
 
 ### 优化
