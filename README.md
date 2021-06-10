@@ -72,6 +72,8 @@ Edward_Snowdeng exp
 [yumusb](https://github.com/yumusb)
 
 # 更新日志
+<details>
+<summary><b>✨点击展开</b></summary>
 
 ## v1.3.10 20210606
 
@@ -443,6 +445,7 @@ Edward_Snowdeng exp
 - 合并metasploit-framework v5.0.90
 - 优化前端UI细节
 - 优化上传/下载Session文件操作
+</details>
 
 # Stargazers
 
