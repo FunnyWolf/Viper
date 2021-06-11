@@ -42,6 +42,9 @@
 - github issues : [https://github.com/FunnyWolf/Viper/issues](https://github.com/FunnyWolf/Viper/issues)
 - [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
 
+# 模块列表
+- [文档链接](https://www.yuque.com/vipersec/module)
+
 # 开发手册
 
 - [开发手册](https://www.yuque.com/vipersec/code)
@@ -447,9 +450,6 @@ Edward_Snowdeng exp
 - 优化上传/下载Session文件操作
 </details>
 
-# Stargazers
-
-[![Stargazers over time](https://starchart.cc/FunnyWolf/Viper.svg)](https://starchart.cc/FunnyWolf/Viper)
 
 # 404StarLink 2.0 - Galaxy
 
@@ -459,3 +459,9 @@ Viper(炫彩蛇) 是 404Team [星链计划2.0](https://github.com/knownsec/404St
 有任何疑问又或是想要找小伙伴交流，可以参考星链计划的加群方式。
 
 - [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
+
+
+# Stargazers
+
+[![Stargazers over time](https://starchart.cc/FunnyWolf/Viper.svg)](https://starchart.cc/FunnyWolf/Viper)
+
