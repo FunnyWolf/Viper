@@ -78,6 +78,30 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.3.11 20210613
+
+### 新功能
+
+- 新增`随机身份生成`模块
+- 新增`内网Netbios&SMB扫描`模块
+- 新增`NtCreateSection进程注入`模块
+- `主机信息`展示内网信息收集获取的信息(原`主机信息`功能改为`运行信息`)
+
+
+### 优化
+
+- 优化`网络拓扑`UI展示
+- `网络拓扑`可在独立窗口打开
+- 优化`运行模块`UI
+- 更新内置的7个免杀模板代码
+- 删除reverse_https类型监听证书必选标识
+- 合并metasploit-framework 6.0.49版本
+
+### Bugfix
+
+- 修复`Windows系统服务持久化`编译错误
+
+
 ## v1.3.10 20210606
 
 ### 新功能
@@ -464,4 +488,3 @@ Viper(炫彩蛇) 是 404Team [星链计划2.0](https://github.com/knownsec/404St
 # Stargazers
 
 [![Stargazers over time](https://starchart.cc/FunnyWolf/Viper.svg)](https://starchart.cc/FunnyWolf/Viper)
-
