@@ -90,6 +90,7 @@ Edward_Snowdeng exp
 - 微调部分前端样式
 - 调整`随机身份生成`模块分类
 - `reverse_http(s)`类型监听新增部分proxy相关参数
+- 合并metasploit-framework 6.0.50版本
 
 ### Bugfix
 
