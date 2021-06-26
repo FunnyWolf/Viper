@@ -78,6 +78,19 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.3.13 20210627
+
+### 新功能
+
+- Viper已支持DNS协议上线Session
+- 新增`reverse_dns`类型载荷
+- 新增`伪造成Word文档的exe文件`模块
+
+### 优化
+
+- 微调部分前端样式
+- 合并metasploit-framework 6.0.51版本
+
 ## v1.3.12 20210620
 
 ### 新功能
