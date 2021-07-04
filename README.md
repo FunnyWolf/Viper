@@ -78,6 +78,20 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.3.14 20210704
+
+### 优化
+
+- 优化弱网条件下下载大文件的成功率
+- 优化`伪造成Word文档的exe文件`模块进程名称
+- 优化reverse_dns校验等待时间
+- metasploit-framework可正确使用所有python类型模块
+- 合并metasploit-framework 6.0.52版本
+
+### Bugfix
+
+- 修复无法修改密码问题
+
 ## v1.3.13 20210627
 
 ### 新功能
