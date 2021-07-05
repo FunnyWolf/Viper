@@ -80,17 +80,25 @@ Edward_Snowdeng exp
 
 ## v1.3.14 20210704
 
+### 新功能
+
+- 新增`自守护免杀ShellcodeLoader(Linux)`模块
+
+
 ### 优化
 
 - 优化弱网条件下下载大文件的成功率
 - 优化`伪造成Word文档的exe文件`模块进程名称
 - 优化reverse_dns校验等待时间
+- 优化`基础ShellcodeLoader免杀(Linux)`readme
+- 内置最新的mimikatz文件
 - metasploit-framework可正确使用所有python类型模块
 - 合并metasploit-framework 6.0.52版本
 
 ### Bugfix
 
 - 修复无法修改密码问题
+- 修复开发环境(Windows)分隔符问题
 
 ## v1.3.13 20210627
 
