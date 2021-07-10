@@ -43,6 +43,7 @@
 - [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
 
 # 模块列表
+
 - [文档链接](https://www.yuque.com/vipersec/module)
 
 # 开发手册
@@ -75,15 +76,28 @@ Edward_Snowdeng exp
 [yumusb](https://github.com/yumusb)
 
 # 更新日志
+
 <details>
 <summary><b>✨点击展开</b></summary>
+
+## v1.3.15 20210711
+
+### 新功能
+
+- 全新的主机与权限操作界面,适配实战中大量主机及大量权限等场景
+- `Msfconsole`当前可以在独立的浏览器窗口打开使用
+
+### 优化
+
+- 优化viper中超时机制,不同操作设置不同的超时时间
+- 上传下载文件时`实时信息`中显示进度信息
+- 合并metasploit-framework 6.0.53版本
 
 ## v1.3.14 20210704
 
 ### 新功能
 
 - 新增`自守护免杀ShellcodeLoader(Linux)`模块
-
 
 ### 优化
 
@@ -131,7 +145,6 @@ Edward_Snowdeng exp
 
 - 修复输入字符为None导致模块日志输出异常问题
 
-
 ## v1.3.11 20210613
 
 ### 新功能
@@ -140,7 +153,6 @@ Edward_Snowdeng exp
 - 新增`内网Netbios&SMB扫描`模块
 - 新增`NtCreateSection进程注入`模块
 - `主机信息`展示内网信息收集获取的信息(原`主机信息`功能改为`运行信息`)
-
 
 ### 优化
 
@@ -154,7 +166,6 @@ Edward_Snowdeng exp
 ### Bugfix
 
 - 修复`Windows系统服务持久化`编译错误
-
 
 ## v1.3.10 20210606
 
@@ -173,7 +184,6 @@ Edward_Snowdeng exp
 ### Bugfix
 
 - 删除`一句话下载`中powershell相关命令
-
 
 ## v1.3.9 20210530
 
@@ -526,8 +536,8 @@ Edward_Snowdeng exp
 - 合并metasploit-framework v5.0.90
 - 优化前端UI细节
 - 优化上传/下载Session文件操作
-</details>
 
+</details>
 
 # 404StarLink 2.0 - Galaxy
 
@@ -537,7 +547,6 @@ Viper(炫彩蛇) 是 404Team [星链计划2.0](https://github.com/knownsec/404St
 有任何疑问又或是想要找小伙伴交流，可以参考星链计划的加群方式。
 
 - [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
-
 
 # Stargazers
 
