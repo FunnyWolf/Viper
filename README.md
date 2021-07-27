@@ -46,6 +46,9 @@
 
 - [文档链接](https://www.yuque.com/vipersec/module)
 
+# 系统架构图
+![viper.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1627364231093-768d3b07-e044-4a2d-a3fa-e9ebd92a0828.png)
+
 # 开发手册
 
 - [开发手册](https://www.yuque.com/vipersec/code)
