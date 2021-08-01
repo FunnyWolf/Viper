@@ -83,6 +83,15 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.3.18 20210801
+
+### 优化
+- `PSEXEC明文/哈希传递` `WMI明文传递`模块增加执行进度输出
+- 增加`session_info`超时时间,适配监听未唤醒场景
+- 删除`域信任信息`模块(不稳定)
+- 优化部分UI输出格式
+- 合并metasploit-framework 6.0.56版本
+
 ## v1.3.17 20210726
 
 ### 新功能
