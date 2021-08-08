@@ -83,6 +83,20 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.3.19 20210726
+
+### 新功能
+
+- 新增`Sharpwmi横向移动`模块
+- 新增`EfsPotato提权`模块
+- 新增`Invoke-WMIExec哈希传递`模块
+
+### 优化
+
+- 优化`内网端口扫描`IP地址输入格式 
+- 优化`内网端口扫描与服务识别`IP地址输入格式
+- 合并metasploit-framework 6.0.57版本
+
 ## v1.3.18 20210801
 
 ### 优化
