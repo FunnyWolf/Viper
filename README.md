@@ -83,7 +83,18 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
-## v1.3.19 20210726
+## v1.3.20 20210815
+
+### 新功能
+
+- 新增`WebDelivery`功能
+
+### 优化
+
+- 优化多级内网中网络传输稳定性及传输速度(通过优化rex-core实现)
+- 合并metasploit-framework 6.1.1版本
+
+## v1.3.19 20210808
 
 ### 新功能
 
