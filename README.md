@@ -83,6 +83,24 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.4.0 20210822
+
+### 新功能
+
+- 新增`Windows已安装软件`模块
+
+### 优化
+
+- 优化Session地理位置获取功能(使用qqwry)
+- 优化`监听载荷``命令终端`等功能UI
+- 升级到Python3.9
+- 合并metasploit-framework 6.1.2版本
+
+### Bugfix
+
+- 修复meterpreter中文乱码问题
+- 修复无法加载历史监听问题
+
 ## v1.3.20 20210815
 
 ### 新功能
