@@ -83,6 +83,20 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.4.1 20210822
+
+### 优化
+
+- 优化`Msfconsole`切换到shell终端时显示效果
+- 优化`内网代理`UI界面
+- `主机管理`功能合并到`内网代理`中
+
+### Bugfix
+
+- 修复vps中webdelivery运行超时问题
+- 修复`运行信息`无法获取问题
+- 修复`Msfconsole`中linux shell命令行无法使用问题
+
 ## v1.4.0 20210822
 
 ### 新功能
