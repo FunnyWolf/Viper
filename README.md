@@ -83,6 +83,23 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.4.2 20210822
+
+### 新功能
+- 新增`利用云函数上线(腾讯API网关)`模块
+
+### 优化
+- 使用Unix socketpair替换127.0.0.1 socketpair,提高性能
+- 优化`监听`功能,新增HttpHostHeader参数
+- 屏蔽session的ids检查
+- 合并metasploit-framework 6.1.5版本
+
+### Bugfix
+- 修复部分模块任务无法删除问题
+- 修复MSF中channel未释放问题
+- 修复`克隆Https证书`证书长度问题,适配SSLVersion新特性
+- 修复stream挂起导致使用linux内网路由与命令执行后session无响应问题
+
 ## v1.4.1 20210822
 
 ### 优化
