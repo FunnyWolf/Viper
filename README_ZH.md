@@ -88,10 +88,10 @@ Edward_Snowdeng exp
 ## v1.5.0 20210919
 
 ### 新功能
-- VIPER当前已支持英文版
+- VIPER已支持英文版
 
 ### 优化
-- 使用Unix socketpair替换127.0.0.1 socketpair,提高性能
+
 - 优化session上线通知格式
 - 合并metasploit-framework 6.1.7版本
 
