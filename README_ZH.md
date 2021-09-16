@@ -85,7 +85,21 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
-## v1.4.2 20210822
+## v1.5.0 20210919
+
+### 新功能
+- VIPER当前已支持英文版
+
+### 优化
+- 使用Unix socketpair替换127.0.0.1 socketpair,提高性能
+- 优化session上线通知格式
+- 合并metasploit-framework 6.1.7版本
+
+### Bugfix
+- 修复ExitOnSession未生效问题
+- 修复exploit模块bind监听不生效问题
+
+## v1.4.2 20210904
 
 ### 新功能
 - 新增`利用云函数上线(腾讯API网关)`模块
@@ -102,7 +116,7 @@ Edward_Snowdeng exp
 - 修复`克隆Https证书`证书长度问题,适配SSLVersion新特性
 - 修复stream挂起导致使用linux内网路由与命令执行后session无响应问题
 
-## v1.4.1 20210822
+## v1.4.1 20210828
 
 ### 优化
 
