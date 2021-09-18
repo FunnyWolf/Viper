@@ -95,6 +95,19 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.0 20210919
+
+### New Function
+- VIPER now support English language
+
+### Optimization
+- Optimized the format of session online SMS
+- Merged metasploit-framework 6.1.7 version
+
+### Bugfix
+- Fixed the issue that `ExitOnSession` did not take effect
+- Fix the issue that the bind handler of the exploit module does not take effect
+
 ## v1.4.2 20210822
 
 ### New Function
