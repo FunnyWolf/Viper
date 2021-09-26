@@ -85,13 +85,27 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.1 20210926
+
+### 新功能
+- 新增`获取互联网出口IP`模块
+- session进程列表新增搜索过滤
+
+### 优化
+- 杀毒软件显示支持英文版
+- 优化内网扫描模块输出格式
+- 优化`运行模块`功能的性能及UI
+- 合并metasploit-framework 6.1.8版本
+
+### Bugfix
+- 修复不显示杀毒软件名称问题
+
 ## v1.5.0 20210919
 
 ### 新功能
 - VIPER已支持英文版
 
 ### 优化
-
 - 优化session上线通知格式
 - 合并metasploit-framework 6.1.7版本
 

@@ -95,6 +95,21 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.1 20210926
+
+### new function
+-Added `Obtain Internet outbound IP` module
+-New search filter for session process list
+
+### Optimization
+-Antivirus software display supports English version
+-Optimize the output format of the intranet scanning module
+-Optimize the performance and UI of the `Run Module` function
+-Merged metasploit-framework 6.1.8 version
+
+### Bugfix
+-Fix the problem that the name of antivirus software is not displayed
+
 ## v1.5.0 20210919
 
 ### New Function
