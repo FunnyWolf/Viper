@@ -96,7 +96,6 @@ Edward_Snowdeng exp
 <summary><b>✨Click to expand</b></summary>
 
 ## v1.5.1 20210926
-
 ### new function
 - Added `Obtain Internet outbound IP` module
 - New search filter for session process list
@@ -111,7 +110,6 @@ Edward_Snowdeng exp
 - Fix the problem that the name of antivirus software is not displayed
 
 ## v1.5.0 20210919
-
 ### New Function
 - VIPER now support English language
 
