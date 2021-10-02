@@ -37,11 +37,11 @@ English | [简体中文](./README_ZH.md)
 
 # Website
 
-- [https://www.yuque.com/viper-en](https://www.yuque.com/viper-en)
+- [https://www.yuque.com/viper-en](https://www.yuque.com/viper-en?language=en-us)
 
 # Installation manual
 
-- [Installation manual](https://www.yuque.com/viper-en/inh85g/cvucxz)
+- [Installation manual](https://www.yuque.com/viper-en/inh85g/cvucxz?language=en-us)
 
 # FAQ
 
