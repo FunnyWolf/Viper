@@ -85,6 +85,12 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.2 20211007
+
+### 优化
+- 登录界面多语言支持
+- 合并metasploit-framework 6.1.9版本
+
 ## v1.5.1 20210926
 
 ### 新功能

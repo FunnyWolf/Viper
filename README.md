@@ -95,8 +95,14 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.2 20211007
+
+### Optimization
+- Login page multilingual support
+- Merged metasploit-framework 6.1.9
+
 ## v1.5.1 20210926
-### new function
+### Bew Features
 - Added `Obtain Internet outbound IP` module
 - New search filter for session process list
 
@@ -110,7 +116,7 @@ Edward_Snowdeng exp
 - Fix the problem that the name of antivirus software is not displayed
 
 ## v1.5.0 20210919
-### New Function
+### New Features
 - VIPER now support English language
 
 ### Optimization
@@ -123,7 +129,7 @@ Edward_Snowdeng exp
 
 ## v1.4.2 20210822
 
-### New Function
+### New Features
 - Added `Session online by SCF (Tencent API Gateway)` module
 
 ### Optimization
