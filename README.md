@@ -95,6 +95,13 @@ Edward_Snowdeng exp
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.3 20211010
+### Optimization
+- Optimize msfconsole user experience
+- Merged metasploit-framework 6.1.10
+
+<br/>
+
 ## v1.5.2 20211007
 
 ### Optimization
