@@ -89,6 +89,8 @@ Edward_Snowdeng exp
 ### 优化
 - 优化MSFCONSOLE使用体验
 - 合并metasploit-framework 6.1.10版本
+### 视频
+https://www.bilibili.com/video/BV1Yb4y1Y75r/
 
 <br/>
 
@@ -111,6 +113,9 @@ Edward_Snowdeng exp
 
 ### Bugfix
 - 修复不显示杀毒软件名称问题
+
+### 视频
+https://www.bilibili.com/video/BV1PQ4y1C7w7/
 
 ## v1.5.0 20210919
 
