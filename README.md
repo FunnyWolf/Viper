@@ -43,57 +43,18 @@ English | [简体中文](./README_ZH.md)
 
 - [Installation manual](https://www.yuque.com/viper-en/inh85g/cvucxz?language=en-us)
 
-# FAQ
-
-- [FAQ](https://www.yuque.com/viper-en/faq)
-
-# Issues
-
-- github issues : [https://github.com/FunnyWolf/Viper/issues](https://github.com/FunnyWolf/Viper/issues)
-- [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
-
-# Modules
-
-- [Document link](https://www.yuque.com/viper-en/module)
-
-# System architecture diagram
-
-![viper.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1627364231093-768d3b07-e044-4a2d-a3fa-e9ebd92a0828.png)
-
-# Development Manual
-
-- [Development Manual](https://www.yuque.com/viper-en/code)
-
-# Source Code
-
-- viperjs (Frontend)
-
-[https://github.com/FunnyWolf/viperjs](https://github.com/FunnyWolf/viperjs)
-
-- viperpython (Backend)
-
-[https://github.com/FunnyWolf/viperpython](https://github.com/FunnyWolf/viperpython)
-
-- vipermsf (MSFRPC)
-
-[https://github.com/FunnyWolf/vipermsf](https://github.com/FunnyWolf/vipermsf)
-
-# Acknoladgement
-
-Edward_Snowdeng exp
-[Fnzer0](https://github.com/Fnzer0)
-[qingyun00](https://github.com/qingyun00)
-脸谱 NoobFTW Somd5-小宇
-[timwhitez](https://github.com/timwhitez)
-[ViCrack](https://github.com/ViCrack)
-[xiaobei97](https://github.com/xiaobei97)
-[yumusb](https://github.com/yumusb)
-
-
 # Updatelog
 
 <details>
 <summary><b>✨Click to expand</b></summary>
+
+## v1.5.4 20211017
+### New Features
+- Added `MS17-010 Exploit (CSharp)` module
+### Optimization
+- Merged metasploit-framework 6.1.10
+### Bugfix
+- Fix duplicate add reverse_http(s) handler failed to deal with session online requests.
 
 ## v1.5.3 20211010
 ### Optimization
@@ -109,7 +70,7 @@ Edward_Snowdeng exp
 - Merged metasploit-framework 6.1.9
 
 ## v1.5.1 20210926
-### Bew Features
+### New Features
 - Added `Obtain Internet outbound IP` module
 - New search filter for session process list
 
@@ -152,6 +113,52 @@ Edward_Snowdeng exp
 - Fix the issue that the session does not respond after the use of Linux intranet routing and command execution due to stream hang
 
 </details>
+
+
+# FAQ
+
+- [FAQ](https://www.yuque.com/viper-en/faq)
+
+# Issues
+
+- github issues : [https://github.com/FunnyWolf/Viper/issues](https://github.com/FunnyWolf/Viper/issues)
+
+# Modules
+
+- [Document link](https://www.yuque.com/viper-en/module)
+
+# System architecture diagram
+
+![viper.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1627364231093-768d3b07-e044-4a2d-a3fa-e9ebd92a0828.png)
+
+# Development
+
+- [Development](https://www.yuque.com/viper-en/code)
+
+# Source Code
+
+- viperjs (Frontend)
+
+[https://github.com/FunnyWolf/viperjs](https://github.com/FunnyWolf/viperjs)
+
+- viperpython (Backend)
+
+[https://github.com/FunnyWolf/viperpython](https://github.com/FunnyWolf/viperpython)
+
+- vipermsf (MSFRPC)
+
+[https://github.com/FunnyWolf/vipermsf](https://github.com/FunnyWolf/vipermsf)
+
+# Thanks
+
+Edward_Snowdeng exp
+[Fnzer0](https://github.com/Fnzer0)
+[qingyun00](https://github.com/qingyun00)
+脸谱 NoobFTW Somd5-小宇
+[timwhitez](https://github.com/timwhitez)
+[ViCrack](https://github.com/ViCrack)
+[xiaobei97](https://github.com/xiaobei97)
+[yumusb](https://github.com/yumusb)
 
 
 # 404StarLink 2.0 - Galaxy

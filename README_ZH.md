@@ -35,57 +35,22 @@
 
 - [安装](https://www.yuque.com/vipersec/help/olg1ua)
 
-# 常见问题
-
-- [FAQ](https://www.yuque.com/vipersec/faq)
-
-# 问题反馈
-
-- github issues : [https://github.com/FunnyWolf/Viper/issues](https://github.com/FunnyWolf/Viper/issues)
-- [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
-
-# 模块列表
-
-- [文档链接](https://www.yuque.com/vipersec/module)
-
-# 系统架构图
-![viper.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1627364231093-768d3b07-e044-4a2d-a3fa-e9ebd92a0828.png)
-
-# 开发手册
-
-- [开发手册](https://www.yuque.com/vipersec/code)
-
-# 源代码
-
-- viperjs (前端)
-
-[https://github.com/FunnyWolf/viperjs](https://github.com/FunnyWolf/viperjs)
-
-- viperpython (后台)
-
-[https://github.com/FunnyWolf/viperpython](https://github.com/FunnyWolf/viperpython)
-
-- vipermsf (渗透服务)
-
-[https://github.com/FunnyWolf/vipermsf](https://github.com/FunnyWolf/vipermsf)
-
-# 致谢
-
-Edward_Snowdeng exp
-[Fnzer0](https://github.com/Fnzer0)
-[qingyun00](https://github.com/qingyun00)
-脸谱 NoobFTW Somd5-小宇
-[timwhitez](https://github.com/timwhitez)
-[ViCrack](https://github.com/ViCrack)
-[xiaobei97](https://github.com/xiaobei97)
-[yumusb](https://github.com/yumusb)
-
 # 更新日志
 
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.4 20211017
+### 新功能
+- 新增`MS17-010利用(CSharp)`模块
+### 优化
+- 合并metasploit-framework 6.1.11版本
+### Bugfix
+- 修复重复添加reverse_http(s)监听时无法上线Session问题
+
+
 ## v1.5.3 20211010
+
 ### 优化
 - 优化MSFCONSOLE使用体验
 - 合并metasploit-framework 6.1.10版本
@@ -200,7 +165,7 @@ https://www.bilibili.com/video/BV1PQ4y1C7w7/
 
 ### 优化
 
-- 优化`内网端口扫描`IP地址输入格式 
+- 优化`内网端口扫描`IP地址输入格式
 - 优化`内网端口扫描与服务识别`IP地址输入格式
 - 合并metasploit-framework 6.0.57版本
 
@@ -710,6 +675,51 @@ https://www.bilibili.com/video/BV1PQ4y1C7w7/
 - 优化上传/下载Session文件操作
 
 </details>
+
+# 常见问题
+
+- [FAQ](https://www.yuque.com/vipersec/faq)
+
+# 问题反馈
+
+- github issues : [https://github.com/FunnyWolf/Viper/issues](https://github.com/FunnyWolf/Viper/issues)
+
+# 模块列表
+
+- [文档链接](https://www.yuque.com/vipersec/module)
+
+# 系统架构图
+![viper.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1627364231093-768d3b07-e044-4a2d-a3fa-e9ebd92a0828.png)
+
+# 开发手册
+
+- [开发手册](https://www.yuque.com/vipersec/code)
+
+# 源代码
+
+- viperjs (前端)
+
+[https://github.com/FunnyWolf/viperjs](https://github.com/FunnyWolf/viperjs)
+
+- viperpython (后台)
+
+[https://github.com/FunnyWolf/viperpython](https://github.com/FunnyWolf/viperpython)
+
+- vipermsf (渗透服务)
+
+[https://github.com/FunnyWolf/vipermsf](https://github.com/FunnyWolf/vipermsf)
+
+# 致谢
+
+Edward_Snowdeng exp
+[Fnzer0](https://github.com/Fnzer0)
+[qingyun00](https://github.com/qingyun00)
+脸谱 NoobFTW Somd5-小宇
+[timwhitez](https://github.com/timwhitez)
+[ViCrack](https://github.com/ViCrack)
+[xiaobei97](https://github.com/xiaobei97)
+[yumusb](https://github.com/yumusb)
+
 
 # 404StarLink 2.0 - Galaxy
 
