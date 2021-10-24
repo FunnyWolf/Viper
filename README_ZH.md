@@ -40,6 +40,15 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.5 20211024
+### 新功能
+- 新增`CVE-2021-40449提权`模块
+- 新增WebUI一键下载Viper所有日志
+### 优化
+- 合并metasploit-framework 6.1.12版本
+### Bugfix
+- 修复Socks代理关闭后端口占用问题
+
 ## v1.5.4 20211017
 ### 新功能
 - 新增`MS17-010利用(CSharp)`模块

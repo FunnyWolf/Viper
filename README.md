@@ -48,11 +48,20 @@ English | [简体中文](./README_ZH.md)
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.5 20211024
+### New Features
+- Added `CVE-2021-40449 LPE` module
+- One click download all Viper logs from WEBUI
+### Optimization
+- Merged metasploit-framework 6.1.12
+### Bugfix
+- Fix the port occupancy problem after the socks is removed
+
 ## v1.5.4 20211017
 ### New Features
 - Added `MS17-010 Exploit (CSharp)` module
 ### Optimization
-- Merged metasploit-framework 6.1.10
+- Merged metasploit-framework 6.1.11
 ### Bugfix
 - Fix duplicate add reverse_http(s) handler failed to deal with session online requests.
 
