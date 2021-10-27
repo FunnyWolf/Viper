@@ -175,7 +175,3 @@ Edward_Snowdeng exp
 ![](https://github.com/knownsec/404StarLink-Project/raw/master/logo.png)
 
 Viper has joined 404Team [404StarLink 2.0 - Galaxy](https://github.com/knownsec/404StarLink2.0-Galaxy)
-
-# Stargazers
-
-[![Stargazers over time](https://starchart.cc/FunnyWolf/Viper.svg)](https://starchart.cc/FunnyWolf/Viper)
