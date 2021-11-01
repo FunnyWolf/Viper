@@ -40,6 +40,18 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.6 20211031
+### 新功能
+- 新增`监听防火墙`功能
+- 新增`直接windows系统调用规避技术`模块
+### 优化
+- reverse_http(s)在网络断开时超时时间从21秒(Windows默认)更新为3秒
+- 当前Session默认用不过期,不会自动退出
+- 合并metasploit-framework 6.1.13版本
+### Bugfix
+- 修复`sessionExpirationTimeout`为0时reverse_tcp无法连接问题
+- 修复UI界面无法获取默认lhost参数问题
+
 ## v1.5.5 20211024
 ### 新功能
 - 新增`CVE-2021-40449提权`模块

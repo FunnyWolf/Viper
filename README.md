@@ -48,6 +48,18 @@ English | [简体中文](./README_ZH.md)
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.6 20211031
+### New Features
+- Added 'Hander firewall' function
+- Added the module of "Direct windows syscall evasion technique"
+### Optimization
+- reverse_http(s) when the network is disconnected, the timeout is updated from 21 seconds (Windows default) to 3 seconds
+- The current session does not expire by default and will not exit automatically
+- Merge Metasploit Framework version 6.1.13
+### Bugfix
+- Repair reverse_tcp failed to connect when 'sessionexpirationtimeout' is 0
+- Fix failure to get default lhost parameter on ui
+
 ## v1.5.5 20211024
 ### New Features
 - Added `CVE-2021-40449 LPE` module
