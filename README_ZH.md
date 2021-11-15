@@ -40,6 +40,18 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.7 20211115
+### 优化
+- `全网扫描`添加Debug接口
+- webdelivery当前不再强制绑定target与payload
+- puma及ipgeo功能优化
+- 部分前端交互优化
+- 合并metasploit-framework 6.1.15版本
+
+### Bugfix
+- 修复ipgeo异常处理导致监听异常问题
+- 修复重启viper后udp类型监听重复添加问题
+
 ## v1.5.6 20211031
 ### 新功能
 - 新增`监听防火墙`功能

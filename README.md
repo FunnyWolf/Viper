@@ -48,6 +48,18 @@ English | [简体中文](./README_ZH.md)
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.7 20211115
+### Optimization
+- 'InternetScan' add debug interface
+- Webdelivery currently no longer forces binding of target and payload
+- Functional optimization of Puma and ipgeo
+- front-end interaction optimization
+- Merge Metasploit Framework version 6.1.15
+
+### Bugfix
+- Fix the handler exception caused by ipgeo exception
+- Fix the repeated addition of UDP handler after Viper restart
+
 ## v1.5.6 20211031
 ### New Features
 - Added 'Hander firewall' function
