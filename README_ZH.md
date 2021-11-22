@@ -712,6 +712,7 @@ https://www.bilibili.com/video/BV1PQ4y1C7w7/
 # 友情链接
 
 [使用Cloudflare Argo隐藏VIPER后台](https://tokisaki.top/blog/viper-via-cloudflare-argo/)
+[msf http使用cloudflare argo上线](https://tokisaki.top/blog/meterpreter-via-cloudflare-argo/)
 
 # 常见问题
 
