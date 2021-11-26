@@ -48,6 +48,16 @@ English | [简体中文](./README_ZH.md)
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.8 20211126
+### New features
+- New module `Syscall Visual Studio project`
+### Optimization
+- `InternetScan` UI is updated to make the operation more convenient, and the manual import function is added
+- Add partial log (heartbeat data section)
+- Merge Metasploit Framework version 6.1.17
+### Bugfix
+- Fix the problem that the PEM certificate could not be loaded
+
 ## v1.5.7 20211115
 ### Optimization
 - 'InternetScan' add debug interface

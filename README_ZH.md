@@ -40,6 +40,19 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.8 20211126
+### 新功能
+- 新增`Syscall的Visual Studio工程`模块
+
+### 优化
+- `全网扫描`UI更新,操作更便捷并新增手动导入功能
+- 添加部分日志(心跳数据部分)
+- 合并metasploit-framework 6.1.17版本
+
+### Bugfix
+- 修复无法加载pem证书问题
+
+
 ## v1.5.7 20211115
 ### 优化
 - `全网扫描`添加Debug接口
