@@ -40,6 +40,15 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.9 20211204
+
+### 优化
+- 合并metasploit-framework 6.1.18版本
+- 更新ruby3.0
+
+### Bugfix
+- 修复执行FOFA搜索失败问题
+
 ## v1.5.8 20211126
 ### 新功能
 - 新增`Syscall的Visual Studio工程`模块

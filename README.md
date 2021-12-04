@@ -48,6 +48,15 @@ English | [简体中文](./README_ZH.md)
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.9 20211204
+
+### Optimization
+- Merge Metasploit Framework version 6.1.18
+- Update ruby version to 3.0
+
+### Bugfix
+- Fix bug on FOFA search
+
 ## v1.5.8 20211126
 ### New features
 - New module `Syscall Visual Studio project`
