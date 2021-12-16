@@ -10,6 +10,9 @@ English | [简体中文](./README_ZH.md)
 - Viper's goal is to help red team engineers improve attack efficiency, simplify operation and reduce technical threshold
 - Viper supports running native msfconsole in browser and multi - person collaboration
 
+### Log4j Scanning Readme
+- [English](https://www.yuque.com/vipersec/blog/sn2x39)
+
 <br>
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1631688473804-d80f746b-e2fd-4d53-a44e-8bf8c4dc89d1.png?x-oss-process=image%2Fresize%2Cw_2250%2Climit_0)
@@ -47,6 +50,26 @@ English | [简体中文](./README_ZH.md)
 
 <details>
 <summary><b>✨Click to expand</b></summary>
+
+## v1.5.10 20211216
+### New Features
+- New log4j passive scanning function
+- Viper + crawlergo can be used in combination to automatically and actively scan log4j vulnerabilities
+
+### Log4j passive scan
+- Automatically replace the get request parameter with payload
+- The auto replace post request parameter is payload
+- The JSON value of auto replace post request is payload
+- Auto replace skip password field
+- Automatically add payload in headers (polling by Dictionary)
+- The payload contains the original payload and the payload bypassing the WAF
+- The payload contains UUID, which can find the specific request content that triggers the vulnerability according to the dnslog record
+
+### Log4j automatic active scanning
+- Get all requests for automatic page acquisition through chrome headless + crawler, and import the requests into the passive proxy to realize automatic scanning
+
+### Log4j Scanning Readme
+- [English](https://www.yuque.com/vipersec/blog/sn2x39)
 
 ## v1.5.9 20211204
 

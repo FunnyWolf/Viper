@@ -10,6 +10,10 @@
 - Viper(炫彩蛇)目标是帮助红队工程师提高攻击效率,简化操作,降低技术门槛.
 - Viper(炫彩蛇)支持在浏览器中运行原生msfconsole,且支持多人协作.
 
+### Log4j扫描使用文档
+- [中文文档](https://www.yuque.com/vipersec/blog/lgrqm4)
+
+
 <br>
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1631687579184-a2603220-9009-4240-9709-76b503fe8174.png?x-oss-process=image%2Fresize%2Cw_1504%2Climit_0)
@@ -39,6 +43,27 @@
 
 <details>
 <summary><b>✨点击展开</b></summary>
+
+## v1.5.10 20211216
+
+### 新功能
+- 新增Log4j被动扫描功能
+- VIPER+crawlergo组合使用可实现全自动主动扫描Log4j漏洞
+
+### Log4j被动扫描
+- 自动替换GET请求参数为Payload
+- 自动替换POST请求参数为Payload
+- 自动替换POST请求JSON中值为Payload
+- 自动替换跳过密码字段
+- 自动在headers中添加Payload(依据字典轮询)
+- Payload包含原始Payload与绕过WAF的Payload
+- Payload中包含UUID,可根据DNSLOG记录查找具体触发漏洞的请求内容
+
+### Log4j自动化主动扫描
+- 通过chrome headless + 爬虫的方式获取自动获取页面所有请求,将请求导入到被动proxy中,实现自动化扫描
+
+### Log4j扫描使用文档
+- [中文文档](https://www.yuque.com/vipersec/blog/lgrqm4)
 
 ## v1.5.9 20211204
 
