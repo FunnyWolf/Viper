@@ -11,8 +11,8 @@
 - Viper(炫彩蛇)支持在浏览器中运行原生msfconsole,且支持多人协作.
 
 ### Log4j扫描使用文档
-- [中文文档](https://www.yuque.com/vipersec/blog/lgrqm4)
 
+- [中文文档](https://www.yuque.com/vipersec/blog/lgrqm4)
 
 <br>
 
@@ -44,13 +44,30 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.12 20211231
+
+### 新功能
+
+- 新增被动扫描模块框架
+- 新增`VMware Horizon Log4j Rce`全网扫描模块
+- 新增`LDAP Server`模块,图形化管理LDAPServer
+
+### 优化
+
+- Log4j RCE被动扫描功能更新为被动扫描模块
+- 更新Log4j RCE的bypass WAF payload
+- `Log4j RCE被动扫描模块`新增超时参数
+
+
 ## v1.5.10 20211216
 
 ### 新功能
+
 - 新增Log4j被动扫描功能
 - VIPER+crawlergo组合使用可实现全自动主动扫描Log4j漏洞
 
 ### Log4j被动扫描
+
 - 自动替换GET请求参数为Payload
 - 自动替换POST请求参数为Payload
 - 自动替换POST请求JSON中值为Payload
@@ -60,35 +77,44 @@
 - Payload中包含UUID,可根据DNSLOG记录查找具体触发漏洞的请求内容
 
 ### Log4j自动化主动扫描
+
 - 通过chrome headless + 爬虫的方式获取自动获取页面所有请求,将请求导入到被动proxy中,实现自动化扫描
 
 ### Log4j扫描使用文档
+
 - [中文文档](https://www.yuque.com/vipersec/blog/lgrqm4)
 
 ## v1.5.9 20211204
 
 ### 优化
+
 - 合并metasploit-framework 6.1.18版本
 - 更新ruby3.0
 
 ### Bugfix
+
 - 修复执行FOFA搜索失败问题
 
 ## v1.5.8 20211126
+
 ### 新功能
+
 - 新增`Syscall的Visual Studio工程`模块
 
 ### 优化
+
 - `全网扫描`UI更新,操作更便捷并新增手动导入功能
 - 添加部分日志(心跳数据部分)
 - 合并metasploit-framework 6.1.17版本
 
 ### Bugfix
+
 - 修复无法加载pem证书问题
 
-
 ## v1.5.7 20211115
+
 ### 优化
+
 - `全网扫描`添加Debug接口
 - webdelivery当前不再强制绑定target与payload
 - puma及ipgeo功能优化
@@ -96,97 +122,130 @@
 - 合并metasploit-framework 6.1.15版本
 
 ### Bugfix
+
 - 修复ipgeo异常处理导致监听异常问题
 - 修复重启viper后udp类型监听重复添加问题
 
 ## v1.5.6 20211031
+
 ### 新功能
+
 - 新增`监听防火墙`功能
 - 新增`直接windows系统调用规避技术`模块
+
 ### 优化
+
 - reverse_http(s)在网络断开时超时时间从21秒(Windows默认)更新为3秒
 - 当前Session默认用不过期,不会自动退出
 - 合并metasploit-framework 6.1.13版本
+
 ### Bugfix
+
 - 修复`sessionExpirationTimeout`为0时reverse_tcp无法连接问题
 - 修复UI界面无法获取默认lhost参数问题
 
 ## v1.5.5 20211024
+
 ### 新功能
+
 - 新增`CVE-2021-40449提权`模块
 - 新增WebUI一键下载Viper所有日志
+
 ### 优化
+
 - 合并metasploit-framework 6.1.12版本
+
 ### Bugfix
+
 - 修复Socks代理关闭后端口占用问题
 
 ## v1.5.4 20211017
-### 新功能
-- 新增`MS17-010利用(CSharp)`模块
-### 优化
-- 合并metasploit-framework 6.1.11版本
-### Bugfix
-- 修复重复添加reverse_http(s)监听时无法上线Session问题
 
+### 新功能
+
+- 新增`MS17-010利用(CSharp)`模块
+
+### 优化
+
+- 合并metasploit-framework 6.1.11版本
+
+### Bugfix
+
+- 修复重复添加reverse_http(s)监听时无法上线Session问题
 
 ## v1.5.3 20211010
 
 ### 优化
+
 - 优化MSFCONSOLE使用体验
 - 合并metasploit-framework 6.1.10版本
+
 ### 视频
+
 https://www.bilibili.com/video/BV1Yb4y1Y75r/
 
 <br/>
 
 ## v1.5.2 20211007
+
 ### 优化
+
 - 登录界面多语言支持
 - 合并metasploit-framework 6.1.9版本
 
 ## v1.5.1 20210926
 
 ### 新功能
+
 - 新增`获取互联网出口IP`模块
 - session进程列表新增搜索过滤
 
 ### 优化
+
 - 杀毒软件显示支持英文版
 - 优化内网扫描模块输出格式
 - 优化`运行模块`功能的性能及UI
 - 合并metasploit-framework 6.1.8版本
 
 ### Bugfix
+
 - 修复不显示杀毒软件名称问题
 
 ### 视频
+
 https://www.bilibili.com/video/BV1PQ4y1C7w7/
 
 ## v1.5.0 20210919
 
 ### 新功能
+
 - VIPER已支持英文版
 
 ### 优化
+
 - 优化session上线通知格式
 - 合并metasploit-framework 6.1.7版本
 
 ### Bugfix
+
 - 修复ExitOnSession未生效问题
 - 修复exploit模块bind监听不生效问题
 
 ## v1.4.2 20210904
 
 ### 新功能
+
 - 新增`利用云函数上线(腾讯API网关)`模块
 
 ### 优化
+
 - 使用Unix socketpair替换127.0.0.1 socketpair,提高性能
 - 优化`监听`功能,新增HttpHostHeader参数
 - 屏蔽session的ids检查
 - 合并metasploit-framework 6.1.5版本
 
 ### Bugfix
+
 - 修复部分模块任务无法删除问题
 - 修复MSF中channel未释放问题
 - 修复`克隆Https证书`证书长度问题,适配SSLVersion新特性
@@ -252,6 +311,7 @@ https://www.bilibili.com/video/BV1PQ4y1C7w7/
 ## v1.3.18 20210801
 
 ### 优化
+
 - `PSEXEC明文/哈希传递` `WMI明文传递`模块增加执行进度输出
 - 增加`session_info`超时时间,适配监听未唤醒场景
 - 删除`域信任信息`模块(不稳定)
@@ -272,7 +332,6 @@ https://www.bilibili.com/video/BV1PQ4y1C7w7/
 - 优化部分模块文本
 - 持久化模块支持自定义loader
 - 合并metasploit-framework 6.0.55版本
-
 
 ## v1.3.16 20210718
 
@@ -774,6 +833,7 @@ https://www.bilibili.com/video/BV1PQ4y1C7w7/
 - [文档链接](https://www.yuque.com/vipersec/module)
 
 # 系统架构图
+
 ![viper.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1627364231093-768d3b07-e044-4a2d-a3fa-e9ebd92a0828.png)
 
 # 开发手册
