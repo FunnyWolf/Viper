@@ -14,9 +14,6 @@ English | [简体中文](./README_ZH.md)
   threshold
 - Viper supports running native msfconsole in browser and multi - person collaboration
 
-### Log4j Scanning Readme
-
-- [English](https://www.yuque.com/vipersec/blog/sn2x39)
 
 <br>
 
@@ -55,6 +52,34 @@ English | [简体中文](./README_ZH.md)
 
 <details>
 <summary><b>✨Click to expand</b></summary>
+
+## v1. 5.13 20220111
+
+### New features
+
+- Added zoomeye API interface
+
+- Add `dnslog server` module
+
+
+
+### Optimize
+
+- Delete the "InternetScan" debug interface (the manual import function can completely replace this interface)
+
+- Log4j payload echo java version, OS arch, OS version
+
+- Optimize the pipeline logic of `InternetScan`, which will not affect the heartbeat data transmission at present
+
+- Merge Metasploit Framework version 6.1.25
+
+
+
+### Bugfix
+
+- Fix the problem that the `VMware horizon log4j rce` timeout parameter does not take effect
+
+
 
 ## v1.5.12 20211231
 
