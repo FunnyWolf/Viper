@@ -10,10 +10,6 @@
 - Viper(炫彩蛇)目标是帮助红队工程师提高攻击效率,简化操作,降低技术门槛.
 - Viper(炫彩蛇)支持在浏览器中运行原生msfconsole,且支持多人协作.
 
-### Log4j扫描使用文档
-
-- [中文文档](https://www.yuque.com/vipersec/blog/lgrqm4)
-
 <br>
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1631687579184-a2603220-9009-4240-9709-76b503fe8174.png?x-oss-process=image%2Fresize%2Cw_1504%2Climit_0)
@@ -43,6 +39,22 @@
 
 <details>
 <summary><b>✨点击展开</b></summary>
+
+## v1.5.13 20220111
+### 新功能
+- 新增Zoomeye API接口
+- 新增`DNSLog服务器`模块
+
+### 优化
+- 删除`全网扫描`debug接口(手工导入功能可完全代替此接口)
+- Log4j Payload回显Java version,OS arch,OS version
+- 优化`全网扫描`流水线逻辑,当前不会影响心跳数据传输
+- 合并metasploit-framework 6.1.25版本
+
+### Bugfix
+- 修复`VMware Horizon Log4j Rce`超时参数不生效问题
+
+
 
 ## v1.5.12 20211231
 
