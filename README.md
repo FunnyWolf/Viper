@@ -53,30 +53,26 @@ English | [简体中文](./README_ZH.md)
 <details>
 <summary><b>✨Click to expand</b></summary>
 
-## v1. 5.13 20220111
+## v1.5.14 20220206
+### New features
+- Add three Android teaching demonstration modules (obtain target mobile phone SMS / call record / address book) (take photos with mobile phone camera) (record audio with mobile phone)
+- The 'session channel' function is added to make multi-level intranet penetration more convenient [readme](https://www.yuque.com/vipersec/blog/gssfbg)
+### Optimize
+- Merge Metasploit Framework version 6.1.29
+
+## v1.5.13 20220111
 
 ### New features
-
 - Added zoomeye API interface
-
 - Add `dnslog server` module
 
-
-
 ### Optimize
-
 - Delete the "InternetScan" debug interface (the manual import function can completely replace this interface)
-
 - Log4j payload echo java version, OS arch, OS version
-
 - Optimize the pipeline logic of `InternetScan`, which will not affect the heartbeat data transmission at present
-
 - Merge Metasploit Framework version 6.1.25
 
-
-
 ### Bugfix
-
 - Fix the problem that the `VMware horizon log4j rce` timeout parameter does not take effect
 
 

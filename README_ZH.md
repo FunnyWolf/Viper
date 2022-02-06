@@ -40,6 +40,14 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.14 20220206
+### 新功能
+- 新增三个Android教学演示模块(获取目标手机短信/通话记录/通讯录)(手机摄像头拍照)(手机录制音频)
+- 新增`通信通道`功能,多级内网渗透更加便捷 [readme](https://www.yuque.com/vipersec/blog/gssfbg)
+### 优化
+- 合并metasploit-framework 6.1.29版本
+
+
 ## v1.5.13 20220111
 ### 新功能
 - 新增Zoomeye API接口
