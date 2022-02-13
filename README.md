@@ -53,6 +53,16 @@ English | [简体中文](./README_ZH.md)
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.15 20220213
+### Optimize
+- Optimize UI
+- Delete session add secondary confirmation
+- `communication channel` adapts to most payloads
+- Merge Metasploit Framework version 6.1.30
+### Bugfix
+- Fix the MIUI crash problem of `mobile camera taking photos`
+
+
 ## v1.5.14 20220206
 ### New features
 - Add three Android teaching demonstration modules (obtain target mobile phone SMS / call record / address book) (take photos with mobile phone camera) (record audio with mobile phone)
