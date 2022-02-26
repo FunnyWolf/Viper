@@ -40,6 +40,15 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.16 20220226
+### 优化
+- 优化部分UI,适配Macox
+- 合并metasploit-framework 6.1.32版本
+### Bugfix
+- 修复`伪造成Word文档的exe文件`某些情境下无法清理exe问题
+- 修复Python,Java,Android类型Payload无法上线问题
+
+
 ## v1.5.15 20220213
 ### 优化
 - 优化部分UI布局

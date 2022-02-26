@@ -53,6 +53,14 @@ English | [简体中文](./README_ZH.md)
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.16 20220226
+### Optimize
+- Optimize UI and adapt to macox
+- Merge Metasploit Framework version 6.1.32
+### Bugfix
+- Fix `Fake exe file of Word document` exe cannot be cleaned up in some situations
+- Fix the problem that `Python/Java/Android` payloads cannot online
+
 ## v1.5.15 20220213
 ### Optimize
 - Optimize UI
