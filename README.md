@@ -53,6 +53,15 @@ English | [简体中文](./README_ZH.md)
 <details>
 <summary><b>✨Click to expand</b></summary>
 
+## v1.5.17 20220305
+### New features
+- Add Android into `Payload And Handler`
+### Optimize
+- Merge Metasploit Framework version 6.1.33
+### Bugfix
+- Fix the problem that msfrpc generates a large number of 127.0.0.1 connect
+- Repairing 'docker health check' cause a large number of 'TIME_WAIT' connect
+
 ## v1.5.16 20220226
 ### Optimize
 - Optimize UI and adapt to macox

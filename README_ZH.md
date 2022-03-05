@@ -40,6 +40,15 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.17 20220305
+### 新功能
+- 支持在UI界面中使用Android类型`监听载荷`
+### 优化
+- 合并metasploit-framework 6.1.33版本
+### Bugfix
+- 修复MSFRPC生成大量127.0.0.1网络链接问题
+- 修复Docker Health Check导致生成大量TIME_WAIT链接问题
+
 ## v1.5.16 20220226
 ### 优化
 - 优化部分UI,适配Macox
