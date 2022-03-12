@@ -43,9 +43,10 @@
 ## v1.5.18 20220311
 ### 优化
 - Viper重启后不再自动加载历史监听,而是生成对应的虚拟监听并加入`备份`标签,便于用户手动恢复
+- 调用jemalloc编译ruby解释器,优化MSF内存占用
 - 合并metasploit-framework 6.1.34版本
 ### Bugfix
-- 修复reverse_https关闭后端口占用问题
+- 修复reverse_https监听关闭后端口占用问题
 - to_handler生成的监听当前在WEBUI正确显示
 
 ## v1.5.17 20220305
