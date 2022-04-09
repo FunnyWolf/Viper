@@ -40,6 +40,13 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.20 20220409
+### 新功能
+- 新增`分卷压缩目录/文件(7z)`模块
+### 优化
+- 合并metasploit-framework 6.1.38版本
+
+
 ## v1.5.19 20220328
 ### 优化
 - Session文件管理增加缓存,优化首次打开速度
@@ -931,6 +938,7 @@ Edward_Snowdeng exp
 [yumusb](https://github.com/yumusb)
 [Tokisaki-Galaxy](https://github.com/Tokisaki-Galaxy)
 [helinze](https://github.com/helinze)
+
 # 404StarLink 2.0 - Galaxy
 
 ![](https://github.com/knownsec/404StarLink-Project/raw/master/logo.png)
