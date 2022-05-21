@@ -40,6 +40,14 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.21 20220521
+### 优化
+- 更新`内网代理`提示
+- 优化`被动扫描`模块加载逻辑,提高性能
+- 合并metasploit-framework 6.1.44版本
+### Bugfix
+- `FOFA`报错问题[issues](https://github.com/FunnyWolf/Viper/issues/87)
+
 ## v1.5.20 20220409
 ### 新功能
 - 新增`分卷压缩目录/文件(7z)`模块
