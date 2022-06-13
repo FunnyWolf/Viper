@@ -40,6 +40,13 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.22 20220614
+### 优化
+- 优化viperpython与vipermsf定时心跳逻辑,解决渗透服务无响应问题
+- 合并metasploit-framework 6.2.3版本
+
+
+
 ## v1.5.21 20220521
 ### 优化
 - 更新`内网代理`提示
@@ -898,6 +905,7 @@ https://www.bilibili.com/video/BV1PQ4y1C7w7/
 # 友情链接
 
 [使用Cloudflare Argo隐藏VIPER后台](https://tokisaki.top/blog/viper-via-cloudflare-argo/)
+
 [msf http使用cloudflare argo上线](https://tokisaki.top/blog/meterpreter-via-cloudflare-argo/)
 
 # 常见问题
