@@ -40,6 +40,14 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.23 20220807
+### 优化
+- 合并metasploit-framework 6.2.12版本
+
+### Bugfix
+- 修复yajl-ruby bug导致的`渗透服务`无响应问题/msf cpu占用100%问题/内存占用过高问题
+- [yajl-ruby commit](https://github.com/brianmario/yajl-ruby/commit/e8de283a6d64f0902740fd09e858fc3d7d803161)
+
 ## v1.5.22 20220614
 ### 优化
 - 优化viperpython与vipermsf定时心跳逻辑,解决渗透服务无响应问题
