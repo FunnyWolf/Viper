@@ -40,6 +40,17 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.24 20220911
+### 新功能
+- 新增`UI提示框获取用户输入的密码`模块
+### 优化
+- mitmproxy开放公网访问,添加http代理认证
+- msfrpc web组件由puma替换为thin,减少cpu占用
+- msfrpc默认开启cpulimit 50%
+- msfrpc使用OJ为默认json组件,替换yajl(yajl历史出现过多个dos漏洞)
+- 更新Django 4.0
+- 合并metasploit-framework 6.2.18版本
+
 ## v1.5.23 20220807
 ### 优化
 - 合并metasploit-framework 6.2.12版本
