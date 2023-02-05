@@ -40,6 +40,14 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.26 20230205
+### 优化
+- 合并metasploit-framework 6.3.2版本 (更新多个域渗透模块)
+
+### Bugfix
+- 修复 https://github.com/FunnyWolf/Viper/issues/93
+- 修复 https://github.com/FunnyWolf/Viper/issues/120
+
 ## v1.5.25 20221016
 ### 优化
 - 合并metasploit-framework 6.2.23版本
