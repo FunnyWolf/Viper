@@ -40,6 +40,16 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.27 20220911
+### 新功能
+- 新增`基础LoaderShellcode分离免杀(Linux)`模块
+### 优化
+- 合并metasploit-framework 6.3.15版本
+### Bugfix
+- 修复Python类型payload无法上线问题
+- 修复`命令终端`输出中文报错问题(提示执行超时)
+- 修复Session`通信信道`功能无法使用问题
+
 ## v1.5.26 20230205
 ### 优化
 - 合并metasploit-framework 6.3.2版本 (更新多个域渗透模块)
