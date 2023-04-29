@@ -43,6 +43,7 @@
 ## v1.5.27 20230429
 ### 新功能
 - 新增`基础LoaderShellcode分离免杀(Linux)`模块
+- Viper支持安装历史版本(最早支持1.5.26)
 ### 优化
 - 合并metasploit-framework 6.3.15版本
 ### Bugfix
