@@ -40,7 +40,7 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
-## v1.5.27 20220911
+## v1.5.27 20230429
 ### 新功能
 - 新增`基础LoaderShellcode分离免杀(Linux)`模块
 ### 优化
