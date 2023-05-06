@@ -40,6 +40,17 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.28 20230506
+### 新功能
+- 新增`只显示Session`功能(首页和网络拓扑更简洁)
+- 面向互联网的handler被扫描(网络测绘)时会在Notice提示
+### 优化
+- 合并metasploit-framework 6.3.16版本
+### Bugfix
+- 修复无法修改包含中文内容的文件问题
+- 修复`文件管理`无法上传文件问题
+
+
 ## v1.5.27 20230429
 ### 新功能
 - 新增`基础LoaderShellcode分离免杀(Linux)`模块
