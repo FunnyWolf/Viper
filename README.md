@@ -40,6 +40,16 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.5.29 20230522
+### 优化
+- 端口转发记录新增连接提示
+- 模块运行结果记录运行模块的sessionid
+- 适配reverse_tcp_ssl类型payload
+- 合并metasploit-framework 6.3.18版本
+### Bugfix
+- 修复sock4a/socks5代理无法使用问题
+- 修复session长时间运行导致内存占用过高问题
+
 ## v1.5.28 20230506
 ### 新功能
 - 新增`只显示Session`功能(首页和网络拓扑更简洁)
