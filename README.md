@@ -40,6 +40,13 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.6.0 20230701
+### 优化
+- 优化反溯源方案 [文档链接](https://www.yuque.com/vipersec/help/ilwe2iprztf9hlqv)
+- 优化`内存执行C#可执行文件(Bypass)`模块
+- `关于VIPER`中可以快捷查看最新版本
+- 合并metasploit-framework 6.3.24版本
+
 ## v1.5.30 20230617
 ### 新功能
 - Viper所有功能都可通过右下角链接跳转到对应文档
