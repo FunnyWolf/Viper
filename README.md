@@ -40,6 +40,14 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.6.1 20230709
+### 优化
+- 合并metasploit-framework 6.3.25版本
+### Bugfix
+- 修复NAT网络Linux主机(各大云厂商VPS)IP显示为::1问题
+- 修复NAT网络Linux主机(各大云厂商VPS)上线生成多个主机问题
+
+
 ## v1.6.0 20230701
 ### 优化
 - 优化反溯源方案 [文档链接](https://www.yuque.com/vipersec/help/ilwe2iprztf9hlqv)
