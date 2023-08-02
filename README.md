@@ -40,6 +40,16 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.6.2 20230802
+### 优化
+- 优化Session Timeout默认值,断线可自动切换传输协议
+- reverse_http监听不再返回404页面,直接关闭连接
+- 优化`网络拓扑`,根据载荷类型确认方向并动态显示当前存活的连接
+- 合并metasploit-framework 6.3.28版本
+### Bugfix
+- Socks5代理在存在连接时无法正确关闭问题
+
+
 ## v1.6.1 20230709
 ### 优化
 - 合并metasploit-framework 6.3.25版本
