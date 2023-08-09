@@ -2,7 +2,7 @@
 name: Bug反馈
 about: 反馈Bug帮助Viper改进
 title: "[BUG]"
-labels: ''
+labels: BUG
 assignees: FunnyWolf
 
 ---
