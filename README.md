@@ -40,6 +40,18 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.6.3 20230812
+### 优化
+- 调整vipermsf及viperpython日志级别及格式,便于定位问题
+- 关闭vipermsf的cpulimit
+- 新增vipermsf心跳异常提示
+- 更新沙箱IP列表,参考项目: https://github.com/0x727/CloudSandbox
+- 优化网络拓扑动态效果
+- 合并metasploit-framework 6.3.30版本
+### Bugfix
+- Fix https://github.com/FunnyWolf/Viper/issues/150 session下载文件时会偶发性的下载了1m中断
+- Fix https://github.com/FunnyWolf/Viper/issues/145 thin的pid文件未清除导致重启msf后台服务无法启动
+
 ## v1.6.2 20230802
 ### 优化
 - 优化Session Timeout默认值,断线可自动切换传输协议
