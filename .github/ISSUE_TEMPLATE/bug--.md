@@ -12,12 +12,12 @@ assignees: FunnyWolf
 2. YYY
 
 **截图**
-请提供Bug出现时的截图.
+Bug截图.
 
 @Funnywolf
 
 <!--
 以下信息可能会帮助你
-[运行日志](https://www.yuque.com/vipersec/blog/is0ypq)
+[下载日志/联系作者/问题汇总](https://www.yuque.com/vipersec/install/py5fqc)
 或者搜索Issues
 -->
