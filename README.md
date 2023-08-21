@@ -40,6 +40,24 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v1.6.4 20230821
+### 新功能
+- 新增`判断Session是否运行在容器中`模块
+### 优化
+- session通过鼠标提示展示英文的地理位置信息
+- Viper通过CI自动更新Geolite数据库
+- Viper当前通过CI自动构建
+- 优化模块运行部分前端提示信息
+- 优化viperpython日志格式
+- 提高`运行信息`执行速度
+- 渗透服务异常时日志更详细说明异常类型
+- 合并metasploit-framework 6.3.31版本
+### Bugfix
+- Fix https://github.com/FunnyWolf/Viper/issues/155 Session心跳显示999,msfrpc状态正常,界面显示渗透服务心跳异常
+- Fix https://github.com/FunnyWolf/Viper/issues/150 session下载文件时会偶发性的下载了1m中断
+- Fix https://github.com/FunnyWolf/Viper/issues/156 已经上线的session界面未显示
+- Fix https://github.com/FunnyWolf/Viper/issues/153 日志逻辑问题
+
 ## v1.6.3 20230812
 ### 优化
 - 调整vipermsf及viperpython日志级别及格式,便于定位问题
