@@ -40,6 +40,16 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## 20230827
+### 优化
+- 反溯源脚本nobody.sh可以快速使用初始nginx配置
+- 合并metasploit-framework 6.3.32版本
+- Viper后续使用构建时间作为版本号
+### Bugfix
+- fix https://github.com/FunnyWolf/Viper/issues/155
+- fix https://github.com/FunnyWolf/Viper/issues/163
+- fix https://github.com/FunnyWolf/Viper/issues/161
+
 ## v1.6.4 20230821
 ### 新功能
 - 新增`判断Session是否运行在容器中`模块
@@ -57,6 +67,18 @@
 - Fix https://github.com/FunnyWolf/Viper/issues/150 session下载文件时会偶发性的下载了1m中断
 - Fix https://github.com/FunnyWolf/Viper/issues/156 已经上线的session界面未显示
 - Fix https://github.com/FunnyWolf/Viper/issues/153 日志逻辑问题
+
+## v1.6.3 20230812
+### 优化
+- 调整vipermsf及viperpython日志级别及格式,便于定位问题
+- 关闭vipermsf的cpulimit
+- 新增vipermsf心跳异常提示
+- 更新沙箱IP列表,参考项目: https://github.com/0x727/CloudSandbox
+- 优化网络拓扑动态效果
+- 合并metasploit-framework 6.3.30版本
+### Bugfix
+- Fix https://github.com/FunnyWolf/Viper/issues/150 session下载文件时会偶发性的下载了1m中断
+- Fix https://github.com/FunnyWolf/Viper/issues/145 thin的pid文件未清除导致重启msf后台服务无法启动
 
 ## v1.6.3 20230812
 ### 优化
