@@ -40,6 +40,17 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## 2023-09-14-19-59-43
+### 优化
+- 清理不必要的日志打印
+- 合并metasploit-framework 6.3.34版本
+- 增加后台服务监控日志
+- 渗透服务使用多线程模式,解决Session操作执行超时导致其他任务无法进行
+
+### Bugfix
+- fix Python Meterpreter断线后无法重连问题
+  fix https://github.com/FunnyWolf/Viper/issues/145
+
 ## 20230827
 ### 优化
 - 反溯源脚本nobody.sh可以快速使用初始nginx配置
