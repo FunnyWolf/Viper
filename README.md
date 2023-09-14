@@ -39,7 +39,6 @@
 
 <details>
 <summary><b>✨点击展开</b></summary>
-
 ## 2023-09-14-19-59-43
 ### 优化
 - 清理不必要的日志打印
@@ -50,6 +49,17 @@
 ### Bugfix
 - fix Python Meterpreter断线后无法重连问题
   fix https://github.com/FunnyWolf/Viper/issues/145
+
+## 20230831
+### 优化
+- 清除不需要的日志,提高系统运行速度
+- 优化docker logs日志,存储到日志目录便于问题定位
+- docker healthcheck当前检查所有后台服务
+
+### Bugfix
+- fix https://github.com/FunnyWolf/Viper/issues/117
+- fix https://github.com/FunnyWolf/Viper/issues/145
+
 
 ## 20230827
 ### 优化
