@@ -40,6 +40,21 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## 2023-09-24-20-18-56
+### 新功能
+- `自动编排`新增`Session定时任务`功能
+- 新增`TCPLOG服务器`模块 (作者[xizyy](https://github.com/xizyy))
+- 新增`Last日志删除`模块 (作者[xizyy](https://github.com/xizyy))
+### 优化
+- 前端界面支持OSX的Payload和Handler生成
+- Session展示区域支持伸缩(点击右侧按钮扩大缩小)
+- 合并metasploit-framework 6.3.35版本
+
+
+### Bugfix
+- fix 监听`通信通道`选择Session后不显示问题
+- fix https://github.com/FunnyWolf/Viper/issues/177 `内存执行C#可执行文件`模块报错问题
+
 ## 2023-09-14-19-59-43
 ### 优化
 - 清理不必要的日志打印
