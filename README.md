@@ -40,6 +40,11 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## 2023-11-23-15-18-35
+### Bugfix
+- Fix https://github.com/FunnyWolf/Viper/issues/129 渗透服务连接失败,请检查MSFRPC状态 问题
+
+
 ## 2023-09-24-20-18-56
 ### 新功能
 - `自动编排`新增`Session定时任务`功能
