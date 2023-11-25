@@ -40,10 +40,10 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
-## 2023-11-23-15-18-35
+## 2023-11-25-18-48-35
 ### Bugfix
 - Fix https://github.com/FunnyWolf/Viper/issues/129 渗透服务连接失败,请检查MSFRPC状态 问题
-
+- Fix https://github.com/FunnyWolf/Viper/issues/178 安装完成后访问Web页面时报502错误
 
 ## 2023-09-24-20-18-56
 ### 新功能
