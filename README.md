@@ -40,6 +40,13 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+
+## 2023-12-03-13-44-27
+### Bugfix
+- Fix https://github.com/FunnyWolf/Viper/issues/188
+- Fix https://github.com/FunnyWolf/Viper/issues/187
+- Fix https://github.com/FunnyWolf/Viper/issues/186
+
 ## 2023-11-25-18-48-35
 ### Bugfix
 - Fix https://github.com/FunnyWolf/Viper/issues/129 渗透服务连接失败,请检查MSFRPC状态 问题
