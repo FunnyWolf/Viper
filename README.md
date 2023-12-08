@@ -40,6 +40,13 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## 2023-12-07-13-44-18
+### 优化
+- 每个Session连接请求会展示地理位置信息
+- 合并metasploit-framework 6.3.46版本
+### Bugfix
+- Fix https://github.com/FunnyWolf/Viper/issues/191
+
 
 ## 2023-12-03-13-44-27
 ### Bugfix
