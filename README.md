@@ -1172,3 +1172,10 @@ Viper(炫彩蛇) 是 404Team [星链计划2.0](https://github.com/knownsec/404St
 有任何疑问又或是想要找小伙伴交流，可以参考星链计划的加群方式。
 
 - [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
+
+# JetBrains Open Source License
+
+Viper has been being developed with Pycharm/WebStorm/Rubymine under the **free JetBrains Open Source license(s)** granted by JetBrains s.r.o., hence I would like to express my gratitude here.
+
+<a href="https://jb.gg/OpenSourceSupport" target="_blank"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo." width="300"></a>
+
