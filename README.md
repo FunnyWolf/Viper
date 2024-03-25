@@ -40,81 +40,128 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
-## 2024-02-01-15-37-38
+## v2.0 2024-03-25-14-54-27
+
 ### 新功能
+
+- 互联网攻击面管理正式上线
+
+### 优化
+
+- `360 Quake`支持多账号自动切换
+- 优化`网络资产`搜索性能
+- 前端升级Ant Design V5版本
+- 新增导航页面
+- 优化`创建监听`和`端口转发`时端口已被占用时提示
+
+### Bugfix
+
+- fix https://github.com/FunnyWolf/Viper/issues/195
+- fix https://github.com/FunnyWolf/Viper/issues/194
+- fix https://github.com/FunnyWolf/Viper/issues/193
+- fix https://github.com/FunnyWolf/Viper/issues/192
+- fix https://github.com/FunnyWolf/Viper/issues/200
+
+## 2024-02-01-15-37-38
+
+### 新功能
+
 - 新增互联网攻击面管理功能(Beta)
 
-
 ## 2023-12-07-13-44-18
+
 ### 优化
+
 - 每个Session连接请求会展示地理位置信息
 - 合并metasploit-framework 6.3.46版本
+
 ### Bugfix
+
 - Fix https://github.com/FunnyWolf/Viper/issues/191
 
-
 ## 2023-12-03-13-44-27
+
 ### Bugfix
+
 - Fix https://github.com/FunnyWolf/Viper/issues/188
 - Fix https://github.com/FunnyWolf/Viper/issues/187
 - Fix https://github.com/FunnyWolf/Viper/issues/186
 
 ## 2023-11-25-18-48-35
+
 ### Bugfix
+
 - Fix https://github.com/FunnyWolf/Viper/issues/129 渗透服务连接失败,请检查MSFRPC状态 问题
 - Fix https://github.com/FunnyWolf/Viper/issues/178 安装完成后访问Web页面时报502错误
 
 ## 2023-09-24-20-18-56
+
 ### 新功能
+
 - `自动编排`新增`Session定时任务`功能
 - 新增`TCPLOG服务器`模块 (作者[xizyy](https://github.com/xizyy))
 - 新增`Last日志删除`模块 (作者[xizyy](https://github.com/xizyy))
+
 ### 优化
+
 - 前端界面支持OSX的Payload和Handler生成
 - Session展示区域支持伸缩(点击右侧按钮扩大缩小)
 - 合并metasploit-framework 6.3.35版本
 
-
 ### Bugfix
+
 - fix 监听`通信通道`选择Session后不显示问题
 - fix https://github.com/FunnyWolf/Viper/issues/177 `内存执行C#可执行文件`模块报错问题
 
 ## 2023-09-14-19-59-43
+
 ### 优化
+
 - 清理不必要的日志打印
 - 合并metasploit-framework 6.3.34版本
 - 增加后台服务监控日志
 - 渗透服务使用多线程模式,解决Session操作执行超时导致其他任务无法进行
 
 ### Bugfix
+
 - fix Python Meterpreter断线后无法重连问题
   fix https://github.com/FunnyWolf/Viper/issues/145
 
 ## 20230831
+
 ### 优化
+
 - 清除不需要的日志,提高系统运行速度
 - 优化docker logs日志,存储到日志目录便于问题定位
 - docker healthcheck当前检查所有后台服务
 
 ### Bugfix
+
 - fix https://github.com/FunnyWolf/Viper/issues/117
 - fix https://github.com/FunnyWolf/Viper/issues/145
 
-
 ## 20230827
+
 ### 优化
+
 - 反溯源脚本nobody.sh可以快速使用初始nginx配置
 - 合并metasploit-framework 6.3.32版本
 - Viper后续使用构建时间作为版本号
+
 ### Bugfix
+
 - fix https://github.com/FunnyWolf/Viper/issues/155
 - fix https://github.com/FunnyWolf/Viper/issues/163
 - fix https://github.com/FunnyWolf/Viper/issues/161
 
 ## v1.6.4 20230821
+
 ### 新功能
+
 - 新增`判断Session是否运行在容器中`模块
+
 ### 优化
+
 - session通过鼠标提示展示英文的地理位置信息
 - Viper通过CI自动更新Geolite数据库
 - Viper当前通过CI自动构建
@@ -123,122 +170,168 @@
 - 提高`运行信息`执行速度
 - 渗透服务异常时日志更详细说明异常类型
 - 合并metasploit-framework 6.3.31版本
+
 ### Bugfix
+
 - Fix https://github.com/FunnyWolf/Viper/issues/155 Session心跳显示999,msfrpc状态正常,界面显示渗透服务心跳异常
 - Fix https://github.com/FunnyWolf/Viper/issues/150 session下载文件时会偶发性的下载了1m中断
 - Fix https://github.com/FunnyWolf/Viper/issues/156 已经上线的session界面未显示
 - Fix https://github.com/FunnyWolf/Viper/issues/153 日志逻辑问题
 
 ## v1.6.3 20230812
+
 ### 优化
+
 - 调整vipermsf及viperpython日志级别及格式,便于定位问题
 - 关闭vipermsf的cpulimit
 - 新增vipermsf心跳异常提示
 - 更新沙箱IP列表,参考项目: https://github.com/0x727/CloudSandbox
 - 优化网络拓扑动态效果
 - 合并metasploit-framework 6.3.30版本
+
 ### Bugfix
+
 - Fix https://github.com/FunnyWolf/Viper/issues/150 session下载文件时会偶发性的下载了1m中断
 - Fix https://github.com/FunnyWolf/Viper/issues/145 thin的pid文件未清除导致重启msf后台服务无法启动
 
 ## v1.6.3 20230812
+
 ### 优化
+
 - 调整vipermsf及viperpython日志级别及格式,便于定位问题
 - 关闭vipermsf的cpulimit
 - 新增vipermsf心跳异常提示
 - 更新沙箱IP列表,参考项目: https://github.com/0x727/CloudSandbox
 - 优化网络拓扑动态效果
 - 合并metasploit-framework 6.3.30版本
+
 ### Bugfix
+
 - Fix https://github.com/FunnyWolf/Viper/issues/150 session下载文件时会偶发性的下载了1m中断
 - Fix https://github.com/FunnyWolf/Viper/issues/145 thin的pid文件未清除导致重启msf后台服务无法启动
 
 ## v1.6.2 20230802
+
 ### 优化
+
 - 优化Session Timeout默认值,断线可自动切换传输协议
 - reverse_http监听不再返回404页面,直接关闭连接
 - 优化`网络拓扑`,根据载荷类型确认方向并动态显示当前存活的连接
 - 合并metasploit-framework 6.3.28版本
+
 ### Bugfix
+
 - Socks5代理在存在连接时无法正确关闭问题
 
-
 ## v1.6.1 20230709
+
 ### 优化
+
 - 合并metasploit-framework 6.3.25版本
+
 ### Bugfix
+
 - 修复NAT网络Linux主机(各大云厂商VPS)IP显示为::1问题
 - 修复NAT网络Linux主机(各大云厂商VPS)上线生成多个主机问题
 
-
 ## v1.6.0 20230701
+
 ### 优化
+
 - 优化反溯源方案 [文档链接](https://www.yuque.com/vipersec/help/ilwe2iprztf9hlqv)
 - 优化`内存执行C#可执行文件(Bypass)`模块
 - `关于VIPER`中可以快捷查看最新版本
 - 合并metasploit-framework 6.3.24版本
 
 ## v1.5.30 20230617
+
 ### 新功能
+
 - Viper所有功能都可通过右下角链接跳转到对应文档
+
 ### 优化
+
 - `监听防火墙`前端UI优化
 - `只显示Session`功能可在主页面使用
 - 合并metasploit-framework 6.3.22版本
+
 ### Bugfix
+
 - 修复python类型payload断线后无法重连及无法清理历史网络连接问题
 
-
 ## v1.5.29 20230522
+
 ### 优化
+
 - 端口转发记录新增连接提示
 - 模块运行结果记录运行模块的sessionid
 - 适配reverse_tcp_ssl类型payload
 - 合并metasploit-framework 6.3.18版本
+
 ### Bugfix
+
 - 修复sock4a/socks5代理无法使用问题
 - 修复session长时间运行导致内存占用过高问题
 
 ## v1.5.28 20230506
+
 ### 新功能
+
 - 新增`只显示Session`功能(首页和网络拓扑更简洁)
 - 面向互联网的handler被扫描(网络测绘)时会在Notice提示
+
 ### 优化
+
 - 合并metasploit-framework 6.3.16版本
+
 ### Bugfix
+
 - 修复无法修改包含中文内容的文件问题
 - 修复`文件管理`无法上传文件问题
 
-
 ## v1.5.27 20230429
+
 ### 新功能
+
 - 新增`基础LoaderShellcode分离免杀(Linux)`模块
 - Viper支持安装历史版本(最早支持1.5.26)
+
 ### 优化
+
 - 合并metasploit-framework 6.3.15版本
+
 ### Bugfix
+
 - 修复Python类型payload无法上线问题
 - 修复`命令终端`输出中文报错问题(提示执行超时)
 - 修复Session`通信信道`功能无法使用问题
 
 ## v1.5.26 20230205
+
 ### 优化
+
 - 合并metasploit-framework 6.3.2版本 (更新多个域渗透模块)
 
 ### Bugfix
+
 - 修复 https://github.com/FunnyWolf/Viper/issues/93
 - 修复 https://github.com/FunnyWolf/Viper/issues/120
 
 ## v1.5.25 20221016
+
 ### 优化
+
 - 合并metasploit-framework 6.2.23版本
 - 新增BOF支持
 
-
 ## v1.5.24 20220911
+
 ### 新功能
+
 - 新增`UI提示框获取用户输入的密码`模块
+
 ### 优化
+
 - mitmproxy开放公网访问,添加http代理认证
 - msfrpc web组件由puma替换为thin,减少cpu占用
 - msfrpc默认开启cpulimit 50%
@@ -247,103 +340,139 @@
 - 合并metasploit-framework 6.2.18版本
 
 ## v1.5.23 20220807
+
 ### 优化
+
 - 合并metasploit-framework 6.2.12版本
 
 ### Bugfix
+
 - 修复yajl-ruby bug导致的`渗透服务`无响应问题/msf cpu占用100%问题/内存占用过高问题
 - [yajl-ruby commit](https://github.com/brianmario/yajl-ruby/commit/e8de283a6d64f0902740fd09e858fc3d7d803161)
 
 ## v1.5.22 20220614
+
 ### 优化
+
 - 优化viperpython与vipermsf定时心跳逻辑,解决渗透服务无响应问题
 - 合并metasploit-framework 6.2.3版本
 
-
-
 ## v1.5.21 20220521
+
 ### 优化
+
 - 更新`内网代理`提示
 - 优化`被动扫描`模块加载逻辑,提高性能
 - 合并metasploit-framework 6.1.44版本
+
 ### Bugfix
+
 - `FOFA`报错问题[issues](https://github.com/FunnyWolf/Viper/issues/87)
 
 ## v1.5.20 20220409
+
 ### 新功能
+
 - 新增`分卷压缩目录/文件(7z)`模块
+
 ### 优化
+
 - 合并metasploit-framework 6.1.38版本
 
-
 ## v1.5.19 20220328
+
 ### 优化
+
 - Session文件管理增加缓存,优化首次打开速度
 - 合并metasploit-framework 6.1.36版本
+
 ### Bugfix
+
 - 修复无法使用migrate命令问题
 - 修复无法创建虚拟监听问题
 - 修复`Windows UAC绕过`运行报错问题
 
 ## v1.5.18 20220311
+
 ### 优化
+
 - Viper重启后不再自动加载历史监听,而是生成对应的虚拟监听并加入`备份`标签,便于用户手动恢复
 - 调用jemalloc编译ruby解释器,优化MSF内存占用
 - 合并metasploit-framework 6.1.34版本
+
 ### Bugfix
+
 - 修复reverse_https监听关闭后端口占用问题
 - to_handler生成的监听当前在WEBUI正确显示
 
 ## v1.5.17 20220305
+
 ### 新功能
+
 - 支持在UI界面中使用Android类型`监听载荷`
+
 ### 优化
+
 - 合并metasploit-framework 6.1.33版本
+
 ### Bugfix
+
 - 修复MSFRPC生成大量127.0.0.1网络链接问题
 - 修复Docker Health Check导致生成大量TIME_WAIT链接问题
 
 ## v1.5.16 20220226
+
 ### 优化
+
 - 优化部分UI,适配Macox
 - 合并metasploit-framework 6.1.32版本
+
 ### Bugfix
+
 - 修复`伪造成Word文档的exe文件`某些情境下无法清理exe问题
 - 修复Python,Java,Android类型Payload无法上线问题
 
-
 ## v1.5.15 20220213
+
 ### 优化
+
 - 优化部分UI布局
 - 删除Session增加二次确认
 - `通信通道`适配大部分Payload
 - 合并metasploit-framework 6.1.30版本
+
 ### Bugfix
+
 - 修复`手机摄像头拍照` MIUI崩溃问题
 
 ## v1.5.14 20220206
+
 ### 新功能
+
 - 新增三个Android教学演示模块(获取目标手机短信/通话记录/通讯录)(手机摄像头拍照)(手机录制音频)
 - 新增`通信通道`功能,多级内网渗透更加便捷 [readme](https://www.yuque.com/vipersec/blog/gssfbg)
+
 ### 优化
+
 - 合并metasploit-framework 6.1.29版本
 
-
 ## v1.5.13 20220111
+
 ### 新功能
+
 - 新增Zoomeye API接口
 - 新增`DNSLog服务器`模块
 
 ### 优化
+
 - 删除`全网扫描`debug接口(手工导入功能可完全代替此接口)
 - Log4j Payload回显Java version,OS arch,OS version
 - 优化`全网扫描`流水线逻辑,当前不会影响心跳数据传输
 - 合并metasploit-framework 6.1.25版本
 
 ### Bugfix
+
 - 修复`VMware Horizon Log4j Rce`超时参数不生效问题
-
-
 
 ## v1.5.12 20211231
 
@@ -358,7 +487,6 @@
 - Log4j RCE被动扫描功能更新为被动扫描模块
 - 更新Log4j RCE的bypass WAF payload
 - `Log4j RCE被动扫描模块`新增超时参数
-
 
 ## v1.5.10 20211216
 
@@ -1180,7 +1308,8 @@ Viper(炫彩蛇) 是 404Team [星链计划2.0](https://github.com/knownsec/404St
 
 # JetBrains Open Source License
 
-Viper has been being developed with Pycharm/WebStorm/Rubymine under the **free JetBrains Open Source license(s)** granted by JetBrains s.r.o., hence I would like to express my gratitude here.
+Viper has been being developed with Pycharm/WebStorm/Rubymine under the **free JetBrains Open Source license(s)**
+granted by JetBrains s.r.o., hence I would like to express my gratitude here.
 
 <a href="https://jb.gg/OpenSourceSupport" target="_blank"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo." width="300"></a>
 
