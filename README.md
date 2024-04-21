@@ -40,6 +40,28 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v2.2.1 2024-04-21-13-52-18
+
+### 新功能
+
+- 新增`通用配置`界面,可以配置`网络搜索引擎`,`wafw00f`相关配置
+
+### 优化
+
+- `服务状态`新增wafw00f检查
+- 未登录时访问导航页自动跳转
+- nuclei支持设置漏洞级别及并发数
+- 更新360 Quake接口
+- 优化wafw00f性能(gevent)
+- 优化模块报错时前端错误提示
+- 解释器更新到python3.12及pip依赖包更新到最新版本
+- 合并metasploit-framework 6.4.6版本
+
+### Bugfix
+
+- fix https://github.com/FunnyWolf/Viper/issues/207
+- fix 低概率生成C代码时出现编码错误
+
 ## v2.1 2024-03-29-16-01-04
 
 ### 新功能
@@ -92,6 +114,7 @@
 ### Bugfix
 
 - Fix https://github.com/FunnyWolf/Viper/issues/191
+
 
 ## 2023-12-03-13-44-27
 
