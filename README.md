@@ -40,6 +40,23 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v2.3.1 2024-07-08-16-03-05
+
+### 新功能
+
+- 新增`V-GPT`,AI驱动的攻击型智能体框架
+- 新增`数据分析智能体` `数据分析多角色智能体`模块
+- 新增`OpenAI`集成
+
+### 优化
+
+- 调整`平台设置`部分UI
+
+### Bugfix
+
+- fix https://github.com/FunnyWolf/Viper/issues/217
+- fix https://github.com/FunnyWolf/Viper/issues/218
+
 ## v2.3.0 2024-05-08-17-00-11
 
 ### 优化
@@ -129,7 +146,6 @@
 ### Bugfix
 
 - Fix https://github.com/FunnyWolf/Viper/issues/191
-
 
 ## 2023-12-03-13-44-27
 
