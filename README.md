@@ -40,6 +40,17 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v2.3.3 2024-08-21-11-24-51
+
+### 优化
+- 更新部分智能体prompt
+- `邮件生成/发送智能体`,可以添加及发送附件
+- 使用langgraph重构所有智能体
+- 自动清理ToolCall及Tool Message已减少Token使用
+
+### Bugfix
+- fix https://github.com/FunnyWolf/Viper/issues/225
+
 ## v2.3.2 2024-08-05-15-27-29
 
 ### 新功能
