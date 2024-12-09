@@ -39,6 +39,19 @@
 <details>
 <summary><b>✨点击展开</b></summary>
 
+## v3.0.0 2024-12-09-10-50-06
+### 新功能
+- screen_share功能支持web端直接预览
+- 攻击面管理新增`备案` `Favicon`等功能
+- 
+
+## 优化
+- 更新AI模块提示词
+- 攻击面管理数据存储由sqlite切换为elasticsearch
+- 更新后台服务启动顺序,添加启动失败原因日志
+- 合并metasploit-framework 6.4.40版本
+
+
 ## v2.3.5 2024-09-29-16-32-42
 ### 新功能
 - webcam_stream功能支持web端直接预览
