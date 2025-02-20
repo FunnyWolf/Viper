@@ -5,10 +5,14 @@
 简体中文 | [English](./README_EN.md)
 
 - Viper(炫彩蛇)是一款图形化互联网攻击面管理&红队模拟平台.
+- Viper(炫彩蛇)将内网渗透过程中常用的战术及技术进行模块化及武器化.
 - Viper(炫彩蛇)覆盖红队模拟的常用功能(杀软绕过,内网隧道,文件管理,命令行等).
 - Viper(炫彩蛇)红队模拟当前已集成100+个模块,覆盖MITRE ATT&CK的所有战术大类.
-- Viper(炫彩蛇)红队模拟支持基于LLM的智能体,用户可以用自然语言调用系统功能.
+- Viper(炫彩蛇)内置红队LLM智能体,可以用自然语言进行内网信息收集/横向移动/钓鱼邮件生成等
+- Viper(炫彩蛇)目标是帮助红队工程师提高攻击效率,简化操作,降低技术门槛.
 - Viper(炫彩蛇)攻击面管理支持备案\域名\IP\公众号小程序\CDN\WAF\漏洞等采集及管理功能.
+- Viper(炫彩蛇)支持在浏览器中运行原生msfconsole,且支持多人协作.
+
 <br>
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/159259/1631687579184-a2603220-9009-4240-9709-76b503fe8174.png?x-oss-process=image%2Fresize%2Cw_1504%2Climit_0)
@@ -207,6 +211,7 @@
 ### Bugfix
 
 - Fix https://github.com/FunnyWolf/Viper/issues/191
+
 
 ## 2023-12-03-13-44-27
 

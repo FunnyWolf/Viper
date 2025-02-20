@@ -8,12 +8,11 @@ English | [简体中文](./README.md)
   used in the process of Intranet penetration
 - Viper integrates basic functions such as bypass anti-virus software, intranet tunnel, file management, command line
   and so on
+- Viper features built-in red team LLM agent capable of intranet information gathering, lateral movement, phishing email generation, and more.
 - Viper has integrated 80+ modules, covering Resource Development / Initial Access / Execution / Persistence / Privilege
   Escalation / Defense Evasion / Credential Access / Discovery / Lateral Movement / Collection and other categories
 - Viper's goal is to help red team engineers improve attack efficiency, simplify operation and reduce technical
   threshold
-- Viper supports running native msfconsole in browser and multi - person collaboration
-
 
 <br>
 
@@ -52,6 +51,123 @@ English | [简体中文](./README.md)
 
 <details>
 <summary><b>✨Click to expand</b></summary>
+
+## v3.0.0 2024-12-09-10-50-06
+### New Features
+- screen_share function supports direct preview on the web end
+- Added 'Filing', 'Favicon' and other features to attack surface management
+- Automatically block login when Viper is brute-forced
+
+## Optimizations
+- Updated AI module prompts
+- Switched attack surface management data storage from sqlite to elasticsearch
+- Updated the startup sequence of backend services, added logs for reasons of startup failure
+- Merged Metasploit-Framework version 6.4.40
+
+
+## v2.3.5 2024-09-29-16-32-42
+### New Features
+- webcam_stream function supports direct preview on the web end
+
+### Optimizations
+- Supports entering a custom model name for `OPENAI`
+- Improved error message when `OPENAI` is not configured
+- Updated API for the 'Get Internet Exit IP' module to https://ipwho.is/
+- Prompt updates for 'Email Generation/Sending Agent' and 'Platform Operation Agent', introducing CoT and Role Play
+
+## v2.3.4 2024-09-04-16-59-30
+### New Features
+- Added 'Multi-user' feature, supporting multi-person collaboration
+
+### Optimizations
+- 'Smart Assistant' now supports output and display in Markdown format
+
+
+## v2.3.3 2024-08-21-11-24-51
+
+### Optimizations
+- Updated some smart agent prompts
+- 'Email Generation/Sending Agent' can now add and send attachments
+- Reconstructed all smart agents using langgraph
+- Automatic cleanup of ToolCall and Tool Message to reduce token usage
+
+### Bugfixes
+- Fixed https://github.com/FunnyWolf/Viper/issues/225
+
+## v2.3.2 2024-08-05-15-27-29
+
+### New Features
+
+- Added 'SMTP Configuration' for sending emails
+- 'Data Analysis Multi-role Agent' supports querying and analyzing session/handler related information
+- 'Data Analysis Multi-role Agent' supports Meterpreter-related operations (camera/stream capture/keystroke logging/file viewing)
+- Added 'Email Generation/Sending Agent', which can generate complete emails and send them based on user description
+
+### Optimizations
+
+- Adjusted some button UIs
+- 'OpenAI' adds 'gpt-4o-mini' model
+- Added heartbeat detection for service status checks in 'Penetration Service'
+- Code for 'Internet Attack Surface Management' workers has been merged into the main branch
+
+### Bugfixes
+
+- Fixed interface jitter issues
+
+## v2.3.1 2024-07-08-16-03-05
+
+### New Features
+
+- Introduced 'V-GPT', an AI-driven offensive intelligent agent framework
+- Added 'Data Analysis Agent' and 'Data Analysis Multi-role Agent' modules
+- Integrated 'OpenAI'
+
+### Optimizations
+
+- Adjusted parts of the 'Platform Settings' UI
+
+### Bugfixes
+
+- Fixed https://github.com/FunnyWolf/Viper/issues/217
+- Fixed https://github.com/FunnyWolf/Viper/issues/218
+
+## v2.3.0 2024-05-08-17-00-11
+
+### Optimizations
+
+- Adjusted the overall architecture of 'Internet Attack Surface'
+- Enhanced 'Network Asset' search functionality
+- Optimized data storage efficiency for 'Internet Attack Surface'
+- Adapted to new API interfaces of Quake
+
+### Bugfixes
+
+- Fixed the issue where modules could not use newly established listeners
+- Fixed the inability to use 'Anti-tracing'
+- Fixed the timeout issue of creating new listeners when host performance is insufficient
+
+## v2.2.1 2024-04-21-13-52-18
+
+### New Features
+
+- Added 'General Configuration' page, allowing configuration for 'Web Search Engine', 'wafw00f' related settings
+
+### Optimizations
+
+- Added wafw00f check to 'Service Status'
+- Automatically redirects to login when accessing navigation pages without being logged in
+- Nuclei now supports setting vulnerability levels and concurrency numbers
+- Updated 360 Quake interface
+- Optimized wafw00f performance (gevent)
+- Improved frontend error messages when module errors occur
+- Interpreter updated to Python 3.12 and pip dependencies updated to the latest versions
+- Merged Metasploit-Framework version 6.4.6
+
+### Bugfixes
+
+- Fixed https://github.com/FunnyWolf/Viper/issues/207
+- Fixed low probability encoding errors when generating C code
+
 
 ## v1.5.18 20220311
 ### Optimize
