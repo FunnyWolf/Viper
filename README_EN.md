@@ -4,15 +4,14 @@
 
 English | [简体中文](./README.md)
 
-- Viper is a graphical intranet penetration tool, which modularizes and weaponizes the tactics and technologies commonly
-  used in the process of Intranet penetration
-- Viper integrates basic functions such as bypass anti-virus software, intranet tunnel, file management, command line
-  and so on
-- Viper features built-in red team LLM agent capable of intranet information gathering, lateral movement, phishing email generation, and more.
-- Viper has integrated 80+ modules, covering Resource Development / Initial Access / Execution / Persistence / Privilege
-  Escalation / Defense Evasion / Credential Access / Discovery / Lateral Movement / Collection and other categories
-- Viper's goal is to help red team engineers improve attack efficiency, simplify operation and reduce technical
-  threshold
+- Viper is a graphical internet attack surface management & red team simulation platform.
+- Viper modularizes and weaponizes the tactics and techniques commonly used in internal network penetration.
+- Viper covers the common functions of red team simulations (anti-virus bypass, internal network tunnels, file management, command line, etc.).
+- Viper red team simulation currently integrates more than 100 modules, covering all major tactics of MITRE ATT&CK.
+- Viper has a built-in red team LLM agent that can use natural language to perform internal network information gathering/lateral movement/phishing email generation, etc.
+- The goal of Viper is to help red team engineers improve attack efficiency, simplify operations, and lower technical barriers.
+- Viper attack surface management supports collection and management functions for filing/domains/IPs/public account mini-programs/CDN/WAF/vulnerabilities, etc.
+- Viper supports running native msfconsole in a browser and supports multi-person collaboration.
 
 <br>
 
