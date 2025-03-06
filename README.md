@@ -1404,19 +1404,6 @@ https://www.bilibili.com/video/BV1PQ4y1C7w7/
 
 - [开发手册](https://www.yuque.com/vipersec/code)
 
-# 源代码
-
-- viperjs (前端)
-
-[https://github.com/FunnyWolf/viperjs](https://github.com/FunnyWolf/viperjs)
-
-- viperpython (后台)
-
-[https://github.com/FunnyWolf/viperpython](https://github.com/FunnyWolf/viperpython)
-
-- vipermsf (渗透服务)
-
-[https://github.com/FunnyWolf/vipermsf](https://github.com/FunnyWolf/vipermsf)
 
 # 致谢
 
@@ -1439,11 +1426,4 @@ Viper(炫彩蛇) 是 404Team [星链计划2.0](https://github.com/knownsec/404St
 有任何疑问又或是想要找小伙伴交流，可以参考星链计划的加群方式。
 
 - [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
-
-# JetBrains Open Source License
-
-Viper has been being developed with Pycharm/WebStorm/Rubymine under the **free JetBrains Open Source license(s)**
-granted by JetBrains s.r.o., hence I would like to express my gratitude here.
-
-<a href="https://jb.gg/OpenSourceSupport" target="_blank"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo." width="300"></a>
 

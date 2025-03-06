@@ -453,20 +453,6 @@ English | [简体中文](./README.md)
 
 - [Development](https://www.yuque.com/viper-en/code)
 
-# Source Code
-
-- viperjs (Frontend)
-
-[https://github.com/FunnyWolf/viperjs](https://github.com/FunnyWolf/viperjs)
-
-- viperpython (Backend)
-
-[https://github.com/FunnyWolf/viperpython](https://github.com/FunnyWolf/viperpython)
-
-- vipermsf (MSFRPC)
-
-[https://github.com/FunnyWolf/vipermsf](https://github.com/FunnyWolf/vipermsf)
-
 # Thanks
 
 Edward_Snowdeng exp
