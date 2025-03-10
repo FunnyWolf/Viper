@@ -1,6 +1,6 @@
-<div style="display: flex; justify-content: center; align-items: center;">
+<p align="center">
   <img src="docs/public/viper.svg" alt="Viper Icon" width="200">
-</div>
+</p>
 
 English | [简体中文](./README_ZH.md)
 
