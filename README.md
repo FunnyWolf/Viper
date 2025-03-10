@@ -1,5 +1,5 @@
-<div style="display: flex; justify-content: center; align-items: center; height: 30vh;">
-  <img src="docs/public/viper.svg" alt="Viper Icon" style="max-width: 30%; height: auto;">
+<div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+  <img src="docs/public/viper.svg" alt="Viper Icon" style="max-width: 10%; height: auto;">
 </div>
 
 English | [简体中文](./README_ZH.md)
@@ -31,12 +31,12 @@ efficiently completing cybersecurity assessment tasks.
 - **Attack Surface Management (Beta)**  
   Introduces Attack Surface Management (ASM) capabilities to help teams better identify and analyze potential risk points in target enterprises.
 
-![img.webp](\docs\en\guide\webp\img.webp)
-![img_1.webp](\docs\en\guide\webp\img_1.webp)
-![img_2.webp](\docs\en\guide\webp\img_2.webp)
-![img_3.webp](\docs\en\guide\webp\img_3.webp)
-![img_4.webp](\docs\en\guide\webp\img_4.webp)
-![img_5.webp](\docs\en\guide\webp\img_5.webp)
+![img.webp](./docs/en/guide/webp/img.webp)
+![img_1.webp](./docs/en/guide/webp/img_1.webp)
+![img_2.webp](./docs/en/guide/webp/img_2.webp)
+![img_3.webp](./docs/en/guide/webp/img_3.webp)
+![img_4.webp](./docs/en/guide/webp/img_4.webp)
+![img_5.webp](./docs/en/guide/webp/img_5.webp)
 
 # Website
 

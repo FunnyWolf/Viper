@@ -1,5 +1,5 @@
-<div style="display: flex; justify-content: center; align-items: center; height: 30vh;">
-  <img src="docs/public/viper.svg" alt="Viper Icon" style="max-width: 30%; height: auto;">
+<div style="display: flex; justify-content: center; align-items: center; height: 15vh;">
+  <img src="docs/public/viper.svg" alt="Viper Icon" style="max-width: 15%; height: auto;">
 </div>
 
 简体中文 | [English](./README_ZH)
@@ -38,12 +38,12 @@
 
   引入攻击面管理功能，帮助团队更好地识别和理解目标企业潜在的风险点。
 
-![img.webp](\docs\zh\guide\webp\img.webp)
-![img_1.webp](\docs\zh\guide\webp\img_1.webp)
-![img_2.webp](\docs\zh\guide\webp\img_2.webp)
-![img_3.webp](\docs\zh\guide\webp\img_3.webp)
-![img_4.webp](\docs\zh\guide\webp\img_4.webp)
-![img_5.webp](\docs\zh\guide\webp\img_5.webp)
+![img.webp](./docs/zh/guide/webp/img.webp)
+![img_1.webp](./docs/zh/guide/webp/img_1.webp)
+![img_2.webp](./docs/zh/guide/webp/img_2.webp)
+![img_3.webp](./docs/zh/guide/webp/img_3.webp)
+![img_4.webp](./docs/zh/guide/webp/img_4.webp)
+![img_5.webp](./docs/zh/guide/webp/img_5.webp)
 
 ## 官方网站
 
