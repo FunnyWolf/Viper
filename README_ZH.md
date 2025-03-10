@@ -1,5 +1,5 @@
-<div style="display: flex; justify-content: center; align-items: center; height: 15vh;">
-  <img src="docs/public/viper.svg" alt="Viper Icon" style="max-width: 15%; height: auto;">
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="docs/public/viper.svg" alt="Viper Icon" width="200">
 </div>
 
 简体中文 | [English](./README_ZH)
