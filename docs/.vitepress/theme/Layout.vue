@@ -1,4 +1,5 @@
 <script setup>
+import { Analytics } from '@vercel/analytics/vue';
 import DefaultTheme from "vitepress/theme";
 import {onMounted} from "vue";
 import {useRouter} from "vitepress";
@@ -23,6 +24,7 @@ router.onAfterRouteChanged = setupMediumZoom;
 </script>
 
 <template>
+  <Analytics />
   <Layout/>
 </template>
 

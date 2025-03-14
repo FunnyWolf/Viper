@@ -16,6 +16,7 @@
     "vitepress-plugin-lightbox": "^1.0.2"
   },
   "dependencies": {
-
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0"
   }
 }
