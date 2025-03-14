@@ -1,6 +1,4 @@
 <script setup>
-import { inject } from '@vercel/analytics';
-inject();
 import DefaultTheme from "vitepress/theme";
 import {onMounted} from "vue";
 import {useRouter} from "vitepress";
