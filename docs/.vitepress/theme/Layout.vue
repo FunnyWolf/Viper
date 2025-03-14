@@ -19,9 +19,11 @@ onMounted(setupMediumZoom);
 
 // Subscribe to route changes to re-apply medium zoom effect
 router.onAfterRouteChanged = setupMediumZoom;
+import { Analytics } from '@vercel/analytics/vue';
 </script>
 
 <template>
+  <Analytics />
   <Layout/>
 </template>
 
