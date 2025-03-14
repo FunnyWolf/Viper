@@ -1,0 +1,7 @@
+# 登录
++ 安装Viper成功后访问[https://vpsip:60000](http://10.10.10.10:60000)打开登录界面
+
++ 用户名:root,密码:**<font style="color:#F5222D;">自定义密码</font>**
+> 程序后台有密码限制,不能使用diypassword作为密码
+
++ 登录成功后进入Viper主界面
