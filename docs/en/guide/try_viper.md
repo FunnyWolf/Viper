@@ -4,13 +4,13 @@ If you are using Viper for the first time, you can refer to the following articl
 
 ## Red Team Simulation
 
-[First Session](../blog/first_session)
+[First Session](../training/first_session)
 
-[Information Collection](../blog/information_collection)
+[Information Collection](../training/information_collection)
 
-[Lateral Movement](../blog/lateral_movement)
+[Lateral Movement](../training/lateral_movement)
 
 ## Attack surface management
 
-[Information_collection (Internet)](../blog/Information_collection_Internet)
+[Information_collection (Internet)](../training/Information_collection_Internet)
 

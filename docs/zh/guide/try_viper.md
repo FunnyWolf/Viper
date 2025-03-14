@@ -4,13 +4,13 @@
 
 ## 红队模拟
 
-[获取权限](../blog/first_session)
+[获取权限](../training/first_session)
 
-[信息收集](../blog/information_collection)
+[信息收集](../training/information_collection)
 
-[横向渗透](../blog/lateral_movement)
+[横向渗透](../training/lateral_movement)
 
 ## 攻击面管理
 
-[信息收集(互联网)](../blog/Information_collection_Internet)
+[信息收集(互联网)](../training/Information_collection_Internet)
 
