@@ -72,6 +72,15 @@ export const shared = defineConfig({
       src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4907153636177535',
       crossorigin: 'anonymous',
     }],
+    ['script', {}, `
+      window.va = window.va || function () { 
+        (window.vaq = window.vaq || []).push(arguments); 
+      };
+    `],
+    ['script', {
+      src: '/_vercel/insights/script.js',
+      defer: true
+    }]
   ],
 
   themeConfig: {
