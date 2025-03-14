@@ -1,4 +1,4 @@
-# MSFCONSOLE
+# Msfconsole
 
 ## Functional Features
 

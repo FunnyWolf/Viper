@@ -14,6 +14,7 @@ export const zh = defineConfig({
         sidebar: {
             '/zh/guide/': {base: '/zh/guide/', items: sidebarGuide()},
             '/zh/module/': {base: '/zh/module/', items: sidebarReference()},
+            '/zh/training/': {base: '/zh/training/', items: sidebarTraining()},
             '/zh/blog/': {base: '/zh/blog/', items: sidebarBlog()}
         },
 
@@ -65,6 +66,11 @@ function nav(): DefaultTheme.NavItem[] {
             text: '模块',
             link: '/zh/module/index',
             activeMatch: '/zh/module/'
+        },
+        {
+            text: '培训',
+            link: '/zh/training/index',
+            activeMatch: '/zh/training/'
         },
         {
             text: '博客',
@@ -139,11 +145,11 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '回连过滤', link: 'handler_firewall'},
                 {text: 'WebDelivery', link: 'web_delivery'},
                 {text: '自动编排', link: 'automation'},
-                {text: '凭证管理', link: 'credential_management'},
+                {text: '凭证管理', link: 'credential'},
                 {text: '文件列表', link: 'file_explorer'},
-                {text: '内网代理', link: 'internal_proxy'},
-                {text: 'MSFCONSOLE', link: 'msfconsole'},
-                {text: '网络拓扑', link: 'network_topology'},
+                {text: '内网代理', link: 'routeproxy'},
+                {text: 'Msfconsole', link: 'msfconsole'},
+                {text: '网络拓扑', link: 'pivotgraph'},
                 {text: '全网扫描', link: 'internet_scan'},
                 {text: '被动扫描', link: 'passive_scan'},
                 {text: '', link: ''},
@@ -401,7 +407,7 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
     ]
 }
 
-function sidebarBlog(): DefaultTheme.SidebarItem[] {
+function sidebarTraining(): DefaultTheme.SidebarItem[] {
     return [
         {
             text: '熟悉Viper',
@@ -429,8 +435,27 @@ function sidebarBlog(): DefaultTheme.SidebarItem[] {
                 {text: 'cthun3与Viper联动', link: 'cthun3_and_viper_collaborate'},
 
             ]
-        },
-        {text: '社区文章', link: 'community_articles'},
+        }
+    ]
+}
+
+function sidebarBlog(): DefaultTheme.SidebarItem[] {
+    return [
+        {text: 'Viper开源图形化内网渗透工具安装与入门指南', link: 'viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide'},
+        {text: 'Viper半自动化内网信息收集', link: 'viper_semi_automated_intranet_information_gathering'},
+        {text: '隐形的翅膀:MSF使用DNS隧道进行上线', link: 'invisible_wings_msf_using_dns_tunnel_for_online'},
+        {text: 'MSF执行程序集与CobaltStrike执行程序集', link: 'msfexecute_assembly_and_cobaltstrikeexecute_assembly'},
+        {text: 'MSF休眠与CobaltStrike休眠', link: 'msfsleep_and_cobaltstrikesleep'},
+        {text: '无互联网内网隧道构建新思路', link: 'no_internet_intranet_tunnel_construction_new_ideas'},
+        {text: '两种自动化进程注入方式', link: 'two_ways_of_automated_process_injection'},
+        {text: '利用Heroku隐藏C2服务器简单零成本', link: 'utilize_heroku_to_hide_c2_server_simple_zero_cost'},
+        {text: '如何在MSF中高效使用云函数', link: 'how_to_use_cloud_functions_efficiently_in_msf'},
+        {text: '如何将MSF Meterpreter变得像CS Beacon一样稳定', link: 'how_to_transform_msf_meterpreter_as_stable_as_cs_beacon'},
+        {text: 'FRP与云函数用于内网渗透', link: 'frp_and_cloud_functions_for_intranet_penetration'},
+        {text: '从零构建Log4j被动扫描器', link: 'build_log4j_passive_scanner_from_scratch'},
+        {text: '进攻性网络安全智能代理', link: 'offensive_cybersecurity_intelligent_agent'},
+        {text: '智能纪元AI大模型驱动的红队攻击技术', link: 'intelligent_epoch_ai_large_model_driven_red_team_attack_techniques'},
+        {text: '智能纪元AI大模型驱动的红队攻击技术II', link: 'intelligent_epoch_ai_large_model_driven_red_team_attack_techniques_ii'},
     ]
 }
 

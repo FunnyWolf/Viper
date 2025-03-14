@@ -50,7 +50,7 @@ export const shared = defineConfig({
   },
 
   sitemap: {
-    hostname: 'https://vipersite.vercel.app',
+    hostname: 'https://www.viperrtp.com',
     transformItems(items) {
       return items.filter((item) => !item.url.includes('migration'))
     }
@@ -59,15 +59,19 @@ export const shared = defineConfig({
   /* prettier-ignore */
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/viper.svg' }],
-    // ['link', { rel: 'icon', type: 'image/png', href: '/viper.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/viper.svg' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'en' }],
-    ['meta', { property: 'og:title', content: 'Viper | Advanced Red Team Platform' }],
+    ['meta', { property: 'og:title', content: 'Viper | Powerful and Flexible Red Team Platform' }],
     ['meta', { property: 'og:site_name', content: 'Viper' }],
-    // ['meta', { property: 'og:image', content: 'https://vitepress.dev/vitepress-og.jpg' }],
-    // ['meta', { property: 'og:url', content: 'https://vitepress.dev/' }],
-    ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }]
+    ['meta', { property: 'og:image', content: 'https://www.viperrtp.com/viper-og.png' }],
+    ['meta', { property: 'og:url', content: 'https://www.viperrtp.com/' }],
+    ['script', {
+      async: 'async',
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4907153636177535',
+      crossorigin: 'anonymous',
+    }],
   ],
 
   themeConfig: {

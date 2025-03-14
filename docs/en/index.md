@@ -29,7 +29,7 @@ features:
     details: Provides a clear and concise user experience for quick onboarding
   - icon: 🚀
     title: Multi-Platform Support
-    details: Supports red team assessments across multiple operating systems (Windows/Linux/macOS)
+    details: Supports red team assessments across multi OS Windows/Linux/macOS/Android
   - icon: 📦
     title: Out-of-the-Box Functionality
     details: Modules cover all stages of the MITRE ATT&CK attack lifecycle
