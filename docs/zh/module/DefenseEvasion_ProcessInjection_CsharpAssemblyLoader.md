@@ -10,8 +10,8 @@
 功能类似CS的execute-assembly,当C#需要输入参数时需要确保填写参数.
 
 # 操作方法
-![1623381717076-bb59e931-d387-4a35-86ab-07e391832edb.webp](./img/lRmaD2YwEoV84VwA/1623381717076-bb59e931-d387-4a35-86ab-07e391832edb-635000.webp)
+![](img\DefenseEvasion_ProcessInjection_CsharpAssemblyLoader\1.webp)
 
-![1623381757427-cc18d94c-5001-4df1-976c-6870840eaba0.webp](./img/lRmaD2YwEoV84VwA/1623381757427-cc18d94c-5001-4df1-976c-6870840eaba0-512473.webp)
+![](img\DefenseEvasion_ProcessInjection_CsharpAssemblyLoader\2.webp)
 
 

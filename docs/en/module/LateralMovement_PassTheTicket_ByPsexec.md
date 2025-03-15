@@ -1,15 +1,11 @@
-# PSEXEC plaintext/hash delivery
+# PSEXEC Plaintext/Hash Passing
 
-# Main functions
+# Main Functions
+Perform lateral movement using hashes and passwords.
 
-Move horizontally through Hash and password
+# Operation Methods
+![](img\LateralMovement_PassTheTicket_ByPsexec\1.webp)
 
-# How to operate
+![](img\LateralMovement_PassTheTicket_ByPsexec\2.webp)
 
-![1626242345179-72e389e4-5a38-4cfd-8bf0-441590655a07.webp](./img/3l2N3200vfn1FWqw/1626242345179-72e389e4-5a38-4cfd-8bf0-441590655a07-225669.webp)
-
-![1626242414897-f1661183-5a37-47e1-a844-94700299d7ab.webp](./img/3l2N3200vfn1FWqw/1626242414897-f1661183-5a37-47e1-a844-94700299d7ab-540893.webp)
-
-![1626242457393-f06f0003-e89b-46d0-bee8-98db24a568d0.webp](./img/3l2N3200vfn1FWqw/1626242457393-f06f0003-e89b-46d0-bee8-98db24a568d0-475460.webp)
-
-
+![](img\LateralMovement_PassTheTicket_ByPsexec\3.webp)

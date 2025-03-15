@@ -4,8 +4,8 @@
 模块获取主机本地所有用户信息或本地管理员组用户信息
 
 # 操作方法
-![1625193171056-d2a591a5-0df7-45ac-ae69-1b226d9bd79d.webp](./img/IKLG7ZqvH0d2T9ml/1625193171056-d2a591a5-0df7-45ac-ae69-1b226d9bd79d-568289.webp)
+![](img\Discovery_AccountDiscovery_PowerView\1.webp)
 
-![1625193187801-2a07cd6b-71b2-4840-ab9a-5a1258c14053.webp](./img/IKLG7ZqvH0d2T9ml/1625193187801-2a07cd6b-71b2-4840-ab9a-5a1258c14053-029343.webp)
+![](img\Discovery_AccountDiscovery_PowerView\2.webp)
 
 

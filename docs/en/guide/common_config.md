@@ -1,10 +1,10 @@
-# General configuration
+# General Configuration
 
-## Return to the address
+## Callback Address
 
-+ The back connection address is used for automatic prompts such as /load/port forwarding.
++ The callback address is used for auto-suggestions such as handler, payloads, and port forwarding.
 
 ## Session Monitoring
 
-+ Send notifications when the platform has a new session online
-+ Function recommendations are used with bot notifications
++ Send notifications when a new session goes online on the platform.
++ It is recommended to use this feature in conjunction with bot notifications. 

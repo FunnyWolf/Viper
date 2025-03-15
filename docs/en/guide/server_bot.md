@@ -1,3 +1,3 @@
-# Server sauce Bot
+# ServerChan Bot
 
-Server Sauce Message Notification
+ServerChan sends message notifications.

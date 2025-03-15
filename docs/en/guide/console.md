@@ -1,7 +1,7 @@
-# Command terminal
+# Console
 
-## Command operation
+## Command Operations
 
-+ Commands can be entered directly in the command terminal, and they can also be entered quickly through shortcut keys.
++ Commands can be directly entered in the command terminal. You can also use shortcut keys for quick input.
 
-+ The command terminal uses meterpreter to enhance the command line by default. If you want to execute system commands, you can use the shell + command method.
++ The meterpreter enhanced command line is used by default in the command terminal. If you want to execute system commands, you can use the format of "shell + command". 

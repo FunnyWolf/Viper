@@ -1,13 +1,9 @@
-# Get Windows browser password (Golang)
+# Obtain Windows Browser Passwords (Golang)
 
-# Main functions
+# Main Functions
+This module uses HackBrowserData to obtain browser passwords, cookies, browsing history, and bookmarks on Windows systems. 
 
-The module uses HackBrowserData to obtain the Windows system browser password/cookies/history/bookmark.
+The module uploads the binary file of HackBrowserData to the target host, executes it, and then downloads the execution result file to Viper.
 
-The module uploads the binary file of HackBrowserData to the target host, and downloads the execution result file to Viper after execution.
-
-# How to operate
-
-![1624003756199-f750d80e-5607-41bc-9a0b-73d153dda000.webp](./img/XPXqCKL9QcyTzaCr/1624003756199-f750d80e-5607-41bc-9a0b-73d153dda000-965354.webp)
-
-
+# Operation Method
+![](img\CredentialAccess_CredentialInFiles_BrowserData\1.webp)

@@ -10,8 +10,8 @@
 如需要获取PE执行之后的输出(如mimikatz),请勾选获取输出选项,并填写等待时间
 
 # 操作方法
-![1623389533788-554343df-5b03-4eb5-be6a-1e4468b50ffc.webp](./img/r4VOoQb7TTFiVN_O/1623389533788-554343df-5b03-4eb5-be6a-1e4468b50ffc-106890.webp)
+![](img\DefenseEvasion_ProcessInjection_PeLoader\1.webp)
 
-![1623389588387-3263905b-8493-4b7d-a08b-8b849feb6166.webp](./img/r4VOoQb7TTFiVN_O/1623389588387-3263905b-8493-4b7d-a08b-8b849feb6166-421104.webp)
+![](img\DefenseEvasion_ProcessInjection_PeLoader\2.webp)
 
 

@@ -12,32 +12,32 @@
 ## 钓鱼邮件生成/发送
 + 内容生成
 
-![1727665719755-9dac1419-29bf-4b3a-877f-dce9508d262b.webp](./img/28UV9CjN8lwrDvf5/1727665719755-9dac1419-29bf-4b3a-877f-dce9508d262b-550778.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\1.webp)
 
 + 自动化发送
 
-![1727665826801-c0610e0b-347e-4458-b94d-9059dbf6af73.webp](./img/28UV9CjN8lwrDvf5/1727665826801-c0610e0b-347e-4458-b94d-9059dbf6af73-054209.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\2.webp)
 
 + 接收后效果
 
-![1727665901339-5c331636-3580-4006-b682-9744570f3a8f.webp](./img/28UV9CjN8lwrDvf5/1727665901339-5c331636-3580-4006-b682-9744570f3a8f-988799.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\3.webp)
 
 ## 后渗透数据分析
 + 文件分析
 
-![1727666102255-bf8aaef9-8267-4fda-9811-1cd9b4083880.webp](./img/28UV9CjN8lwrDvf5/1727666102255-bf8aaef9-8267-4fda-9811-1cd9b4083880-120903.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\4.webp)
 
-![1727666121070-57e6768b-1e78-4894-b9bf-12b613749477.webp](./img/28UV9CjN8lwrDvf5/1727666121070-57e6768b-1e78-4894-b9bf-12b613749477-083709.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\5.webp)
 
 + 攻击面分析
 
-![1727666538164-2ff05074-7ace-407f-bfa0-859d1e6137ce.webp](./img/28UV9CjN8lwrDvf5/1727666538164-2ff05074-7ace-407f-bfa0-859d1e6137ce-807390.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\6.webp)
 
-![1727666578571-797cf8b3-31b9-420d-84f2-27ae76e7f848.webp](./img/28UV9CjN8lwrDvf5/1727666578571-797cf8b3-31b9-420d-84f2-27ae76e7f848-028510.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\7.webp)
 
-![1727666644322-1af54502-c595-4787-bba8-0c815b71b353.webp](./img/28UV9CjN8lwrDvf5/1727666644322-1af54502-c595-4787-bba8-0c815b71b353-807462.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\8.webp)
 
-![1727666698832-44e79c52-6ca7-4cef-9819-e2923c910df1.webp](./img/28UV9CjN8lwrDvf5/1727666698832-44e79c52-6ca7-4cef-9819-e2923c910df1-600186.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\9.webp)
 
 
 
@@ -72,7 +72,7 @@
 
 本地部署基本都是运行开源模型,在当前的时间节点开源模型性能还是无法和很多SaaS闭源模型相抗衡,通过lmarena.ai的Leaderboard可以看到前几位的基本都是闭源模型
 
-![1728364910117-e651abd5-6391-4868-ba53-9667c71119f8.webp](./img/28UV9CjN8lwrDvf5/1728364910117-e651abd5-6391-4868-ba53-9667c71119f8-257649.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\10.webp)
 
 可以看到排名靠前的基本都是闭源模型,只有llama3.1和qwen2.5两款闭源模型进入了榜单.
 
@@ -158,12 +158,12 @@ RAG方向是大模型进行实际生产应用的重要方式,除了上述基于�
 > 红队相关的情报绝大部分是结构类信息,且信息之间存在关联,所以graphrag相比基于向量搜索或倒排索引的RAG在情报分析领域更有效.如下图就是将多个IP的相关端口,漏洞,告警等信息进行使用图数据库进行存储后的效果.
 >
 
-![1728437991854-93e35fb3-deec-4482-be1c-de0122ddc741.webp](./img/28UV9CjN8lwrDvf5/1728437991854-93e35fb3-deec-4482-be1c-de0122ddc741-724425.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\11.webp)
 
 # <font style="color:rgb(44, 44, 54);">Function calling</font>
 Function calling是指大语言模型通过预定义的接口与外部系统或服务进行交互的能力.通过function calling，模型可以访问数据库、调用API、执行计算任务.function calling是构建agent的核心能力之一.下图是OpenAI关于Function calling流程的说明.
 
-![1728370408893-99f7ba1b-be00-4c47-833f-cd2210e039b7.webp](./img/28UV9CjN8lwrDvf5/1728370408893-99f7ba1b-be00-4c47-833f-cd2210e039b7-819611.webp)
+![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\12.webp)
 
 当前大模型实现Function calling有两种方式,分别是ReAct和原生支持,针对这两种方式进行简要的介绍,以便于我们进行技术选型.
 

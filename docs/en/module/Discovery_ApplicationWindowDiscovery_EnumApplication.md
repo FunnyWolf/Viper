@@ -1,13 +1,7 @@
-# Windows has installed software
+# Installed Software in Windows
 
-# Main functions
+# Main Function
+Obtain the list of installed software in the current Windows system. This information can be used to search for potential exploitation chains or understand the purpose of the current host.
 
-Get a list of the currently installed software on Windows. You can use this information to find possible exploitation chains or the use of the current host.
-
-# How to operate
-
-![1629343118330-83452f4b-bbc3-42cc-bd72-9ecf371a0da6.webp](./img/5NUcun7_1nEbcruH/1629343118330-83452f4b-bbc3-42cc-bd72-9ecf371a0da6-491665.webp)
-
-
-
-
+# Operation Method
+![](img\Discovery_ApplicationWindowDiscovery_EnumApplication\1.webp)

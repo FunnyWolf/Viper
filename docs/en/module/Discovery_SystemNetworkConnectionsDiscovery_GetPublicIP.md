@@ -1,15 +1,9 @@
-# Obtain Internet export IP
+# Obtain Internet Egress IP
 
-# Main functions
+# Main Functions
+The module obtains the Internet egress IP address of the current session by accessing the https://ifconfig.me/ip interface.
 
-The module obtains the Internet exit IP address of the current Session by accessing the https://ifconfig.me/ip interface.
+# Operation Method
+![](img\Discovery_SystemNetworkConnectionsDiscovery_GetPublicIP\1.webp)
 
-# How to operate
-
-![1632061098621-2b9eb17e-5dfd-47f0-8f7a-eceb5635c619.webp](./img/ClRocZhhht1_EUn_/1632061098621-2b9eb17e-5dfd-47f0-8f7a-eceb5635c619-042012.webp)
-
-![1632061077633-2a9713df-db1e-4589-9a23-515e10ab64ba.webp](./img/ClRocZhhht1_EUn_/1632061077633-2a9713df-db1e-4589-9a23-515e10ab64ba-406348.webp)
-
-
-
-
+![](img\Discovery_SystemNetworkConnectionsDiscovery_GetPublicIP\2.webp)

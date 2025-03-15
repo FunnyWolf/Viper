@@ -6,7 +6,7 @@
 
 ## 切换到攻击面管理
 
-![1706772083005-b617040c-05eb-4bdc-8cc6-0eb298a6e32d.webp](./img/ROAxNQXLwuO2t5Ln/1706772083005-b617040c-05eb-4bdc-8cc6-0eb298a6e32d-948862.webp)
+![](img\Information_collection_Internet\1.webp)
 
 ## 系统配置
 
@@ -16,11 +16,11 @@
 
 ## 新建项目
 
-![1706753723373-28839eee-d1ff-4bc0-af39-775c24239459.webp](./img/ROAxNQXLwuO2t5Ln/1706753723373-28839eee-d1ff-4bc0-af39-775c24239459-330255.webp)
+![](img\Information_collection_Internet\2.webp)
 
-![1706753743859-ff0a0944-f22b-4425-aec1-b876eb2896f7.webp](./img/ROAxNQXLwuO2t5Ln/1706753743859-ff0a0944-f22b-4425-aec1-b876eb2896f7-245692.webp)
+![](img\Information_collection_Internet\3.webp)
 
-![1706753788733-8e1d0ae4-b134-4184-b241-384f2e0579a9.webp](./img/ROAxNQXLwuO2t5Ln/1706753788733-8e1d0ae4-b134-4184-b241-384f2e0579a9-335732.webp)
+![](img\Information_collection_Internet\4.webp)
 
 ## 通过企业名称自动化信息收集
 
@@ -28,11 +28,11 @@
 
 如果你不清楚企业的正式名称,可以使用关键字搜索模块
 
-![1706604748308-b6073f4b-91d1-4de8-ae8c-8428212ccbf6.webp](./img/ROAxNQXLwuO2t5Ln/1706604748308-b6073f4b-91d1-4de8-ae8c-8428212ccbf6-318423.webp)
+![](img\Information_collection_Internet\5.webp)
 
 + 输入企业进行信息收集
 
-![1706604839643-4434dcac-68e8-4fa3-958a-c5831a4f49a8.webp](./img/ROAxNQXLwuO2t5Ln/1706604839643-4434dcac-68e8-4fa3-958a-c5831a4f49a8-480553.webp)
+![](img\Information_collection_Internet\6.webp)
 
 > 首次运行建议使用Quake进行子域名和端口扫描,关闭WAF及漏洞扫描,这样能快速看到效果
 

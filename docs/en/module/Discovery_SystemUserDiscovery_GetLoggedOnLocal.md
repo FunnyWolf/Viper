@@ -1,17 +1,13 @@
-# Get the local logged in user
+# Get Locally Logged-in Users
 
-# Main functions
+## Main Function
+This module retrieves the logged-in user information of remote hosts within the domain. 
 
-The module obtains the user information that the remote host is logging in in the domain.
+The module requires normal domain user permissions, and the remote hosts need to have the Remote Registry feature enabled. 
 
-The module requires ordinary domain user permissions and requires the remote host to enable the remote registration function.
+The hostnames can be obtained using the <<Collect Information of All Domain Hosts>> module.
 
-The host name can be obtained using the `Collect information about all domain hosts` module
+## Operation Method
+![](img\Discovery_SystemUserDiscovery_GetLoggedOnLocal\1.webp)
 
-# How to operate
-
-![1625195931470-202da392-e0ce-433b-81b9-fd36d2f6e0a4.webp](./img/9EvMuEqsBOg_irbY/1625195931470-202da392-e0ce-433b-81b9-fd36d2f6e0a4-869804.webp)
-
-![1625195959212-a7702503-6b3f-48d6-b299-433645afc40a.webp](./img/9EvMuEqsBOg_irbY/1625195959212-a7702503-6b3f-48d6-b299-433645afc40a-934170.webp)
-
-
+![](img\Discovery_SystemUserDiscovery_GetLoggedOnLocal\2.webp)

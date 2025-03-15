@@ -1,13 +1,9 @@
-# Callback free kill (EnumWindows)
+# Callback Anti - Detection (EnumWindows)
 
-# Main functions
+# Main Function
+Generate anti - detection EXE
 
-Generate kill-free exe
-
-# How to operate
-
-+ Create new monitor
-+ Open the module and select the corresponding monitor
-+ After running the module, it will be in`文件管理`Generate a zip file, containing the free kill exe payload and corresponding C++ code
-
-
+# Operation Method
++ Create a new listener
++ Open the module and select the corresponding listener
++ After running the module, a zip file will be generated in the `File Management`, which contains the anti - detection EXE payload and the corresponding C++ code

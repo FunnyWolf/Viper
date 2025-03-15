@@ -3,7 +3,7 @@
 ## 什么是多级内网
 标题中所说的多级内网,常见于各种大型企业.举个例子,如下图
 
-![1630550347634-baccb576-4eec-48a5-bb6a-e84491c56502.webp](./img/zA3VWU0fC_2gXbKF/1630550347634-baccb576-4eec-48a5-bb6a-e84491c56502-926401.webp)
+![](img\multi_level_intranet_penetration_gost_viper\1.webp)
 
 A网中一般是企业的DMZ区,里面有对外的web服务器,dns服务器等.
 
@@ -18,11 +18,11 @@ C网中一般是企业红区,里面有敏感信息存储的数据库,或者各�
 ## Viper与gost结合渗透多级内网
 实验环境网络配置如下:
 
-![1630551064214-97c362b5-df0b-4020-9137-08009c9e87ba.webp](./img/zA3VWU0fC_2gXbKF/1630551064214-97c362b5-df0b-4020-9137-08009c9e87ba-752405.webp)
+![](img\multi_level_intranet_penetration_gost_viper\2.webp)
 
 + 上线192.168.146.1
 
-![1633519701641-4158f4eb-b5a7-41ed-9248-ab5b87f6f7f3.webp](./img/zA3VWU0fC_2gXbKF/1633519701641-4158f4eb-b5a7-41ed-9248-ab5b87f6f7f3-609141.webp)
+![](img\multi_level_intranet_penetration_gost_viper\3.webp)
 
 + 在192.168.146.1上使用gost启动一个端口转发,把192.168.146.1:2000的流量转发到192.168.146.130:2000
 
@@ -30,11 +30,11 @@ C网中一般是企业红区,里面有敏感信息存储的数据库,或者各�
 gost.exe -L=tcp://:2000/192.168.146.130:2000
 ```
 
-![1633519969293-8bd71c1e-97c3-4652-9f08-1f6a1d7e0bbc.webp](./img/zA3VWU0fC_2gXbKF/1633519969293-8bd71c1e-97c3-4652-9f08-1f6a1d7e0bbc-535294.webp)
+![](img\multi_level_intranet_penetration_gost_viper\4.webp)
 
 + 146.11执行回连到146.1:2000的payload,146.11上线(可以看到是通过146.1回连的)
 
-![1633521049030-5a70991f-60c8-427d-9e2a-3abcd8668377.webp](./img/zA3VWU0fC_2gXbKF/1633521049030-5a70991f-60c8-427d-9e2a-3abcd8668377-203485.webp)
+![](img\multi_level_intranet_penetration_gost_viper\5.webp)
 
 
 
@@ -44,7 +44,7 @@ gost.exe -L=tcp://:2000/192.168.146.130:2000
 gost.exe -L :8080
 ```
 
-![1633521265187-b601d41b-b54e-4e98-bb70-624c0b608f03.webp](./img/zA3VWU0fC_2gXbKF/1633521265187-b601d41b-b54e-4e98-bb70-624c0b608f03-791533.webp)
+![](img\multi_level_intranet_penetration_gost_viper\6.webp)
 
 + 然后在146.11上启动端口转发,流量经过146.1:8080这个代理
 
@@ -52,11 +52,11 @@ gost.exe -L :8080
 gost.exe -L=tcp://:2000/192.168.146.130:2000 -F 192.168.146.1:8080
 ```
 
-![1633521438835-3074d19b-c71e-4df8-8156-30ef7bff3c29.webp](./img/zA3VWU0fC_2gXbKF/1633521438835-3074d19b-c71e-4df8-8156-30ef7bff3c29-277139.webp)
+![](img\multi_level_intranet_penetration_gost_viper\7.webp)
 
 + 146.12执行回连到146.11:2000的payload,146.12上线(可以看到146.12是通过146.1回连的)
 
-![1633521514340-eba95781-9291-44f1-b5d5-47709d981332.webp](./img/zA3VWU0fC_2gXbKF/1633521514340-eba95781-9291-44f1-b5d5-47709d981332-116980.webp)
+![](img\multi_level_intranet_penetration_gost_viper\8.webp)
 
 
 

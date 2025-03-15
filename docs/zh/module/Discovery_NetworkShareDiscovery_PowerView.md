@@ -4,9 +4,9 @@
 模块获取主机本地共享信息或域内其他主机共享信息
 
 # 操作方法
-![1625194164063-1109694c-d335-47f0-87b1-3d8855fb41b0.webp](./img/J-OzjWSfdXbbppUi/1625194164063-1109694c-d335-47f0-87b1-3d8855fb41b0-745606.webp)
+![](img\Discovery_NetworkShareDiscovery_PowerView\1.webp)
 
-![1625194186460-6181c0cc-004d-433a-a07d-6ed14eb22966.webp](./img/J-OzjWSfdXbbppUi/1625194186460-6181c0cc-004d-433a-a07d-6ed14eb22966-195337.webp)
+![](img\Discovery_NetworkShareDiscovery_PowerView\2.webp)
 
 
 

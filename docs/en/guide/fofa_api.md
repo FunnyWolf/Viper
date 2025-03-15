@@ -1,2 +1,2 @@
 # FOFA API
-FOFA API configuration information, used for the full network scanning module
+The configuration information of FOFA API is used for the whole-network scanning module.

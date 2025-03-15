@@ -1,17 +1,12 @@
-# Reverse_https direct connection to avoid killing
+# Reverse_https Direct Connection Anti-detection
 
-# Main functions
+# Main Functions
+Generate anti-detection EXE
 
-Generate kill-free exe
+# Operation Methods
++ Create a new reverse_https listener.
++ Open the module and select the corresponding https listener.
++ After running the module, a zip file will be generated in "File Management", which contains the anti-detection EXE payload and the corresponding C++ code.
 
-# How to operate
-
-+ Create new reverse_https listening
-+ Open the module and select the corresponding https monitor
-+ After running the module, it will be in`文件管理`Generate a zip file, containing the free kill exe payload and corresponding C++ code
-
-# Things to note
-
-+ Can bypass Windows Defander (20210611)
-
-
+# Precautions
++ Can bypass Windows Defender (20210611)

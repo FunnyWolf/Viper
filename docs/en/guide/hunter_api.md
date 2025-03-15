@@ -1,3 +1,3 @@
 # Hunter API
 
-Hunter API configuration information, used for the full network scanning module
+The configuration information of Hunter API is used for the全网 scanning module.

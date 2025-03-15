@@ -1,23 +1,23 @@
-# File Management
+# Explorer
 
-## File browsing
+## File Browsing
 
-+ File management function similar to Windows Explorer
-+ The top icons are Open the root directory, open the default directory, open the parent directory, go to the directory bar, refresh, switch to the default directory, create a new folder, and upload files
-+ Double-click to enter the folder and disk. The directory column supports inputting the specified directory and then entering the directory.
-+ Supports direct viewing of files not larger than 100kb
-+ Support to switch working directory/refresh the current directory
++ The file management function is similar to Windows Explorer.
++ The icons at the top are, in order, `Open Root Directory`, `Open Default Directory`, `Open Parent Directory`, `Directory Bar`, `Go To`, `Refresh`, `Switch Default Directory`, `New Folder`, `Upload File`.
++ Folders and disks support double-click to enter. The directory bar supports entering a specified directory and then pressing Enter to enter the directory.
++ Supports directly viewing files not larger than 100kb.
++ Supports switching the working directory/refresh the current directory.
 
-## Create a new folder/upload a file/download a file
+## Creating New Folders/Uploading Files/Downloading Files
 
-+ Click the New Folder button on the right to create a new folder in the current directory
-+ Click the upload button to open the server file manager, and upload the server's files to the current directory
-+ Click`Download`Link, the download file task is automatically created in the background, and the downloaded file will be stored in`file management`
++ Click the "New Folder" button on the right to create a new folder in the current directory.
++ Click the "Upload" button to open the server file manager, and you can upload server files to the current directory.
++ Click the `Download` link, and the background automatically creates a file download task. The downloaded files will be stored in `File Management`.
 
-## Execute files
+## Executing Files
 
-+ Support executable files with parameters (no echo)
++ Supports executing executable files with parameters (no echo).
 
-## Modify the file
+## Modifying Files
 
-+ You can directly modify the text file of the host
++ Can directly modify text-based files on the host.

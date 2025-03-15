@@ -1,16 +1,10 @@
-# Windows Office app startup persistence
+# Windows Office Application Startup Persistence
 
-# Main functions
+# Main Functions
+Achieve persistence by writing the path of the Trojan file in the registry key HKEY_CURRENT_USER\Software\Microsoft\Office test\Special\Perf. Whenever an Office program is run (such as opening a Word document), the Trojan file will be automatically executed.
 
-Persistence is achieved by writing the Trojan file path in the registry HKEY_CURRENT_USER\Software\Microsoft\Office test\Special\Perf key. Whenever an Office program is run (such
-as opening a Word document), the Trojan file will be automatically executed
+# Precautions
+This method is not undetectable.
 
-# Things to note
-
-Can't help but kill
-
-# How to operate
-
-refer to [Winlogon Helper DLL Persistence](./Persistence_WinlogonHelperDLL_Windows)
-
-
+# Operation Method
+Refer to [Winlogon Helper DLL Persistence](./Persistence_WinlogonHelperDLL_Windows)

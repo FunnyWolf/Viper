@@ -6,8 +6,8 @@
 所有扫描的网络流量在目标内网, 如其他模块需要连接发现的服务,请添加对应路由及Socks代理
 
 # 操作方法
-![1624006000678-a9611568-1ee6-4fd7-9950-304b1ec64af5.webp](./img/s2kFI-yYTOtPnlns/1624006000678-a9611568-1ee6-4fd7-9950-304b1ec64af5-030369.webp)
+![](img\Discovery_NetworkServiceScanning_PortScanWithServiceByPython\1.webp)
 
-![1624006053110-fd0bb701-16f1-4d4a-9831-2f63b422d2ec.webp](./img/s2kFI-yYTOtPnlns/1624006053110-fd0bb701-16f1-4d4a-9831-2f63b422d2ec-012798.webp)
+![](img\Discovery_NetworkServiceScanning_PortScanWithServiceByPython\2.webp)
 
 

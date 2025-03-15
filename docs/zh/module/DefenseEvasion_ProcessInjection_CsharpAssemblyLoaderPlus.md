@@ -12,8 +12,8 @@
 本模块新增了BypassETW及BypassAmsi功能,但模块只适用于x64位系统
 
 # 操作方法
-![1623381820780-f60daeb7-1385-4a77-b86a-c7fcc224f17a.webp](./img/5adsz9bCYAMtjxCu/1623381820780-f60daeb7-1385-4a77-b86a-c7fcc224f17a-852624.webp)
+![](img\DefenseEvasion_ProcessInjection_CsharpAssemblyLoaderPlus\1.webp)
 
-![1623381899629-9076e08c-28dc-4f21-aa3c-5e5b69876794.webp](./img/5adsz9bCYAMtjxCu/1623381899629-9076e08c-28dc-4f21-aa3c-5e5b69876794-485568.webp)
+![](img\DefenseEvasion_ProcessInjection_CsharpAssemblyLoaderPlus\2.webp)
 
 

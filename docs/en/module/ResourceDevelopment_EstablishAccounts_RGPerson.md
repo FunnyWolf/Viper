@@ -1,13 +1,9 @@
-# Random identity generation
+# Random Identity Generation
 
-# Main functions
+## Main Functions
+This script generates information including: Chinese hacker ID, name, age, gender, ID number, mobile phone number, organization code, and unified social credit code.
 
-The script generates information: China Hacker ID\Name\Age\Gender\Identity Card\Mobile Number\Organization Code\Unified Social Credit Code.
+## Operation Method
+- Running the module can generate random identity information.
 
-# How to operate
-
-+ Run the module to generate random identity information
-
-![1625192449618-82559ec6-cc9d-4052-bc82-1a72e86513d8.webp](./img/V_VnaYHuT4QbLZ1z/1625192449618-82559ec6-cc9d-4052-bc82-1a72e86513d8-148280.webp)
-
-
+![](img\ResourceDevelopment_EstablishAccounts_RGPerson\1.webp)

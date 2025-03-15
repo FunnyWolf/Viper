@@ -1,16 +1,20 @@
-# msf execute-assembly与CoabltStrike execute-assembly
+# msf execute-assembly vs. CoabltStrike execute-assembly
 
-## 前言
-metasploit-framework和cobalt strike(简称CS)是当前主流的两个红队评估工具.
+## Preface
 
-<font style="color:#262626;">在红队评估过程中为了与杀软对抗,无文件渗透是实现免杀的简单有效的手段.</font>
+The metasploit-framework and cobalt strike (referred to as CS for short) are currently two mainstream red team assessment tools.
 
-<font style="color:#262626;">execute-assembly是用于内存执行C#可执行文件的常用手法,当前</font>metasploit-framework和cobalt strike都已经实现了<font style="color:#262626;">execute-assembly功能,本文通过源码分析的方式演示</font><font style="color:#262626;">execute-assembly功能使用方式,并讲解如何修复使用过程中遇到的问题.</font><font style="color:#262626;"></font>
+<font style="color:#262626;">During the red team assessment process, in order to counter anti-virus software, fileless penetration is a simple and effective means to achieve anti-kill.</font>
 
-# CobaltStrike的execute-assembly
-execute-assembly是CoabltStrike的重要功能,在获取beacon后,只需要编译完成的C#可执行文件拷贝到cobalestrike本地目录,然后执行 `execute-assembly [/path/to/file.exe] [arguments]` 即可在beacon内存执行,并获取可执行文件的输出.
+<font style="color:#262626;">Execute-assembly is a common technique used to execute C# executables in memory. Currently, both metasploit-framework and cobalt strike have implemented the <font style="color:#262626;">
+execute-assembly function. This article demonstrates the usage of the execute-assembly function through source code analysis and explains how to fix problems encountered during use.</font><font style="color:#262626;"></font>
 
-使用如下C#代码生成C#可执行文件 `TestAssembly.exe` 
+# CobaltStrike's execute-assembly
+
+Execute-assembly is an important function of CoabltStrike. After obtaining the beacon, simply copy the compiled C# executable file to the local directory of cobalestrike, and then execute `execute-assembly [/path/to/file.exe] [arguments]`
+to execute it in the beacon memory and obtain the output of the executable.
+
+Use the following C# code to generate the C# executable file `TestAssembly.exe`:
 
 ```csharp
 using System;
@@ -54,41 +58,43 @@ namespace TestAssembly
 
 ```
 
-CobaltStrike执行效果如下
+The execution effect of CobaltStrike is as follows:
 
-![1603342055140-a341a585-4bcc-4054-98ba-8dbc523dea9d.webp](./img/f1z_5BIkKWaC_49H/1603342055140-a341a585-4bcc-4054-98ba-8dbc523dea9d-609095.webp)
+![](img\msfexecute_assembly_and_cobaltstrikeexecute_assembly\1.webp)
 
-因为execute-assembly使用方便,免杀效果好,只需要将已有的C#安全工具拷贝到CoabltStrike目录,添加简单的cna界面,就可以封装成一个CoabltStrike插件发布,因此深受国内安全人员喜爱.
+Because execute-assembly is easy to use and has a good anti-kill effect. Just copy the existing C# security tool to the CoabltStrike directory and add a simple cna interface. It can be encapsulated into a CoabltStrike plugin for release. Therefore, it is deeply loved by domestic security personnel.
 
+# metasploit-framework's execute-assembly (official version)
 
+MSF has currently integrated execute-assembly through modules.
 
-# metasploit-framework的execute-assembly (官方版本)
-MSF当前官方已经通过模块的方式集成了execute-assembly.
+The function was initially released by b4rtik in his personal warehouse [metasploit-execute-assembly](https://github.com/b4rtik/metasploit-execute-assembly), and the readme of the project provides detailed explanations on the development process and implementation principles.
 
-功能最初由b4rtik发布于其个人仓库[metasploit-execute-assembly](https://github.com/b4rtik/metasploit-execute-assembly),项目的readme中对开发流程及实现原理进行了详细的说明.
+The core principle is mainly to create a CLR environment in memory through `Reflective dll`, read the C# executable file into memory, and then execute it.
 
-其核心原理主要通过`Reflective dll`在内存中创建CLR环境,将C#可执行文件读取到内存中,然后执行.
+Later, b4rtik also transplanted it to the msf official. The module address is [execute_dotnet_assembly](https://github.com/rapid7/metasploit-framework/blob/master/modules/post/windows/manage/execute_dotnet_assembly.rb).
 
-后续b4tik还将其移植到msf官方,模块地址[execute_dotnet_assembly](https://github.com/rapid7/metasploit-framework/blob/master/modules/post/windows/manage/execute_dotnet_assembly.rb).
+The usage effect of the module is as follows:
 
-模块的使用效果如下:
+![](img\msfexecute_assembly_and_cobaltstrikeexecute_assembly\2.webp)
 
-![1603343332737-3bcad2e4-394f-453a-ba4c-56b5265f8d15.webp](./img/f1z_5BIkKWaC_49H/1603343332737-3bcad2e4-394f-453a-ba4c-56b5265f8d15-585218.webp)
+# Problems in metasploit-framework's execute-assembly
 
+Although the basic functions of MSF's official execute-assembly can be used, there will be problems when the module runs in some special cases. Let's conduct a simple analysis here.
 
+## Problem 1: The module only supports the x64 environment
 
-# metasploit-framework的execute-assembly存在的问题
-虽然MSF官方的execute-assembly的基本功能已经可以使用,但是在部分特殊情况下模块运行会出现问题.我们这里来进行简单分析.
+We can find through the following [link](https://github.com/rapid7/metasploit-framework/tree/master/data/post/execute-dotnet-assembly) that b4rtik only provided the HostingCLRx64.dll, a dll file adapted to the x64 environment, and did not provide the files required for the x86 environment.
 
-## 问题1:模块只支持x64位环境
-我们通过以下 [链接](https://github.com/rapid7/metasploit-framework/tree/master/data/post/execute-dotnet-assembly) 可以返现,b4rtik只提供了HostingCLRx64.dll一个适配x64位的dll文件,并没有提供x86环境所需的文件.
+By analyzing the source code of HostingCLRx64.dll [Syscalls.asm](https://github.com/rapid7/metasploit-framework/blob/master/external/source/HostingCLR_inject/HostingCLR/Syscalls.asm),
+we found that b4rtik added assembly code to the project in order to implement the ETW function, and the assembly code is only adapted to the x64 environment. Therefore, the final module only supports x64.
 
-我们通过分析HostingCLRx64.dll的源代码 [Syscalls.asm](https://github.com/rapid7/metasploit-framework/blob/master/external/source/HostingCLR_inject/HostingCLR/Syscalls.asm) 发现,b4rtik为了实现ETW功能,在项目中加入了汇编代码,而汇编代码只适配了x64环境,所以导致最终模块只支持x64.
+## Problem 2: The module cannot be used in an environment where only.net2.0 is installed
 
-## 问题2:模块在只安装.net2.0的环境中无法使用
-通过实测发现,如果windows操作系统自安装了.net2.0,没有安装.net3.5或.net4.0(比如干净的windows server 2008 x64 r2),msf的官方模块是无法使用的.
+Through actual testing, if the Windows operating system is installed with.net2.0 but not.net3.5 or.net4.0 (such as a clean Windows server 2008 x64 r2), the official module of msf cannot be used.
 
-我们通过分析HostingCLRx64.dll的源代码 [HostingCLR.cpp](https://github.com/rapid7/metasploit-framework/blob/master/external/source/HostingCLR_inject/HostingCLR/HostingCLR.cpp) , 在161行有如下代码
+By analyzing the source code of HostingCLRx64.dll [HostingCLR.cpp](https://github.com/rapid7/metasploit-framework/blob/master/external/source/HostingCLR_inject/HostingCLR/HostingCLR.cpp),
+there is the following code at line 161:
 
 ```cpp
 	hr = CLRCreateInstance(CLSID_CLRMetaHost, IID_ICLRMetaHost, (VOID**)&pMetaHost);
@@ -100,26 +106,28 @@ MSF当前官方已经通过模块的方式集成了execute-assembly.
 	}
 ```
 
-通过查阅microsoft的官方文档 [链接](https://docs.microsoft.com/zh-cn/dotnet/framework/unmanaged-api/hosting/clrcreateinstance-function) ,CLRCreateInstance函数在.NET Framework 版本,自 4 之后可用,所以如果没有安装.net4.0的环境是无法使用msf官方模块的.
+By referring to Microsoft's official documentation [link](https://docs.microsoft.com/zh-cn/dotnet/framework/unmanaged-api/hosting/clrcreateinstance-function), the CLRCreateInstance function is available in the.NET Framework version starting from 4. Therefore, if the environment without installing.net4.0 is used, the official module of msf cannot be used.
 
-## 问题3:如果C#可执行文件可接受参数,但是没有输入参数,无法获取默认输出
-一图胜千言
+## Problem 3: If the C# executable file can accept parameters but no input parameters are entered, the default output cannot be obtained.
 
-![1603344786247-b853d411-ac9f-4159-a670-d3f59294dbe1.webp](./img/f1z_5BIkKWaC_49H/1603344786247-b853d411-ac9f-4159-a670-d3f59294dbe1-369336.webp)
+A picture is worth a thousand words.
 
-可以看到,按照C#代码的正常逻辑,应该输出
+![](img\msfexecute_assembly_and_cobaltstrikeexecute_assembly\3.webp)
+
+It can be seen that according to the normal logic of the C# code, the output should be:
 
 ```cpp
 [+] [+] Process: 64
 [+] [+] Net Vsersion: 2.0.50727.9151
 ```
 
-但是模块运行报错了,错误是 pMethodInfo->Invoke_3  w/hr 0x8002000e.
+But the module runs with an error, and the error is pMethodInfo->Invoke_3 w/hr 0x8002000e.
 
-我们通过分析HostingCLRx64.dll的源代码 [HostingCLR.cpp](https://github.com/rapid7/metasploit-framework/blob/master/external/source/HostingCLR_inject/HostingCLR/HostingCLR.cpp) , 在269行有如下代码
+By analyzing the source code of HostingCLRx64.dll [HostingCLR.cpp](https://github.com/rapid7/metasploit-framework/blob/master/external/source/HostingCLR_inject/HostingCLR/HostingCLR.cpp),
+there is the following code at line 269:
 
 ```cpp
-	if(arg_s[0] != '\x00')
+	if(arg_s[0]!= '\x00')
 	{
 		//if we have at least 1 parameter set cEleemnt to 1
 		psaStaticMethodArgs = SafeArrayCreateVector(VT_VARIANT, 0, 1);
@@ -168,26 +176,27 @@ MSF当前官方已经通过模块的方式集成了execute-assembly.
 	}
 ```
 
-可以发现,如果C#代码中以 static void Main(string[] args) 作为入口函数,但是执行时未输入参数,会导致HostingCLRx64.dll错误的使用psaStaticMethodArgs = SafeArrayCreateVector(VT_VARIANT, 0, 0);生成输入向量,导致后续pMethodInfo->Invoke_3执行失败.
+It can be found that if the C# code uses static void Main(string[] args) as the entry function, but no input parameters are entered during execution, it will cause HostingCLRx64.dll to incorrectly use psaStaticMethodArgs = SafeArrayCreateVector(VT_VARIANT,
+0, 0); to generate the input vector, resulting in the failure of the subsequent pMethodInfo->Invoke_3 execution.
 
+# metasploit-framework's execute-assembly (fixed version)
 
+The three problems of msf official execute-assembly can be fixed or bypassed.
 
-# metasploit-framework的execute-assembly(修复版本)
-msf官方execute-assembly的三个问题都是可以修复或者绕过的.
+## Problem 1: The module only supports the x64 environment (fix method)
 
+Under normal circumstances, the ETW function does not affect anti-kill and execution. Just delete the ETW function and generate the dll file in the x86 version.
 
+## Problem 2: The module cannot be used in an environment where only.net2.0 is installed (fix method)
 
-## 问题1:模块只支持x64位环境(修复方法)
-通常情况下ETW功能不影响免杀及执行,直接删除ETW功能,将将dll文件生成x86版本即可.
+The problem is mainly caused by the CLRCreateInstance function. In.net2.0, you can use the CorBindToRuntimeEx function instead of CLRCreateInstance to achieve the same function.
 
-## 问题2:模块在只安装.net2.0的环境中无法使用(修复方法)
-问题主要由CLRCreateInstance函数引起,在.net2.0中可以使用CorBindToRuntimeEx函数替代CLRCreateInstance,实现相同的功能.
+## Problem 3: If the C# executable file can accept parameters but no input parameters are entered, the default output cannot be obtained (fix method)
 
-## 问题3:如果C#可执行文件可接受参数,但是没有输入参数,无法获取默认输出(修复方法)
-绝大多数的C#程序都是使用static void Main(string[] args) 作为入口函数,只要将HostingCLR.cpp中修改参数解析部分,无论是否输入参数皆按照输入参数模式处理即可,代码如下:
+Most C# programs use static void Main(string[] args) as the entry function. Just modify the parameter parsing part in HostingCLR.cpp. No matter whether there are input parameters or not, they are processed in the input parameter mode. The code is as follows:
 
 ```cpp
-	if(arg_s[0] != '\x00')
+	if(arg_s[0]!= '\x00')
 	{
 		//if we have at least 1 parameter set cEleemnt to 1
 		psaStaticMethodArgs = SafeArrayCreateVector(VT_VARIANT, 0, 1);
@@ -232,21 +241,12 @@ msf官方execute-assembly的三个问题都是可以修复或者绕过的.
 	}
 ```
 
+The effect after repair is as follows:
 
+![](img\msfexecute_assembly_and_cobaltstrikeexecute_assembly\4.webp)
 
-修复后效果如下:
+# Relevant source code
 
-![1603345964609-bc636e0a-5ba8-4c7c-ad14-78121e87d868.webp](./img/f1z_5BIkKWaC_49H/1603345964609-bc636e0a-5ba8-4c7c-ad14-78121e87d868-414062.webp)
-
-
-
-# 相关源码
-修复后的msf execute-assembly代码如下
+The repaired msf execute-assembly code is as follows:
 
 [https://github.com/FunnyWolf/execute-assembly](https://github.com/FunnyWolf/execute-assembly)
-
-
-
-
-
-

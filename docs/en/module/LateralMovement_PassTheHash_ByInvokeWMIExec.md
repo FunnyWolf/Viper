@@ -1,17 +1,11 @@
-# Invoke-WMIExec hash delivery
+# Invoke-WMIExec Pass-the-Hash
 
-# Main functions
+## Main Function
+Use the known username and NTLM hash to execute the payload on the target host via WMI.
 
-Use a known username and NTLM hash to execute the payload on the target host through WMI.
+This module executes WMI in memory using the Invoke-WMIExec method. Compared with "<WMI Pass-the-Hash>", it does not require file upload.
 
-The module uses memory to execute wmi, and does not need to upload files compared to `WMI hash delivery`
+## Operation Method
+![](img\LateralMovement_PassTheHash_ByInvokeWMIExec\1.webp)
 
-# How to operate
-
-![1628081137068-acf7a497-f1f8-4b4f-81c2-93581f019e1c.webp](./img/OwE0GTYtdD9Ng3hH/1628081137068-acf7a497-f1f8-4b4f-81c2-93581f019e1c-644672.webp)
-
-![1628081168179-3e0a668b-49c4-4933-91e3-593e891ca812.webp](./img/OwE0GTYtdD9Ng3hH/1628081168179-3e0a668b-49c4-4933-91e3-593e891ca812-701407.webp)
-
-
-
-
+![](img\LateralMovement_PassTheHash_ByInvokeWMIExec\2.webp)

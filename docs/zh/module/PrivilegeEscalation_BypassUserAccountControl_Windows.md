@@ -18,18 +18,18 @@
 + 获取Session
 + 查看Session信息,确认**Session完整性权限为中以上**** ,****处于管理员组,UAC等级为默认**
 
-![1615642249124-da234d36-b411-4581-86ac-820cc67c4be2.webp](./img/Xk-66t-5uND5HCho/1615642249124-da234d36-b411-4581-86ac-820cc67c4be2-880413.webp)
+![](img\PrivilegeEscalation_BypassUserAccountControl_Windows\1.webp)
 
 + 运行检测模式,查看那些模块可用
 
-![1615642586697-f22ebac5-352f-4935-892d-0ee899b6352e.webp](./img/Xk-66t-5uND5HCho/1615642586697-f22ebac5-352f-4935-892d-0ee899b6352e-033965.webp)
+![](img\PrivilegeEscalation_BypassUserAccountControl_Windows\2.webp)
 
-![1615642623306-59d9033b-a47b-4940-bd68-62533e527fcb.webp](./img/Xk-66t-5uND5HCho/1615642623306-59d9033b-a47b-4940-bd68-62533e527fcb-980662.webp)
+![](img\PrivilegeEscalation_BypassUserAccountControl_Windows\3.webp)
 
 + 根据检测结果,单独运行子模块,或者使用自动模式
 
-![1615642669809-6b758e79-421e-4043-abab-71a99aeedfd7.webp](./img/Xk-66t-5uND5HCho/1615642669809-6b758e79-421e-4043-abab-71a99aeedfd7-134764.webp)
+![](img\PrivilegeEscalation_BypassUserAccountControl_Windows\4.webp)
 
-![1615642697249-852c3e11-e724-40ba-b956-4d15d6800167.webp](./img/Xk-66t-5uND5HCho/1615642697249-852c3e11-e724-40ba-b956-4d15d6800167-357768.webp)
+![](img\PrivilegeEscalation_BypassUserAccountControl_Windows\5.webp)
 
 

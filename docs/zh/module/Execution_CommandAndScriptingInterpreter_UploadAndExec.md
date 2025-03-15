@@ -14,13 +14,13 @@
 
 + 在`自动编排`中添加此模块
 
-![1620394183362-d755852f-a815-4038-ab6f-5038fb61956d.webp](./img/T6PWHzI-YtTqdDS4/1620394183362-d755852f-a815-4038-ab6f-5038fb61956d-114936.webp)
+![](img\Execution_CommandAndScriptingInterpreter_UploadAndExec\1.webp)
 
-![1620394229160-df7a558f-d40b-4960-beda-803eaefee675.webp](./img/T6PWHzI-YtTqdDS4/1620394229160-df7a558f-d40b-4960-beda-803eaefee675-417008.webp)
+![](img\Execution_CommandAndScriptingInterpreter_UploadAndExec\2.webp)
 
 + 请注意,在操作中添加了两条模块配置,分别代表Windows类型权限和Linux类型权限所需要上传执行的文件.
 
-![1620394295324-ee07acb7-c0ae-445c-b346-f344586e495f.webp](./img/T6PWHzI-YtTqdDS4/1620394295324-ee07acb7-c0ae-445c-b346-f344586e495f-847346.webp)
+![](img\Execution_CommandAndScriptingInterpreter_UploadAndExec\3.webp)
 
 + 上述配置实际运行效果:如新增的权限是Windows系统,则第一条配置检查不通过,自动跳过,第二条配置会生效,如果上线的是Linux系统的权限,同样道理,第一条配置会生效,第二条配置会检查不通过.
 

@@ -1,6 +1,5 @@
-# Open port
+# Port Service
 
-## Source of data
+## Data Sources
 
-Port information mainly comes from three modules:`Port Scan & Service Detection` `Internal Port Scan`  `Internal ARP Scan`, can be`Run Module`Select Filter`Discovery`These three
-modules are found in the class module.
+The port information mainly comes from three modules: `Port Scanning and Service Identification`, `Port Scanning`, and `Internal Network ARP Scanning`. These three modules can be found by selecting and filtering modules of the `Information Gathering` category in the `Running Modules`. 

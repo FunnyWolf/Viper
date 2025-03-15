@@ -1,19 +1,15 @@
-# Memory execution Shellcode file
+# Execute Shellcode File in Memory
 
-# Main functions
+# Main Functions
+Inject and execute shellcode in the host memory. The file extension must be.bin. 
 
-Inject shellcode into host memory and execute, the file suffix must be bin.
+The execution of shellcode is highly related to the CPU architecture, so the "arch" option should be filled in accurately. 
 
-Shellcode execution is strongly related to the CPU architecture, and the arch options must be filled in accurately.
+If there is no need for the output of the shellcode (such as when the payload goes online), there is no need to check the "Get Output" option. 
 
-If you do not need shellcode output (such as payload is online), you do not need to check to get the output.
+If you need to obtain the output after the execution of the shellcode (e.g., mimikatz), please check the "Get Output" option and fill in the waiting time.
 
-If you need to get the output after shellcode execution (mimikatz), please check the Get output option and fill in the waiting time
+# Operation Method
+![](img\DefenseEvasion_ProcessInjection_ShellcodeLoader\1.webp)
 
-# How to operate
-
-![1623390423302-4222f450-d896-4049-bb36-13fa952cd7fa.webp](./img/cVu1d2zLdXVUKzpV/1623390423302-4222f450-d896-4049-bb36-13fa952cd7fa-917357.webp)
-
-![1623390443591-9f70dbbf-e4ac-4f25-9ba2-3043a3cf3912.webp](./img/cVu1d2zLdXVUKzpV/1623390443591-9f70dbbf-e4ac-4f25-9ba2-3043a3cf3912-340114.webp)
-
-
+![](img\DefenseEvasion_ProcessInjection_ShellcodeLoader\2.webp)

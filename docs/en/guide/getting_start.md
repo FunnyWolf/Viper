@@ -1,25 +1,19 @@
-# Start quickly
+# Quick Start
 
-## Configuration requirements
+## Configuration Requirements
+- The minimum configuration requires 2U4G.
+- Supported OS versions:
+  - Ubuntu 22.04 and above.
+  - CentOS is not recommended.
 
-+ Minimum configuration requires 2U4G
-+ Supported OS versions
-    - Ubuntu 22.04 and above
-    - Centos is not recommended
-
-## Manual installation (recommended)
-
-+ **Prepare a VPS for Linux system**
-+ **Switch to root**
-
+## Manual Installation (Recommended)
+- **Prepare a VPS with a Linux system.**
+- **Switch to the root user.**
 ```shell
 su root
 ```
-
-> Unknown problems will occur when installing sudo
-
-+ **Optimize operating system configuration**
-
+> Unknown issues may occur when installing with sudo.
+- **Optimize the operating system configuration.**
 ```shell
 sysctl -w net.ipv4.tcp_timestamps=0 
 sysctl -w net.ipv4.tcp_tw_reuse=1 
@@ -49,23 +43,18 @@ ulimit -SHn 65535
 
 sysctl -w vm.max_map_count=262144
 ```
-
-+ **Installation docker**
-
+- **Install docker**
 ```shell
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 service docker start
 ```
 
-+ **Setting/Generate/Entering Installation Directory**
-
+- **Set/generate/enter the installation directory**
 ```shell
 export VIPER_DIR=/root/VIPER
 mkdir -p $VIPER_DIR && cd $VIPER_DIR
 ```
-
-+ **Generate docker-compose.yml**
-
+- **Generate docker-compose.yml**
 ```shell
 tee docker-compose.yml <<-'EOF'
 services:
@@ -91,18 +80,15 @@ services:
     command: ["VIPER_PASSWORD"]
 EOF
 ```
-
-> Foreign VPS can also replace registry.cn-shenzhen.aliyuncs.com/toys/viper:latest with registry.cn-hongkong.aliyuncs.com/toys/viper:latest
-
-+ **Set login password**
-
-> **Viper does not allow the use of default password, diypassword is replaced with a custom password**
+> For foreign VPS, you can also replace registry.cn-shenzhen.aliyuncs.com/toys/viper:latest with registry.cn-hongkong.aliyuncs.com/toys/viper:latest
+- **Set the login password**
+> **Viper does not allow the use of the default password. Replace diypassword with a custom password.**
 
 ```shell
 export VIPER_PASSWORD=diypassword
 ```
 
-+ **Write password to docker-compose.yml**
++ **Write the password to docker-compose.yml**
 
 ```shell
 sed -i "s/VIPER_PASSWORD/$VIPER_PASSWORD/g" docker-compose.yml
@@ -116,25 +102,25 @@ cd $VIPER_DIR
 docker compose up -d
 ```
 
-+ Wait for the 15s system to start, access[https://yourvpsip:60000](https://vpsip:60000/#/user/login)Login. Username:root Password:custom password
++ Wait for 15 seconds for the system to start up, then visit [https://yourvpsip:60000](https://vpsip:60000/#/user/login) to log in. Username: root Password: Custom password
 
-> All docker compose commands must be executed in the installation directory before they can be effective.
+> All docker compose commands must be executed in the installation directory to take effect.
 
-> Use VPS to deploy Viper, please make sure that the VPS firewall has opened 60000 ports and ports required for subsequent .
+> When deploying Viper using a VPS, please confirm that the firewall of the VPS has port 60000 and subsequent ports required for handler open.
 
-> Use VIPER in the red team, it is recommended to configure[Avoid Tracing](./avoid_tracing)
+> When using VIPER in a red team, it is recommended to configure [Anti-traceability](./avoid_tracing).
 
-> [Try Viper](./try_viper) Familiar with Viper's related functions
+> You can familiarize yourself with the relevant functions of Viper through [Get Started](./try_viper).
 
-## Script installation
+## Installation with Script
 
-+ f8x tool supports one-click installation of viper in the new Linux environment, the command is as follows:
++ **The f8x tool supports one-click installation of viper in a brand-new Linux environment. The commands are as follows:**
 
 ```shell
 curl -o f8x https://f8x.io/   # wget -O f8x https://f8x.io/
 bash f8x -viper
 ```
 
-> f8x [https://github.com/ffffffff0x/f8x](https://github.com/ffffffff0x/f8x) supply
+> f8x is provided by [https://github.com/ffffffff0x/f8x](https://github.com/ffffffff0x/f8x).
 
-> Mac installation reference [issues](issues)
+> For Mac installation, refer to [issues](./issues).

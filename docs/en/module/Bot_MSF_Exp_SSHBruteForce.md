@@ -1,11 +1,7 @@
-# SSH brute force cracking module (beta) (wait)
+# SSH Brute-force Cracking Module (beta) (wait)
 
-# Main functions
-
+# Main Functions
 To be supplemented
 
-# How to operate
-
+# Operation Methods
 To be supplemented
-
-

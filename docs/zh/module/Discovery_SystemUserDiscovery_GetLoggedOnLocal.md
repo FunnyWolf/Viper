@@ -8,8 +8,8 @@
 主机名可以使用<<收集所有域主机的信息>>模块进行获取
 
 # 操作方法
-![1625195931470-202da392-e0ce-433b-81b9-fd36d2f6e0a4.webp](./img/9EvMuEqsBOg_irbY/1625195931470-202da392-e0ce-433b-81b9-fd36d2f6e0a4-869804.webp)
+![](img\Discovery_SystemUserDiscovery_GetLoggedOnLocal\1.webp)
 
-![1625195959212-a7702503-6b3f-48d6-b299-433645afc40a.webp](./img/9EvMuEqsBOg_irbY/1625195959212-a7702503-6b3f-48d6-b299-433645afc40a-934170.webp)
+![](img\Discovery_SystemUserDiscovery_GetLoggedOnLocal\2.webp)
 
 

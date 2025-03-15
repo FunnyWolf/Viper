@@ -1,11 +1,9 @@
-# Real-time output
+# Real-time Output
 
-## Module results
+## Module Results
++ The result information of the running module is displayed on the left side of the panel.
 
-+ The result information of the running module is displayed on the left side of the panel
-
-## Platform log
-
-+ The right-hand list displays the platform operation log
-+ Logs contain key operation notifications, logs during module operation and other information
-+ Top input supports multi-user chat
+## Platform Logs
++ The platform running logs are displayed in the list on the right.
++ The logs include information such as key operation notifications and logs during the module running process.
++ The input at the top supports multi-user chat.

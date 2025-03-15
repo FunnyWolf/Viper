@@ -1,27 +1,21 @@
-# Winlogon Helper DLL persistence
+# Winlogon Helper DLL Persistence
 
-# Main functions
+## Main Functions
+Achieve persistence through HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
 
-Persistence via HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
+## Precautions
+It is not undetectable and requires administrator privileges.
 
-# Things to note
+## Operation Methods
+- Generate a listener.
+- Obtain a Session with administrator privileges.
+- Run the module and fill in the listener configuration.
 
-It's inevitable to kill, requires administrator permission
+![](img\Persistence_WinlogonHelperDLL_Windows\1.webp)
 
-# How to operate
+- Caching the listener means that after the module runs successfully, a virtual listener will be automatically generated according to the filled listener parameters, which is convenient for restoration when the server restarts.
+- Module execution results
 
-+ Generate listening
-+ Sesison to obtain administrator permissions
-+ Run the module, fill in the monitoring configuration
+![](img\Persistence_WinlogonHelperDLL_Windows\2.webp)
 
-![1615638829053-f1b25455-db2e-4270-967a-795a4b045c17.webp](./img/CY5mtO3e93YCw1B4/1615638829053-f1b25455-db2e-4270-967a-795a4b045c17-008040.webp)
-
-+ Cache listening means that after the module is successfully run, a virtual listening will be automatically generated based on the filled-in listening parameters, which will
-  facilitate recovery when the server restarts.
-+ Module execution results
-
-![1615639026311-13bce46d-dfe2-44ce-84f1-fcf3c1e064cc.webp](./img/CY5mtO3e93YCw1B4/1615639026311-13bce46d-dfe2-44ce-84f1-fcf3c1e064cc-662093.webp)
-
-+ After the target machine is restarted, any userinit.exe will be executed and the Session will be regenerated.
-
-
+- After the target machine restarts, any user login will execute userinit.exe and regenerate a Session.

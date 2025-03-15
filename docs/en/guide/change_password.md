@@ -1,31 +1,31 @@
-# Modify password
+# Change Password
 
-## Temporary modification
+## Temporary Change
 
-> It is suitable for changing the password without restarting Viper. The password will not be retained after Viper is updated.
+> This is applicable when you need to change the password without restarting Viper. The password will not be retained after Viper is updated.
 
-+ Make sure Viper is in normal operation
-+ Enter the Docker image command line
+- Ensure that Viper is running normally.
+- Enter the command line of the Docker image.
 
 ```shell
 docker exec -it viper-c bash
 ```
 
-+ Execute the password change command
+- Execute the command to change the password.
 
 ```shell
 viper -pw this_is_new_password
 ```
 
-## Persistent modification
+## Persistent Change
 
-+ Enter the installation directory
+- Enter the installation directory.
 
 ```shell
 cd /root/VIPER
 ```
 
-+ Change the command content in docker-compose.yml to a new password, for example
+- Change the content of `command` in `docker-compose.yml` to the new password. For example:
 
 ```shell
 version: "3"
@@ -42,13 +42,12 @@ services:
       - ${PWD}/log:/root/viper/Docker/log
       - ${PWD}/nginxconfig:/root/viper/Docker/nginxconfig
     command: ["this_is_new_password"]
-
 ```
 
-+ Execute the following command to rebuild the container
+- Execute the following commands to recreate the container.
 
 ```shell
 cd /root/VIPER
-docker compose down       
-docker compose up -d      
+docker compose down       # Delete the existing container
+docker compose up -d      # Restart and start the container
 ```

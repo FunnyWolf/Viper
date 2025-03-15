@@ -4,6 +4,6 @@
 模块使用powershell脚本获取主机所在域的域控信息,如果主机不在域中,脚本可能报错
 
 # 操作方法
-![1625196003466-6496916c-1984-43a5-afd1-8e42e6fcfa42.webp](./img/MYi1cV0_dw5O0K3I/1625196003466-6496916c-1984-43a5-afd1-8e42e6fcfa42-769566.webp)
+![](img\Discovery_RemoteSystemDiscovery_GetNetDomainController\1.webp)
 
 

@@ -1,15 +1,15 @@
-# File list
+# File Explorer
 
 ## Upload/Download
 
-+ Support drag and drop file upload and click upload, click `Download` Automatically download using browser
++ Supports drag-and-drop file upload and click-to-upload. Click `Download` to automatically download using the browser.
 
-## Check
+## View
 
-+ Support direct preview of text files and pictures
++ Supports direct preview of text files and images.
 
-## Download in one sentence
+## One-line Download
 
-+ When the file is uploaded to the server, Viper provides the network download function (Host File) by default, and various versions will be prompted to download in one sentence in the interface.
++ After the file is uploaded to the server, Viper provides a network download function (Host File) by default. The interface will prompt for one-line downloads of various versions.
 
-> Currently, it does not support bitadmin downloads for Windows systems
+> Currently, bitadmin download for the Windows system is not supported.

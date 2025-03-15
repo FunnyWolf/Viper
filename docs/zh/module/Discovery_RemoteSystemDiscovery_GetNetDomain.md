@@ -4,6 +4,6 @@
 模块使用powershell脚本获取主机所在域的基本信息,如果主机不在域中,脚本可能报错
 
 # 操作方法
-![1625195099783-376d656d-34c7-4d84-b982-8aa216fc72c6.webp](./img/tkv_O4_Y7_ud72mw/1625195099783-376d656d-34c7-4d84-b982-8aa216fc72c6-652999.webp)
+![](img\Discovery_RemoteSystemDiscovery_GetNetDomain\1.webp)
 
 

@@ -1,6 +1,6 @@
-# Optimized configuration of the operating system
+# OS Optimization
 
-Configuring the following configuration in VPS helps improve Viper performance
+The following configurations in the VPS can help improve Viper performance.
 
 ```shell
 sysctl -w net.ipv4.tcp_timestamps=0 

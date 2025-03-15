@@ -1,3 +1,3 @@
-# SMTP configuration
+# SMTP Configuration
 
-Configure SMTP server to send mail
+Configure the SMTP server for sending emails.

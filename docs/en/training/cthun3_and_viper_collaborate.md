@@ -1,35 +1,35 @@
-# cthun3 and Viper link
+# Link between cthun3 and Viper
 
-cthun3 is a tool for integrated port scanning, service recognition, netbios scanning, website recognition, brute force cracking and vulnerability scanning.
+cthun3 is a tool that integrates port scanning, service identification, NetBIOS scanning, website identification, brute force cracking, and vulnerability scanning.
 
 
 
-# screenshot
+# Screenshots
 > Screenshots when using cthun3 in combination with viper
 >
 
-![1626100626771-5534cc76-4d6b-407e-97de-183426275cd7.webp](./img/WvZROmtygc5ZV1tX/1626100626771-5534cc76-4d6b-407e-97de-183426275cd7-947084.webp)
+![](img\cthun3_and_viper_collaborate\1.webp)
 
-![1626100542396-e3234c35-74be-42a9-bd35-31695087c37a.webp](./img/WvZROmtygc5ZV1tX/1626100542396-e3234c35-74be-42a9-bd35-31695087c37a-550254.webp)
+![](img\cthun3_and_viper_collaborate\2.webp)
 
-![1626100563858-ee4b5240-bd70-420f-b3ee-81d848e3378e.webp](./img/WvZROmtygc5ZV1tX/1626100563858-ee4b5240-bd70-420f-b3ee-81d848e3378e-354811.webp)
+![](img\cthun3_and_viper_collaborate\3.webp)
 
-![1626100709287-73c2f58c-76f0-4cac-abb4-e43c2742b7de.webp](./img/WvZROmtygc5ZV1tX/1626100709287-73c2f58c-76f0-4cac-abb4-e43c2742b7de-540644.webp)
+![](img\cthun3_and_viper_collaborate\4.webp)
 
-![1626100776431-2c9ef7ff-21e2-4af7-b77b-734d8ef635b8.webp](./img/WvZROmtygc5ZV1tX/1626100776431-2c9ef7ff-21e2-4af7-b77b-734d8ef635b8-978683.webp)
+![](img\cthun3_and_viper_collaborate\5.webp)
 
 
 
-# How to use
-## Port Scan
+# Usage Methods
+## Port Scanning
 ### -ps-ip
-The IP address range of port scan, for example, you can enter
+The IP address range for port scanning. For example, you can enter:
 
 ```plain
 -ps-ip 192.168.146.1-255,192.168.147.1-192.168.148.255,192.168.149.1/24,ip.txt
 ```
 
-ip.txt and cthun are in the same directory. The content of ip.txt can be in the following format
+ip.txt is in the same directory as cthun. The content of ip.txt can be in the following format:
 
 ```plain
 192.168.146.1-255
@@ -38,7 +38,7 @@ ip.txt and cthun are in the same directory. The content of ip.txt can be in the 
 
 ### 
 ### -ps-p
-Port scan port range, for example, you can enter
+The port range for port scanning. For example, you can enter:
 
 ```plain
 -ps-p 22,80,1-65535
@@ -46,7 +46,7 @@ Port scan port range, for example, you can enter
 
 ### 
 ### -ps-tp
-Port scan top N port, for example, you can enter
+Port scanning of the top N ports. For example, you can enter:
 
 ```plain
 -ps-tp 100
@@ -54,7 +54,7 @@ Port scan top N port, for example, you can enter
 
 ### 
 ### -ps-r
-The number of retry times of port scanning for each port can enhance stability
+The number of retries for each port during port scanning, which can enhance stability:
 
 ```plain
 -ps-r 2
@@ -62,7 +62,7 @@ The number of retry times of port scanning for each port can enhance stability
 
 
 
-**You can use it as follows**
+**Combined usage can be like the following**:
 
 ```plain
 cthun -ps-ip 192.168.146.1-255,ip.txt -ps-p 60000 -ps-tp 100 
@@ -70,17 +70,15 @@ cthun -ps-ip 192.168.146.1-255,ip.txt -ps-p 60000 -ps-tp 100
 
 
 
-
-
-## Netbios Scan
+## NetBIOS Scanning
 ### -ns-ip
-The IP address range of port scan, for example, you can enter
+The IP address range for port scanning. For example, you can enter:
 
 ```plain
 -ns-ip 192.168.146.1-255,192.168.147.1-192.168.148.255,192.168.149.1/24,ip.txt
 ```
 
-ip.txt and cthun are in the same directory. The content of ip.txt can be in the following format
+ip.txt is in the same directory as cthun. The content of ip.txt can be in the following format:
 
 ```plain
 192.168.146.1-255
@@ -89,23 +87,21 @@ ip.txt and cthun are in the same directory. The content of ip.txt can be in the 
 
 
 
-
-
-## Http Scan
+## Http Scanning
 ### -hs-ipport
-Used in combination with portscan, http scan will automatically add the ip:port of the http and https protocols in the portscan result to the scan queue, just enter
+Used in combination with portscan. Http scanning will automatically add the ip:port with http and https protocols in the portscan result to the scanning queue. Just enter:
 
 ```plain
 -hs-ipport ps
 ```
 
-http scan can also specify the ip:port list separately, for example, you can enter
+Http scanning can also specify a separate list of ip:port. For example, you can enter:
 
 ```plain
 -hs-ipport 192.168.146.1/24:8009,192.168.146.1-255:80,ipport.txt
 ```
 
-ipport.txt and cthun are in the same directory. The ip.txt content can be in the following format
+ipport.txt is in the same directory as cthun. The content of ip.txt can be in the following format:
 
 ```plain
 192.168.146.1-255:80
@@ -114,13 +110,13 @@ ipport.txt and cthun are in the same directory. The ip.txt content can be in the
 
 ### 
 ### -hs-url
-Check if the website has a specified URL
+Check if a website exists with the specified url:
 
 ```plain
 -hs-url /admin/login.jsp,/js/ijustcheck.js,/shell.php
 ```
 
-**You can use it as follows**
+**Combined usage can be like the following**:
 
 ```plain
 cthun -ps-ip ip.txt -ps-tp 100 -hs-ipport ps -hs-url /admin/login.jsp
@@ -130,11 +126,9 @@ cthun -hs-ipport 192.168.146.1-255:80 -hs-url /admin/login.jsp
 
 
 
-
-
-## Brute force cracking
+## Brute Force Cracking
 ### -bf
-Used in combination with portscan, brute force cracking will automatically add the ip:port of the protocol that meets the conditions in the portscan result to the cracking queue, just enter
+Used in combination with portscan. Brute force cracking will automatically add the ip:port with the eligible protocol in the portscan result to the cracking queue. Just enter:
 
 
 
@@ -142,20 +136,20 @@ Used in combination with portscan, brute force cracking will automatically add t
 -bf
 ```
 
-List of brute force cracking protocols: **smb, ssh, redis, ftp, rdp, mysql, mongodb, memcached, vnc**
+Brute force cracking protocol list: **smb,ssh,redis,ftp,rdp,mysql,mongodb,memcached,vnc**
 
 
 
 ### -bf-smb
-Smb protocol brute-force cracking, support and user:pass and hashs brute-force cracking
+Smb protocol brute force cracking, supporting brute force cracking with user:pass and hashs.
 
-Used in combination with portscan, automatically add the ip:port of the smb protocol in the portscan result to the scan queue, just enter
+Used in combination with portscan. Automatically add the smb protocol ip:port in the portscan result to the scanning queue. Just enter:
 
 ```plain
 -bf-smb ps
 ```
 
-http scan can also specify the ip:port list separately, for example, you can enter
+Http scanning can also specify a separate list of ip:port. For example, you can enter:
 
 ```plain
 -bf-smb 192.168.146.1/24:445,192.168.146.1-255:445,ipport.txt
@@ -163,18 +157,18 @@ http scan can also specify the ip:port list separately, for example, you can ent
 
 ### 
 ### --bf-ssh -bf-redis -bf-ftp -bf-rdp -bf-mysql -bf-mongodb -bf-memcached -bf-vnc
-Reference -bf-smb usage method
+Refer to the usage method of -bf-smb.
 
 
 
 ### -bf-u
-Brute-force user name dictionary,
+Brute force cracking user name dictionary:
 
 ```plain
 -bf-u  lab\\administrator,administrator,root,user.txt
 ```
 
-user.txt file content format
+The content format of user.txt file:
 
 ```plain
 root
@@ -185,13 +179,13 @@ funnywolf
 
 
 ### -bf-p
-Brute force password dictionary,
+Brute force cracking password dictionary:
 
 ```plain
 -bf-u   1234qwer!@#$,root,foobared,password.txt
 ```
 
-password.txt file content format
+The content format of password.txt file:
 
 ```plain
 root
@@ -201,13 +195,13 @@ test
 
 ### 
 ### -bf-h
-Smb brute force cracking hash dictionary (note that it does not support the command line to directly enter hash content)
+Smb brute force cracking hash dictionary (note that hash content cannot be directly entered in the command line):
 
 ```plain
 -bf-h hashes.txt
 ```
 
-hashes.txt file content format
+The content format of hashes.txt file:
 
 ```plain
 sealgod,domainadmin1,ae946ec6f4ca785ba54985f61a715a72:1d4d84d758cfa9a8a39f7121cb3e51ed
@@ -217,7 +211,7 @@ sealgod,domainadmin2,be946ec6f4ca785ba54985f61a715a72:2d4d84d758cfa9a8a39f7121cb
 
 
 ### -bf-sk
-ssh protocol private key brute-force cracking, id_rsa is the private key file name, id_rsa and cthun are the same directory as id_rsa
+Ssh protocol private key brute force cracking. id_rsa is the private key file name and is in the same directory as cthun.
 
 ```plain
 -bf-sk id_rsa
@@ -226,13 +220,13 @@ ssh protocol private key brute-force cracking, id_rsa is the private key file na
 
 
 ### --bf-dd
-Whether to use built-in dictionary for brute force
+Whether to use the built-in dictionary for brute force cracking:
 
 ```plain
 -bf-dd
 ```
 
-**You can use it as follows**
+**Combined usage can be like the following**:
 
 ```plain
 cthun -ps-ip ip.txt -ps-tp 100 -bf -bf-u user.txt -bf-p password.txt
@@ -244,9 +238,9 @@ cthun -bf-smb 192.168.146.1-255:445 -bf-u user.txt -bf-p password.txt
 
 
 
-## Vulnerability scanning
+## Vulnerability Scanning
 ### -vs
-Used in combination with portscan, the vulnerability will automatically add the ip:port of the protocol that meets the criteria in the portscan result to the crack queue, just enter
+Used in combination with portscan. Vulnerability scanning will automatically add the ip:port with the eligible protocol in the portscan result to the cracking queue. Just enter:
 
 
 
@@ -254,20 +248,20 @@ Used in combination with portscan, the vulnerability will automatically add the 
 -vs
 ```
 
-Vulnerability scanning protocol list: **smb, http, https**
+Vulnerability scanning protocol list: **smb,http,https**
 
 ****
 
 ### -vs-smb -vs-http
-Reference -bf-smb usage method
+Refer to the usage method of -bf-smb.
 
 ****
 
 ****
 
-## Network parameters
+## Network Parameters
 ### -ms
-The maximum number of connections is 100 for Windows and 300 for Linux.
+The maximum number of connections. It is recommended to be 100 for Windows and 300 for Linux:
 
 ```plain
 -ms 200
@@ -276,7 +270,7 @@ The maximum number of connections is 100 for Windows and 300 for Linux.
 ****
 
 ### -st
-The socket timeout time (seconds). Generally, the network delay in the intranet is very low, and it is recommended to be less than 0.3.
+Socket timeout time (seconds). Generally, the network delay in the intranet is very low. It is recommended to be less than 0.3:
 
 ```plain
 -st 0.2
@@ -285,7 +279,7 @@ The socket timeout time (seconds). Generally, the network delay in the intranet 
 ****
 
 ### -lh
-Whether to load the historical scan results in ipportservice.log, for`http扫描``暴力破解``漏洞扫描`wait
+Whether to load the historical scanning results in ipportservice.log for "http scanning", "brute force cracking", "vulnerability scanning", etc.:
 
 ```plain
 -lh
@@ -293,22 +287,22 @@ Whether to load the historical scan results in ipportservice.log, for`http扫描
 
 
 
-# advantage
-+ Port scanning speed is fast (255 IPs, TOP100 ports, 15 seconds)
-+ Port scanning speed is fast (255 IPs, TOP100 ports, 15 seconds)
-+ Port scanning speed is fast (255 IPs, TOP100 ports, 15 seconds)
-+ Accurate service identification (integrated NMAP fingerprint database)
-+ Single file without dependencies (convenient to intranet scanning)
+# Advantages
++ Fast port scanning speed (255 IPs, TOP100 ports, 15 seconds)
++ Fast port scanning speed (255 IPs, TOP100 ports, 15 seconds)
++ Fast port scanning speed (255 IPs, TOP100 ports, 15 seconds)
++ Accurate service identification (integrated with NMAP fingerprint database)
++ Single file with no dependencies (convenient for intranet scanning)
 + Strong adaptability (Windows Server 2012, CentOS6, Debain9, ubuntu16)
-+ Support multiple protocol brute-force cracking
-+ Support netbios scanning (get multiple network card IP)
-+ Support vul scanning (ms17-010)
++ Support for multiple protocol brute force cracking
++ Support for NetBIOS scanning (obtain multiple network card IPs)
++ Support for vul scanning (ms17-010)
 
 
 
-# shortcoming
-+ Executable file large (20M)
-+ Windows Server 2003/Windows XP is not supported
+# Disadvantages
++ Large executable file (20M)
++ Does not support Windows Server 2003/Windows XP
 
 
 
@@ -326,32 +320,31 @@ Whether to load the historical scan results in ipportservice.log, for`http扫描
 
 
 
-# rely
-+ RDP's brute force cracking depends on OpenSSL (Windows Server 2003/Windows XP cannot use rdp brute force cracking, other functions have no effect)
-+ Linux server needs glibc version to be greater than 2.5 (higher than centos5, ldd --version to view)
+# Dependencies
++ RDP brute force cracking depends on OpenSSL (Windows Server 2003/Windows XP cannot use rdp brute force cracking. Other functions are not affected.)
++ Linux server requires glibc version greater than 2.5 (higher than centos5. ldd --version to view)
 
 
 
 # Tested
-+ Windows 7
++ Windows7
 + Windows Server 2012
 + CentOS5
 + Kali
 
 
 
-# Update log
+# Update Log
 ****
 
-**1.0 beta**
+**1.0 beta**  
 Update time: 2021-07-12
 
 
 
-+ Release the first version
++ Released the first version
 
 
 
-> cthun is an ancient god in World of Warcraft video games
+> cthun (Cthun) is an ancient god in the World of Warcraft video game.
 >
-

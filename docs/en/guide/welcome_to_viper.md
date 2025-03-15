@@ -1,43 +1,51 @@
 # Welcome to VIPER
 
-**VIPER** is a powerful and flexible red team platform. It integrates the core tools and functionalities required for adversary simulation and red team operations, assisting you in efficiently completing cybersecurity assessment tasks.
+**VIPER** is a powerful and flexible red team platform. The platform integrates the core tools and functions required for adversary simulation and red team operations, helping you efficiently complete network security assessment tasks.
 
 <div class="tip custom-block" style="padding-top: 8px">
 
-Want to try it out? Jump to [Quick Start](./getting_start).
+Give it a try? Jump to [Quick Start](./getting_start).
 
 </div>
 
-## Why Choose VIPER?
+## Why Use VIPER?
 
-- **User-Friendly Interface**  
-  Provides an intuitive interface that enables red team members to rapidly initiate security assessment tasks.
+- **Intuitive User Interface**
 
-- **Multi-Platform Support**  
-  Supports red team assessments across multiple operating systems, including Windows, Linux, and macOS, ensuring broad compatibility.
+  It provides an easy-to-use user interface, enabling red team members to quickly start their security assessment tasks.
 
-- **Out-of-the-Box Red Teaming Tools**  
-  Designed to cover all phases of the MITRE ATT&CK framework, offering a comprehensive attack simulation solution.
+- **Multi-Platform Support**
 
-- **Integrated LLM Agent**  
-  Built-in Large Language Model (LLM) agent enhances automated processing capabilities and intelligent decision-making support.
+  Supports red team assessments for multiple operating systems, including Windows, Linux, and macOS.
 
-- **Automated Workflows**  
-  Supports orchestration and notification mechanisms for 24/7 monitoring of target environments.
+- **Out-of-the-Box Red Team Tools**
 
-- **Diverse Module Ecosystem**  
-  Includes post-exploitation modules, passive scanning modules, network-wide scanning modules, and more to address diverse scenarios.
+  The functionality design covers all phases of the MITRE ATT&CK framework, providing users with a comprehensive attack simulation solution.
 
-- **Custom Extensibility**  
-  Supports Python-based custom module development to meet specialized requirements or add extended functionalities.
+- **Integrated LLM Agent**
 
-- **Attack Surface Management (Beta)**  
-  Introduces Attack Surface Management (ASM) capabilities to help teams better identify and analyze potential risk points in target enterprises.
+  Built-in large language model agents to enhance automated processing capabilities and intelligent decision-making support.
 
-We hope this information and guide help you better understand VIPER. Our goal is to empower both newcomers and experienced security professionals to leverage VIPER's robust features effectively.
+- **Automated Workflow**
+
+  Supports automated orchestration and notification mechanisms, enabling the red team to monitor the target status around the clock.
+
+- **Diverse Modules**
+
+  Integrates various types of modules, including post-exploitation modules, passive scanning modules, and full-network scanning modules, to meet the needs in different scenarios.
+
+- **Customization and Extension Capabilities**
+
+  Supports writing custom modules in Python to meet specific requirements or add additional functionality.
+
+- **Attack Surface Management (Beta)**
+
+  Introduces attack surface management capabilities to help teams better identify and understand potential risk points of target enterprises.
+
+We hope the above information and this guide will help you better understand VIPER. Our goal is that both novice and experienced security professionals can find powerful features suitable for themselves in **VIPER**.
 
 ## Next Steps
 
-+ Read the [Quick Start](getting_start.md) to install and explore VIPER
-+ Browse [Platform Screenshots](screenshots.md) for a feature overview
-+ Visit the [Blog](../blog/index) to learn more about VIPER
++ Read [Quick Start](getting_start.md) to install and experience VIPER.
++ Take a quick look at VIPER's functions through [Platform Screenshots](screenshots.md).
++ Refer to [Blog](../blog/index) to get familiar with VIPER.

@@ -1,109 +1,101 @@
-# Viper-半自动化内网信息收集
+# Viper - Semi-Automated Intranet Information Gathering
 
-# 前言
-在前一篇文章 [Viper：开源的图形化内网渗透工具 - 安装及入门](https://www.anquanke.com/post/id/230287) 详细的介绍了Viper的安装方法及部分基础功能,内容主要面向首次接触内网渗透或刚刚入门的安全工程师.
+# Preface
+In the previous article [Viper: Open Source Graphical Internal Network Penetration Tool - Installation and Getting Started](https://www.anquanke.com/post/id/230287), the installation method and some basic functions of Viper were introduced in detail. The content is mainly aimed at security engineers who are first exposed to internal network penetration or just start.
 
-对于有一定内网渗透测试经验的人员来说,在实际渗透测试过程中更需要一款集成常用功能,可以灵活搭配,自动化完成固定操作流程的测试平台.特别是在信息收集阶段,每次获取新的权限都要执行很多重复性的工作,收集到的信息又分散在不同的工具中,不方便进行统计分析.
+For those with certain experience in internal network penetration testing, in the actual penetration testing process, a testing platform that integrates common functions, can be flexibly combined, and automatically completes fixed operation processes is needed. Especially in the information collection stage, every time a new permission is obtained, a lot of repetitive work needs to be performed, and the collected information is scattered in different tools, which is not convenient for statistical analysis.
 
-本篇文章就介绍如何使用Viper进行半自动化内网信息收集,希望可以帮助有此类需求的安全工程师.
+This article introduces how to use Viper for semi-automated intranet information collection. It is hoped that it can help security engineers with such needs.
 
+# Local Information Collection
+Each time a new host permission is obtained or a higher permission for the same host is obtained, a complete information collection work should be performed on the host. The information collected on the host can usually guide the direction of the next penetration test or provide necessary help prompts.
 
+Local information collection includes information such as `hostname`, `operating system`, `domain`, `network card information`, `local listening`, `external network connection`, `intranet connection`, `ARP information`, `important processes`, etc.
 
-# 本地信息收集
-每次获取到一个新的主机的权限,或者获取同一主机的更高权限,都应对主机进行一次完整的信息收集工作.在主机中收集到的信息通常能指引我们下一步渗透测试的方向或提供必要的帮助提示.
+![](img\viper_semi_automated_intranet_information_gathering\1.webp)
 
-本地信息收集包括 `主机名` `操作系统` `域` `网卡信息` `本地监听` `外网连接` `内网连接` `ARP信息` `重要进程` 等信息
++ Network Card Information
+  The network card information will display all network card configurations and IP/Mask of the current host. In the intranet, if a host has multiple network cards and is connected to different subnets, it can be used as a stepping stone through this host to carry out intranet penetration of multi-level networks in the subsequent penetration process.
 
-![1613560622503-4e457d71-2415-4f3b-a2cc-1b7d15a1de3c.webp](./img/p1eSp1TIGF2UZcYr/1613560622503-4e457d71-2415-4f3b-a2cc-1b7d15a1de3c-760053.webp)
+![](img\viper_semi_automated_intranet_information_gathering\2.webp)
 
-+ 网卡信息
++ Local Listening
+  Local listening is a summary of the attack surface of the current host against the network. For example, checking whether it is listening to 80 and 443 to analyze whether it provides Web services externally, whether WebShell and other persistence operations can be performed, whether it is listening to 3389 to determine whether RDP login can be performed, and whether it is listening to 6379, 1433 and other ports to determine whether the corresponding database service is enabled, which can be used for privilege escalation.
 
-网卡信息中会展示当前主机的所有网卡配置及IP/Mask,在内网中如果一台主机有多个网卡,且连接不同的子网,后续渗透过程中可以通过该主机作为跳板,来进行多级网络的内网渗透.
+![](img\viper_semi_automated_intranet_information_gathering\3.webp)
 
-![1613560696367-37f1c491-344d-4c32-b10d-f82736849f27.webp](./img/p1eSp1TIGF2UZcYr/1613560696367-37f1c491-344d-4c32-b10d-f82736849f27-076378.webp)
++ Intranet Connection
+  Viewing which intranet hosts the host is connected to helps us confirm the next penetration test target. Such as the website database address of separated station and library, the IP address and port of the intranet business server, the address of the intranet OA server, etc.
 
-+ 本地监听
+![](img\viper_semi_automated_intranet_information_gathering\4.webp)
 
-本地监听是当前主机针对网络的攻击面的汇总,例如查看是否监听80,443来分析是否对外提供Web服务,可否进行Webshell等持久化操作,是否监听3389来判断是否可以进行RDP登录,是否监听6379,1433等端口来判断是否启用了对应的数据库服务,可以用来提权.
++ Important Processes
+  The credential-related process lsass.exe or anti-virus software process needs to be focused on. Viper will compare according to the built-in database information and display all sensitive processes.
 
-![1613561107774-43c2ae84-5da6-4404-9d6d-7a5e200e6468.webp](./img/p1eSp1TIGF2UZcYr/1613561107774-43c2ae84-5da6-4404-9d6d-7a5e200e6468-267768.webp)
+![](img\viper_semi_automated_intranet_information_gathering\5.webp)
 
-+ 内网连接
+# Subnet Information Collection
+After completing the local information collection, it is necessary to collect information for the subnet where the current host is located, usually port scanning.
 
-查看主机连接那些内网主机,有助于帮助我们确认下一步的渗透测试目标.如站库分离的网站数据库地址,内网业务服务器的IP地址及端口,内网OA服务器地址等.
++ ARP scanning only performs network scanning for the same network segment (usually C segment) to discover hosts.
 
-![1613561301832-e7f0f095-96c7-4f0a-a43a-7f1d6b89d77e.webp](./img/p1eSp1TIGF2UZcYr/1613561301832-e7f0f095-96c7-4f0a-a43a-7f1d6b89d77e-522783.webp)
+![](img\viper_semi_automated_intranet_information_gathering\6.webp)
 
-+ 重要进程
++ The conventional port scanning is to view the port opening status of other hosts. It is usually purposeful to scan a single port of the same network segment or all ports of a certain IP.
 
-系统的凭证相关进程lsass.exe或杀软进程需要重点关注,Viper会根据内置的数据库信息进行比对,展示所有敏感进程.
+![](img\viper_semi_automated_intranet_information_gathering\7.webp)
 
-![1613561460791-931e32e0-7b2a-4e16-b22c-61acceda5cd5.webp](./img/p1eSp1TIGF2UZcYr/1613561460791-931e32e0-7b2a-4e16-b22c-61acceda5cd5-094321.webp)
++ While performing port scanning, fingerprint recognition can also be performed to view the port service type (the fingerprint is from Nmap).
 
-# 子网信息收集
-在完成本地信息收集后,就需要针对当前主机所在子网进行信息收集,通常是端口扫描.
+![](img\viper_semi_automated_intranet_information_gathering\8.webp)
 
-+ ARP扫描只针对同一网段(通常是C段)进行网络扫描,进行主机发现
+# Domain Information Collection
+Domain penetration accounts for a large proportion in internal network penetration, and there are usually many high-value targets in the domain. Once the domain control permission is obtained, almost any host in the domain can be controlled. In the HW and red team evaluation process, the domain has always been the focus of attention. Viper also integrates multiple domain-related information collection modules. Here are some examples.
 
-![1613561958009-2dbf73b5-977f-419a-94c2-33f7f314bd1c.webp](./img/p1eSp1TIGF2UZcYr/1613561958009-2dbf73b5-977f-419a-94c2-33f7f314bd1c-861905.webp)
++ Obtain basic domain information / obtain domain control information. The first operation in domain penetration.
 
-+ 常规的端口扫描是查看其他主机的端口开放情况,通常是有目的性的针对同一网段的单个端口或某一IP的全部端口进行扫描.
+![](img\viper_semi_automated_intranet_information_gathering\9.webp)
 
-![1613562167140-0b40951a-a058-4417-942e-f01a3f8c0c8e.webp](./img/p1eSp1TIGF2UZcYr/1613562167140-0b40951a-a058-4417-942e-f01a3f8c0c8e-911695.webp)
++ Obtain all domain user information. This module is usually used to locate key personnel or domain administrators.
 
-+ 端口扫描的同时还可以进行指纹识别,查看端口服务类型(指纹来源于Nmap)
+![](img\viper_semi_automated_intranet_information_gathering\10.webp)
 
-![1613562280833-cd08b5d0-40a4-4d72-8016-4129922f0ee6.webp](./img/p1eSp1TIGF2UZcYr/1613562280833-cd08b5d0-40a4-4d72-8016-4129922f0ee6-247034.webp)
++ Obtain domain permission group information. Some enterprises use domain permission groups to classify department personnel. This information can be used to attack specific departments (such as finance and development).
 
-# 域信息收集
-域渗透在内网渗透占有很大比重,且域中通常有很多高价值目标,一旦获取域控权限则几乎可以控制域内任意主机,在HW及红队评估过程中域一直受到重点关注.Viper也集成多个域相关信息收集模块,这里举几个例子.
+![](img\viper_semi_automated_intranet_information_gathering\11.webp)
 
-+ 获取域基本信息/获取域控信息,域渗透的第一步操作
++ Obtain the IP information of domain hosts. If a certain host has been located as the target host, the IP address of the target host can be found through this module.
 
-![1613563015584-91b117b8-0763-45d7-8f3c-eb0144038c26.webp](./img/p1eSp1TIGF2UZcYr/1613563015584-91b117b8-0763-45d7-8f3c-eb0144038c26-782153.webp)
+![](img\viper_semi_automated_intranet_information_gathering\12.webp)
 
-+ 获取所有域用户信息,通常使用该模块来定位关键人员或域管理员.
++ Obtain the currently logged-in users of domain hosts. In domain penetration, domain administrators are always high-value targets. Finding out which host the administrator has logged in to and obtaining the permission of the administrator's login host to capture the administrator's password or hash is the simplest and direct idea.
 
-![1613562557920-7b039ca7-f353-4f79-819b-03103b7e889c.webp](./img/p1eSp1TIGF2UZcYr/1613562557920-7b039ca7-f353-4f79-819b-03103b7e889c-119295.webp)
+![](img\viper_semi_automated_intranet_information_gathering\13.webp)
 
-+ 获取域权限组信息,部分企业使用域权限组的方式进行部门人员分类,可以通过此信息来针对特定部门(如财务,开发)进行攻击.
++ Obtain the last logged-in user of domain hosts and can view the last user of the host.
 
-![1613562943832-3250c3f8-440b-4d65-aa70-e81bcc6588d6.webp](./img/p1eSp1TIGF2UZcYr/1613562943832-3250c3f8-440b-4d65-aa70-e81bcc6588d6-172786.webp)
+![](img\viper_semi_automated_intranet_information_gathering\14.webp)
 
-+ 获取域主机的IP信息,如果已经定位到某个主机为目标主机,可以通过此模块查找目标主机的IP地址.
+# Credential Access
+According to the classification of MITRE ATT&CK, information collection (Discovery) and credential access (Credential Access) belong to two different dimensions. However, in various tutorials or actual penetration processes in China, credential access is usually classified as information collection. Therefore, it is introduced here together.
 
-![1613562922694-d8703279-aa5b-44f8-a343-04af4c91ad26.webp](./img/p1eSp1TIGF2UZcYr/1613562922694-d8703279-aa5b-44f8-a343-04af4c91ad26-111246.webp)
++ Obtain Windows memory password. Use the memory loading mimikatz method to capture the password.
 
-+ 获取域内主机正在登录用户,在域渗透中,域管理员永远是高价值目标,查找管理员在哪台主机登录过,通过获取管理员登录主机的权限,抓取管理员的密码或hash,是最简单直接的思路.
+![](img\viper_semi_automated_intranet_information_gathering\15.webp)
 
-![1613563323924-0e705732-4872-4e1e-8254-a7b6e53937d6.webp](./img/p1eSp1TIGF2UZcYr/1613563323924-0e705732-4872-4e1e-8254-a7b6e53937d6-652099.webp)
++ Obtain Windows memory Hash. Only the local user's Hash is captured in the module.
 
-+ 获取域主机最后登录用户,可以查看主机最后的使用者
+![](img\viper_semi_automated_intranet_information_gathering\16.webp)
 
-![1613563190631-61c8aae8-c2f6-472f-b2dc-208dd07a5121.webp](./img/p1eSp1TIGF2UZcYr/1613563190631-61c8aae8-c2f6-472f-b2dc-208dd07a5121-218132.webp)
++ Obtain Windows browser password. A large amount of valuable information is saved in the user's browser, such as the website history record, bookmarks, cookies and password information of other websites in the intranet. This kind of information is of great value in subsequent horizontal movement and penetration of intranet WEB services.
 
-# 凭证访问
-按照MITRE ATT&CK的分类,信息收集(Discovery)与凭证访问(Credential Access)分属两个不同的维度,但在国内的各个教程或实际渗透过程中通常将凭证访问归类为信息收集,所以这里一并介绍.
+![](img\viper_semi_automated_intranet_information_gathering\17.webp)
 
-+ 获取Windows内存密码.使用内存加载mimikatz的方式抓取密码.
-
-![1613564790931-0c18ab95-9977-44b4-8337-16ce0ec177ac.webp](./img/p1eSp1TIGF2UZcYr/1613564790931-0c18ab95-9977-44b4-8337-16ce0ec177ac-563597.webp)
-
-+ 获取Windows内存Hash.模块中只抓取本地用户的Hash
-
-![1613564884728-45c9d7ee-9682-4ce1-9b5f-4f953ee870a1.webp](./img/p1eSp1TIGF2UZcYr/1613564884728-45c9d7ee-9682-4ce1-9b5f-4f953ee870a1-921088.webp)
-
-+ 获取Windows浏览器密码.用户浏览器中保存了大量有价值的信息,如访问的网站历史记录,书签,cookie和内网其他网站的密码信息.此类信息在后续横向移动渗透内网WEB服务中有很大价值.
-
-![1613565060953-eb46c5f7-69fa-4c48-80f6-d262735a2d7d.webp](./img/p1eSp1TIGF2UZcYr/1613565060953-eb46c5f7-69fa-4c48-80f6-d262735a2d7d-466914.webp)
-
-![1613565154700-7afd38a4-3e84-482e-b7e2-c3c3fa7cce41.webp](./img/p1eSp1TIGF2UZcYr/1613565154700-7afd38a4-3e84-482e-b7e2-c3c3fa7cce41-660088.webp)
+![](img\viper_semi_automated_intranet_information_gathering\18.webp)
 
 
 
-# 总结
-本文介绍了如何使用Viper进行内网渗透信息收集,其中所有功能都保持简单直观,原子化的宗旨.为了适应不同的内网环境,在自动化方面也控制在半自动化程度,及保证灵活性,有保持了易用性.
+# Summary
+This article introduces how to use Viper for intranet penetration information collection. All functions maintain the simple and intuitive, atomic purpose. In order to adapt to different intranet environments, the automation is also controlled at a semi-automated level, which ensures flexibility and maintains ease of use.
 
-不论你是刚刚入门内网渗透的安全工程师还是资深的红队人员,希望Viper都能在内网渗透领域助你一臂之力.
-
-
+Whether you are a security engineer who has just started to penetrate the intranet or a senior red team member, it is hoped that Viper can help you in the field of intranet penetration.

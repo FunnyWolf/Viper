@@ -1,73 +1,72 @@
-# Multi-level intranet penetration (native tunnel)
+# Multi-level internal network penetration (native tunnel)
 
-## What is a multi-level intranet
+## What is a multi-level internal network
 
-The multi-level intranet mentioned in the title is common in various large enterprises. For example, the following figure
+The multi-level internal network mentioned in the title is common in various large enterprises. For example, as shown in the following figure:
 
-![1630550347634-baccb576-4eec-48a5-bb6a-e84491c56502.webp](./img/3E2jRr2GedkNQvO9/1630550347634-baccb576-4eec-48a5-bb6a-e84491c56502-173873.webp)
+![](img\multi_level_intranet_penetration_native_tunnel\1.webp)
 
-Network A is generally the DMZ area of ​​the enterprise, with external web servers, dns servers, etc.
+In network A, there are generally the DMZ area of the enterprise, including external web servers, DNS servers, etc.
 
-The B network is generally the server area of ​​the enterprise intranet, which contains domain control servers, intranet OA, etc.
+In network B, there are generally the server area of the enterprise internal network, including domain control servers, internal network OA, etc.
 
-The C network is generally a red zone of enterprises, with databases for sensitive information storage or various key business servers. (such as hospital HIS, industrial controllers, etc.)
+In network C, there are generally the red area of the enterprise, including databases storing sensitive information or various key business servers. (For example, the HIS of a hospital, the industrial controller of an industrial enterprise, etc.)
 
-In this network, Network A can connect to the Internet, Network B can connect to Network A and Network C but cannot connect to the Internet, Network C can only connect to Network B.
+In this kind of network, network A can connect to the Internet, network B can connect to network A and network C but cannot connect to the Internet, and network C can only connect to network B.
 
-## How to use Viper to penetrate multi-level intranet
+## How to penetrate a multi-level internal network with Viper
 
-Most of the current Internet introduction of msf for multi-level intranet penetration are used to use intranet routing/port forwarding or through third-party tools for network traffic forwarding.
+At present, most of the Internet introductions on using msf for multi-level internal network penetration are to use the methods of internal network routing/port forwarding or using third-party tools to forward network traffic.
 
-This article introduces how to use native session communication channels in Viper to perform intranet penetration. This method is the simplest and relatively stable operation. Its principle is similar to the multi-level forwarding function native to Cobalt Strike. This function in Viper is more powerful (
-Support forward/reverse connection, support Windows and Linux)
+This article introduces how to use the native session communication channel method in Viper for internal network penetration. This method is the simplest to operate and relatively stable. Its principle is similar to the native multi-level forwarding function of Cobalt Strike. The function in Viper is stronger (supporting forward/backward connection and supporting Windows and Linux).
 
 The network configuration of the experimental environment is as follows:
 
-![1630551064214-97c362b5-df0b-4020-9137-08009c9e87ba.webp](./img/3E2jRr2GedkNQvO9/1630551064214-97c362b5-df0b-4020-9137-08009c9e87ba-661282.webp)
+![](img\multi_level_intranet_penetration_native_tunnel\2.webp)
 
-+ Online 192.168.146.1
++ Connect to 192.168.146.1
 
-![1644134196346-5932001d-0288-4f1b-8761-bb6deb7df314.webp](./img/3E2jRr2GedkNQvO9/1644134196346-5932001d-0288-4f1b-8761-bb6deb7df314-184850.webp)
+![](img\multi_level_intranet_penetration_native_tunnel\3.webp)
 
-+ Use meterpreter_reverse_tcp to go online through the Session of 192.168.146.192.168.146.1
++ Use meterpreter_reverse_tcp and connect to 192.168.146.11 through the session of 192.168.146.1
 
-> Create a new monitor as follows
+> Set up a new listening as follows:
 >
 
-![1644134270494-12251b4a-e583-4e09-abd2-5df3b9ec8311.webp](./img/3E2jRr2GedkNQvO9/1644134270494-12251b4a-e583-4e09-abd2-5df3b9ec8311-203052.webp)
+![](img\multi_level_intranet_penetration_native_tunnel\4.webp)
 
-> Generate a load, execute on 192.168.146.11
+> Generate a payload and execute it on 192.168.146.11
 >
 
-![1644134329185-996a4424-a038-44af-9750-e957c9eb3563.webp](./img/3E2jRr2GedkNQvO9/1644134329185-996a4424-a038-44af-9750-e957c9eb3563-234785.webp)![1644134383814-9d3c8044-1a91-484a-992b-fe9bf8604037.webp](./img/3E2jRr2GedkNQvO9/1644134383814-9d3c8044-1a91-484a-992b-fe9bf8604037-135999.webp)
+![](img\multi_level_intranet_penetration_native_tunnel\5.webp)![](img\multi_level_intranet_penetration_native_tunnel\6.webp)
 
-> You can see that the newly generated Session has a connection flag at the end, indicating that Session 2 is forwarded online through Session 1.
+> It can be seen that the newly generated session has a connection flag at the end, indicating that Session 2 is connected through Session 1.
 >
 
-+ Use meterpreter_bind_tcp to go online through the Session of 192.168.146.11 192.168.146.12
++ Use meterpreter_bind_tcp and connect to 192.168.146.12 through the session of 192.168.146.11
 
-> Generate the load as follows and execute it on 192.168.146.12
+> Generate a payload according to the following configuration and execute it on 192.168.146.12
 >
 
-![1644134515339-908a213f-f42a-4c14-b856-8778bc63bfa5.webp](./img/3E2jRr2GedkNQvO9/1644134515339-908a213f-f42a-4c14-b856-8778bc63bfa5-026769.webp)
+![](img\multi_level_intranet_penetration_native_tunnel\7.webp)
 
 
 
-> Create new monitor, go online
+> Set up a new listening and connect
 >
 
-![1644134638338-49caee45-17a2-468b-b9e5-afc6c8005337.webp](./img/3E2jRr2GedkNQvO9/1644134638338-49caee45-17a2-468b-b9e5-afc6c8005337-276616.webp)
+![](img\multi_level_intranet_penetration_native_tunnel\8.webp)
 
-![1644134666488-560c804c-da6f-4fbd-9341-0be6ef97f57b.webp](./img/3E2jRr2GedkNQvO9/1644134666488-560c804c-da6f-4fbd-9341-0be6ef97f57b-492062.webp)
+![](img\multi_level_intranet_penetration_native_tunnel\9.webp)
 
-> The red box indicates that Session 3 is launched through Session 2.
+> The red box indicates that Session 3 is connected through Session 2.
 >
 
 + Network topology
 
-![1644134733400-28473a04-ad6c-4ec7-a7f9-58d7e315bfc1.webp](./img/3E2jRr2GedkNQvO9/1644134733400-28473a04-ad6c-4ec7-a7f9-58d7e315bfc1-003736.webp)
+![](img\multi_level_intranet_penetration_native_tunnel\10.webp)
 
-+ Load support list:
++ Payload support list:
 
 Windows/Linux
 
@@ -80,4 +79,3 @@ meterpreter_reverse_https
 meterpreter/bind_tcp
 
 meterpreter_bind_tcp
-

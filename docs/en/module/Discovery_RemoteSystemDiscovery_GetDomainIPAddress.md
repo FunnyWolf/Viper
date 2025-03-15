@@ -1,14 +1,9 @@
-# Get the IP information of the domain host
+# Obtain IP Information of Domain Hosts
 
-# Main functions
+## Main Function
+By default, it collects the IP addresses of the controlled hosts. If you need to collect the IPs of other hosts in the domain, such as domain controllers or other domain users' hosts, please enter the host name as a parameter.
 
-The IP address of the controlled host is collected by default. If you need to collect other hosts in the domain, such as domain control or other domain user IP, please enter the
-host name as the parameter
+## Operation Method
+![](img\Discovery_RemoteSystemDiscovery_GetDomainIPAddress\1.webp)
 
-# How to operate
-
-![1625194858895-41575df2-a872-49d3-b143-1fc95768b933.webp](./img/Y9G8a5HgPtRi_1ml/1625194858895-41575df2-a872-49d3-b143-1fc95768b933-195410.webp)
-
-![1625194873356-b6923bc4-0db1-4ede-b026-8d9b6d53ab82.webp](./img/Y9G8a5HgPtRi_1ml/1625194873356-b6923bc4-0db1-4ede-b026-8d9b6d53ab82-288317.webp)
-
-
+![](img\Discovery_RemoteSystemDiscovery_GetDomainIPAddress\2.webp)

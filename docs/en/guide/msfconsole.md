@@ -1,12 +1,12 @@
 # Msfconsole
 
-## Functional Features
+## Features
 
-+ Native copy msfconsole operation
-+ Support tab smart prompts
-+ Support Ctrl+C termination/Ctrl-Z switch to the background and other operations
-+ Supports the function of automatically copying text to the clipboard
++ Native replication of msfconsole operations
++ Support for tab intelligent prompting
++ Support operations such as Ctrl+C to terminate/Ctrl-Z to switch to the background
++ Support the function of automatically copying selected text to the clipboard
 
-## Reset the terminal
+## Reset the Terminal
 
-+ If there are problems such as fake death on the command line, you can use the`Reset Console`Button
++ If problems such as the command line freezing occur, you can use the `Reset Terminal` button on the right.

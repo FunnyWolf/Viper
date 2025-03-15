@@ -1,39 +1,39 @@
-# MSF sleep与CobaltStrike sleep
+# MSF sleep vs. CobaltStrike sleep
 
-## 前言
-metasploit-framework和cobalt strike(简称CS)是当前主流的两个红队评估工具.
+## Preface
+The metasploit-framework and cobalt strike (abbreviated as CS) are currently the two mainstream red team assessment tools.
 
-在红队评估过程中为了尽可能的降低暴露的风险,减少通讯流量是基本需求.巧合的是CS和metasploit-framework都是使用sleep命令进行通讯间隔控制.(MSF是在2015年[pr链接](https://github.com/rapid7/meterpreter/pull/158)加入,CS应该是在2.13版本加入).
+During the red team assessment process, in order to minimize the risk of exposure and reduce communication traffic as much as possible, it is a basic requirement. Coincidentally, both CS and the metasploit-framework use the sleep command to control communication intervals. (MSF joined in 2015 [pr link](https://github.com/rapid7/meterpreter/pull/158), and CS should have joined in version 2.13).
 
-两者实现的方法应该大同小异,但是呈现的效果有所区别.
+The implementation methods of the two should be mostly the same, but the presented effects are different.
 
 
 
 ## Cobalt Strike sleep
-因为cobalt strike不开源,无法从代码层分析sleep原理.
+Because cobalt strike is not open source, the sleep principle cannot be analyzed from the code layer.
 
-从效果上看Cobalt Strike sleep实现了beacon的通讯间隔控制.beacon中调用系统sleep进行休眠,teamserver实现一种消息队列,将命令存储在消息队列中.当beacon连接teamserver时读取命令并执行.
+From the perspective of effects, the Cobalt Strike sleep achieves the control of the communication interval of the beacon. The beacon calls the system sleep to enter hibernation, and the teamserver implements a message queue to store commands in the message queue. When the beacon connects to the teamserver, it reads and executes the commands.
 
-当然因为没有分析代码,以上都是从功能上进行的猜测.
+Of course, because the code has not been analyzed, the above are all guesses based on functions.
 
 
 
 ## MSF Sleep
-因为metasploit-framework和meterpreter都是开源的,所以我们可以从源码中分析sleep是如何工作与实现的.
+Because the metasploit-framework and meterpreter are open source, we can analyze how sleep works and is implemented from the source code.
 
-### Sleep效果
+### Sleep effect
 
 
-![1599028835573-027e9ec7-6d03-4a16-baa2-197ad072d33a.webp](./img/1205032_5QRuIyWnzIBcZyMT/1599028835573-027e9ec7-6d03-4a16-baa2-197ad072d33a-616437.webp)
+![](img\msfsleep_and_cobaltstrikesleep\1.webp)
 
-+ metasploit-framework的sleep会直接让session处于休眠状态,在UI上表现为session关闭,
-+ session指定时间后重新连接(handler未删除的情况下).
-+ session在重新连接后通讯间隔并不会改变
++ The sleep of the metasploit-framework will directly put the session into a dormant state, which is shown as the session being closed on the UI.
++ The session reconnects after the specified time (if the handler is not deleted).
++ The communication interval does not change after the session reconnects.
 
 ### Sleep on Metasploit-framework
-Metasploit-framework代码主要来源于这个pr [链接](https://github.com/rapid7/metasploit-framework/pull/5339)
+The Metasploit-framework code mainly comes from this pr [link](https://github.com/rapid7/metasploit-framework/pull/5339)
 
-代码中主要分为两个部分,一部分是UI上的命令处理/帮助处理等
+The code is mainly divided into two parts. One part is the command processing/help processing, etc. on the UI.
 
 ```ruby
   def cmd_sleep_help
@@ -62,7 +62,7 @@ Metasploit-framework代码主要来源于这个pr [链接](https://github.com/ra
       return
     end
 
-    print_status("Telling the target instance to sleep for #{seconds} seconds ...")
+    print_status("Telling the target instance to sleep for #{seconds} seconds...")
     if client.core.transport_sleep(seconds)
       print_good("Target instance has gone to sleep, terminating current session.")
       client.shutdown_passive_dispatcher
@@ -73,7 +73,7 @@ Metasploit-framework代码主要来源于这个pr [链接](https://github.com/ra
   end
 ```
 
-第二部分是具体发送到meterpreter的TLV控制
+The second part is the specific TLV control sent to meterpreter.
 
 ```ruby
   def transport_sleep(seconds)
@@ -90,17 +90,17 @@ Metasploit-framework代码主要来源于这个pr [链接](https://github.com/ra
 ```
 
 ### Sleep on Meterpreter
-Meterpreter的代码主要来源于这个pr [链接](https://github.com/rapid7/meterpreter/pull/158/files)
+The Meterpreter code mainly comes from this pr [link](https://github.com/rapid7/meterpreter/pull/158/files)
 
-因为[https://github.com/rapid7/meterpreter](https://github.com/rapid7/meterpreter)已经废弃,我们后续代码都依据[https://github.com/rapid7/metasploit-payloads](https://github.com/rapid7/metasploit-payloads)进行分析.
+Because [https://github.com/rapid7/meterpreter](https://github.com/rapid7/meterpreter) has been deprecated, we will analyze the subsequent code based on [https://github.com/rapid7/metasploit-payloads](https://github.com/rapid7/metasploit-payloads).
 
-除了常规的TLV控制外,代码的主体部分如下
+In addition to the regular TLV control, the main part of the code is as follows:
 
 ```c
 				// transport switching and failover both need to support the waiting functionality.
 				if (remote->next_transport_wait > 0)
 				{
-					dprintf("[TRANS] Sleeping for %u seconds ...", remote->next_transport_wait);
+					dprintf("[TRANS] Sleeping for %u seconds...", remote->next_transport_wait);
 
 					sleep(remote->next_transport_wait);
 
@@ -110,40 +110,40 @@ Meterpreter的代码主要来源于这个pr [链接](https://github.com/rapid7/m
 
 ```
 
-可以看到最终实现是使用sleep进行休眠.
+It can be seen that the final implementation uses sleep for hibernation.
 
 
 
-### 休眠-重新连接流程原理
-实现休眠及重新连接的代码主要来源于ruby中的
+### Hibernation-reconnection process principle
+The code for implementing hibernation and reconnection mainly comes from the following two lines in ruby:
 
 ```ruby
       client.shutdown_passive_dispatcher
       shell.stop
 ```
 
-这两行,第一行是将处理http请求的线程关闭,第二行是将session关闭.
+The first line closes the thread that handles HTTP requests, and the second line closes the session.
 
 
 
-## MSF中实现Cobalt Strike的效果
-笔者个人认为msf的sleep更加符合休眠隐蔽的逻辑,Cobalt Strike的通讯间隔方式依赖于队列/请求模型.但是现实情况是国内大多数安全人员更喜欢Cobalt Strike的模型,那我们能在MSF中实现Cobalt Strike效果吗?
+## Implementing the effect of Cobalt Strike in MSF
+In my opinion, the sleep of msf is more in line with the logic of hibernation and concealment. The communication interval method of Cobalt Strike depends on the queue/request model. But in reality, most security personnel in China prefer the model of Cobalt Strike. So can we achieve the effect of Cobalt Strike in MSF?
 
-答案是肯定的.
+The answer is yes.
 
-### MSF原生通讯间隔
-其实MSF本身就带有通讯间隔控制,如果你执行 session -x,会发现checkin字段会在1-10中变化.
+### Native communication interval of MSF
+In fact, MSF itself has communication interval control. If you execute session -x, you will find that the checkin field will change between 1 and 10.
 
-![1599029121164-0907b2e7-42a4-482f-993d-b392e981b21f.webp](./img/1205032_5QRuIyWnzIBcZyMT/1599029121164-0907b2e7-42a4-482f-993d-b392e981b21f-688135.webp)
+![](img\msfsleep_and_cobaltstrikesleep\2.webp)
 
-这是因为http类型的meterpreter会最长每10秒连接一次服务器.
+This is because the http-type meterpreter will connect to the server at most every 10 seconds.
 
-10秒间隔的前提是不使用session进行操作,如果使用session进行操作后,会发现心跳间隔缩短为1秒.后续停止操作,通讯间隔会慢慢递增到10秒.
+The premise of a 10-second interval is that no operation is performed on the session. If operations are performed on the session, you will find that the heartbeat interval is shortened to 1 second. After stopping the operation, the communication interval will slowly increase to 10 seconds.
 
-### 实现原理
-我们会发现meterpreter的通讯间隔控制非常巧妙,在不操作session时增大通讯间隔,在操作session后将通讯间隔缩小到最小,保证快速获取操作结果,如果停止操作通讯间隔又会慢慢增大.这样就在减小通讯流量和操作流畅性上达到平衡.
+### Implementation principle
+We will find that the communication interval control of meterpreter is very ingenious. It increases the communication interval when no operation is performed on the session, and reduces the communication interval to the minimum when operating the session to ensure quick acquisition of operation results. If the operation is stopped, the communication interval will slowly increase. This achieves a balance between reducing communication traffic and smooth operation.
 
-具体的代码链接 [链接](https://github.com/rapid7/metasploit-payloads/blob/master/c/meterpreter/source/metsrv/server_transport_winhttp.c)
+The specific code link is [link](https://github.com/rapid7/metasploit-payloads/blob/master/c/meterpreter/source/metsrv/server_transport_winhttp.c)
 
 ```c
 			else if (result == ERROR_BAD_CONFIGURATION)
@@ -176,18 +176,18 @@ Meterpreter的代码主要来源于这个pr [链接](https://github.com/rapid7/m
 
 
 
-![1592892172675-58c89dd6-86b4-48ab-b6db-c05aeb290c31.webp](./img/1205032_5QRuIyWnzIBcZyMT/1592892172675-58c89dd6-86b4-48ab-b6db-c05aeb290c31-812455.webp)
+![](img\msfsleep_and_cobaltstrikesleep\3.webp)
 
 
 
-### 模拟Cobalt Strike效果
-如果要模拟Cobalt Strike效果,其实只要修改Sleep(min(10000, delay))中的delay就可以了,那我们怎么实现动态控制呢?为了尽量少改动代码,我们先借用已有的功能来帮助我们实现.
+### Simulating the effect of Cobalt Strike
+If you want to simulate the effect of Cobalt Strike, in fact, you only need to modify the delay in Sleep(min(10000, delay)). So how do we achieve dynamic control? In order to modify the code as little as possible, we will first use the existing functions to help us achieve it.
 
-meterpreter中set_timeout是控制session的超时时间参数,我们可以借用这个参数中的wait time来实现通讯间隔控制.
+In meterpreter, set_timeout is a parameter that controls the timeout time of the session. We can use the wait time in this parameter to achieve communication interval control.
 
-![1592892403908-0b27334b-391d-4eb5-b354-16e1236af483.webp](./img/1205032_5QRuIyWnzIBcZyMT/1592892403908-0b27334b-391d-4eb5-b354-16e1236af483-852551.webp)
+![](img\msfsleep_and_cobaltstrikesleep\4.webp)
 
-代码如下:
+The code is as follows:
 
 ```c
 			delay = 10 * ecount;
@@ -207,24 +207,21 @@ meterpreter中set_timeout是控制session的超时时间参数,我们可以借�
 			}
 ```
 
-当retry_wait大于60时,我们就使用retry_wait作为通讯间隔参数,
+When retry_wait is greater than 60, we use retry_wait as the communication interval parameter.
 
-+ 编译代码
-+ 将生成的metsrv.x64.dll上传到metasploit-framework/data/meterpreter/
-+ 重新生成session
-+ 进入session后执行 set_timeout -w 61
++ Compile the code
++ Upload the generated metsrv.x64.dll to metasploit-framework/data/meterpreter/
++ Regenerate the session
++ After entering the session, execute set_timeout -w 61
 
-![1599029328563-ed49149e-d7a5-4f7f-8ea0-839a6e779cf3.webp](./img/1205032_5QRuIyWnzIBcZyMT/1599029328563-ed49149e-d7a5-4f7f-8ea0-839a6e779cf3-181086.webp)
+![](img\msfsleep_and_cobaltstrikesleep\5.webp)
 
-+ 我们看到通讯间隔大于10了
-+ 在checkin大于55时执行set_timeout -w 10,可以恢复原有通讯间隔.(因为meterpreter命令默认超时时间为10秒,所以要在checkin大于50的时候操作)
++ We can see that the communication interval is greater than 10.
++ When checkin is greater than 55, execute set_timeout -w 10 to restore the original communication interval. (Because the default timeout time of the meterpreter command is 10 seconds, you need to operate when checkin is greater than 50).
 
-![1599029428053-1e6e5751-c3c1-4242-ab41-4a86f0e362b1.webp](./img/1205032_5QRuIyWnzIBcZyMT/1599029428053-1e6e5751-c3c1-4242-ab41-4a86f0e362b1-709707.webp)
-
-
-
-## 总结
-Cobalt Strike和MSF在sleep实现上应该大同小异,只不过呈现的效果不同,因为MSF是开源的,我们还可以通过自定义代码来实现自定义通讯间隔的功能.
+![](img\msfsleep_and_cobaltstrikesleep\6.webp)
 
 
 
+## Summary
+The sleep implementations of Cobalt Strike and MSF should be mostly the same, except for the presented effects. Because MSF is open source, we can also achieve the function of custom communication interval through custom code.

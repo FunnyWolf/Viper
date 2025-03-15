@@ -1,27 +1,25 @@
-# Summary of questions
+# Issues
 
-# Summary of installation problems
+# Installation Problem Summary
 
-## Redis startup failed
+## redis fails to start
 
-+ low docker version
+- Low docker version
+  It is recommended to use version 24 or higher. You can use `docker version` to check.
 
+- Low operating system kernel version
+  Please use ubuntu22 or a higher version.
 
+## Encounter a 502 error when accessing the Web page after installation
 
-+ Low operating system kernel version
+[[BUG] Encounter a 502 error when accessing the Web page after installation · Issue #178 · FunnyWolf/Viper](https://github.com/FunnyWolf/Viper/issues/178)
 
-Please use ubuntu22 or higher
-
-## After the installation is completed, the 502 error is reported.
-
-[[BUG] 安装完成后访问Web页面时报502错误 · Issue #178 · FunnyWolf/Viper](https://github.com/FunnyWolf/Viper/issues/178)
-
-This problem is caused by telecom operators blocking filtering, and can be avoided by switching networks (usually clients switch hotspots and proxy nodes).
+This problem is caused by the blocking and filtering of telecom operators. It can be avoided by switching the network (usually the client switches to a hotspot or switches the proxy node).
 
 ## Install Viper on Mac
 
-+ Docker does not support Mac itself`network_mode:"host"`, so it is not recommended to install Viper natively on Mac
-
+- Docker on Mac itself does not support `network_mode:"host"`, so it is not recommended to install Viper natively on Mac.
+- The installation process is the same as that on Linux. The `docker-compose.yml` is generated using the following script.
 
 ```shell
 tee docker-compose.yml <<-'EOF'
@@ -43,5 +41,4 @@ services:
 EOF
 ```
 
-
-
+- Please note that for Viper started with the above script, only 9 ports from 59990 - 59999 can be used for handler.

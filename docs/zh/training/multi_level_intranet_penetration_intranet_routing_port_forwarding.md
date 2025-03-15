@@ -3,7 +3,7 @@
 ## 什么是多级内网
 标题中所说的多级内网,常见于各种大型企业.举个例子,如下图
 
-![1630550347634-baccb576-4eec-48a5-bb6a-e84491c56502.webp](./img/Ehv54ZVDVrDX22Pu/1630550347634-baccb576-4eec-48a5-bb6a-e84491c56502-935303.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\1.webp)
 
 A网中一般是企业的DMZ区,里面有对外的web服务器,dns服务器等.
 
@@ -20,50 +20,50 @@ viper基于msf开发,msf中渗透多级内网有两种网络跳板,一种是内�
 
 实验环境网络配置如下:
 
-![1630551064214-97c362b5-df0b-4020-9137-08009c9e87ba.webp](./img/Ehv54ZVDVrDX22Pu/1630551064214-97c362b5-df0b-4020-9137-08009c9e87ba-560044.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\2.webp)
 
 + 上线192.168.146.1
 
-![1630551087908-834b6d3c-bcf7-43e0-989a-5b2c462e0bc0.webp](./img/Ehv54ZVDVrDX22Pu/1630551087908-834b6d3c-bcf7-43e0-989a-5b2c462e0bc0-927509.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\3.webp)
 
-![1630551105058-28bc1678-39cd-4e0a-bd3e-b79441b0199d.webp](./img/Ehv54ZVDVrDX22Pu/1630551105058-28bc1678-39cd-4e0a-bd3e-b79441b0199d-451017.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\4.webp)
 
 + 在session上(session 8)添加到192.168.146.11的路由
 
-![1630551156550-eb2341d3-3d18-42d8-a95c-5a110b7da6ee.webp](./img/Ehv54ZVDVrDX22Pu/1630551156550-eb2341d3-3d18-42d8-a95c-5a110b7da6ee-703041.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\5.webp)
 
 + 在192.168.146.11上执行bind_tcp的payload
 
-![1630551202982-a4c9845f-19fd-4048-8031-2c8eddcaa1ef.webp](./img/Ehv54ZVDVrDX22Pu/1630551202982-a4c9845f-19fd-4048-8031-2c8eddcaa1ef-073785.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\6.webp)
 
-![1630551225987-fb8fa3ce-92fd-4064-ba67-2c9f12b3367c.webp](./img/Ehv54ZVDVrDX22Pu/1630551225987-fb8fa3ce-92fd-4064-ba67-2c9f12b3367c-172634.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\7.webp)
 
 + 新增一个到192.168.146.11:5000的bind_tcp监听
 
-![1630551287743-242fedda-d4aa-4b4f-87d7-3f46e45131ae.webp](./img/Ehv54ZVDVrDX22Pu/1630551287743-242fedda-d4aa-4b4f-87d7-3f46e45131ae-859423.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\8.webp)
 
 146.11上线
 
-![1630551302206-ff5d3405-d6bc-43b2-b922-ee8b4b7678a3.webp](./img/Ehv54ZVDVrDX22Pu/1630551302206-ff5d3405-d6bc-43b2-b922-ee8b4b7678a3-857419.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\9.webp)
 
 + 在146.11的session(session 9)上新增一个到192.168.146.12的路由
 
-![1630551390831-5134fd1c-6465-4d99-9303-ef17a3150fa9.webp](./img/Ehv54ZVDVrDX22Pu/1630551390831-5134fd1c-6465-4d99-9303-ef17a3150fa9-756404.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\10.webp)
 
 + 在192.168.146.12上执行bind_tcp的payload
 
-![1630551432630-0d90838e-9eab-41a1-93ba-a31114a75b9f.webp](./img/Ehv54ZVDVrDX22Pu/1630551432630-0d90838e-9eab-41a1-93ba-a31114a75b9f-295498.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\11.webp)
 
 + 新增一个到192.168.146.12:5000的bind_tcp监听
 
-![1630551485762-4748b48e-6983-4d8d-99fa-720e8b81fad7.webp](./img/Ehv54ZVDVrDX22Pu/1630551485762-4748b48e-6983-4d8d-99fa-720e8b81fad7-049707.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\12.webp)
 
-![1630551523753-7b49e8c8-8057-4edc-8248-db6455126aa5.webp](./img/Ehv54ZVDVrDX22Pu/1630551523753-7b49e8c8-8057-4edc-8248-db6455126aa5-738768.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\13.webp)
 
 146.12上线
 
-![1630551542671-e06f7df6-6258-4091-b0ff-e4ea1e86f258.webp](./img/Ehv54ZVDVrDX22Pu/1630551542671-e06f7df6-6258-4091-b0ff-e4ea1e86f258-991021.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\14.webp)
 
 网络拓扑如下:
 
-![1630551581392-394c87bd-6ec1-4ff8-a7da-b74cdd09525f.webp](./img/Ehv54ZVDVrDX22Pu/1630551581392-394c87bd-6ec1-4ff8-a7da-b74cdd09525f-073503.webp)
+![](img\multi_level_intranet_penetration_intranet_routing_port_forwarding\15.webp)

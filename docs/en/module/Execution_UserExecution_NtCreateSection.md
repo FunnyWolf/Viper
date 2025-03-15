@@ -1,13 +1,7 @@
-# NtCreateSection process injection (wait)
+# NtCreateSection Process Injection (wait)
 
-# Main functions
-
+# Main Functions
 XXX
 
-# How to operate
-
+# Operation Methods
 + XXX
-
-
-
-

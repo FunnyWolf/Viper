@@ -23,7 +23,6 @@
 
 ## Reverse_dns上线
 
-参考以下文章
+[reverse_dns](../blog/invisible_wings_msf_using_dns_tunnel_for_online.md)
 
-[https://www.anquanke.com/post/id/255625](https://www.anquanke.com/post/id/255625)
 

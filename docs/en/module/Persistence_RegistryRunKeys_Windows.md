@@ -1,21 +1,12 @@
-# Windows Registry Run key value persistence
+# Persistence via Windows Registry Run Key Values
 
-# Main functions
+## Main Function
+The module achieves persistence by writing the path of the Trojan file into the registry keys:
+- HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run
+- HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 
-Module pass in the registry
+## Precautions
+It is not anti-detection.
 
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run
-
-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
-
-Write Trojan file paths into keys to achieve persistence
-
-# Things to note
-
-Can't help but kill
-
-# How to operate
-
-refer to [Winlogon Helper DLL Persistence](./Persistence_WinlogonHelperDLL_Windows)
-
-
+## Operation Method
+Refer to [Winlogon Helper DLL Persistence](./Persistence_WinlogonHelperDLL_Windows)

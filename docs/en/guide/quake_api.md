@@ -1,6 +1,6 @@
 # Quake API
 
-## Configuration method
+## Configuration Method
 
-+ Viper compatible with 360Quake members/non-members
-+ 360Quake can only view relevant domestic data after authentication, so you need to perform **real-name authentication after registering an account**
++ Viper is compatible with both members and non-members of 360Quake.
++ 360Quake requires authentication to view domestic-related data. Therefore, after registering an account, **real-name authentication** is required. 

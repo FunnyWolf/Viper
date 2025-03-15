@@ -1,17 +1,11 @@
-# Windows Library-ms persistence
+# Windows Library-ms Persistence
 
-# Main functions
+# Main Functions
+The Trojan DLL file is written into the Documents.library-ms configuration file and Junction Folders are created.
+It takes effect when the user logs in or browses the desktop.
 
-Write Trojan dll files into Documents.library-ms configuration file and create new Junction Folders
+# Precautions
+It is not anti-detection.
 
-Effective when the user logs in or browses the desktop.
-
-# Things to note
-
-Can't help but kill
-
-# How to operate
-
-refer to [Winlogon Helper DLL Persistence](./Persistence_WinlogonHelperDLL_Windows)
-
-
+# Operation Method
+Refer to [Winlogon Helper DLL Persistence](./Persistence_WinlogonHelperDLL_Windows)
