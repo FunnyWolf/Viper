@@ -39,7 +39,6 @@ It can be seen that the Session connection information of Host B is through `Hos
 
 + `Host A` is connected normally.
 
-![1620527279034-d4d24311-ed48-4ad8-9655-21970e80d4b8.webp](./img/Qxo95txm7HbT62M-/1620527279034-d4d24311-ed48-4ad8-9655-21970e80d4b8-189809.webp)
 
 + Add a reverse_tcp_rc4 type listening and remember to use the 9000 port here.
 
@@ -57,13 +56,13 @@ It can be seen that the Session connection information of Host B is through `Hos
 
 + Generate a reverse_tcp_rc4 type payload and execute it on `Host B`.
 
-> **<font style="color:#F5222D;">Please pay attention to the following parameters here.</font>**
+> **Please pay attention to the following parameters here.**
 >
-> **<font style="color:#F5222D;">Fill in the internal network IP address (192.168.146.1) of the on-network host in LHOST.</font>**
+> **Fill in the internal network IP address (192.168.146.1) of the on-network host in LHOST.**
 >
-> **<font style="color:#F5222D;">Fill in the address (12345) of the remote port (listening) in the previous port forwarding in LPORT.</font>**
+> **Fill in the address (12345) of the remote port (listening) in the previous port forwarding in LPORT.**
 >
-> **<font style="color:#F5222D;">The RC4 password must be the same as the RC4 password established when listening before.</font>**
+> **The RC4 password must be the same as the RC4 password established when listening before.**
 >
 
 ![](img\online_session_without_internet\9.webp)

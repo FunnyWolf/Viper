@@ -1,10 +1,8 @@
 # 如何在MSF中高效的使用云函数
 
-在攻防对抗过程中,使用云函数来隐藏C2是一种常见的手法,互联网也有很多教程来指导如何配置,但目前公开的文章中都是介绍如何在<font style="color:rgb(18, 18, 18);">CobaltStrike中使用云函数,还没有文章介绍如何在metasploit-framework中使用.</font>
+在攻防对抗过程中,使用云函数来隐藏C2是一种常见的手法,互联网也有很多教程来指导如何配置,但目前公开的文章中都是介绍如何在CobaltStrike中使用云函数,还没有文章介绍如何在metasploit-framework中使用.
 
-<font style="color:rgb(18, 18, 18);">本文详细介绍在metasploit-framework中云函数的使用方法及相关技巧,希望通过本文能够对红队同学在红蓝对抗过程中有所帮助。</font>
-
-<font style="color:rgb(18, 18, 18);"></font>
+本文详细介绍在metasploit-framework中云函数的使用方法及相关技巧,希望通过本文能够对红队同学在红蓝对抗过程中有所帮助。
 
 # 原始配置方法
 > 此处使用Viper的操作方法进行说明,在metasploit-framework中参考对应配置参数即可

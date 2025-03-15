@@ -39,7 +39,6 @@
 
 + `主机A`正常上线
 
-![1620527279034-d4d24311-ed48-4ad8-9655-21970e80d4b8.webp](./img/Qxo95txm7HbT62M-/1620527279034-d4d24311-ed48-4ad8-9655-21970e80d4b8-189809.webp)
 
 + 添加一个reverse_tcp_rc4类型监听,记住这里使用的9000端口
 
@@ -57,13 +56,13 @@
 
 + 生成一个reverse_tcp_rc4类型的载荷,并在`主机B`上执行
 
-> **<font style="color:#F5222D;">这里一定注意以下几个参数</font>**
+> **这里一定注意以下几个参数**
 >
-> **<font style="color:#F5222D;">LHOST填写出网主机的内网IP地址(192.168.146.1)</font>**
+> **LHOST填写出网主机的内网IP地址(192.168.146.1)**
 >
-> **<font style="color:#F5222D;">LPORT填写上一步端口转发中 远程端口(监听)的地址 (12345)</font>**
+> **LPORT填写上一步端口转发中 远程端口(监听)的地址 (12345)**
 >
-> **<font style="color:#F5222D;">RC4密码一定要与之前建立监听时RC4密码相同</font>**
+> **RC4密码一定要与之前建立监听时RC4密码相同**
 >
 
 ![](img\online_session_without_internet\9.webp)

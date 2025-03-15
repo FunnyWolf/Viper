@@ -8,12 +8,12 @@
 
 ![](img\viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide\3.webp)
 
-<font style="color:#39434C;"></font>
+
 
 # 简介
 + Viper是一款图形化内网渗透工具,将内网渗透过程中常用的战术及技术进行模块化及武器化.
 + Viper基础功能已集成杀软绕过,内网隧道,文件管理,增强命令行等基础功能.
-+ Viper通过模块的方式落地<font style="color:#39434C;">MITRE ATT&CK中的常用技术.</font>当前已集成55个模块,覆盖初始访问/持久化/权限提升/防御绕过/凭证访问/信息收集/横向移动等大类.
++ Viper通过模块的方式落地MITRE ATT&CK中的常用技术.当前已集成55个模块,覆盖初始访问/持久化/权限提升/防御绕过/凭证访问/信息收集/横向移动等大类.
 + Viper可以帮助你以直观/可视化的方式使用metasploit-framework.
 + 项目地址: [https://github.com/FunnyWolf/Viper](https://github.com/FunnyWolf/Viper)
 
@@ -42,7 +42,7 @@ mkswap /root/swapfile2
 swapon /root/swapfile2
 ```
 
-+ 执行如下命令生成docker-compose.yml, **<font style="color:#F5222D;">diypassword 替换为自定义密码</font>**
++ 执行如下命令生成docker-compose.yml, **diypassword 替换为自定义密码**
 
 ```shell
 mkdir -p /root/viper
@@ -70,7 +70,7 @@ EOF
 docker-compose up -d
 ```
 
-+ 等待系统启动(15s),使用浏览器访问 [https://vpsip:60000](https://vpsip:60000/#/user/login) 登录服务器. 用户名:root 密码:**<font style="color:#F5222D;">自定义密码</font>**
++ 等待系统启动(15s),使用浏览器访问 [https://vpsip:60000](https://vpsip:60000/#/user/login) 登录服务器. 用户名:root 密码:**自定义密码**
 
 ![](img\viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide\4.webp)
 
@@ -99,7 +99,7 @@ docker-compose up -d
 
 ![](img\viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide\8.webp)
 
-> 免杀载荷可能由于杀毒软件厂商添加 md5 标签而失效,<font style="background-color:transparent;">viper通过持续更新的方式对抗杀软</font>
+> 免杀载荷可能由于杀毒软件厂商添加 md5 标签而失效,viper通过持续更新的方式对抗杀软
 >
 
 + 将生成的exe上传到要控制主机中,然后执行,下图是冰蝎webshell为例运行方法
@@ -167,7 +167,7 @@ Viper用户PC <=>Viper服务器文件管理器<=>已控主机磁盘
 
 
 # 总结
-<font style="color:#39434C;">Viper在内网渗透工程化技术落地及易用性上做一些探索,</font>当前功能已经覆盖内网渗透中的大部分场景且在不断的迭代更新中,<font style="color:#39434C;">希望可以帮助到对此有需求的安全研究人员.</font>如果你正在学习内网渗透或希望定制自己的内网渗透工具,可以尝试使用Viper.
+Viper在内网渗透工程化技术落地及易用性上做一些探索,当前功能已经覆盖内网渗透中的大部分场景且在不断的迭代更新中,希望可以帮助到对此有需求的安全研究人员.如果你正在学习内网渗透或希望定制自己的内网渗透工具,可以尝试使用Viper.
 
 项目地址:[https://github.com/FunnyWolf/Viper](https://github.com/FunnyWolf/Viper)
 

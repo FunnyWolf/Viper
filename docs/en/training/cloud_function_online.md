@@ -33,7 +33,7 @@ Currently, there is a lack of relevant information on using cloud functions to g
 
 ![](img\cloud_function_online\6.webp)
 
-- Remember the cloud function web address here. For example, in the sample, it is: <font style="color:rgba(0, 0, 0, 0.9);">service-6abofmuc-1256520000.gz.apigw.tencentcs.com</font>
+- Remember the cloud function web address here. For example, in the sample, it is: service-6abofmuc-1256520000.gz.apigw.tencentcs.com
 
 ## Generate the Complementary Payload
 + Open "Generate Payload" in Viper and configure as follows:

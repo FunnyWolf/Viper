@@ -1,10 +1,10 @@
 # How to Use Cloud Functions Efficiently in MSF
 
-During the process of offense and defense confrontation, using cloud functions to hide C2 is a common technique. There are many tutorials on the Internet to guide how to configure, but at present, the publicly available articles only introduce how to use cloud functions in <font style="color:rgb(18, 18, 18);">CobaltStrike, and there is no article introducing how to use it in metasploit-framework.</font>
+During the process of offense and defense confrontation, using cloud functions to hide C2 is a common technique. There are many tutorials on the Internet to guide how to configure, but at present, the publicly available articles only introduce how to use cloud functions in CobaltStrike, and there is no article introducing how to use it in metasploit-framework.
 
-<font style="color:rgb(18, 18, 18);">This article details the usage methods and related skills of cloud functions in metasploit-framework. It is hoped that this article can be helpful to red team members during the red and blue confrontation process.</font>
+This article details the usage methods and related skills of cloud functions in metasploit-framework. It is hoped that this article can be helpful to red team members during the red and blue confrontation process.
 
-<font style="color:rgb(18, 18, 18);"></font>
+
 
 # Original Configuration Method
 > The operation method using Viper is used here. Refer to the corresponding configuration parameters in metasploit-framework.

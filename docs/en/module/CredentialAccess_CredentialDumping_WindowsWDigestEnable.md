@@ -5,7 +5,7 @@ This is used to turn on the WDigest credential storage switch. The WDigest switc
 
 The switch can be turned on by modifying the `UseLogonCredential` value in the registry.
 
-After the user logs off and logs back in, mimikatz can be used to capture passwords. <font style="color:rgba(255, 255, 255, 0.85);">.</font>
+After the user logs off and logs back in, mimikatz can be used to capture passwords. .
 
 # Operation Method
 ![](img\CredentialAccess_CredentialDumping_WindowsWDigestEnable\1.webp)

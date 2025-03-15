@@ -8,7 +8,7 @@
 
 以上两个场景更多从防御角度应用大模型,本文则从攻击者(即红队模拟)的角度,探讨大模型在内容生成/自动化等领域的应用.
 
-# <font style="color:rgb(25, 27, 31);">效果预览</font>
+# 效果预览
 ## 钓鱼邮件生成/发送
 + 内容生成
 
@@ -112,15 +112,15 @@ ollama的特色是易用性和快速部署,vllm更侧重于性能优化.经过�
 
 
 # RAG
-<font style="color:rgb(18, 18, 18);">检索增强生成(Retrieval Augmented Generation)是大模型领域最火也是应用最广泛的技术.这里简单介绍一下RAG的过程.</font>
+检索增强生成(Retrieval Augmented Generation)是大模型领域最火也是应用最广泛的技术.这里简单介绍一下RAG的过程.
 
-+ **知识库搭建**: 将模型需要的相关知识/信息通过<font style="color:rgb(44, 44, 54);">embedding model进行向量化,然后存储到专门的向量数据库中.</font>
-+ **<font style="color:rgb(44, 44, 54);">用户输入</font>**<font style="color:rgb(44, 44, 54);">: 当你提出一个问题或需要一个详细的回答时，这就是整个过程的起点.</font>
-+ **<font style="color:rgb(44, 44, 54);">向量化</font>**<font style="color:rgb(44, 44, 54);">: 使用专用的embedding model针对用户输入进行向量化.</font>
-+ **<font style="color:rgb(44, 44, 54);">数据检索</font>**<font style="color:rgb(44, 44, 54);">: 系统在预先建立的知识库(通常存储于向量数据库)寻找与你的问题相关的信息,最相关的那些信息就会排在前面.</font>
-+ **<font style="color:rgb(44, 44, 54);">生成答案</font>**<font style="color:rgb(44, 44, 54);">: 检索到的信息会和提示词及用户输入一起发送给大模型,大模型输出答案.</font>
++ **知识库搭建**: 将模型需要的相关知识/信息通过embedding model进行向量化,然后存储到专门的向量数据库中.
++ **用户输入**: 当你提出一个问题或需要一个详细的回答时，这就是整个过程的起点.
++ **向量化**: 使用专用的embedding model针对用户输入进行向量化.
++ **数据检索**: 系统在预先建立的知识库(通常存储于向量数据库)寻找与你的问题相关的信息,最相关的那些信息就会排在前面.
++ **生成答案**: 检索到的信息会和提示词及用户输入一起发送给大模型,大模型输出答案.
 
-<font style="color:rgb(44, 44, 54);">简单理解RAG就是大模型加上私有的数据库,通过数据库提供大模型在训练过程中没有的知识.</font>
+简单理解RAG就是大模型加上私有的数据库,通过数据库提供大模型在训练过程中没有的知识.
 
 
 
@@ -137,7 +137,7 @@ RAG在红队智能体应用有**知识增强**和**情报分析**两个方向.
 ## 情报分析
 这里提到的情报是指红队评估过程中会收集到大量的信息,例如目标的互联网资产,邮箱域名等,或者后渗透过程中收集到的主机文件,进程及网络配置等.
 
-分析大量信息正是大模型擅长的工作,但是大模型都有输入长度限制,无法将所有信息一次性发送给大模型,通常的做法是先将情报信息通过<font style="color:rgb(44, 44, 54);">embedding model存储到向量数据库,然后根据用户请求选择性的提取情报,让后让大模型进行分析.</font>
+分析大量信息正是大模型擅长的工作,但是大模型都有输入长度限制,无法将所有信息一次性发送给大模型,通常的做法是先将情报信息通过embedding model存储到向量数据库,然后根据用户请求选择性的提取情报,让后让大模型进行分析.
 
 > RAG+情报分析的主要场景是外网攻击面情报分析,因为此类情报通常数据量大,且明显可以通过实体进行聚合.
 >
@@ -147,20 +147,20 @@ RAG在红队智能体应用有**知识增强**和**情报分析**两个方向.
 RAG方向是大模型进行实际生产应用的重要方式,除了上述基于向量数据库方式实现外,近期基于图数据的graphrag在某些领域有更好的效果.
 
 ## GraphRAG
-<font style="color:rgb(44, 44, 54);">GraphRAG与基于向量数据库的RAG的主要区别在于：</font>
+GraphRAG与基于向量数据库的RAG的主要区别在于：
 
-<font style="color:rgb(44, 44, 54);">数据结构：GraphRAG利用图数据库作为底层数据存储,能够更好地捕捉数据间的复杂关联性.</font>
+数据结构：GraphRAG利用图数据库作为底层数据存储,能够更好地捕捉数据间的复杂关联性.
 
-<font style="color:rgb(44, 44, 54);">查询能力：由于图数据库支持高效的路径查找,子图匹配等操作,GraphRAG在处理需要理解上下文关系的任务时可能表现得更好.</font>
+查询能力：由于图数据库支持高效的路径查找,子图匹配等操作,GraphRAG在处理需要理解上下文关系的任务时可能表现得更好.
 
-<font style="color:rgb(44, 44, 54);">信息融合：在生成阶段,除了像传统RAG那样考虑检索到的相关文档外,GraphRAG还可以考虑从图中检索出的相关节点及其连接,从而为生成过程提供更丰富的背景信息.</font>
+信息融合：在生成阶段,除了像传统RAG那样考虑检索到的相关文档外,GraphRAG还可以考虑从图中检索出的相关节点及其连接,从而为生成过程提供更丰富的背景信息.
 
 > 红队相关的情报绝大部分是结构类信息,且信息之间存在关联,所以graphrag相比基于向量搜索或倒排索引的RAG在情报分析领域更有效.如下图就是将多个IP的相关端口,漏洞,告警等信息进行使用图数据库进行存储后的效果.
 >
 
 ![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\11.webp)
 
-# <font style="color:rgb(44, 44, 54);">Function calling</font>
+# Function calling
 Function calling是指大语言模型通过预定义的接口与外部系统或服务进行交互的能力.通过function calling，模型可以访问数据库、调用API、执行计算任务.function calling是构建agent的核心能力之一.下图是OpenAI关于Function calling流程的说明.
 
 ![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\12.webp)
@@ -168,17 +168,17 @@ Function calling是指大语言模型通过预定义的接口与外部系统或�
 当前大模型实现Function calling有两种方式,分别是ReAct和原生支持,针对这两种方式进行简要的介绍,以便于我们进行技术选型.
 
 ## ReAct
-<font style="color:rgb(34, 45, 58);">ReAct的核心在于整合推理（Reasoning）与行动（Acting）的功能,以增强大模型在调用外部函数的能力.</font>
+ReAct的核心在于整合推理（Reasoning）与行动（Acting）的功能,以增强大模型在调用外部函数的能力.
 
-+ <font style="color:rgb(34, 45, 58);">Re (Reasoning，推理)</font>
++ Re (Reasoning，推理)
 
-<font style="color:rgb(34, 45, 58);">ReAct的推理框架使用"思维链"(Chain of Thought,CoT)技术,这是一种针对大模型的高级提示工程策略.我们后续会在提示词进化部分详细说明CoT.</font>
+ReAct的推理框架使用"思维链"(Chain of Thought,CoT)技术,这是一种针对大模型的高级提示工程策略.我们后续会在提示词进化部分详细说明CoT.
 
 + Acting
 
-<font style="color:rgb(34, 45, 58);">此部分强调模型执行具体行动的能力,也就是需要模型不直接输出结果,而是输出行动动作.Acting也依赖模型进行结构化输出(通常是JSON)的能力.</font>
+此部分强调模型执行具体行动的能力,也就是需要模型不直接输出结果,而是输出行动动作.Acting也依赖模型进行结构化输出(通常是JSON)的能力.
 
-<font style="color:rgb(34, 45, 58);">我们通过一个经典的ReAct提示词就可以理解ReAct上述两个概念.</font>
+我们通过一个经典的ReAct提示词就可以理解ReAct上述两个概念.
 
 ```python
 Answer the following questions as best you can. If it is in order, you can use some tools appropriately. 

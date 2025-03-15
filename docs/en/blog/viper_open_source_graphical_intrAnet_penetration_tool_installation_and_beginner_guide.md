@@ -6,7 +6,7 @@
 
 ![](img\viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide\3.webp)
 
-<font style="color:#39434C;"></font>
+
 
 # Introduction
 + Viper is a graphical intranet penetration tool that modularizes and weaponizes common tactics and techniques used in intranet penetration.
@@ -38,7 +38,7 @@ mkswap /root/swapfile2
 swapon /root/swapfile2
 ```
 
-+ Execute the following command to generate docker-compose.yml, **<font style="color:#F5222D;">diypassword replace with your custom password</font>**
++ Execute the following command to generate docker-compose.yml, **diypassword replace with your custom password**
 
 ```shell
 mkdir -p /root/viper
@@ -66,7 +66,7 @@ EOF
 docker-compose up -d
 ```
 
-+ Wait for the system to start (15s), use the browser to access [https://vpsip:60000](https://vpsip:60000/#/user/login) to login to the server. Username: root Password:**<font style="color:#F5222D;">Custom password</font>**
++ Wait for the system to start (15s), use the browser to access [https://vpsip:60000](https://vpsip:60000/#/user/login) to login to the server. Username: root Password:**Custom password**
 
 ![](img\viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide\4.webp)
 
@@ -95,7 +95,7 @@ In intranet penetration, a stable foothold in the intranet is the starting point
 
 ![](img\viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide\8.webp)
 
-> Malware-free payloads may失效 due to the addition of md5 tags by antivirus software vendors, <font style="background-color:transparent;">Viper combats antivirus software through continuous updates</font>
+> Malware-free payloads may失效 due to the addition of md5 tags by antivirus software vendors, Viper combats antivirus software through continuous updates
 >
 
 + Upload the generated exe to the host to be controlled, then execute it, the following image shows the method of running the icebreaker webshell
@@ -163,7 +163,7 @@ Viper user PC <=> Viper server file manager <=> controlled host disk
 
 
 # Conclusion
-<font style="color:#39434C;">Viper makes some explorations in the technical implementation and ease of use of intranet penetration engineering,</font> currently covering most scenarios in intranet penetration and constantly iterating and updating,<font style="color:#39434C;">hoping to help security researchers who have this need.</font> If you are learning intranet penetration or want to customize your own intranet penetration tool, you can try using Viper.
+Viper makes some explorations in the technical implementation and ease of use of intranet penetration engineering, currently covering most scenarios in intranet penetration and constantly iterating and updating,hoping to help security researchers who have this need. If you are learning intranet penetration or want to customize your own intranet penetration tool, you can try using Viper.
 
 Project address:[https://github.com/FunnyWolf/Viper](https://github.com/FunnyWolf/Viper)
 

@@ -5,7 +5,7 @@ The module obtains information about the antivirus software installed on the sys
 
 Use the webshell command execution function to execute `tasklist /svc`, and then copy the result to the input box and run it.
 
-**<font style="color:#00b580;"></font>**
+****
 
 # Operation Method
 + Execute using webshell

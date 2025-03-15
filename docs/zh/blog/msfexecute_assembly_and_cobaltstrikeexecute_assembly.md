@@ -3,9 +3,9 @@
 ## 前言
 metasploit-framework和cobalt strike(简称CS)是当前主流的两个红队评估工具.
 
-<font style="color:#262626;">在红队评估过程中为了与杀软对抗,无文件渗透是实现免杀的简单有效的手段.</font>
+在红队评估过程中为了与杀软对抗,无文件渗透是实现免杀的简单有效的手段.
 
-<font style="color:#262626;">execute-assembly是用于内存执行C#可执行文件的常用手法,当前</font>metasploit-framework和cobalt strike都已经实现了<font style="color:#262626;">execute-assembly功能,本文通过源码分析的方式演示</font><font style="color:#262626;">execute-assembly功能使用方式,并讲解如何修复使用过程中遇到的问题.</font><font style="color:#262626;"></font>
+execute-assembly是用于内存执行C#可执行文件的常用手法,当前metasploit-framework和cobalt strike都已经实现了execute-assembly功能,本文通过源码分析的方式演示execute-assembly功能使用方式,并讲解如何修复使用过程中遇到的问题.
 
 # CobaltStrike的execute-assembly
 execute-assembly是CoabltStrike的重要功能,在获取beacon后,只需要编译完成的C#可执行文件拷贝到cobalestrike本地目录,然后执行 `execute-assembly [/path/to/file.exe] [arguments]` 即可在beacon内存执行,并获取可执行文件的输出.

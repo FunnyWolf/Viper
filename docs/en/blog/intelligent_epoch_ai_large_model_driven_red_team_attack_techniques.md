@@ -8,7 +8,7 @@ Currently, AI large models in the field of network security mainly focus on two 
 
 The above two scenarios mainly apply large models from a defense perspective. This article discusses the applications of large models in content generation/automation and other fields from the perspective of attackers (that is, red team simulation).
 
-# <font style="color:rgb(25, 27, 31);">Effect Preview</font>
+# Effect Preview
 ## Phishing Email Generation/Sending
 + Content Generation
 
@@ -112,15 +112,15 @@ After comprehensive analysis of performance and cost, GPT-4o-mini can meet the r
 
 
 # RAG
-<font style="color:rgb(18, 18, 18);">Retrieval Augmented Generation (RAG) is the hottest and most widely used technology in the large model field. Here is a brief introduction to the process of RAG.</font>
+Retrieval Augmented Generation (RAG) is the hottest and most widely used technology in the large model field. Here is a brief introduction to the process of RAG.
 
-+ **Knowledge Base Building**: Vectorize the relevant knowledge/information required by the model through the <font style="color:rgb(44, 44, 54);">embedding model and then store it in a specialized vector database.</font>
-+ **<font style="color:rgb(44, 44, 54);">User Input</font>**: When you ask a question or need a detailed answer, this is the starting point of the entire process.
-+ **<font style="color:rgb(44, 44, 54);">Vectorization</font>**: Use a dedicated embedding model to vectorize the user input.
-+ **<font style="color:rgb(44, 44, 54);">Data Retrieval</font>**: The system searches for information related to your question in the pre-established knowledge base (usually stored in the vector database), and the most relevant information will be ranked at the top.
-+ **<font style="color:rgb(44, 44, 54);">Generating Answers</font>**: The retrieved information, together with the prompt and user input, is sent to the large model, and the large model outputs the answer.
++ **Knowledge Base Building**: Vectorize the relevant knowledge/information required by the model through the embedding model and then store it in a specialized vector database.
++ **User Input**: When you ask a question or need a detailed answer, this is the starting point of the entire process.
++ **Vectorization**: Use a dedicated embedding model to vectorize the user input.
++ **Data Retrieval**: The system searches for information related to your question in the pre-established knowledge base (usually stored in the vector database), and the most relevant information will be ranked at the top.
++ **Generating Answers**: The retrieved information, together with the prompt and user input, is sent to the large model, and the large model outputs the answer.
 
-<font style="color:rgb(44, 44, 54);">Simply put, RAG is a large model plus a private database, which provides the large model with knowledge that it does not have during training through the database.</font>
+Simply put, RAG is a large model plus a private database, which provides the large model with knowledge that it does not have during training through the database.
 
 
 
@@ -137,7 +137,7 @@ From the analysis of current actual test results, the current mainstream large m
 ## Intelligence Analysis
 The intelligence mentioned here refers to a large amount of information collected during the red team assessment process, such as the target's Internet assets, email domains, etc., or the host files, processes and network configurations collected during the post-infiltration process.
 
-Analyzing a large amount of information is exactly what large models are good at. However, large models have limitations on input length and cannot send all information to the large model at once. The common practice is to first store intelligence information in a vector database through the <font style="color:rgb(44, 44, 54);">embedding model, and then selectively extract intelligence according to user requests and let the large model perform analysis.</font>
+Analyzing a large amount of information is exactly what large models are good at. However, large models have limitations on input length and cannot send all information to the large model at once. The common practice is to first store intelligence information in a vector database through the embedding model, and then selectively extract intelligence according to user requests and let the large model perform analysis.
 
 > The main scenario of RAG + intelligence analysis is external network attack surface intelligence analysis because such intelligence usually has a large amount of data and can be aggregated by entities.
 >
@@ -147,20 +147,20 @@ Analyzing a large amount of information is exactly what large models are good at
 The RAG direction is an important way for large models to be applied in actual production. In addition to the above implementation based on vector databases, GraphRAG based on graph data has better effects in some fields recently.
 
 ## GraphRAG
-<font style="color:rgb(44, 44, 54);">The main differences between GraphRAG and RAG based on vector databases are:</font>
+The main differences between GraphRAG and RAG based on vector databases are:
 
-<font style="color:rgb(44, 44, 54);">Data Structure: GraphRAG uses a graph database as the underlying data storage, which can better capture the complex correlations between data.</font>
+Data Structure: GraphRAG uses a graph database as the underlying data storage, which can better capture the complex correlations between data.
 
-<font style="color:rgb(44, 44, 54);">Query Ability: Due to the support of graph databases for efficient path finding, subgraph matching and other operations, GraphRAG may perform better when dealing with tasks that require understanding context relationships.</font>
+Query Ability: Due to the support of graph databases for efficient path finding, subgraph matching and other operations, GraphRAG may perform better when dealing with tasks that require understanding context relationships.
 
-<font style="color:rgb(44, 44, 54);">Information Fusion: In the generation stage, in addition to considering the retrieved relevant documents as in traditional RAG, GraphRAG can also consider the relevant nodes and their connections retrieved from the graph, thereby providing richer background information for the generation process.</font>
+Information Fusion: In the generation stage, in addition to considering the retrieved relevant documents as in traditional RAG, GraphRAG can also consider the relevant nodes and their connections retrieved from the graph, thereby providing richer background information for the generation process.
 
 > Most of the red team-related intelligence is structural information and there is a correlation between information. Therefore, graphrag is more effective in the intelligence analysis field than RAG based on vector search or inverted index. As shown in the following figure, this is the effect after storing the relevant port, vulnerability, alarm and other information of multiple IPs using a graph database.
 >
 
 ![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\11.webp)
 
-# <font style="color:rgb(44, 44, 54);">Function calling</font>
+# Function calling
 Function calling refers to the ability of large language models to interact with external systems or services through predefined interfaces. Through function calling, the model can access databases, call APIs, and perform computational tasks. Function calling is one of the core capabilities of building agents. The following is OpenAI's description of the Function calling process.
 
 ![](img\intelligent_epoch_ai_large_model_driven_red_team_attack_techniques\12.webp)
@@ -168,17 +168,17 @@ Function calling refers to the ability of large language models to interact with
 Currently, there are two ways for large models to implement Function calling, namely ReAct and native support. A brief introduction to these two methods is provided to facilitate our technical selection.
 
 ## ReAct
-<font style="color:rgb(34, 45, 58);">The core of ReAct is to integrate the functions of reasoning and action to enhance the ability of large models to call external functions.</font>
+The core of ReAct is to integrate the functions of reasoning and action to enhance the ability of large models to call external functions.
 
-+ <font style="color:rgb(34, 45, 58);">Re (Reasoning, Reasoning)</font>
++ Re (Reasoning, Reasoning)
 
-<font style="color:rgb(34, 45, 58);">The reasoning framework of ReAct uses the "Chain of Thought" (CoT) technology, which is an advanced prompt engineering strategy for large models. We will describe CoT in detail in the prompt evolution part later.</font>
+The reasoning framework of ReAct uses the "Chain of Thought" (CoT) technology, which is an advanced prompt engineering strategy for large models. We will describe CoT in detail in the prompt evolution part later.
 
 + Acting
 
-<font style="color:rgb(34, 45, 58);">This part emphasizes the model's ability to perform specific actions, that is, the model needs to output action actions instead of directly outputting results. Acting also depends on the model's ability to output structured (usually JSON).</font>
+This part emphasizes the model's ability to perform specific actions, that is, the model needs to output action actions instead of directly outputting results. Acting also depends on the model's ability to output structured (usually JSON).
 
-<font style="color:rgb(34, 45, 58);">We can understand the above two concepts of ReAct through a classic ReAct prompt.</font>
+We can understand the above two concepts of ReAct through a classic ReAct prompt.
 
 ```python
 Answer the following questions as best you can. If it is in order, you can use some tools appropriately. 

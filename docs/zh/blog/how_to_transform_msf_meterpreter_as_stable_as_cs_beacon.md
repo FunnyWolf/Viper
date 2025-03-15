@@ -24,9 +24,9 @@ Metasploit-Framework和Cobalt Strike是当前红队模拟中最流行的两款�
 这里的C2指的是Meterpreter的Hander和Beacon的Listener.
 
 + Meterpreter的handler实现: TCPServer结合resources实现的简易http服务
-+ Beacon的Listener实现: 基于<font style="color:rgb(51, 51, 51);">NanoHTTPD实现.</font>
++ Beacon的Listener实现: 基于**NanoHTTPD实现**
 
-<font style="color:rgb(51, 51, 51);">相较于成熟的NanoHTTPD,自行实现的http服务可能在稳定性上有一定的劣势.</font>
+**相较于成熟的NanoHTTPD,自行实现的http服务可能在稳定性上有一定的劣势.**
 
 
 

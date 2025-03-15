@@ -4,10 +4,10 @@
 
 The metasploit-framework and cobalt strike (referred to as CS for short) are currently two mainstream red team assessment tools.
 
-<font style="color:#262626;">During the red team assessment process, in order to counter anti-virus software, fileless penetration is a simple and effective means to achieve anti-kill.</font>
+During the red team assessment process, in order to counter anti-virus software, fileless penetration is a simple and effective means to achieve anti-kill.
 
-<font style="color:#262626;">Execute-assembly is a common technique used to execute C# executables in memory. Currently, both metasploit-framework and cobalt strike have implemented the <font style="color:#262626;">
-execute-assembly function. This article demonstrates the usage of the execute-assembly function through source code analysis and explains how to fix problems encountered during use.</font><font style="color:#262626;"></font>
+Execute-assembly is a common technique used to execute C# executables in memory. Currently, both metasploit-framework and cobalt strike have implemented the 
+execute-assembly function. This article demonstrates the usage of the execute-assembly function through source code analysis and explains how to fix problems encountered during use.
 
 # CobaltStrike's execute-assembly
 

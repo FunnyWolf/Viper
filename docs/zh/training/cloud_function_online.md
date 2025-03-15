@@ -33,7 +33,7 @@
 
 ![](img\cloud_function_online\6.webp)
 
-+ 记住这里的云函数web地址,例如样例中为:<font style="color:rgba(0, 0, 0, 0.9);">service-6abofmuc-1256520000.gz.apigw.tencentcs.com</font>
++ 记住这里的云函数web地址,例如样例中为:service-6abofmuc-1256520000.gz.apigw.tencentcs.com
 
 ## 生成配套的载荷(Payload)
 

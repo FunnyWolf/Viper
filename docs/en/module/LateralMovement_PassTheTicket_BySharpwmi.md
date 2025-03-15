@@ -5,7 +5,7 @@ The module executes a customized Sharpwmi.exe in memory.
 
 It conducts lateral movement by using the specified username and password or the hash in the memory of the current user. It loads the payload and goes online by invoking PowerShell on the target host.
 
-Compared with the <WMI Plaintext Transmission> module, this module does not call the local wmi.exe file.
+Compared with the `WMI Plaintext Transmission` module, this module does not call the local wmi.exe file.
 
 # Operation Methods
 + Passing Hashes in Memory

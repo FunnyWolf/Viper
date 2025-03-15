@@ -24,9 +24,9 @@ It can be seen that when performing basic commands, Meterpreter needs to load an
 Here, C2 refers to Meterpreter's Hander and Beacon's Listener.
 
 + The implementation of Meterpreter's handler: a simple http service implemented by TCPServer combined with resources
-+ The implementation of Beacon's Listener: implemented based on <font style="color:rgb(51, 51, 51);">NanoHTTPD.</font>
++ The implementation of Beacon's Listener: implemented based on NanoHTTPD.
 
-<font style="color:rgb(51, 51, 51);">Compared with the mature NanoHTTPD, the self-implemented http service may have certain disadvantages in stability.</font>
+Compared with the mature NanoHTTPD, the self-implemented http service may have certain disadvantages in stability.
 
 
 
