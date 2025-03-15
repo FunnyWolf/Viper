@@ -30,11 +30,11 @@ Give it a try? Jump to [Quick Start](./getting_start).
 
   Supports automated orchestration and notification mechanisms, enabling the red team to monitor the target status around the clock.
 
-- **Diverse Modules**
+- **Dozens of Modules**
 
   Integrates various types of modules, including post-exploitation modules, passive scanning modules, and full-network scanning modules, to meet the needs in different scenarios.
 
-- **Customization and Extension Capabilities**
+- **Customize and Extension**
 
   Supports writing custom modules in Python to meet specific requirements or add additional functionality.
 

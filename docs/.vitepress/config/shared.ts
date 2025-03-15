@@ -1,10 +1,12 @@
-import { defineConfig } from 'vitepress'
+import {defineConfig, TransformContext} from 'vitepress'
+
 import {
   groupIconMdPlugin,
   groupIconVitePlugin,
   localIconLoader
 } from 'vitepress-plugin-group-icons'
 import lightbox from "vitepress-plugin-lightbox"
+import {handleHeadMeta} from "../theme/handleHeadMeta";
 export const shared = defineConfig({
   title: 'VIPER',
 
@@ -67,6 +69,14 @@ export const shared = defineConfig({
     ['meta', { property: 'og:site_name', content: 'Viper' }],
     ['meta', { property: 'og:image', content: 'https://www.viperrtp.com/viper-og.png' }],
     ['meta', { property: 'og:url', content: 'https://www.viperrtp.com/' }],
+    ['meta', { name: 'twitter:site', content: '@viperrtp' }],
+    ['meta', { name: 'twitter:creator', content: '@viperrtp' }],
+    // 默认图片（可选）
+    ['meta', {
+      name: 'twitter:image',
+      content: new URL('/viper-og.png', 'https://www.viperrtp.com').href
+    }],
+
     ['script', {
       async: 'async',
       src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4907153636177535',
@@ -74,11 +84,17 @@ export const shared = defineConfig({
     }]
   ],
 
+  async transformHead(context: TransformContext) {
+    return handleHeadMeta(context)
+  },
+
   themeConfig: {
     logo: { src: '/viper.svg', width: 24, height: 24 },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/FunnyWolf/Viper' }
+      { icon: 'github', link: 'https://github.com/FunnyWolf/Viper' },
+      { icon: 'twitter', link: 'https://x.com/viperrtp' },
+
     ],
 
     search: {
