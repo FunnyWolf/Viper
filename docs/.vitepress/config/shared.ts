@@ -71,12 +71,10 @@ export const shared = defineConfig({
     ['meta', { property: 'og:url', content: 'https://www.viperrtp.com/' }],
     ['meta', { name: 'twitter:site', content: '@viperrtp' }],
     ['meta', { name: 'twitter:creator', content: '@viperrtp' }],
-    // 默认图片（可选）
-    ['meta', {
-      name: 'twitter:image',
-      content: new URL('/viper-og.png', 'https://www.viperrtp.com').href
-    }],
-
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:title', content: 'Viper | Powerful and Flexible Red Team Platform' }],
+    ['meta', { name: 'twitter:description', content: 'A Unified Platform Designed for Adversary Emulation and Red Team Operations' }],
+    ['meta', { name: 'twitter:image:src', content: 'https://www.viperrtp.com/viper-og.png' }],
     ['script', {
       async: 'async',
       src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4907153636177535',

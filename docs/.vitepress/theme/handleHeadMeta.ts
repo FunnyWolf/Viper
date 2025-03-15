@@ -12,6 +12,7 @@ export function handleHeadMeta(context: TransformContext) {
     const ogTitle: HeadConfig = ["meta", { property: "og:title", content: title }]
     const ogDescription: HeadConfig = ["meta", { property: "og:description", content: curDesc }]
     const ogImage: HeadConfig = ["meta", { property: "og:image", content: cover }]
+
     const twitterCard: HeadConfig = ["meta", { name: "twitter:card", content: cardType }]
     const twitterImage: HeadConfig = ["meta", { name: "twitter:image:src", content: cover }]
     const twitterDescription: HeadConfig = ["meta", { name: "twitter:description", content: curDesc }]
