@@ -8,20 +8,20 @@
 + 获取Session
 + 使用监听配置生成免杀载荷
 
-![1615640034617-9e0bee1b-17d0-4c28-bb1e-326351f6b18b.webp](./img/VAAS7sFQRI-kq7m-/1615640034617-9e0bee1b-17d0-4c28-bb1e-326351f6b18b-614840.webp)
+![](img\Persistence_RegistryRunKeys_SharpHide\1.webp)
 
 + 将生成的载荷上传到目标
 
-![1615640137294-5734093e-4870-418b-8b27-006edf2299ab.webp](./img/VAAS7sFQRI-kq7m-/1615640137294-5734093e-4870-418b-8b27-006edf2299ab-216433.webp)
+![](img\Persistence_RegistryRunKeys_SharpHide\2.webp)
 
 + 填写模块参数
 
-![1615640199648-4664645a-c36e-4484-9224-25df17e0050b.webp](./img/VAAS7sFQRI-kq7m-/1615640199648-4664645a-c36e-4484-9224-25df17e0050b-014545.webp)
+![](img\Persistence_RegistryRunKeys_SharpHide\3.webp)
 
 可执行文件目录参数填写上传的免杀载荷路径
 
 + 运行模块
 
-![1615640252544-4c6509c3-4cea-40aa-9e8e-0d89299b49cc.webp](./img/VAAS7sFQRI-kq7m-/1615640252544-4c6509c3-4cea-40aa-9e8e-0d89299b49cc-001709.webp)
+![](img\Persistence_RegistryRunKeys_SharpHide\4.webp)
 
 

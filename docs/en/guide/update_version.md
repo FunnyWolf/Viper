@@ -1,69 +1,69 @@
-# Updated version
+# Update Version
 
-## Small version update (for example, 1.2.1 update to 1.2.2)
+## Minor Version Update (e.g., updating from 1.2.1 to 1.2.2)
 
-> docker compose all commands executed in the Viper installation directory
+> All `docker compose` commands should be executed in the Viper installation directory.
 
-+ Delete the original container
+- Delete the existing containers
 
 ```shell
-cd /root/VIPER              
-docker compose down         
+cd /root/VIPER              # Viper installation directory
+docker compose down         # Delete the existing containers
 ```
 
-+ Update docker image
+- Update the Docker images
 
 ```shell
 docker compose pull
 ```
 
-+ Create and start the container
+- Create and start the containers
 
 ```shell
 docker compose up -d
 ```
 
-+ Visit[https://vpsip:diyport](http://vpsip:60000)Log in to the server. Username: root password: custom password
+- Visit [https://vpsip:diyport](http://vpsip:60000) to log in to the server. Username: root, Password: Custom password
 
-> Password can be passed`cat /root/VIPER/docker-compose.yml`Check
+> The password can be viewed by running `cat /root/VIPER/docker-compose.yml`
 >
-> diyport can be passed`cat /root/VIPER/nginxconfig/viper.conf`Check
+> The `diyport` can be viewed by running `cat /root/VIPER/nginxconfig/viper.conf`
 >
 
-## Large version update (for example, 1.2.6 update to 1.3.0)
+## Major Version Update (e.g., updating from 1.2.6 to 1.3.0)
 
-> docker compose all commands executed in the Viper installation directory
+> All `docker compose` commands should be executed in the Viper installation directory.
 >
-> Viper's high version is incompatible with existing data in the lower version. Cross-version updates require clearing of existing data.
+> Higher versions of Viper are not compatible with the existing data of lower versions. Cross-version updates require clearing the existing data.
 
-+ Delete the original container
+- Delete the existing containers
 
 ```shell
-cd /root/VIPER 
+cd /root/VIPER # Viper installation directory
 docker compose down
 ```
 
-+ Clear existing data and custom modules
+- Clear the existing data and custom modules
 
 ```shell
-rm -f ./db/*
-rm -f ./module/*
+rm -f./db/*
+rm -f./module/*
 ```
 
-+ Update docker image
+- Update the Docker images
 
 ```shell
 docker compose pull
 ```
 
-+ Create and start the container
+- Create and start the containers
 
 ```shell
 docker compose up -d
 ```
 
-+ Visit[https://vpsip:diyport](http://vpsip:60000)Login.Username:root Password:custom password
+- Visit [https://vpsip:diyport](http://vpsip:60000) to log in. Username: root, Password: Custom password
 
-> Password can be passed`cat /root/VIPER/docker-compose.yml`Check
+> The password can be viewed by running `cat /root/VIPER/docker-compose.yml`
 >
-> diyport can be passed`cat /root/VIPER/nginxconfig/viper.conf`Check
+> The `diyport` can be viewed by running `cat /root/VIPER/nginxconfig/viper.conf`

@@ -12,22 +12,22 @@
 
 + `主机A`正常上线
 
-![1620527279034-d4d24311-ed48-4ad8-9655-21970e80d4b8.webp](./img/Qxo95txm7HbT62M-/1620527279034-d4d24311-ed48-4ad8-9655-21970e80d4b8-189809.webp)
+![](img\online_session_without_internet\1.webp)
 
-+ 添加一个到192.168.146.0/24网段的路由![1620527331569-b35fe180-479d-4b27-9fb3-2a4522f20ca6.webp](./img/Qxo95txm7HbT62M-/1620527331569-b35fe180-479d-4b27-9fb3-2a4522f20ca6-104056.webp)
-+ 生成一个bind_tcp的载荷,在`主机B`上执行(实战中通过exp执行)![1620527396776-8e1cc174-6374-4506-ac8b-a6f738ce1f92.webp](./img/Qxo95txm7HbT62M-/1620527396776-8e1cc174-6374-4506-ac8b-a6f738ce1f92-907635.webp)
++ 添加一个到192.168.146.0/24网段的路由![](img\online_session_without_internet\2.webp)
++ 生成一个bind_tcp的载荷,在`主机B`上执行(实战中通过exp执行)![](img\online_session_without_internet\3.webp)
 
-      ![1620527508270-ef49e459-8e30-41ed-a1bb-ca5de2232ee0.webp](./img/Qxo95txm7HbT62M-/1620527508270-ef49e459-8e30-41ed-a1bb-ca5de2232ee0-910110.webp)
+      ![](img\online_session_without_internet\4.webp)
 
 + 运行一个指向`主机B`的监听
 
-![1620527604109-a75d4c3e-f05e-43af-83db-a4f7d21feeae.webp](./img/Qxo95txm7HbT62M-/1620527604109-a75d4c3e-f05e-43af-83db-a4f7d21feeae-674757.webp)
+![](img\online_session_without_internet\5.webp)
 
 + `主机B`上线
 
 
 
-![1620527666968-65498887-0b02-46cc-a12c-ab10921161fa.webp](./img/Qxo95txm7HbT62M-/1620527666968-65498887-0b02-46cc-a12c-ab10921161fa-763300.webp)
+![](img\online_session_without_internet\6.webp)
 
 可以看到主机B的Session连接信息是通过`主机A(192.168.146.1)`
 
@@ -39,40 +39,39 @@
 
 + `主机A`正常上线
 
-![1620527279034-d4d24311-ed48-4ad8-9655-21970e80d4b8.webp](./img/Qxo95txm7HbT62M-/1620527279034-d4d24311-ed48-4ad8-9655-21970e80d4b8-189809.webp)
 
 + 添加一个reverse_tcp_rc4类型监听,记住这里使用的9000端口
 
 > 不要使用reverse_https类型
 >
 
-![1620527875860-c6986982-a2e1-4bb8-a740-f43c4e480105.webp](./img/Qxo95txm7HbT62M-/1620527875860-c6986982-a2e1-4bb8-a740-f43c4e480105-533381.webp)
+![](img\online_session_without_internet\7.webp)
 
 + 添加一个反向端口转发,记住这里使用的9000端口和12345端口
 
 > 该操作需要已经过UAC的管理员权限
 >
 
-![1620527938382-4d8bb401-43e8-4b84-9e1f-d65482d44688.webp](./img/Qxo95txm7HbT62M-/1620527938382-4d8bb401-43e8-4b84-9e1f-d65482d44688-819051.webp)
+![](img\online_session_without_internet\8.webp)
 
 + 生成一个reverse_tcp_rc4类型的载荷,并在`主机B`上执行
 
-> **<font style="color:#F5222D;">这里一定注意以下几个参数</font>**
+> **这里一定注意以下几个参数**
 >
-> **<font style="color:#F5222D;">LHOST填写出网主机的内网IP地址(192.168.146.1)</font>**
+> **LHOST填写出网主机的内网IP地址(192.168.146.1)**
 >
-> **<font style="color:#F5222D;">LPORT填写上一步端口转发中 远程端口(监听)的地址 (12345)</font>**
+> **LPORT填写上一步端口转发中 远程端口(监听)的地址 (12345)**
 >
-> **<font style="color:#F5222D;">RC4密码一定要与之前建立监听时RC4密码相同</font>**
+> **RC4密码一定要与之前建立监听时RC4密码相同**
 >
 
-![1620528129192-23f3e760-c234-4176-afee-fca97b8228f3.webp](./img/Qxo95txm7HbT62M-/1620528129192-23f3e760-c234-4176-afee-fca97b8228f3-337653.webp)
+![](img\online_session_without_internet\9.webp)
 
 
 
 + `主机B`上线
 
-![1620528302667-d226184b-e5fd-419d-a586-308c403c36f1.webp](./img/Qxo95txm7HbT62M-/1620528302667-d226184b-e5fd-419d-a586-308c403c36f1-551193.webp)
+![](img\online_session_without_internet\10.webp)
 
 因为是使用了反向端口转发,所以Session连接信息是127.0.0.1环路地址
 

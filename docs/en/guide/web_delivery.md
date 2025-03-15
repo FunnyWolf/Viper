@@ -1,15 +1,15 @@
 # WebDelivery
 
-WebDelivery is used to load payload in one sentence. It is often used in scenarios where commands can be executed but files are not convenient to upload.
+WebDelivery is used to load the payload in one line. It is often used in scenarios where commands can be executed, but it is inconvenient to upload files.
 
-## How to use
+## Usage
 
-+ Create a new one[Handler](./handler_and_payload.md)
+- Create a new [listener](./handler_and_payload.md).
 
-+ Select`Add Service`, select the corresponding monitor
+- Select "Add Service" and choose the corresponding listener.
 
-> Note that srvport needs to be an unoccupied port, srvhost is usually a VPS external network IP
+> Note that the srvport needs to be an unoccupied port, and the srvhost is usually the external IP of the VPS.
 
-+ Click`one line cmd`Get the command to be executed
+- Click "Execute in One Line" to obtain the command to be executed.
 
-+ Copy the command to the corresponding host and execute it, and you can go online
+- Copy the command to the corresponding host and execute it to get online.

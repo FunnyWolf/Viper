@@ -1,3 +1,1 @@
-# Information collection agent
-
-
+# Information Collection Agent

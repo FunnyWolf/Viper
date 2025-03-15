@@ -1,29 +1,27 @@
-# Windows Registry Run Key Value Persistence (C#)
+# Windows Registry Run Key Persistence (C#)
 
-# Main functions
+# Main Function
+Write the payload directory to the Registry Run key value by executing SharpHide in memory.
 
-Write the load directory to the Run key value of the registry by executing SharpHide in memory
+# Operation Method
++ Generate a listener.
++ Obtain a session.
++ Use the listener configuration to generate an anti - detection payload.
 
-# How to operate
+![](img\Persistence_RegistryRunKeys_SharpHide\1.webp)
 
-+ Generate listening
-+ Get Session
-+ Use the listening configuration to generate free kill payloads
++ Upload the generated payload to the target.
 
-![1615640034617-9e0bee1b-17d0-4c28-bb1e-326351f6b18b.webp](./img/VAAS7sFQRI-kq7m-/1615640034617-9e0bee1b-17d0-4c28-bb1e-326351f6b18b-614840.webp)
+![](img\Persistence_RegistryRunKeys_SharpHide\2.webp)
 
-+ Upload the generated load to the target
++ Fill in the module parameters.
 
-![1615640137294-5734093e-4870-418b-8b27-006edf2299ab.webp](./img/VAAS7sFQRI-kq7m-/1615640137294-5734093e-4870-418b-8b27-006edf2299ab-216433.webp)
+![](img\Persistence_RegistryRunKeys_SharpHide\3.webp)
 
-+ Fill in module parameters
+Fill in the "Executable File Directory" parameter with the path of the uploaded anti - detection payload.
 
-![1615640199648-4664645a-c36e-4484-9224-25df17e0050b.webp](./img/VAAS7sFQRI-kq7m-/1615640199648-4664645a-c36e-4484-9224-25df17e0050b-014545.webp)
++ Run the module.
 
-Fill in the uploaded load-free load path
+![](img\Persistence_RegistryRunKeys_SharpHide\4.webp)
 
-+ Run the module
-
-![1615640252544-4c6509c3-4cea-40aa-9e8e-0d89299b49cc.webp](./img/VAAS7sFQRI-kq7m-/1615640252544-4c6509c3-4cea-40aa-9e8e-0d89299b49cc-001709.webp)
-
-
+ 

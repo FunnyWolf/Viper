@@ -1,31 +1,31 @@
-# Main panel
+# Host and Session 
 
-## Run the module
+## Running Modules
 
-Click to display all modules (Yes or no session dependency)
+After clicking, the `Module List without Session` and `All Module Lists` will be displayed respectively.
 
-## Host operation portal
+## Host Operation Entrance
 
-Clicking on the host IP will pop up the selection box for host operations
+Clicking on the host IP will pop up a selection box for host operations.
 
 ## Host Tags/Remarks
 
-Clicking on the host's tag will open the host's tag comment modification function
+Clicking on the host's tag will open the function to modify the host tag remarks.
 
-## Permission operation portal
+## Permission Operation Entrance
 
-Click on the host entry to expand/zoom all sessions under the host. Click on the Session entry to display the permission operation function list
+Clicking on the host entry will expand/zoom all Sessions under the host. Clicking on the Session entry will display the list of permission operation functions.
 
-## Permission information prompts
+## Permission Information Hint
 
-Stop the mouse over the permissions related information and prompt more detailed information
+Hovering the mouse over the relevant permission information will prompt more detailed information.
 
-+ Session-related Handler information
-+ Full version number of the operating system
-+ Session Process Pid
+- Session-related Handler information
+- Full operating system version number
+- Session process Pid
 
-## Quick function on the right
+## Right-side Quick Functions
 
-### Show only the Session switch
+### Session-only Display Switch
 
-When the switch is currently on, only the hosts with 255.255.255 and Session are present will be displayed on the interface. When the switch is turned off, all hosts are displayed normally.
+When the current switch is turned on, only hosts with 255.255.255.255 and hosts with Sessions will be displayed on the interface. When the switch is turned off, all hosts will be displayed normally.

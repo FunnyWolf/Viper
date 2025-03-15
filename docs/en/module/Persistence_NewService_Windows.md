@@ -1,17 +1,12 @@
-# Windows system service persistence
+# Windows System Service Persistence
 
-# Main functions
+# Main Functions
+The module achieves persistent control by registering the uploaded Payload file as a system service.
 
-The module performs persistent control by registering the uploaded Payload file as a system service.
+This module requires Session system privileges or administrator privileges.
 
-This module requires Session system permissions or administrator permissions.
+# Precautions
+Administrator privileges or System privileges are required, and it is not anti-detection.
 
-# Things to note
-
-Need administrator permission or system permission, it is inevitable to kill
-
-# How to operate
-
-refer to [Winlogon Helper DLL Persistence](./Persistence_WinlogonHelperDLL_Windows)
-
-
+# Operation Method
+Refer to [Winlogon Helper DLL Persistence](./Persistence_WinlogonHelperDLL_Windows)

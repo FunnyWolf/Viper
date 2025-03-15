@@ -24,9 +24,9 @@ Metasploit-Framework和Cobalt Strike是当前红队模拟中最流行的两款�
 这里的C2指的是Meterpreter的Hander和Beacon的Listener.
 
 + Meterpreter的handler实现: TCPServer结合resources实现的简易http服务
-+ Beacon的Listener实现: 基于<font style="color:rgb(51, 51, 51);">NanoHTTPD实现.</font>
++ Beacon的Listener实现: 基于**NanoHTTPD实现**
 
-<font style="color:rgb(51, 51, 51);">相较于成熟的NanoHTTPD,自行实现的http服务可能在稳定性上有一定的劣势.</font>
+**相较于成熟的NanoHTTPD,自行实现的http服务可能在稳定性上有一定的劣势.**
 
 
 
@@ -46,15 +46,15 @@ Metasploit-Framework和Cobalt Strike是当前红队模拟中最流行的两款�
 ## 核心库加载优化
 核心库加载的改造是最简单的,或者说算不上改造.Metasploit-framework本身支持不自动加载stdapi.dll,只要在生成Handler时间AutoLoadStdapi参数设置为False就可以.
 
-![1619420712342-4c89e21f-b38a-49f6-9c4c-43168761bb41.webp](./img/FHoN4tL3ycY7U94N/1619420712342-4c89e21f-b38a-49f6-9c4c-43168761bb41-131681.webp)
+![](img\how_to_transform_msf_meterpreter_as_stable_as_cs_beacon\1.webp)
 
 此时如果有payload连接该监听,效果如下:
 
-![1619423386491-a4483eac-572f-4033-b817-12f0f2007a87.webp](./img/FHoN4tL3ycY7U94N/1619423386491-a4483eac-572f-4033-b817-12f0f2007a87-794035.webp)
+![](img\how_to_transform_msf_meterpreter_as_stable_as_cs_beacon\2.webp)
 
 具体表现是该Session很像一个假session,我们需要进入meterpreter然后执行load stdapi手动加载核心库.
 
-![1619423268552-678ae67f-d75e-49c4-86b3-8cfd1e6dadd2.webp](./img/FHoN4tL3ycY7U94N/1619423268552-678ae67f-d75e-49c4-86b3-8cfd1e6dadd2-851905.webp)
+![](img\how_to_transform_msf_meterpreter_as_stable_as_cs_beacon\3.webp)
 
 此时该Session就可以正常使用了.
 
@@ -77,13 +77,13 @@ Meterpreter自行实现简易的http服务,笔者认为主要有以下几点考�
 
 [https://github.com/rapid7/metasploit-framework/blob/master/lib/rex/proto/http/server.rb#L372](https://github.com/rapid7/metasploit-framework/blob/master/lib/rex/proto/http/server.rb#L372)
 
-![1619424139385-cc645b2f-bd9e-4f38-b590-9ef3c6d20a81.webp](./img/FHoN4tL3ycY7U94N/1619424139385-cc645b2f-bd9e-4f38-b590-9ef3c6d20a81-572181.webp)
+![](img\how_to_transform_msf_meterpreter_as_stable_as_cs_beacon\4.webp)
 
 可以看出对于非法请求,虽然MSF会返回404页面(372行),但是如果对方设置keep-alive header,MSF就不会主动关闭该TCP连接,导致端口上出现很多无效的网络连接,进而影响真正的payload连接.
 
 而解决这个Bug的代码如下:
 
-![1619424384409-3161a06b-6439-4042-b84a-fab582d11adb.webp](./img/FHoN4tL3ycY7U94N/1619424384409-3161a06b-6439-4042-b84a-fab582d11adb-144430.webp)
+![](img\how_to_transform_msf_meterpreter_as_stable_as_cs_beacon\5.webp)
 
 也就是非法请求默认关闭连接.
 
@@ -101,11 +101,11 @@ Meterpreter自行实现简易的http服务,笔者认为主要有以下几点考�
 
 [https://github.com/rapid7/metasploit-payloads/blob/master/c/meterpreter/source/metsrv/server_transport_winhttp.c#L157](https://github.com/rapid7/metasploit-payloads/blob/master/c/meterpreter/source/metsrv/server_transport_winhttp.c#L157)
 
-![1619425989323-1b84a8cc-65ea-4799-9857-155860db2874.webp](./img/FHoN4tL3ycY7U94N/1619425989323-1b84a8cc-65ea-4799-9857-155860db2874-988470.webp)
+![](img\how_to_transform_msf_meterpreter_as_stable_as_cs_beacon\6.webp)
 
 这个函数用于http请求,改造后的代码如下
 
-![1619426085070-8f487c76-8fe7-4357-87ef-45821c2475d0.webp](./img/FHoN4tL3ycY7U94N/1619426085070-8f487c76-8fe7-4357-87ef-45821c2475d0-904086.webp)
+![](img\how_to_transform_msf_meterpreter_as_stable_as_cs_beacon\7.webp)
 
 我们在代码中增加额外的判断,如果心跳间隔(delay)大于3秒,则关闭keep-alive功能.
 
@@ -118,7 +118,7 @@ meterpreter也可能通过修改源代码的方式支持这种特性,代码如�
 
 [https://github.com/rapid7/metasploit-payloads/blob/master/c/meterpreter/source/metsrv/server_transport_winhttp.c](https://github.com/rapid7/metasploit-payloads/blob/master/c/meterpreter/source/metsrv/server_transport_winhttp.c#L157)
 
-![1619426578095-5dd5689f-3578-4d65-834b-ace21e9687fe.webp](./img/FHoN4tL3ycY7U94N/1619426578095-5dd5689f-3578-4d65-834b-ace21e9687fe-740422.webp)
+![](img\how_to_transform_msf_meterpreter_as_stable_as_cs_beacon\8.webp)
 
  其中ecount是心跳增长因子,max_delay是最大心跳间隔,我们通过在这两个值上增加随机数,就实现了心跳抖动功能.
 

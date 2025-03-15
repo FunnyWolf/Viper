@@ -18,11 +18,11 @@
 + 感谢 kiwi ,我们可以抓取已控制 windows 主机的明文密码或 hash,为之后的渗透做准备.
 + VIPER 中有多个模块可以完成该工作,以**获取 windows 内存密码**为例进行演示
 
-![1610515577967-29475811-ae02-44cd-bf77-226eaeb40f4a.webp](./img/KWbtAtB2zCihAm3C/1610515577967-29475811-ae02-44cd-bf77-226eaeb40f4a-523188.webp)![1610515615384-a475b48e-8b54-4eec-bbca-0b63951bd3d5.webp](./img/KWbtAtB2zCihAm3C/1610515615384-a475b48e-8b54-4eec-bbca-0b63951bd3d5-894474.webp)
+![](img\lateral_movement\1.webp)![](img\lateral_movement\2.webp)
 
 + 收集到的凭证信息还可以在 **凭证管理 **中查看
 
-![1610515678330-7814cafa-c067-47b0-9b22-c115f01e0d65.webp](./img/KWbtAtB2zCihAm3C/1610515678330-7814cafa-c067-47b0-9b22-c115f01e0d65-876175.webp)
+![](img\lateral_movement\3.webp)
 
 ## 网络代理
 > 一般我们将 NAT 后面的网络称为内网,当前内网分为三种
@@ -50,7 +50,7 @@
 
 + `网络直连` 表示 VIPER 服务器在尝试连接内网主机时采用直连的方式,很明显在绝大多数情况下由于主机在 NAT 后面是无法连接的,这时需要我们在 Session 上添加内网路由才能使 VIPER 连接到内网主机.
 
-![1610516164619-e2e43a26-3427-4a9e-ace2-b43bc7e6f83f.webp](./img/KWbtAtB2zCihAm3C/1610516164619-e2e43a26-3427-4a9e-ace2-b43bc7e6f83f-870564.webp)
+![](img\lateral_movement\4.webp)
 
 > 选择自动时 VIPER 会根据 Session 主机的网卡配置的 IP 地址添加路由
 >
@@ -59,7 +59,7 @@
 
 + 如果添加了对应的路由,会提示连接该 ip 所用的路由 sessionid ,便于判断是通过那个 Session 进行路由.
 
-![1610516223808-e31fb3af-3f31-48b3-88a2-f35dd8b10756.webp](./img/KWbtAtB2zCihAm3C/1610516223808-e31fb3af-3f31-48b3-88a2-f35dd8b10756-726917.webp)
+![](img\lateral_movement\5.webp)
 
 + **这是我们最常用的正向连接内网的方法,也是 VIPER 模块(MSF模块)默认的连接内网方法**
 
@@ -71,11 +71,11 @@
 > 内网代理和内网路由是相互配合的
 >
 
-![1610516326813-9961c74d-024c-4e1d-939e-e112605e080b.webp](./img/KWbtAtB2zCihAm3C/1610516326813-9961c74d-024c-4e1d-939e-e112605e080b-628900.webp)
+![](img\lateral_movement\6.webp)
 
-![1610516370064-749ab0ce-4c8f-4eb2-90f6-34529c855c72.webp](./img/KWbtAtB2zCihAm3C/1610516370064-749ab0ce-4c8f-4eb2-90f6-34529c855c72-827731.webp)
+![](img\lateral_movement\7.webp)
 
-![1610516449737-7dabab44-99a7-4b43-8198-5003cb366f43.webp](./img/KWbtAtB2zCihAm3C/1610516449737-7dabab44-99a7-4b43-8198-5003cb366f43-035924.webp)
+![](img\lateral_movement\8.webp)
 
 
 
@@ -85,11 +85,11 @@
 > 详细帮助可以参考VIPER页面下方的帮助
 >
 
-![1610516529687-1ec4da21-c71c-4a48-bbce-6522601aafe2.webp](./img/KWbtAtB2zCihAm3C/1610516529687-1ec4da21-c71c-4a48-bbce-6522601aafe2-703561.webp)
+![](img\lateral_movement\9.webp)
 
 + 如果需要查看所有权限上的端口转发,可以在**内网代理**中查看
 
-![1610516576557-6e950d29-4068-4fd1-bc36-577a4dfb9edb.webp](./img/KWbtAtB2zCihAm3C/1610516576557-6e950d29-4068-4fd1-bc36-577a4dfb9edb-503559.webp)
+![](img\lateral_movement\10.webp)
 
 ### 外部工具
 + 有很多外部工具可以实现内网穿透型的代理,如老牌的 ew,htran 等,推荐几款其他的代理工具,具体操作方法见对应的说明文档
@@ -108,21 +108,21 @@
 ### 内网端口扫描与服务识别
 + **内网端口扫描与服务识别**是最常用的内网网络扫描模块,模块本身会包含端口探测及基于指纹的端口识别功能.
 
-![1610516761695-9cc33fae-751c-441c-849e-025b8b0f51c5.webp](./img/KWbtAtB2zCihAm3C/1610516761695-9cc33fae-751c-441c-849e-025b8b0f51c5-976732.webp)
+![](img\lateral_movement\11.webp)
 
 + **后台任务**标签可以查看正在运行的任务
 
-![1610516779620-e7bcb94e-d5fc-4588-b392-52d2a5e1480f.webp](./img/KWbtAtB2zCihAm3C/1610516779620-e7bcb94e-d5fc-4588-b392-52d2a5e1480f-678789.webp)
+![](img\lateral_movement\12.webp)
 
 + 运行结果
 
-![1610516813969-965afabb-5beb-41eb-88a0-7231ae8e4bb3.webp](./img/KWbtAtB2zCihAm3C/1610516813969-965afabb-5beb-41eb-88a0-7231ae8e4bb3-745675.webp)
+![](img\lateral_movement\13.webp)
 
 + 扫描到的主机会自动在主控台显示出来,还可以点击开放端口按钮查看该主机开放的端口
 
-![1610516839614-4dc02ac9-e709-4c1c-b3a8-054e088e9943.webp](./img/KWbtAtB2zCihAm3C/1610516839614-4dc02ac9-e709-4c1c-b3a8-054e088e9943-332832.webp)
+![](img\lateral_movement\14.webp)
 
-![1610516877936-78d64f15-507f-441f-8857-a252e0bfe20a.webp](./img/KWbtAtB2zCihAm3C/1610516877936-78d64f15-507f-441f-8857-a252e0bfe20a-528057.webp)
+![](img\lateral_movement\15.webp)
 
 > 模块所有的网络连接都是在内网中进行,所以扫描速度与准确度远高于基于代理的内网扫描.
 >
@@ -140,15 +140,15 @@
 >
 
 ### MS17-010 扫描
-![1610516948637-414a5f0c-4637-437f-9ab0-23fbf8d16357.webp](./img/KWbtAtB2zCihAm3C/1610516948637-414a5f0c-4637-437f-9ab0-23fbf8d16357-303919.webp)
+![](img\lateral_movement\16.webp)
 
 + 还可以选择**已知漏洞**查看已扫描到的漏洞
 
-![1610516965593-52c42dbd-f07d-4254-b76f-149a7f1bd8b9.webp](./img/KWbtAtB2zCihAm3C/1610516965593-52c42dbd-f07d-4254-b76f-149a7f1bd8b9-257863.webp)
+![](img\lateral_movement\17.webp)
 
-![1610516988254-eb91a4cb-a9aa-47ec-a863-b9a837e44259.webp](./img/KWbtAtB2zCihAm3C/1610516988254-eb91a4cb-a9aa-47ec-a863-b9a837e44259-565248.webp)
+![](img\lateral_movement\18.webp)
 
-![1610517005033-1afeb878-5aba-4f6f-b4a1-df1774b5ec85.webp](./img/KWbtAtB2zCihAm3C/1610517005033-1afeb878-5aba-4f6f-b4a1-df1774b5ec85-334672.webp)
+![](img\lateral_movement\19.webp)
 
 
 

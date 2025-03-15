@@ -4,6 +4,6 @@
 模块获取主机所在域的所有域主机名,如果主机不在域中,脚本可能报错.
 
 # 操作方法
-![1625194967147-827f1789-2722-4bbd-bc9a-6b485dc3f9e6.webp](./img/FesQwOJQwJ4e35rL/1625194967147-827f1789-2722-4bbd-bc9a-6b485dc3f9e6-513930.webp)
+![](img\Discovery_RemoteSystemDiscovery_GetNetComputer\1.webp)
 
 

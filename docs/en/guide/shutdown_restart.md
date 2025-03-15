@@ -1,6 +1,6 @@
-# Close/restart
+# Shutdown Restart
 
-+ Temporarily close Viper
++ Temporarily shut down Viper
 
 ```shell
 cd /root/VIPER
@@ -14,7 +14,7 @@ cd /root/VIPER
 docker compose start
 ```
 
-+ View container log
++ View container logs
 
 ```shell
 docker logs viper-c

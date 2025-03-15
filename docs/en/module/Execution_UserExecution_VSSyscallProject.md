@@ -1,13 +1,9 @@
 # Visual Studio Project for Syscall
 
-# Main functions
+## Main Functions
+A VS project that includes the basic usage of syscall and encrypted shellcode.
 
-A VS project, which contains the basic usage method of syscall and the encrypted shellcode
-
-# How to operate
-
-+ Create new monitor
-+ Open the module and select the corresponding monitor
-+ After running the module, it will be in`文件管理`Generate a zip file, including all files of the VS project
-
-
+## Operation Methods
+- Create a new listener.
+- Open the module and select the corresponding listener.
+- After running the module, a zip file will be generated in `File Management`, which contains all the files of the VS project.

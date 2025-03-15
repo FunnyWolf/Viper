@@ -1,13 +1,7 @@
-# Last log deletion (wait)
+# Last Log Deletion (wait)
 
-# Main functions
-
+# Main Functions
 xxx
 
-# How to operate
-
+# Operation Methods
 + xxx
-
-
-
-

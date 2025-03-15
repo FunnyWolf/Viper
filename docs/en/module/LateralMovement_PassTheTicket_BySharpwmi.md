@@ -1,32 +1,25 @@
-# Sharpwmi horizontal movement
+# Sharpwmi Lateral Movement
 
-# Main functions
+# Main Functions
+The module executes a customized Sharpwmi.exe in memory.
 
-Module memory executes a customized version of Sharpwmi.exe.
+It conducts lateral movement by using the specified username and password or the hash in the memory of the current user. It loads the payload and goes online by invoking PowerShell on the target host.
 
-By specifying the username and password or using the Hash in the current user's memory for horizontal movement, the loading of the payload is launched by calling the powershell of
-the target host.
+Compared with the `WMI Plaintext Transmission` module, this module does not call the local wmi.exe file.
 
-Compared with the `WMI plaintext delivery` module, this module does not call the native wmi.exe file.
+# Operation Methods
++ Passing Hashes in Memory
 
-# How to operate
+![](img\LateralMovement_PassTheTicket_BySharpwmi\1.webp)
 
-+ Memory hash pass
++ Manually Entering Username and Password
 
-![1627999144641-6c3276b1-4fd6-4cc7-847c-090af6ab661d.webp](./img/OsI78aqg1xFsKncE/1627999144641-6c3276b1-4fd6-4cc7-847c-090af6ab661d-736823.webp)
+![](img\LateralMovement_PassTheTicket_BySharpwmi\2.webp)
 
-+ Manually enter the username and password
++ Using Captured Username and Password
 
-![1627999179495-e2f41c02-65e7-41e2-aeaf-4c7429e972d9.webp](./img/OsI78aqg1xFsKncE/1627999179495-e2f41c02-65e7-41e2-aeaf-4c7429e972d9-956731.webp)
+![](img\LateralMovement_PassTheTicket_BySharpwmi\3.webp)
 
-+ Use the crawled username and password
++ Execution Results
 
-![1627999214258-36c0741a-92f4-4e29-9723-8806774e7a7c.webp](./img/OsI78aqg1xFsKncE/1627999214258-36c0741a-92f4-4e29-9723-8806774e7a7c-925080.webp)
-
-+ Execution results
-
-![1627999272870-8da5f166-009c-4159-b718-538a5879a5b4.webp](./img/OsI78aqg1xFsKncE/1627999272870-8da5f166-009c-4159-b718-538a5879a5b4-670911.webp)
-
-
-
-
+![](img\LateralMovement_PassTheTicket_BySharpwmi\4.webp)

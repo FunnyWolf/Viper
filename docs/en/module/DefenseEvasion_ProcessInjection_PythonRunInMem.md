@@ -1,17 +1,13 @@
-# Execute custom Python scripts
+# Execute Custom Python Scripts
 
-# Main functions
+# Main Functions
+Execute custom Python scripts in the host memory (for Windows) or within the system Python interpreter (for Linux). 
 
-Execute custom Python scripts in host memory (Windows) or system Python interpreter (Linux).
+The Python scripts only support Python 2.7 and its built-in libraries. 
 
-Python scripts only support Python 2.7 and its own libraries.
+The scripts to be executed can be uploaded to the server through the `File List`.
 
-The executed script can be passed`文件列表`Upload to server
+# Operation Methods
+![](img\DefenseEvasion_ProcessInjection_PythonRunInMem\1.webp)
 
-# How to operate
-
-![1623390181661-f405a5cf-a976-404a-a211-d63bc3dad65e.webp](./img/ELvXc5sK3QrTfAEt/1623390181661-f405a5cf-a976-404a-a211-d63bc3dad65e-704802.webp)
-
-![1623390196939-8a48b81c-b8a4-4565-bff8-385d3f9f3351.webp](./img/ELvXc5sK3QrTfAEt/1623390196939-8a48b81c-b8a4-4565-bff8-385d3f9f3351-259818.webp)
-
-
+![](img\DefenseEvasion_ProcessInjection_PythonRunInMem\2.webp)

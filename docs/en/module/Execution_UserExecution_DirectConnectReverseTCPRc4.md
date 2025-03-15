@@ -1,19 +1,15 @@
-# Reverse_TCP_RC4 direct connection without killing
+# Reverse_TCP_RC4 Direct Connection Anti-Detection
 
-# Main functions
+# Main Functions
+Generate anti-detection exe
 
-Generate kill-free exe
+# Operation Methods
++ Create a new reverse_tcp_rc4 listener
++ Open the module and select the corresponding rc4 listener
++ After running the module, a zip file will be generated in `File Management`, which contains the anti-detection exe payload and the corresponding C++ code
 
-# How to operate
+![](img\Execution_UserExecution_DirectConnectReverseTCPRc4\1.webp)
 
-+ Create a new reverse_tcp_rc4 listening
-+ Open the module and select the corresponding rc4 monitoring
-+ After running the module, it will be in`文件管理`Generate a zip file, containing the free kill exe payload and corresponding C++ code
+![](img\Execution_UserExecution_DirectConnectReverseTCPRc4\2.webp)
 
-![1623376414844-3a611553-061f-4b4c-89d5-2e9612c6ef3f.webp](./img/Z_tmfEWtsILG6xWq/1623376414844-3a611553-061f-4b4c-89d5-2e9612c6ef3f-228433.webp)
-
-![1623376431206-32e08d73-8823-47c3-9db5-b7bc97f084aa.webp](./img/Z_tmfEWtsILG6xWq/1623376431206-32e08d73-8823-47c3-9db5-b7bc97f084aa-492394.webp)
-
-![1623376477346-766b8e41-82cd-4934-afec-abf6ba3d4347.webp](./img/Z_tmfEWtsILG6xWq/1623376477346-766b8e41-82cd-4934-afec-abf6ba3d4347-562982.webp)
-
-
+![](img\Execution_UserExecution_DirectConnectReverseTCPRc4\3.webp)

@@ -1,22 +1,17 @@
-# Operation information
+# Running Information
 
-## Read cache/request
+## Read Cache/Re-request
+- When opening the window each time, the host information cached in the database will be automatically read.
+- Clicking `Re-request` will execute the host information update module in the background. After the module finishes execution, the result will be automatically stored in the database.
 
-+ Each time the window is opened, the cached host information will be automatically read.
-+ Click `Request` to update host information module will be executed in the background, and the results will be automatically stored in the database after the module is executed.
+## External Network Connection
+Determine which network-connected applications are running on the host.
 
-## External network connection
+## Internal Network Connection
+Usually used to determine the IP addresses and services of other hosts in the internal network.
 
-Determine what networked applications are available on the host
+## ARP Information
+Used to search for internal network segments.
 
-## Intranet connection
-
-Usually used to determine the IP address and services of other hosts in the intranet
-
-## ARP information
-
-Used to find intranet segments
-
-## Important process
-
-Used to determine the operation status of the host's software and remote control software (teamviewer/anydesk)
+## Important Processes
+Used to determine the running status of anti-virus software and remote control software (TeamViewer/AnyDesk) on the host. 

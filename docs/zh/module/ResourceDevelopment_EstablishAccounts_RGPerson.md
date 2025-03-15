@@ -6,6 +6,6 @@
 # 操作方法
 + 运行模块即可生成随机身份信息
 
-![1625192449618-82559ec6-cc9d-4052-bc82-1a72e86513d8.webp](./img/V_VnaYHuT4QbLZ1z/1625192449618-82559ec6-cc9d-4052-bc82-1a72e86513d8-148280.webp)
+![](img\ResourceDevelopment_EstablishAccounts_RGPerson\1.webp)
 
 

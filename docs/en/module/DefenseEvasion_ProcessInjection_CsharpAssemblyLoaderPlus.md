@@ -1,21 +1,17 @@
-# Memory execution C# executable file (Bypass)
+# Memory Execution of C# Executable Files (Bypass)
 
-# Main functions
+# Main Functions
+The module loads an exe file written in C# into memory and then executes it using the CLR.
 
-The module loads the exe file written in C# into memory and executes it using CLR.
+The compromised host needs to have.NET 2.0 (installed by default on Windows 2008) or.NET 4.0 (installed by default on Windows 2012) installed. 
 
-The controlled host needs to be installed .net2.0 (win2008 default installation) or .net4.0 (win2012 default installation).
+The executable file needs to be compatible with the.NET version of the compromised host. 
 
-The executable file needs to be the same as the controlled host.net version.
+The function is similar to CS's execute-assembly. When the C# program requires input parameters, make sure to fill them in. 
 
-The function is similar to the execute-assembly of CS. When C# needs to enter parameters, you need to make sure to fill in the parameters.
+This module adds the BypassETW and BypassAmsi functions, but the module is only applicable to x64-bit systems.
 
-This module has added BypassETW and BypassAmsi functions, but the module is only suitable for x64-bit systems
+# Operation Method
+![](img\DefenseEvasion_ProcessInjection_CsharpAssemblyLoaderPlus\1.webp)
 
-# How to operate
-
-![1623381820780-f60daeb7-1385-4a77-b86a-c7fcc224f17a.webp](./img/5adsz9bCYAMtjxCu/1623381820780-f60daeb7-1385-4a77-b86a-c7fcc224f17a-852624.webp)
-
-![1623381899629-9076e08c-28dc-4f21-aa3c-5e5b69876794.webp](./img/5adsz9bCYAMtjxCu/1623381899629-9076e08c-28dc-4f21-aa3c-5e5b69876794-485568.webp)
-
-
+![](img\DefenseEvasion_ProcessInjection_CsharpAssemblyLoaderPlus\2.webp)

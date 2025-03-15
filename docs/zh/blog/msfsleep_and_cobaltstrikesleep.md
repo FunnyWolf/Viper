@@ -24,7 +24,7 @@ metasploit-framework和cobalt strike(简称CS)是当前主流的两个红队评�
 ### Sleep效果
 
 
-![1599028835573-027e9ec7-6d03-4a16-baa2-197ad072d33a.webp](./img/1205032_5QRuIyWnzIBcZyMT/1599028835573-027e9ec7-6d03-4a16-baa2-197ad072d33a-616437.webp)
+![](img\msfsleep_and_cobaltstrikesleep\1.webp)
 
 + metasploit-framework的sleep会直接让session处于休眠状态,在UI上表现为session关闭,
 + session指定时间后重新连接(handler未删除的情况下).
@@ -134,7 +134,7 @@ Meterpreter的代码主要来源于这个pr [链接](https://github.com/rapid7/m
 ### MSF原生通讯间隔
 其实MSF本身就带有通讯间隔控制,如果你执行 session -x,会发现checkin字段会在1-10中变化.
 
-![1599029121164-0907b2e7-42a4-482f-993d-b392e981b21f.webp](./img/1205032_5QRuIyWnzIBcZyMT/1599029121164-0907b2e7-42a4-482f-993d-b392e981b21f-688135.webp)
+![](img\msfsleep_and_cobaltstrikesleep\2.webp)
 
 这是因为http类型的meterpreter会最长每10秒连接一次服务器.
 
@@ -176,7 +176,7 @@ Meterpreter的代码主要来源于这个pr [链接](https://github.com/rapid7/m
 
 
 
-![1592892172675-58c89dd6-86b4-48ab-b6db-c05aeb290c31.webp](./img/1205032_5QRuIyWnzIBcZyMT/1592892172675-58c89dd6-86b4-48ab-b6db-c05aeb290c31-812455.webp)
+![](img\msfsleep_and_cobaltstrikesleep\3.webp)
 
 
 
@@ -185,7 +185,7 @@ Meterpreter的代码主要来源于这个pr [链接](https://github.com/rapid7/m
 
 meterpreter中set_timeout是控制session的超时时间参数,我们可以借用这个参数中的wait time来实现通讯间隔控制.
 
-![1592892403908-0b27334b-391d-4eb5-b354-16e1236af483.webp](./img/1205032_5QRuIyWnzIBcZyMT/1592892403908-0b27334b-391d-4eb5-b354-16e1236af483-852551.webp)
+![](img\msfsleep_and_cobaltstrikesleep\4.webp)
 
 代码如下:
 
@@ -214,12 +214,12 @@ meterpreter中set_timeout是控制session的超时时间参数,我们可以借�
 + 重新生成session
 + 进入session后执行 set_timeout -w 61
 
-![1599029328563-ed49149e-d7a5-4f7f-8ea0-839a6e779cf3.webp](./img/1205032_5QRuIyWnzIBcZyMT/1599029328563-ed49149e-d7a5-4f7f-8ea0-839a6e779cf3-181086.webp)
+![](img\msfsleep_and_cobaltstrikesleep\5.webp)
 
 + 我们看到通讯间隔大于10了
 + 在checkin大于55时执行set_timeout -w 10,可以恢复原有通讯间隔.(因为meterpreter命令默认超时时间为10秒,所以要在checkin大于50的时候操作)
 
-![1599029428053-1e6e5751-c3c1-4242-ab41-4a86f0e362b1.webp](./img/1205032_5QRuIyWnzIBcZyMT/1599029428053-1e6e5751-c3c1-4242-ab41-4a86f0e362b1-709707.webp)
+![](img\msfsleep_and_cobaltstrikesleep\6.webp)
 
 
 

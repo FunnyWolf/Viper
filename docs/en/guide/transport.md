@@ -1,21 +1,20 @@
-# Transmission Protocol
+# Transport
 
-## Add/Delete
+## Addition/Deletion
 
-+ Transmission protocol refers to how Session communicates with Viper servers over a network connection
++ The transmission protocol refers to how the Session communicates with the Viper server through a network connection.
 
-+ After selecting the bottom monitor, you can quickly add the corresponding transmission protocol to the session.
++ After selecting the bottom listener, the transmission protocol corresponding to the listener can be quickly added to the Session.
 
-+ Can directly delete protocols that are not currently in use
++ The protocol that is not currently in use can be directly deleted.
 
-> Usually, the Session can only specify one transmission method in the initial stage. After the session is fully loaded, multiple transmission protocols can be added to ensure transmission reliability.
+> Usually, a Session can only specify one transmission method at the initial stage. After the Session is fully loaded, multiple transmission protocols can be added to ensure transmission reliability.
 
-## Switch
+## Switching
 
-+ If Session has multiple protocols, you can switch manually
-+ Switch the transmission protocol. Viper will close the current session and wait for the transmission protocol connection of the information used by the Session process.
++ If a Session has multiple protocols, manual switching operations can be performed.
++ When switching the transmission protocol, Viper will close the current Session and wait for the process where the Session is located to connect using the information's transmission protocol.
 
-## Things to note
+## Precautions
 
-+ The rc4 password parameter cannot be added in the transmission protocol, so do not add the listening of the rc4 class to the transmission protocol.
-
++ The rc4 password parameter cannot be added to the transmission protocol. Therefore, do not add rc4-based listeners to the transmission protocol.

@@ -1,25 +1,25 @@
-# Intranet proxy
+# Route Proxy
 
-Viper's intranet proxy function is integrated based on MSF's socks4a/socks5 proxy module. Viper centrally controls intranet routing, port forwarding, and intranet proxy for easy use.
+The internal network proxy function of Viper is integrated based on the socks4a/socks5 proxy modules of MSF. Viper centralizes the control of internal network routing, port forwarding, and internal network proxy, making it convenient to use.
 
-## Routing path
+## Routing Path
 
-+ `Internal Proxy` `Routing Path`You can view routing information for all hosts
++ You can view the routing information of all hosts in the `Internal Network Proxy` `Routing Path`.
 
-+ If there is no corresponding route, it is represented by direct network connection.
++ If the corresponding route does not exist, it is represented by a direct network connection.
 
-## Routing list
+## Routing List
 
-+ View routes in all sessions
++ View the routes in all Sessions.
 
 ## Port Forwarding
 
-+ View all Session port forwarding configurations
++ View the port forwarding configurations of all Sessions.
 
-## Intranet proxy
+## Internal Network Proxy
 
-+ Intranet proxy can add two types of proxy socks4a and socks5
++ The internal network proxy can add two types of proxies: socks4a and socks5.
 
-+ The route used by the proxy is based on`Internal Routing`, confirm that the correct routing is configured before using the proxy.
++ The route used by the proxy is based on the `Internal Network Routing`. Confirm that the correct route is configured before using the proxy.
 
-> Socks5 proxy does not support udp
+> The socks5 proxy does not support UDP.

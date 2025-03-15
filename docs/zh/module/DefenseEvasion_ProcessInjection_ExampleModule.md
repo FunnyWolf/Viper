@@ -4,7 +4,7 @@
 模块用于演示PostMSFCSharpModule模块的基本编写方法
 
 # 操作方法
-![1623381962607-ef89b58c-bf76-4289-bdd0-94aaf88d3f17.webp](./img/GcK6YyHuZh4uE_Uc/1623381962607-ef89b58c-bf76-4289-bdd0-94aaf88d3f17-439334.webp)
+![](img\DefenseEvasion_ProcessInjection_ExampleModule\1.webp)
 
 详细信息参考如下代码:
 

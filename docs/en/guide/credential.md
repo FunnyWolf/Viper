@@ -1,7 +1,7 @@
-# Certificate Management
+# Credential
 
-Store password information obtained through the module
+Password/hash information obtained by the storage platform
 
-## Add manually
+## Manual Addition
 
-Users can manually add username and password/hash, which can be used in modules
+Users can manually add usernames and passwords/hashes, and this configuration can be used in the module.

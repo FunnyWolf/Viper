@@ -11,6 +11,6 @@
 + 选择提权技术(建议为自动)
 + 运行模块
 
-![1615647026968-ccb626f1-931b-493a-9679-dbc2b8203f56.webp](./img/dCwRWKy93HNia12G/1615647026968-ccb626f1-931b-493a-9679-dbc2b8203f56-431292.webp)
+![](img\PrivilegeEscalation_ProcessInjection_Getsystem\1.webp)
 
 

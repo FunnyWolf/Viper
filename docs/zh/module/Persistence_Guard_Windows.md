@@ -14,16 +14,16 @@
 + 获取Sesison
 + 填写参数
 
-![1615640983994-e2e14989-7046-4080-9952-2fda558d2cba.webp](./img/WqEKJmeoDzRDnNRk/1615640983994-e2e14989-7046-4080-9952-2fda558d2cba-234866.webp)
+![](img\Persistence_Guard_Windows\1.webp)
 
 + 运行模块
 
-![1615641014892-10142406-b0c6-4265-93e5-31e755833b62.webp](./img/WqEKJmeoDzRDnNRk/1615641014892-10142406-b0c6-4265-93e5-31e755833b62-188834.webp)
+![](img\Persistence_Guard_Windows\2.webp)
 
 + Session 20 是新增的Session,如果该Session因为意外关闭了(用 `删除权限` 进行模拟),该Session会在10s后重连
 
-![1615641103566-91ed2406-30b3-46ba-8e50-cebd2faee9b1.webp](./img/WqEKJmeoDzRDnNRk/1615641103566-91ed2406-30b3-46ba-8e50-cebd2faee9b1-572946.webp)
+![](img\Persistence_Guard_Windows\3.webp)
 
-![1615641117089-be51f928-66e6-457d-9240-c2a570784a86.webp](./img/WqEKJmeoDzRDnNRk/1615641117089-be51f928-66e6-457d-9240-c2a570784a86-222385.webp)
+![](img\Persistence_Guard_Windows\4.webp)
 
 

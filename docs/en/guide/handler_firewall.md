@@ -1,33 +1,33 @@
-# Back-to-connect filtering
+# handler Firewall
 
-Whenever the client connects to the viper listening, the viper will determine whether the IP allows connection based on the client's network IP address. When allowed, the payload will be transmitted normally to the client, and when it is not allowed, the network connection will be directly disconnected.
+Whenever a client connects to Viper's listener, Viper determines whether the IP of the client is allowed to connect based on the client's network IP address. If allowed, the payload is transmitted to the client as normal; if not, the network connection is disconnected directly.
 
-## Use scenarios
+## Usage Scenarios
 
-+ When using spear phishing, the target's geographical location is a fixed area (such as a province), and the listening firewall can block IP connection  from other foreign or other provinces.
-+ When the red team is simulated, if you can block the sandbox and network mapping server connection and  as needed.
-+ If the IP address is not allowed to connect and listen, the client (usually a sandbox or blue team member) cannot obtain the stager and cannot determine the C2 server type.
++ When using spear-phishing, if the target's geographical location is a fixed area (such as a province), the handler firewall can block connections from IPs outside the country or from other provinces to the listener.
++ During red team simulations, connections from sandbox and network mapping servers can be blocked as needed.
++ If an IP address is not allowed to connect to the listener, the client (usually a sandbox or blue team personnel) cannot obtain the stager, and thus cannot determine the type of the C2 server.
 
-## How to use
+## How to Use
 
-1. Turn on the main switch and fill in the corresponding configuration
-2. Click? to view the corresponding configuration instructions
-3. IP address filtering check is from left to right, from top to bottom
+1. Turn on the master switch and fill in the corresponding configuration.
+2. For the corresponding description of the configuration, click "?" to view.
+3. The IP address filtering check is performed from left to right and from top to bottom.
 
-> + Firewall Master Switch Close -> Release
-> + Firewall Master Switch Open -> Next Check
-> + Custom whitelist Hit -> Release
-> + Custom whitelist Miss -> Next check
-> + Custom blacklist Hit -> Block
-> + Custom blacklist Miss -> Next check
-> + Block cloud vendor Hit -> Block
-> + Block cloud vendor Miss -> Next check
-> + Blocked Sandbox IP Hit -> Blocked
-> + Blocked Sandbox IP Missed -> Next Check
-> + Geographic location blacklist Hit -> Block
-> + Geographic location blacklist Missed -> Release
+> + Master firewall switch off -> Allow access
+> + Master firewall switch on -> Proceed to the next check
+> + Custom whitelist match -> Allow access
+> + Custom whitelist no match -> Proceed to the next check
+> + Custom blacklist match -> Block
+> + Custom blacklist no match -> Proceed to the next check
+> + Block cloud providers match -> Block
+> + Block cloud providers no match -> Proceed to the next check
+> + Block sandbox IPs match -> Block
+> + Block sandbox IPs no match -> Proceed to the next check
+> + Geographical blacklist match -> Block
+> + Geographical blacklist no match -> Allow access
 
-4. If you need to confirm whether an IP is filtered, you can use the search function on the left to confirm.
+4. If you need to confirm whether a certain IP is filtered, you can use the search function on the left to confirm.
 
 5. Execution effect
-When the IP connection to the viper is not in the allow list, a blocking prompt will be received
+   When an IP not in the allowed list connects to Viper's listener, a blocking prompt will be received.

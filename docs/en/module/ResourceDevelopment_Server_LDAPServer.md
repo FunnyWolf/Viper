@@ -1,13 +1,7 @@
-# LDAP service (wait)
+# LDAP Service (wait)
 
-# Main functions
-
+# Main Functions
 xxx
 
-# How to operate
-
+# Operation Methods
 + xxx
-
-
-
-

@@ -1,17 +1,13 @@
-# Windows WDigest switch
+# Windows WDigest Switch
 
-# Main functions
+# Main Function
+This is used to turn on the WDigest credential storage switch. The WDigest switch is turned off by default in Windows 8/2012 and above versions.
 
-Used to turn on the WDigest credential storage switch, Windows 8/2012 or above will turn off the Wdigest switch by default.
+The switch can be turned on by modifying the `UseLogonCredential` value in the registry.
 
-Turn on the switch by modifying the registry UseLogonCredential value.
+After the user logs off and logs back in, mimikatz can be used to capture passwords. .
 
-When the user logs out and logs back in, he can use mimikatz to grab the password.
+# Operation Method
+![](img\CredentialAccess_CredentialDumping_WindowsWDigestEnable\1.webp)
 
-# How to operate
-
-![1624003634252-ec96f4ad-765b-4e44-b08c-f1a054865d5d.webp](./img/k8BP2mnR7TFhaLt7/1624003634252-ec96f4ad-765b-4e44-b08c-f1a054865d5d-327172.webp)
-
-![1624003654211-3bcacc70-9cf9-4555-995f-fc2b9b173828.webp](./img/k8BP2mnR7TFhaLt7/1624003654211-3bcacc70-9cf9-4555-995f-fc2b9b173828-955992.webp)
-
-
+![](img\CredentialAccess_CredentialDumping_WindowsWDigestEnable\2.webp)

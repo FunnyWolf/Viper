@@ -9,10 +9,10 @@
 + 选择session
 + 执行模块
 
-![1623379114557-163ed08e-ef2a-41ae-b0ab-d61fadfa82c4.webp](./img/m1LBdUXaHF1xy1lK/1623379114557-163ed08e-ef2a-41ae-b0ab-d61fadfa82c4-516864.webp)
+![](img\DefenseEvasion_CodeSigning_PeSigningAuthHijack\1.webp)
 
 使用模块`伪造Microsoft Windows签名` 生成的exe会显示Microsoft签名正常.
 
-![1623379187736-a654ad40-f5c2-4a86-aa3f-741a06f75c7c.webp](./img/m1LBdUXaHF1xy1lK/1623379187736-a654ad40-f5c2-4a86-aa3f-741a06f75c7c-047963.webp)
+![](img\DefenseEvasion_CodeSigning_PeSigningAuthHijack\2.webp)
 
 

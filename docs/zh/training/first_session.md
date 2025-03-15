@@ -4,11 +4,11 @@
 
 + 选择 **监听载荷-新增监听** ,进入新增监听页面
 
-![1610507619537-3f3448a7-ad38-436e-97da-908a3cb3b1af.webp](./img/kU8vfvWcZAwkhJvn/1610507619537-3f3448a7-ad38-436e-97da-908a3cb3b1af-874387.webp)
+![](img\first_session\1.webp)
 
 + 以 reverse_tcp 为例
 
-![1610507660121-bee41a45-2a37-4876-a947-ba18b2b71b5f.webp](./img/kU8vfvWcZAwkhJvn/1610507660121-bee41a45-2a37-4876-a947-ba18b2b71b5f-372919.webp)
+![](img\first_session\2.webp)
 
 > 请注意 LHOST 填写为 VPS 的外网 IP 地址,Viper会自动提示
 >
@@ -19,7 +19,7 @@
 
 + 点击对应监听的 **生成载荷** ,浏览器会自动下载一个免杀的exe或elf
 
-![1590849238383-d08704db-cdda-4efc-9e67-d9b81c148877.webp](./img/kU8vfvWcZAwkhJvn/1590849238383-d08704db-cdda-4efc-9e67-d9b81c148877-464997.webp)
+![](img\first_session\3.webp)
 
 > 免杀载荷可能由于杀毒软件厂商添加 md5 标签而失效
 >
@@ -30,7 +30,7 @@
 
 + 将生成的exe上传到要控制主机中,然后执行
 
-![1610508198997-22c3b2e9-ecf8-466e-9b41-3500ed91c45e.webp](./img/kU8vfvWcZAwkhJvn/1610508198997-22c3b2e9-ecf8-466e-9b41-3500ed91c45e-232043.webp)![1610508227621-5572b1a6-b945-4aa2-8648-210e998a8be7.webp](./img/kU8vfvWcZAwkhJvn/1610508227621-5572b1a6-b945-4aa2-8648-210e998a8be7-724684.webp)
+![](img\first_session\4.webp)![](img\first_session\5.webp)
 
 
 
@@ -39,11 +39,11 @@
 
 + 此时控制台已经获取了一个 Session
 
-![1610508267807-c75a03a1-ba43-4291-9655-5d6405ce918d.webp](./img/kU8vfvWcZAwkhJvn/1610508267807-c75a03a1-ba43-4291-9655-5d6405ce918d-694375.webp)
+![](img\first_session\6.webp)
 
 ## 主机和 Session
 
-![1610508348080-961396d3-2096-4ba0-805b-78debff6cf11.webp](./img/kU8vfvWcZAwkhJvn/1610508348080-961396d3-2096-4ba0-805b-78debff6cf11-914906.webp)
+![](img\first_session\7.webp)
 
 控制台中显示权限及主机的重要信息,从左到右分别介绍各个图标的含义.
 
@@ -52,7 +52,7 @@
 > 平台会根据当前目标是否有 session 权限来自动过滤适用的模块
 >
 
-![1610509139113-3771d1b0-eed3-4d7c-a202-553d0cfcd3ed.webp](./img/kU8vfvWcZAwkhJvn/1610509139113-3771d1b0-eed3-4d7c-a202-553d0cfcd3ed-645234.webp)
+![](img\first_session\8.webp)
 
 + 彩色长方形标签表示 session 最后的心跳时间
 
@@ -89,11 +89,11 @@
 
 + 点击权限中的任意标签会弹出针对对权限的所有可用操作
 
-![1610509063570-2def9732-651c-42ce-8d60-ece464e82a24.webp](./img/kU8vfvWcZAwkhJvn/1610509063570-2def9732-651c-42ce-8d60-ece464e82a24-725509.webp)
+![](img\first_session\9.webp)
 
 + 点击主机中的任意标签中可以操作/查看/修改/更新以主机 IP 为 ID 的信息集
 
-![1610509106404-b318ebc5-9e6f-4c2b-955e-6e574e537bb1.webp](./img/kU8vfvWcZAwkhJvn/1610509106404-b318ebc5-9e6f-4c2b-955e-6e574e537bb1-267972.webp)
+![](img\first_session\10.webp)
 
 ## 常见问题
 

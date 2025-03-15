@@ -1,39 +1,37 @@
-# Information Collection (Internet)
+# Information Gathering (Internet)
 
-## Preparation
+## Preparation Work
 
-This tutorial requires a Baidu account and Quake member account
+This tutorial requires a Baidu account and a Quake membership account.
 
-## Switch to attack surface management
+## Switch to Attack Surface Management
 
-![1706772083005-b617040c-05eb-4bdc-8cc6-0eb298a6e32d.webp](./img/ROAxNQXLwuO2t5Ln/1706772083005-b617040c-05eb-4bdc-8cc6-0eb298a6e32d-948862.webp)
+![](img\Information_collection_Internet\1.webp)
 
-## System configuration
+## System Configuration
 
-+ Set up Aiqicha API
++ Set up Aiqi Check API
 
-+ Set up the Quake API
++ Set up Quake API
 
-## Create a new project
+## Create a New Project
 
-![1706753723373-28839eee-d1ff-4bc0-af39-775c24239459.webp](./img/ROAxNQXLwuO2t5Ln/1706753723373-28839eee-d1ff-4bc0-af39-775c24239459-330255.webp)
+![](img\Information_collection_Internet\2.webp)
 
-![1706753743859-ff0a0944-f22b-4425-aec1-b876eb2896f7.webp](./img/ROAxNQXLwuO2t5Ln/1706753743859-ff0a0944-f22b-4425-aec1-b876eb2896f7-245692.webp)
+![](img\Information_collection_Internet\3.webp)
 
-![1706753788733-8e1d0ae4-b134-4184-b241-384f2e0579a9.webp](./img/ROAxNQXLwuO2t5Ln/1706753788733-8e1d0ae4-b134-4184-b241-384f2e0579a9-335732.webp)
+![](img\Information_collection_Internet\4.webp)
 
-## Automated information collection through enterprise name
+## Automated Information Gathering through Enterprise Name
 
-+ Get the company name
++ Obtain Enterprise Name
 
-If you are not sure about the official name of the company, you can use the keyword search module
+If you are not sure of the formal name of the enterprise, you can use the keyword search module.
 
-![1706604748308-b6073f4b-91d1-4de8-ae8c-8428212ccbf6.webp](./img/ROAxNQXLwuO2t5Ln/1706604748308-b6073f4b-91d1-4de8-ae8c-8428212ccbf6-318423.webp)
+![](img\Information_collection_Internet\5.webp)
 
-+ Enter the enterprise to collect information
++ Enter the Enterprise for Information Gathering
 
-![1706604839643-4434dcac-68e8-4fa3-958a-c5831a4f49a8.webp](./img/ROAxNQXLwuO2t5Ln/1706604839643-4434dcac-68e8-4fa3-958a-c5831a4f49a8-480553.webp)
+![](img\Information_collection_Internet\6.webp)
 
-> It is recommended to use Quake to scan subdomain names and ports for the first time, and turn off WAF and vulnerability scans, so that you can quickly see the effect.
-
-
+> It is recommended to use Quake for subdomain and port scanning for the first run and turn off WAF and vulnerability scanning to quickly see the results.

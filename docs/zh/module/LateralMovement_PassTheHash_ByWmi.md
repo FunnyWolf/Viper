@@ -8,7 +8,7 @@
 (如模块提示powershell命令超长,请使用stager类型监听) (模块无需内网路由)
 
 # 操作方法
-# ![1626245022083-143bd063-4402-45be-9b4f-8f077e4e00a0.webp](./img/PB6MjZ0zoxZmTqoN/1626245022083-143bd063-4402-45be-9b4f-8f077e4e00a0-338569.webp)
-![1626244825739-675254dc-2d41-4d35-b7eb-ad56cfb1f6da.webp](./img/PB6MjZ0zoxZmTqoN/1626244825739-675254dc-2d41-4d35-b7eb-ad56cfb1f6da-857886.webp)
+# ![](img\LateralMovement_PassTheHash_ByWmi\1.webp)
+![](img\LateralMovement_PassTheHash_ByWmi\2.webp)
 
 

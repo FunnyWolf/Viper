@@ -1,19 +1,14 @@
-# Windows Schedule Task Persistence
+# Windows Scheduled Task Persistence
 
-# Main functions
+# Main Function
+Achieve persistence by writing scheduled tasks through the Windows API
 
-Write scheduled tasks through Windows API for persistence
+# Precautions
+In most cases, it can bypass anti - virus software. It is a recommended persistence method
 
-# Things to note
+# Operation Method
++ Generate a listener
++ Obtain a Session
++ Execute the module
 
-Most cases are free of killing, recommended persistence method
-
-# How to operate
-
-+ Generate listening
-+ Get Session
-+ Execute module
-
-![1615639636307-a734d96d-5d87-473b-b4a7-4b389c67bd6a.webp](./img/858QTpIqWeFZru5D/1615639636307-a734d96d-5d87-473b-b4a7-4b389c67bd6a-871057.webp)
-
-
+![](img\Persistence_ScheduledTask_Windows\1.webp)

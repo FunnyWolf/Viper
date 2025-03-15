@@ -3,9 +3,9 @@
 ## 前言
 metasploit-framework和cobalt strike(简称CS)是当前主流的两个红队评估工具.
 
-<font style="color:#262626;">在红队评估过程中为了与杀软对抗,无文件渗透是实现免杀的简单有效的手段.</font>
+在红队评估过程中为了与杀软对抗,无文件渗透是实现免杀的简单有效的手段.
 
-<font style="color:#262626;">execute-assembly是用于内存执行C#可执行文件的常用手法,当前</font>metasploit-framework和cobalt strike都已经实现了<font style="color:#262626;">execute-assembly功能,本文通过源码分析的方式演示</font><font style="color:#262626;">execute-assembly功能使用方式,并讲解如何修复使用过程中遇到的问题.</font><font style="color:#262626;"></font>
+execute-assembly是用于内存执行C#可执行文件的常用手法,当前metasploit-framework和cobalt strike都已经实现了execute-assembly功能,本文通过源码分析的方式演示execute-assembly功能使用方式,并讲解如何修复使用过程中遇到的问题.
 
 # CobaltStrike的execute-assembly
 execute-assembly是CoabltStrike的重要功能,在获取beacon后,只需要编译完成的C#可执行文件拷贝到cobalestrike本地目录,然后执行 `execute-assembly [/path/to/file.exe] [arguments]` 即可在beacon内存执行,并获取可执行文件的输出.
@@ -56,7 +56,7 @@ namespace TestAssembly
 
 CobaltStrike执行效果如下
 
-![1603342055140-a341a585-4bcc-4054-98ba-8dbc523dea9d.webp](./img/f1z_5BIkKWaC_49H/1603342055140-a341a585-4bcc-4054-98ba-8dbc523dea9d-609095.webp)
+![](img\msfexecute_assembly_and_cobaltstrikeexecute_assembly\1.webp)
 
 因为execute-assembly使用方便,免杀效果好,只需要将已有的C#安全工具拷贝到CoabltStrike目录,添加简单的cna界面,就可以封装成一个CoabltStrike插件发布,因此深受国内安全人员喜爱.
 
@@ -73,7 +73,7 @@ MSF当前官方已经通过模块的方式集成了execute-assembly.
 
 模块的使用效果如下:
 
-![1603343332737-3bcad2e4-394f-453a-ba4c-56b5265f8d15.webp](./img/f1z_5BIkKWaC_49H/1603343332737-3bcad2e4-394f-453a-ba4c-56b5265f8d15-585218.webp)
+![](img\msfexecute_assembly_and_cobaltstrikeexecute_assembly\2.webp)
 
 
 
@@ -105,7 +105,7 @@ MSF当前官方已经通过模块的方式集成了execute-assembly.
 ## 问题3:如果C#可执行文件可接受参数,但是没有输入参数,无法获取默认输出
 一图胜千言
 
-![1603344786247-b853d411-ac9f-4159-a670-d3f59294dbe1.webp](./img/f1z_5BIkKWaC_49H/1603344786247-b853d411-ac9f-4159-a670-d3f59294dbe1-369336.webp)
+![](img\msfexecute_assembly_and_cobaltstrikeexecute_assembly\3.webp)
 
 可以看到,按照C#代码的正常逻辑,应该输出
 
@@ -236,7 +236,7 @@ msf官方execute-assembly的三个问题都是可以修复或者绕过的.
 
 修复后效果如下:
 
-![1603345964609-bc636e0a-5ba8-4c7c-ad14-78121e87d868.webp](./img/f1z_5BIkKWaC_49H/1603345964609-bc636e0a-5ba8-4c7c-ad14-78121e87d868-414062.webp)
+![](img\msfexecute_assembly_and_cobaltstrikeexecute_assembly\4.webp)
 
 
 

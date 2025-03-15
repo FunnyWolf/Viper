@@ -1,6 +1,6 @@
-# Permission Information
+# Session Information
 
-## Process list
+## Process List
 
-+ Process list displays information about all processes of the host and information about the Session process.
-+ Click`Operation`Can perform the process`Inject/steal tokens/restore tokens/kill`Wait for operation
++ The process list displays information about all processes on the host and information about Session processes.
++ Click `Operations` to perform operations such as `inject/steal token/revert token/kill` on the process.

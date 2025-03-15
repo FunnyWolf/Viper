@@ -1,55 +1,52 @@
-# Cloud functions are online
+# Going Live with Cloud Functions
 
-Currently, cloud functions are available on the Internet, and there is no relevant information on msf. Here we introduce how to use Tencent cloud functions to launch viperpayload.
+Currently, there is a lack of relevant information on using cloud functions to go live with tools other than Cobalt Strike and Metasploit (MSF) on the internet. Here, we will introduce how to use Tencent Cloud Functions to go live with a Viper payload.
 
-## Configure listening in Viper
+## Configure the Listener in Viper
 
-+ Create new listening, configuration as follows
+- Create a new listener with the following configurations:
 
-![1629425669778-5fdcd5fb-b590-4c85-990d-a786ecc6f0b6.webp](./img/1_UMcYOVzZuI64Hn/1629425669778-5fdcd5fb-b590-4c85-990d-a786ecc6f0b6-647126.webp)
+![](img\cloud_function_online\1.webp)
 
-> Please be sure to select meterpreter_reverse_https for listening here
+> Note that you must select "meterpreter_reverse_https" for the listener.
 >
 
-> LURI and certificate files should be empty
+> Leave the LURI and certificate file fields empty.
 >
 
-![1629425834563-0e99653a-0bfd-4619-8c0a-c67239082d0f.webp](./img/1_UMcYOVzZuI64Hn/1629425834563-0e99653a-0bfd-4619-8c0a-c67239082d0f-151149.webp)
+![](img\cloud_function_online\2.webp)
 
 ## Configure Tencent Cloud Functions
 
-+ Open the API gateway page[https://console.cloud.tencent.com/apigateway/service?rid=1](https://console.cloud.tencent.com/apigateway/service?rid=1)
-+ Create a new API gateway, configure it as shown in the figure below
+- Open the API Gateway page: [https://console.cloud.tencent.com/apigateway/service?rid=1](https://console.cloud.tencent.com/apigateway/service?rid=1)
+- Create a new API Gateway with the following configurations:
 
-![1629425925454-e3e62c64-5728-49d8-a2fb-e48f43655fb9.webp](./img/1_UMcYOVzZuI64Hn/1629425925454-e3e62c64-5728-49d8-a2fb-e48f43655fb9-405685.webp)
+![](img\cloud_function_online\3.webp)
 
-![1629425969329-8ab5e6a0-e9ba-43c7-bd47-3a59eb1760ea.webp](./img/1_UMcYOVzZuI64Hn/1629425969329-8ab5e6a0-e9ba-43c7-bd47-3a59eb1760ea-542478.webp)
+![](img\cloud_function_online\4.webp)
 
-+ Note that the backend domain name should be filled in the IP address and port of the viper monitor, and select the https protocol
+- Note that you need to fill in the IP address and port of the Viper listener for the backend domain name, and select the HTTPS protocol.
 
-![1629426028238-50dfaca4-f70f-4a88-afc2-21144033100c.webp](./img/1_UMcYOVzZuI64Hn/1629426028238-50dfaca4-f70f-4a88-afc2-21144033100c-310472.webp)
+![](img\cloud_function_online\5.webp)
 
-+ Click the corresponding API after the generation is completed to get details
+- After generation is completed, click on the corresponding API to obtain details.
 
-![1629426176021-1ede0e27-0bba-4a97-b9fd-e841b43c4f02.webp](./img/1_UMcYOVzZuI64Hn/1629426176021-1ede0e27-0bba-4a97-b9fd-e841b43c4f02-021950.webp)
+![](img\cloud_function_online\6.webp)
 
-+ Remember the cloud function web address here, for example, in the example: <font style="color:rgba(0, 0, 0, 0.9);">service-6abofmuc-1256520000.gz.apigw.tencentcs.com</font>
+- Remember the cloud function web address here. For example, in the sample, it is: service-6abofmuc-1256520000.gz.apigw.tencentcs.com
 
-## Generate a matching load (Payload)
+## Generate the Complementary Payload
++ Open "Generate Payload" in Viper and configure as follows:
 
-+ Open in Viper`生成载荷`, as follows
+![](img\cloud_function_online\7.webp)
 
-![1629426667225-4f92aadb-5f9d-404c-9d81-0d1c5869cce4.webp](./img/1_UMcYOVzZuI64Hn/1629426667225-4f92aadb-5f9d-404c-9d81-0d1c5869cce4-676620.webp)
-
-> LHOST is the cloud function web address, LPORT is 443, LURI and certificate files are empty, turn off the verification certificate option
+> LHOST is the web address of the cloud function, LPORT is 443, LURI and the certificate file are empty. Turn off the certificate verification option.
 >
 
-+ Generate load
++ Generate the payload.
 
-## Run online
+## Run and go live
 
-![1629426575449-571e4958-ba38-4405-93a0-0fc55d8cacc2.webp](./img/1_UMcYOVzZuI64Hn/1629426575449-571e4958-ba38-4405-93a0-0fc55d8cacc2-585083.webp)
+![](img\cloud_function_online\8.webp)
 
-![1629426552187-0dfcab08-370b-40e6-9f02-f622e63b96b0.webp](./img/1_UMcYOVzZuI64Hn/1629426552187-0dfcab08-370b-40e6-9f02-f622e63b96b0-284532.webp)
-
-
+![](img\cloud_function_online\9.webp)

@@ -1,4 +1,3 @@
-# Network topology
+# Pivot Graph
 
-Summary **port scan**, **historical Session online information**, **current Session information** and **current routing information**, and generate a network topology map after analysis and processing.
-
+Summarize **port scanning**, **historical Session connection information**, **current Session information**, and **current routing information**. After analysis and processing, generate a network topology diagram. 

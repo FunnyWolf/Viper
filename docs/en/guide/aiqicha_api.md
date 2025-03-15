@@ -1,12 +1,12 @@
 # Aiqicha API
 
-## Get Cookies
+## Obtain Cookie
 
-+ Log in[https://aiqicha.baidu.com/](https://aiqicha.baidu.com/)(Use baidu account)
-+ Use bp or other packet capture tools to capture packages
-+ Enter "Tencent" or other company name keyword to get a request named suggest
-+ Copy the cookies in the request
++ Log in to [https://aiqicha.baidu.com/](https://aiqicha.baidu.com/) (using a Baidu account)
++ Use bp or other packet capture tools to capture packets
++ Enter "Tencent" or other enterprise name keywords to get a request named suggest
++ Copy the cookie from the request
 
-## Set up Aiqicha API
+## Set Up Aiqicha API
 
-+ After filling in the cookie, click to update, and the background will test whether the cookie is available.
++ Fill in the cookie and click update, the backend will test if the cookie is available

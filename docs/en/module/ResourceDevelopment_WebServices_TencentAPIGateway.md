@@ -1,13 +1,7 @@
-# Use cloud functions to go online (Tencent API Gateway) (wait)
+# Going Live with Cloud Functions (Tencent API Gateway) (wait)
 
-# Main functions
-
+# Main Functions
 xxx
 
-# How to operate
-
+# Operation Methods
 + xxx
-
-
-
-

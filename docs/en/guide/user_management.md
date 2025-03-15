@@ -1,7 +1,7 @@
 # User Management
 
-### Additional Instructions
+### Supplementary Instructions
 
-All users have the same permissions, and you can perform any operations on the platform (including deleting other users)
+All users have the same permissions and can perform any operation on the platform (including deleting other users).
 
-The root user cannot delete it
+The root user cannot be deleted.

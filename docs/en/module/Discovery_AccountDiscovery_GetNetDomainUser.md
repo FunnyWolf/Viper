@@ -1,13 +1,9 @@
-# Get all domain users
+# Get All Domain Users
 
-# Main functions
+# Main Function
+This module retrieves information about all domain users in the domain where the host is located. If the host is not in a domain, the script may report an error.
 
-The module obtains all domain user information in the domain where the host is located. If the host is not in the domain, the script may report an error.
+# Operation Method
+![](img\Discovery_AccountDiscovery_GetNetDomainUser\1.webp)
 
-# How to operate
-
-![1625193096556-5ad7a432-b60d-4bf1-ad47-b942a362c73e.webp](./img/rhmPXNgpGvamUAkn/1625193096556-5ad7a432-b60d-4bf1-ad47-b942a362c73e-819573.webp)
-
-![1625193114993-9624e9fb-5dc7-4ace-a903-ed6b0d68be3f.webp](./img/rhmPXNgpGvamUAkn/1625193114993-9624e9fb-5dc7-4ace-a903-ed6b0d68be3f-125555.webp)
-
-
+![](img\Discovery_AccountDiscovery_GetNetDomainUser\2.webp)

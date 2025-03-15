@@ -48,7 +48,7 @@ DNS隧道的网络传输隐藏在大量的DNS请求中,安全设备也会处于�
 
 **从2017到2021,5年!**
 
-![1624521189714-04b62683-a470-4451-988f-0db8b4e934ac.gif](./img/GgsdrLaYNZlAlviT/1624521189714-04b62683-a470-4451-988f-0db8b4e934ac-593123.gif)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\1.gif)
 
 
 
@@ -87,17 +87,17 @@ Ubuntu: 192.168.146.130
 
 + **在Windows Server新建一个DNS服务器,配置如下图所示**
 
-![1624533797145-0ee8adeb-3a80-43ca-868a-53528022061b.webp](./img/GgsdrLaYNZlAlviT/1624533797145-0ee8adeb-3a80-43ca-868a-53528022061b-355076.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\2.webp)
 
 上图中配置表示将域名kali.lab.com指向192.168.146.130
 
-![1624533875194-f7a737a3-b049-4e4f-b2f1-a6f239631597.webp](./img/GgsdrLaYNZlAlviT/1624533875194-f7a737a3-b049-4e4f-b2f1-a6f239631597-841994.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\3.webp)
 
 上图中配置表示将域名test.viper.com的ns服务器设置为kali.lab.com
 
 + 配置Windows7的IP地址
 
-![1624534064208-d6618b88-26cc-4382-9fe7-f6f9fbef042c.webp](./img/GgsdrLaYNZlAlviT/1624534064208-d6618b88-26cc-4382-9fe7-f6f9fbef042c-093651.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\4.webp)
 
 上图中配置表示将Windows 7的DNS服务器设置为192.168.146.20(Windows Server)
 
@@ -116,35 +116,35 @@ docker exec -it viper-c bash
 >
 
 ### 参数配置
-+ 登录Viper后新建监听,配置如下图所示![1624534808604-65007bd2-8d6d-4eea-a1ed-246f78dd8d5f.webp](./img/GgsdrLaYNZlAlviT/1624534808604-65007bd2-8d6d-4eea-a1ed-246f78dd8d5f-713367.webp)
++ 登录Viper后新建监听,配置如下图所示![](img\invisible_wings_msf_using_dns_tunnel_for_online\5.webp)
 + 在dns_server命令行中应观察到如下输出
 
-![1624534889823-1cab5939-afa1-4ac5-910a-042c88d6f62a.webp](./img/GgsdrLaYNZlAlviT/1624534889823-1cab5939-afa1-4ac5-910a-042c88d6f62a-676389.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\6.webp)
 
 + 点击生成载荷,上传到Windows 7 中并执行
 
-![1624534922762-1cde55a0-e676-4cef-8c78-8c445aaa9634.webp](./img/GgsdrLaYNZlAlviT/1624534922762-1cde55a0-e676-4cef-8c78-8c445aaa9634-316382.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\7.webp)
 
-![1624534969590-3470da16-07ed-4ddd-967f-fd5c97d140ee.webp](./img/GgsdrLaYNZlAlviT/1624534969590-3470da16-07ed-4ddd-967f-fd5c97d140ee-398692.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\8.webp)
 
 ### 测试效果
 + session上线及dns_server的输出样例
 
-![1624535022959-03f70b39-25c1-4ab3-bab8-095aeea8f64e.webp](./img/GgsdrLaYNZlAlviT/1624535022959-03f70b39-25c1-4ab3-bab8-095aeea8f64e-633115.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\9.webp)
 
-![1624535043429-ffaae866-547d-46f7-90ee-998dd1866b9d.webp](./img/GgsdrLaYNZlAlviT/1624535043429-ffaae866-547d-46f7-90ee-998dd1866b9d-639918.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\10.webp)
 
 + 执行ps等meterpreter等内置命令
 
-![1624535076985-659d021e-18e2-4210-bf1d-3d1806c93027.webp](./img/GgsdrLaYNZlAlviT/1624535076985-659d021e-18e2-4210-bf1d-3d1806c93027-872771.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\11.webp)
 
 + 执行操作系统shell命令
 
-![1624535130296-978c0883-beb3-4e0a-bb53-0e105f1633a5.webp](./img/GgsdrLaYNZlAlviT/1624535130296-978c0883-beb3-4e0a-bb53-0e105f1633a5-191788.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\12.webp)
 
 + load kiwi抓取密码
 
-![1624535159266-d04d7b36-c7a9-482d-a8bb-0fb4d09517ff.webp](./img/GgsdrLaYNZlAlviT/1624535159266-d04d7b36-c7a9-482d-a8bb-0fb4d09517ff-311026.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\13.webp)
 
 # 实战环境搭建及功能验证
 本地测试毕竟是理想环境,我们需要在互联网中实际测试reverse_dns的速度及稳定性究竟如何.
@@ -162,10 +162,10 @@ VPS使用了阿里云的一台轻量服务器,两个域名都在godaddy中购买
 
 
 
-+ 域名A在godaddy中进行如下设置![1624524373065-97990e12-ac5f-4f7e-af80-37715620a703.webp](./img/GgsdrLaYNZlAlviT/1624524373065-97990e12-ac5f-4f7e-af80-37715620a703-685074.webp)
++ 域名A在godaddy中进行如下设置![](img\invisible_wings_msf_using_dns_tunnel_for_online\14.webp)
 + 域名B在godaddy中进行如下设置
 
-![1624524573403-eb77410f-5a4e-4831-9555-93639a265130.webp](./img/GgsdrLaYNZlAlviT/1624524573403-eb77410f-5a4e-4831-9555-93639a265130-219581.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\15.webp)
 
 + 然后在VPS 47.243.123.123中安装Viper
 + SSH登录VPS服务器,启动dns_server
@@ -183,32 +183,32 @@ docker exec -it viper-c bash
 ### 参数配置
 + 登录Viper后新建监听,配置如下图所示
 
-![1624535999305-b0116e81-06fd-4429-b175-5244ec1c03a3.webp](./img/GgsdrLaYNZlAlviT/1624535999305-b0116e81-06fd-4429-b175-5244ec1c03a3-780183.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\16.webp)
 
 + dns_server应该有如下输出
 
-![1624536052801-8209905b-bc0c-414e-b3a4-52b0cffbf2e3.webp](./img/GgsdrLaYNZlAlviT/1624536052801-8209905b-bc0c-414e-b3a4-52b0cffbf2e3-050427.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\17.webp)
 
 + 点击生成载荷,上传到Windows 7 中并执行
 
-![1624536088875-6d51aea4-6588-4b1a-826f-8a2e5219742a.webp](./img/GgsdrLaYNZlAlviT/1624536088875-6d51aea4-6588-4b1a-826f-8a2e5219742a-071588.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\18.webp)
 
 
 
 ### 测试效果
 + session上线及dns_server的输出样例
 
-![1624537004812-8c29c781-a022-4b48-bbfd-6b05f6ec5279.webp](./img/GgsdrLaYNZlAlviT/1624537004812-8c29c781-a022-4b48-bbfd-6b05f6ec5279-836471.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\19.webp)
 
-![1624537036017-254d0b89-bb7a-4807-ad47-5fefd418a63c.webp](./img/GgsdrLaYNZlAlviT/1624537036017-254d0b89-bb7a-4807-ad47-5fefd418a63c-447453.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\20.webp)
 
 + 执行ps等meterpreter等内置命令
 
-![1624537125934-7abb357d-1eef-4769-9812-2341e2ce7154.webp](./img/GgsdrLaYNZlAlviT/1624537125934-7abb357d-1eef-4769-9812-2341e2ce7154-195864.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\21.webp)
 
 + load kiwi抓取密码(大概用时20秒)
 
-![1624537181390-30d7eda5-115e-450b-8360-a07f7bb83783.webp](./img/GgsdrLaYNZlAlviT/1624537181390-30d7eda5-115e-450b-8360-a07f7bb83783-888751.webp)
+![](img\invisible_wings_msf_using_dns_tunnel_for_online\22.webp)
 
 # 参考内容
 + Viper安装

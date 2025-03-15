@@ -1,22 +1,21 @@
-# Automatic orchestration
+# Automation
 
 ## New Session Execution Module
 
-Whenever a new session (permission) is online, The modules have been configured will be automatically executed in order.
+Whenever a new session (privilege) comes online, the pre-configured modules in `Automatic Orchestration` will be executed sequentially.
 
-+ Time interval
++ Time Interval
 
-This parameter can be used to set the interval time for each module to avoid alarms or instability in a short period of execution of multiple modules.
+This parameter can be set to specify the interval time between the execution of each module to avoid triggering alarms or instability caused by executing multiple modules in a short period.
 
-+ Maximum number of permissions for a single host
++ Maximum Number of Privileges on a Single Host
 
-If module that generates new permissions is configured (for example`Session Clone`), there may be a dead loop
-> New permissions -> Automatic orchestration module -> Automatic orchestration module leads to new permissions -> Automatic orchestration module >...
+If the `Automatic Orchestration` includes modules that generate new privileges (such as `Session Cloning`), it may lead to an infinite loop:
+> New privilege -> Automatic orchestration module -> Automatic orchestration module leads to new privilege -> Automatic orchestration module -> ...
 
-After configuring this parameter, if the system determines that the number of permissions corresponding to a single host (same intranet IP) is greater than the number of
-configurations, the automatic orchestration module will be automatically skipped.
+After configuring this parameter, if the system determines that the number of privileges corresponding to a single host (same internal network IP) exceeds the configured number, it will automatically skip the automatic orchestration module.
 
-## Session timing task module
+## Session Scheduled Task Module
 
-+ Session will automatically execute the module according to the configuration information
-+ Yes`Pause`/`Resume`
++ Sessions will automatically execute modules at scheduled times according to the configuration information.
++ Can `Pause Execution`/`Resume Operation`.

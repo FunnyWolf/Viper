@@ -14,90 +14,90 @@
 
 本地信息收集包括 `主机名` `操作系统` `域` `网卡信息` `本地监听` `外网连接` `内网连接` `ARP信息` `重要进程` 等信息
 
-![1613560622503-4e457d71-2415-4f3b-a2cc-1b7d15a1de3c.webp](./img/p1eSp1TIGF2UZcYr/1613560622503-4e457d71-2415-4f3b-a2cc-1b7d15a1de3c-760053.webp)
+![](img\viper_semi_automated_intranet_information_gathering\1.webp)
 
 + 网卡信息
 
 网卡信息中会展示当前主机的所有网卡配置及IP/Mask,在内网中如果一台主机有多个网卡,且连接不同的子网,后续渗透过程中可以通过该主机作为跳板,来进行多级网络的内网渗透.
 
-![1613560696367-37f1c491-344d-4c32-b10d-f82736849f27.webp](./img/p1eSp1TIGF2UZcYr/1613560696367-37f1c491-344d-4c32-b10d-f82736849f27-076378.webp)
+![](img\viper_semi_automated_intranet_information_gathering\2.webp)
 
 + 本地监听
 
 本地监听是当前主机针对网络的攻击面的汇总,例如查看是否监听80,443来分析是否对外提供Web服务,可否进行Webshell等持久化操作,是否监听3389来判断是否可以进行RDP登录,是否监听6379,1433等端口来判断是否启用了对应的数据库服务,可以用来提权.
 
-![1613561107774-43c2ae84-5da6-4404-9d6d-7a5e200e6468.webp](./img/p1eSp1TIGF2UZcYr/1613561107774-43c2ae84-5da6-4404-9d6d-7a5e200e6468-267768.webp)
+![](img\viper_semi_automated_intranet_information_gathering\3.webp)
 
 + 内网连接
 
 查看主机连接那些内网主机,有助于帮助我们确认下一步的渗透测试目标.如站库分离的网站数据库地址,内网业务服务器的IP地址及端口,内网OA服务器地址等.
 
-![1613561301832-e7f0f095-96c7-4f0a-a43a-7f1d6b89d77e.webp](./img/p1eSp1TIGF2UZcYr/1613561301832-e7f0f095-96c7-4f0a-a43a-7f1d6b89d77e-522783.webp)
+![](img\viper_semi_automated_intranet_information_gathering\4.webp)
 
 + 重要进程
 
 系统的凭证相关进程lsass.exe或杀软进程需要重点关注,Viper会根据内置的数据库信息进行比对,展示所有敏感进程.
 
-![1613561460791-931e32e0-7b2a-4e16-b22c-61acceda5cd5.webp](./img/p1eSp1TIGF2UZcYr/1613561460791-931e32e0-7b2a-4e16-b22c-61acceda5cd5-094321.webp)
+![](img\viper_semi_automated_intranet_information_gathering\5.webp)
 
 # 子网信息收集
 在完成本地信息收集后,就需要针对当前主机所在子网进行信息收集,通常是端口扫描.
 
 + ARP扫描只针对同一网段(通常是C段)进行网络扫描,进行主机发现
 
-![1613561958009-2dbf73b5-977f-419a-94c2-33f7f314bd1c.webp](./img/p1eSp1TIGF2UZcYr/1613561958009-2dbf73b5-977f-419a-94c2-33f7f314bd1c-861905.webp)
+![](img\viper_semi_automated_intranet_information_gathering\6.webp)
 
 + 常规的端口扫描是查看其他主机的端口开放情况,通常是有目的性的针对同一网段的单个端口或某一IP的全部端口进行扫描.
 
-![1613562167140-0b40951a-a058-4417-942e-f01a3f8c0c8e.webp](./img/p1eSp1TIGF2UZcYr/1613562167140-0b40951a-a058-4417-942e-f01a3f8c0c8e-911695.webp)
+![](img\viper_semi_automated_intranet_information_gathering\7.webp)
 
 + 端口扫描的同时还可以进行指纹识别,查看端口服务类型(指纹来源于Nmap)
 
-![1613562280833-cd08b5d0-40a4-4d72-8016-4129922f0ee6.webp](./img/p1eSp1TIGF2UZcYr/1613562280833-cd08b5d0-40a4-4d72-8016-4129922f0ee6-247034.webp)
+![](img\viper_semi_automated_intranet_information_gathering\8.webp)
 
 # 域信息收集
 域渗透在内网渗透占有很大比重,且域中通常有很多高价值目标,一旦获取域控权限则几乎可以控制域内任意主机,在HW及红队评估过程中域一直受到重点关注.Viper也集成多个域相关信息收集模块,这里举几个例子.
 
 + 获取域基本信息/获取域控信息,域渗透的第一步操作
 
-![1613563015584-91b117b8-0763-45d7-8f3c-eb0144038c26.webp](./img/p1eSp1TIGF2UZcYr/1613563015584-91b117b8-0763-45d7-8f3c-eb0144038c26-782153.webp)
+![](img\viper_semi_automated_intranet_information_gathering\9.webp)
 
 + 获取所有域用户信息,通常使用该模块来定位关键人员或域管理员.
 
-![1613562557920-7b039ca7-f353-4f79-819b-03103b7e889c.webp](./img/p1eSp1TIGF2UZcYr/1613562557920-7b039ca7-f353-4f79-819b-03103b7e889c-119295.webp)
+![](img\viper_semi_automated_intranet_information_gathering\10.webp)
 
 + 获取域权限组信息,部分企业使用域权限组的方式进行部门人员分类,可以通过此信息来针对特定部门(如财务,开发)进行攻击.
 
-![1613562943832-3250c3f8-440b-4d65-aa70-e81bcc6588d6.webp](./img/p1eSp1TIGF2UZcYr/1613562943832-3250c3f8-440b-4d65-aa70-e81bcc6588d6-172786.webp)
+![](img\viper_semi_automated_intranet_information_gathering\11.webp)
 
 + 获取域主机的IP信息,如果已经定位到某个主机为目标主机,可以通过此模块查找目标主机的IP地址.
 
-![1613562922694-d8703279-aa5b-44f8-a343-04af4c91ad26.webp](./img/p1eSp1TIGF2UZcYr/1613562922694-d8703279-aa5b-44f8-a343-04af4c91ad26-111246.webp)
+![](img\viper_semi_automated_intranet_information_gathering\12.webp)
 
 + 获取域内主机正在登录用户,在域渗透中,域管理员永远是高价值目标,查找管理员在哪台主机登录过,通过获取管理员登录主机的权限,抓取管理员的密码或hash,是最简单直接的思路.
 
-![1613563323924-0e705732-4872-4e1e-8254-a7b6e53937d6.webp](./img/p1eSp1TIGF2UZcYr/1613563323924-0e705732-4872-4e1e-8254-a7b6e53937d6-652099.webp)
+![](img\viper_semi_automated_intranet_information_gathering\13.webp)
 
 + 获取域主机最后登录用户,可以查看主机最后的使用者
 
-![1613563190631-61c8aae8-c2f6-472f-b2dc-208dd07a5121.webp](./img/p1eSp1TIGF2UZcYr/1613563190631-61c8aae8-c2f6-472f-b2dc-208dd07a5121-218132.webp)
+![](img\viper_semi_automated_intranet_information_gathering\14.webp)
 
 # 凭证访问
 按照MITRE ATT&CK的分类,信息收集(Discovery)与凭证访问(Credential Access)分属两个不同的维度,但在国内的各个教程或实际渗透过程中通常将凭证访问归类为信息收集,所以这里一并介绍.
 
 + 获取Windows内存密码.使用内存加载mimikatz的方式抓取密码.
 
-![1613564790931-0c18ab95-9977-44b4-8337-16ce0ec177ac.webp](./img/p1eSp1TIGF2UZcYr/1613564790931-0c18ab95-9977-44b4-8337-16ce0ec177ac-563597.webp)
+![](img\viper_semi_automated_intranet_information_gathering\15.webp)
 
 + 获取Windows内存Hash.模块中只抓取本地用户的Hash
 
-![1613564884728-45c9d7ee-9682-4ce1-9b5f-4f953ee870a1.webp](./img/p1eSp1TIGF2UZcYr/1613564884728-45c9d7ee-9682-4ce1-9b5f-4f953ee870a1-921088.webp)
+![](img\viper_semi_automated_intranet_information_gathering\16.webp)
 
 + 获取Windows浏览器密码.用户浏览器中保存了大量有价值的信息,如访问的网站历史记录,书签,cookie和内网其他网站的密码信息.此类信息在后续横向移动渗透内网WEB服务中有很大价值.
 
-![1613565060953-eb46c5f7-69fa-4c48-80f6-d262735a2d7d.webp](./img/p1eSp1TIGF2UZcYr/1613565060953-eb46c5f7-69fa-4c48-80f6-d262735a2d7d-466914.webp)
+![](img\viper_semi_automated_intranet_information_gathering\17.webp)
 
-![1613565154700-7afd38a4-3e84-482e-b7e2-c3c3fa7cce41.webp](./img/p1eSp1TIGF2UZcYr/1613565154700-7afd38a4-3e84-482e-b7e2-c3c3fa7cce41-660088.webp)
+![](img\viper_semi_automated_intranet_information_gathering\18.webp)
 
 
 

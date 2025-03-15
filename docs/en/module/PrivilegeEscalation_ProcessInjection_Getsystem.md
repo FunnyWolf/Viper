@@ -1,19 +1,14 @@
-# Windows System License
+# Windows System Privilege Escalation
 
-# Main functions
+# Main Functions
+Attempt to obtain system privileges using a variety of techniques.
 
-Try to use multiple techniques to obtain system permissions
+# Precautions
+This is not anti-detection. It is required that the Session has administrative privileges with UAC bypassed.
 
-# Things to note
+# Operation Methods
++ Obtain the Session.
++ Select the privilege escalation technique (automation is recommended).
++ Run the module.
 
-It is inevitable to kill, and the Session is required to be the administrator permissions that have bypassed UAC
-
-# How to operate
-
-+ Get Session
-+ Select the power-elevation technology (recommended to be automatic)
-+ Run the module
-
-![1615647026968-ccb626f1-931b-493a-9679-dbc2b8203f56.webp](./img/dCwRWKy93HNia12G/1615647026968-ccb626f1-931b-493a-9679-dbc2b8203f56-431292.webp)
-
-
+![](img\PrivilegeEscalation_ProcessInjection_Getsystem\1.webp)

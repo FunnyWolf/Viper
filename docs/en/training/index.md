@@ -1,9 +1,9 @@
-# blog
+# Training
 
-## Familiar with Viper
+## Basic Usage
 
-Demonstrate the basic usage method of Viper
+Demonstrate the basic usage methods of Viper.
 
-## Advanced skills
+## Advanced Skills
 
-Introduction to the construction of the action control chain of large-scale Internet celebrity teams and anonymous methods
+Introduce the advanced usage methods of Viper.

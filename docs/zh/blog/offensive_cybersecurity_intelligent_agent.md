@@ -7,19 +7,19 @@ viper在最新版本中引入了由大模型驱动Agent模块,用于辅助网络
 ## 实际效果
 + 可以使用对话的方式询问智能体相关问题
 
-![1735192771374-8e7fdcf7-249f-4e09-87c8-e003597d30f6.webp](./img/VvkI4zQyQwx5eogV/1735192771374-8e7fdcf7-249f-4e09-87c8-e003597d30f6-458608.webp)
+![](img\offensive_cybersecurity_intelligent_agent\1.webp)
 
 + 智能体可以根据用户需求生成邮件内容
 
-![1735192910670-9c32749f-d4f7-4298-909c-e5857183b3ef.webp](./img/VvkI4zQyQwx5eogV/1735192910670-9c32749f-d4f7-4298-909c-e5857183b3ef-758245.webp)
+![](img\offensive_cybersecurity_intelligent_agent\2.webp)
 
 + 支持多轮对话和工具(API)调用
 
-![1735192980089-5986af9a-7ca8-4d16-bf72-f7f86537218a.webp](./img/VvkI4zQyQwx5eogV/1735192980089-5986af9a-7ca8-4d16-bf72-f7f86537218a-550498.webp)
+![](img\offensive_cybersecurity_intelligent_agent\3.webp)
 
 + 最终效果
 
-![1735193114293-9dc58981-8232-4251-b140-1b03d85ec1f3.webp](./img/VvkI4zQyQwx5eogV/1735193114293-9dc58981-8232-4251-b140-1b03d85ec1f3-327650.webp)
+![](img\offensive_cybersecurity_intelligent_agent\4.webp)
 
 在开发该智能体时主要为了解决以下几个问题:
 
@@ -84,15 +84,15 @@ llm_with_tools = self.llm.bind_tools(tools)
 ## 实际效果
 + 通用对话
 
-![1735195192139-c7ff2d2c-075a-4ef6-aaf2-56c4975063ce.webp](./img/VvkI4zQyQwx5eogV/1735195192139-c7ff2d2c-075a-4ef6-aaf2-56c4975063ce-886014.webp)
+![](img\offensive_cybersecurity_intelligent_agent\5.webp)
 
 + 自然语言查看平台信息
 
-![1735195245726-4b507f78-f4cf-4ada-a452-141961e1e490.webp](./img/VvkI4zQyQwx5eogV/1735195245726-4b507f78-f4cf-4ada-a452-141961e1e490-397674.webp)
+![](img\offensive_cybersecurity_intelligent_agent\6.webp)
 
 + 根据用户需求调用API并返回分析后结果
 
-![1735195286742-51527444-fd09-4388-8edf-f90abe769282.webp](./img/VvkI4zQyQwx5eogV/1735195286742-51527444-fd09-4388-8edf-f90abe769282-322217.webp)
+![](img\offensive_cybersecurity_intelligent_agent\7.webp)
 
 ## 技术说明
 平台操作智能体更多的是一种通用智能助手或智能客服,实现目的是用户可以使用自然语言与平台进行交互(而不是实现特定的需求).

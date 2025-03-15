@@ -1,11 +1,7 @@
 # VMware Horizon Log4j Rce(wait)
 
-# Main functions
-
+# Main Functions
 To be supplemented
 
-# How to operate
-
+# Operation Methods
 To be supplemented
-
-

@@ -1,62 +1,62 @@
-# Behinder and Viper linkage
+# Integration of Behinder and Viper
 
-> Testing based[**Behinder_v3.0 Beta 7**](https://github.com/rebeyond/Behinder/releases/tag/Behinder_v3.0_Beta_7)Version
+> The test is based on the [**Behinder_v3.0 Beta 7**](https://github.com/rebeyond/Behinder/releases/tag/Behinder_v3.0_Beta_7) version.
 
-## The target host does not go out of the network and launches the meterpreter version of Java
+## The target host has no Internet access & deploy the Java version of meterpreter
 
-> 116.85.xx.xx is the VPS address of Viper
+> 116.85.xx.xx is the VPS address of Viper.
 
-+ Behinder has obtained the target webshell normally and can execute commands normally
-+ Create corresponding listening in Viper
+- Behinder has successfully obtained the target's webshell and can execute commands normally.
+- Set up the corresponding listener in Viper.
 
-![1617924893804-ecc88309-8e7f-4c9e-b2d2-a1ba74405881.webp](./img/sCfOgeBYwlL4Zzzr/1617924893804-ecc88309-8e7f-4c9e-b2d2-a1ba74405881-186122.webp)
+![](img\Behinder_and_Viper_collaborate\1.webp)
 
-![1617924928028-9ad8b449-f5df-4b5d-9298-d8ecc3ef4ef8.webp](./img/sCfOgeBYwlL4Zzzr/1617924928028-9ad8b449-f5df-4b5d-9298-d8ecc3ef4ef8-863148.webp)
+![](img\Behinder_and_Viper_collaborate\2.webp)
 
-+ Switch to`反弹shell`Configure as follows
+- Switch to "Reverse Shell" in Behinder and configure as follows:
 
-![1617925039013-6ae71567-b494-4a52-be8a-641e3a444775.webp](./img/sCfOgeBYwlL4Zzzr/1617925039013-6ae71567-b494-4a52-be8a-641e3a444775-293048.webp)
+![](img\Behinder_and_Viper_collaborate\3.webp)
 
-+ After execution, you can get the meterpreter version of java
+- After execution, you can obtain the Java version of meterpreter.
 
-> Principle of online
-> 
-> Behinder will establish a listening position on the target host port 9090, and map the port to 9090 of 116.85.xx.xx through the Behinder client network (that is, your PC).
-
-## The target host does not go out of the network and launches the native version of meterpreter
-
-> The Java version of meterpreter lacks many functions, and the native version of meterpreter is more powerful
-
-+ Behinder has obtained the target webshell normally and can execute commands normally
-+ Switch to`内网穿透`Configure as follows
-
-![1617925463774-8f633ec1-b29c-47f9-951c-cd15ad522848.webp](./img/sCfOgeBYwlL4Zzzr/1617925463774-8f633ec1-b29c-47f9-951c-cd15ad522848-536279.webp)
-
-+ Viper establishes monitoring according to the following configuration
-
-![1617926165066-e7382260-9fba-42de-a8e5-fa191e501870.webp](./img/sCfOgeBYwlL4Zzzr/1617926165066-e7382260-9fba-42de-a8e5-fa191e501870-494339.webp)
-
-![1617926194558-bacb1988-8dc3-4e83-a69a-88b3e1e4eef1.webp](./img/sCfOgeBYwlL4Zzzr/1617926194558-bacb1988-8dc3-4e83-a69a-88b3e1e4eef1-208629.webp)
-
-+ Viper generates loads according to the following configuration, please read the instructions below carefully
-
-![1617926224988-1aa0b66c-5e6c-44fd-873b-a27c8063d60e.webp](./img/sCfOgeBYwlL4Zzzr/1617926224988-1aa0b66c-5e6c-44fd-873b-a27c8063d60e-122395.webp)
-
-> LHOST Fill in the intranet IP address of the controlled host, or fill in 127.0.0.1
+> Principle of going online
 >
-> LPORT is consistent with Viper monitoring and Behinder configuration
+> Behinder will set up a listener on port 9090 of the target host. Through the Behinder client network (that is, your PC), this port is mapped to port 9090 of 116.85.xx.xx.
+
+## The target host has no Internet access & deploy the native version of meterpreter
+
+> The Java version of meterpreter lacks many functions, and the native version of meterpreter is more powerful.
+
+- Behinder has successfully obtained the target's webshell and can execute commands normally.
+- Switch to "Intranet Penetration" in Behinder and configure as follows:
+
+![](img\Behinder_and_Viper_collaborate\4.webp)
+
+- Set up a listener in Viper as follows:
+
+![](img\Behinder_and_Viper_collaborate\5.webp)
+
+![](img\Behinder_and_Viper_collaborate\6.webp)
+
++ Viper generates the payload according to the following configuration. Please read the instructions below carefully.
+
+![](img\Behinder_and_Viper_collaborate\7.webp)
+
+> Fill in LHOST with the internal network IP address of the controlled host, or fill in 127.0.0.1.
 >
-> The RC4 password must be consistent with the monitoring configuration
+> LPORT should be consistent with the Viper listening and Behinder configuration.
+>
+> The RC4 password must be consistent with the listening configuration.
 >
 
-+ Upload the generated payload (exe) through Beninder and execute it
++ Just upload and execute the generated payload (exe) through Beninder.
 
-![1617926414159-00f8ed3d-d113-4113-9674-7a507d68edee.webp](./img/sCfOgeBYwlL4Zzzr/1617926414159-00f8ed3d-d113-4113-9674-7a507d68edee-071720.webp)
+![](img\Behinder_and_Viper_collaborate\8.webp)
 
-![1617926439846-bdc1979b-fdfc-4501-90ee-7d6f435a2ee3.webp](./img/sCfOgeBYwlL4Zzzr/1617926439846-bdc1979b-fdfc-4501-90ee-7d6f435a2ee3-693316.webp)
+![](img\Behinder_and_Viper_collaborate\9.webp)
 
-> Principle of online
+> Principle of going online
 >
-> Behinder will establish a listening position on the target host port 2222, and map the port to 2222 of 116.85.xx.xx through the Behinder client network (that is, your PC).
+> Behinder will establish a listening on port 2222 of the target host. Through the Behinder client network (that is, your PC), this port is mapped to port 2222 of 116.85.xx.xx.
 >
-> Viper generates a payload to connect to the target host's local 2222 port 222 to the VPS116.85.xx.xx
+> When the payload generated by Viper connects to port 2222 of the target host locally, it is equivalent to connecting to port 2222 of VPS 116.85.xx.xx.

@@ -1,11 +1,7 @@
-# Obtain domain control information
+# Obtain Domain Controller Information
 
-# Main functions
+# Main Function
+This module uses a PowerShell script to obtain the domain controller information of the domain where the host is located. If the host is not in a domain, the script may report an error.
 
-The module uses powershell script to obtain domain control information of the domain where the host is located. If the host is not in the domain, the script may report an error.
-
-# How to operate
-
-![1625196003466-6496916c-1984-43a5-afd1-8e42e6fcfa42.webp](./img/MYi1cV0_dw5O0K3I/1625196003466-6496916c-1984-43a5-afd1-8e42e6fcfa42-769566.webp)
-
-
+# Operation Method
+![](img\Discovery_RemoteSystemDiscovery_GetNetDomainController\1.webp)

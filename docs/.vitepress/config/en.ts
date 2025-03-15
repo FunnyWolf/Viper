@@ -86,7 +86,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 {text: 'Information', link: 'information'},
-                {text: 'Port Service', link: 'portservice'},
+                {text: 'PortService', link: 'portservice'},
                 {text: 'Vulnerability', link: 'vulnerability'},
                 {text: 'Delete', link: 'delete'},
                 {text: '', link: ''},
@@ -98,7 +98,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             items: [
                 {text: 'Session', link: 'session'},
                 {text: 'Explorer', link: 'explorer'},
-                {text: 'Route', link: 'route'},
+                {text: 'Routing', link: 'route'},
                 {text: 'Console', link: 'console'},
                 {text: 'PortFwd', link: 'portfwd'},
                 {text: 'Transport', link: 'transport'},

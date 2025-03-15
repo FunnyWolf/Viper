@@ -1,13 +1,9 @@
-# Callback Cannot kill (CreateThreadpoolWait)
+# Callback Anti - Detection (CreateThreadpoolWait)
 
-# Main functions
+# Main Functions
+Generate anti - detection exe
 
-Generate kill-free exe
-
-# How to operate
-
-+ Create new monitor
-+ Open the module and select the corresponding monitor
-+ After running the module, it will be in`文件管理`Generate a zip file, containing the free kill exe payload and corresponding C++ code
-
-
+# Operation Methods
+- Create a new listener
+- Open the module and select the corresponding listener
+- After running the module, a zip file will be generated in `File Management`, which contains the anti - detection exe payload and the corresponding C++ code

