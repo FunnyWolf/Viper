@@ -1,7 +1,6 @@
 # Welcome to VIPER
 
-**VIPER** is a powerful and flexible red team platform. The platform integrates the core tools and functions required for opponent simulation and red team operations, helping you
-complete network security assessment work efficiently.
+**VIPER** is a powerful and flexible red team platform. The platform integrates the core tools and functions required for adversary simulation and red team operations.
 
 <div class="tip custom-block" style="padding-top: 8px">
 
@@ -62,5 +61,5 @@ Try it? Jump to [Quick Start](./getting_start).
 ## Next steps
 
 + Read [Quick Start](getting_start.md) to install and experience VIPER
-+ Browse VIPER functions quickly through [Platform screenshots](screenshots.md)
-+ Familiarize with VIPER by referring to [Blog](../blog/index)
++ Browse VIPER functions quickly through [Screenshots](screenshots.md)
++ Adversary simulation with VIPER by referring to [Blog](../blog/index)
