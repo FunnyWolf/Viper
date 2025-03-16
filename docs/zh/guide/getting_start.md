@@ -7,7 +7,7 @@
     - Ubuntu22.04及以上版本
     - 不建议使用centos
 
-## 手动安装 (推荐)
+## 手动安装
 
 + **准备一台linux系统的VPS**
 + **切换到root用户**
@@ -127,16 +127,5 @@ docker compose up -d
 > 在红队中使用VIPER,建议配置 [反溯源](./avoid_tracing)
 
 > 可通过[开始使用](./try_viper) 熟悉Viper的相关功能
-
-## 脚本安装
-
-+ **f8x工具支持在全新的linux环境一键安装viper,命令如下:**
-
-```shell
-curl -o f8x https://f8x.io/   # wget -O f8x https://f8x.io/
-bash f8x -viper
-```
-
-> f8x由 [https://github.com/ffffffff0x/f8x](https://github.com/ffffffff0x/f8x) 提供
 
 > Mac安装参考 [issues](issues)
