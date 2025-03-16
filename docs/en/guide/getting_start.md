@@ -1,12 +1,14 @@
 # Quick Start
 
-## Configuration Requirements
-- The minimum configuration requires 2U4G.
+## Performance Requirements
+- The minimum performance requires 2U4G.
 - Supported OS versions:
   - Ubuntu 22.04 and above.
+  - Kali Linux 2024.4 and above.
+  - Debian 11 and above.
   - CentOS is not recommended.
 
-## Manual Installation (Recommended)
+## Manual Installation
 - **Prepare a VPS with a Linux system.**
 - **Switch to the root user.**
 ```shell
@@ -80,7 +82,6 @@ services:
     command: ["VIPER_PASSWORD"]
 EOF
 ```
-> For foreign VPS, you can also replace registry.cn-shenzhen.aliyuncs.com/toys/viper:latest with registry.cn-hongkong.aliyuncs.com/toys/viper:latest
 - **Set the login password**
 > **Viper does not allow the use of the default password. Replace diypassword with a custom password.**
 
@@ -102,25 +103,14 @@ cd $VIPER_DIR
 docker compose up -d
 ```
 
-+ Wait for 15 seconds for the system to start up, then visit [https://yourvpsip:60000](https://vpsip:60000/#/user/login) to log in. Username: root Password: Custom password
++ Wait for 30 seconds for the system to ready, then visit [https://your-vps-ip:60000](https://vpsip:60000/#/user/login) to log in. Username: root Password: Custom password
 
 > All docker compose commands must be executed in the installation directory to take effect.
 
 > When deploying Viper using a VPS, please confirm that the firewall of the VPS has port 60000 and subsequent ports required for handler open.
 
-> When using VIPER in a red team, it is recommended to configure [Anti-traceability](./avoid_tracing).
+> When using VIPER in a red team, it is recommended to configure [Anti Tracing](./avoid_tracing).
 
 > You can familiarize yourself with the relevant functions of Viper through [Get Started](./try_viper).
-
-## Installation with Script
-
-+ **The f8x tool supports one-click installation of viper in a brand-new Linux environment. The commands are as follows:**
-
-```shell
-curl -o f8x https://f8x.io/   # wget -O f8x https://f8x.io/
-bash f8x -viper
-```
-
-> f8x is provided by [https://github.com/ffffffff0x/f8x](https://github.com/ffffffff0x/f8x).
 
 > For Mac installation, refer to [issues](./issues).

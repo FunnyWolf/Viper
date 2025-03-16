@@ -25,8 +25,6 @@
 
 + `主机B`上线
 
-
-
 ![](img\online_session_without_internet\6.webp)
 
 可以看到主机B的Session连接信息是通过`主机A(192.168.146.1)`
@@ -66,8 +64,6 @@
 >
 
 ![](img\online_session_without_internet\9.webp)
-
-
 
 + `主机B`上线
 

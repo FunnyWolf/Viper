@@ -7,7 +7,7 @@ titleTemplate: 强大且灵活的红队平台
 hero:
   name: VIPER
   text: 强大且灵活的红队平台
-  tagline: 为对手仿真和红队行动设计的统一平台
+  tagline: 一个平台满足对手仿真和红队行动的所有需求
   actions:
     - theme: brand
       text: 什么是 VIPER?
@@ -37,7 +37,7 @@ features:
     title: LLM Agent
     details: 内置大型语言模型智能体，增强自动化处理能力和智能决策支持
   - icon: 🖥️
-    title: 自动化工作流程
+    title: 自动化工作流
     details: 支持自动化的编排和通知机制，使红队能够全天候监控目标状态
   - icon: 🔧
     title: 多样化的模块
