@@ -7,7 +7,7 @@ titleTemplate: Powerful and Flexible Red Team Platform
 hero:
   name: VIPER
   text: Powerful and Flexible Red Team Platform
-  tagline: A Unified Platform Designed for Adversary Emulation and Red Team Operations
+  tagline: Designed for Adversary Emulation and Red Team Operations 
   actions:
     - theme: brand
       text: What is VIPER?
@@ -25,13 +25,13 @@ hero:
 
 features:
   - icon: 😄
-    title: Intuitive Interface
+    title: Intuitive UI
     details: Provides a clear and concise user experience for quick onboarding
   - icon: 🚀
     title: Multi-Platform Support
-    details: Supports red team assessments across multi OS Windows/Linux/macOS/Android
+    details: Supports red team assessments across Windows/Linux/macOS/Android
   - icon: 📦
-    title: Out-of-the-Box Tools
+    title: Ready-to-use
     details: Modules cover all stages of the MITRE ATT&CK attack lifecycle
   - icon: 🤖
     title: LLM Agent

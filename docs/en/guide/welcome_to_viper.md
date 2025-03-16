@@ -1,51 +1,66 @@
 # Welcome to VIPER
 
-**VIPER** is a powerful and flexible red team platform. The platform integrates the core tools and functions required for adversary simulation and red team operations, helping you efficiently complete network security assessment tasks.
+**VIPER** is a powerful and flexible red team platform. The platform integrates the core tools and functions required for opponent simulation and red team operations, helping you
+complete network security assessment work efficiently.
 
 <div class="tip custom-block" style="padding-top: 8px">
 
-Give it a try? Jump to [Quick Start](./getting_start).
+Try it? Jump to [Quick Start](./getting_start).
 
 </div>
 
-## Why Use VIPER?
+## Why VIPER?
 
-- **Intuitive User Interface**
+- **Easy-to-use operation interface**
 
-  It provides an easy-to-use user interface, enabling red team members to quickly start their security assessment tasks.
+  Provides an easy-to-learn user interface, allowing red team members to quickly start their security assessment tasks.
 
-- **Multi-Platform Support**
+- **Multi-platform support**
 
-  Supports red team assessments for multiple operating systems, including Windows, Linux, and macOS.
+  Supports red team assessment for multiple operating systems, including Windows, Linux, and macOS.
 
-- **Out-of-the-Box Red Team Tools**
+- **Out-of-the-box red team tools**
 
-  The functionality design covers all phases of the MITRE ATT&CK framework, providing users with a comprehensive attack simulation solution.
+  The functional design covers all stages of the MITRE ATT&CK framework and provides users with a comprehensive attack simulation solution.
 
 - **Integrated LLM Agent**
 
-  Built-in large language model agents to enhance automated processing capabilities and intelligent decision-making support.
+  Built-in large language model intelligent agent to enhance automated processing capabilities and intelligent decision support.
 
-- **Automated Workflow**
+- **Automated workflow**
 
-  Supports automated orchestration and notification mechanisms, enabling the red team to monitor the target status around the clock.
+  Supports automated orchestration and notification mechanisms, enabling red teams to monitor target status around the clock.
 
-- **Dozens of Modules**
+- **Diverse modules**
 
-  Integrates various types of modules, including post-exploitation modules, passive scanning modules, and full-network scanning modules, to meet the needs in different scenarios.
+  Integrates multiple types including post-penetration modules, passive scanning modules, and whole-network scanning modules to meet the needs in different scenarios.
 
-- **Customize and Extension**
+- **Custom extension ability**
 
-  Supports writing custom modules in Python to meet specific requirements or add additional functionality.
+  Supports writing custom modules in Python to meet specific needs or add additional functions.
 
-- **Attack Surface Management (Beta)**
+- **Attack surface management (Beta)**
 
-  Introduces attack surface management capabilities to help teams better identify and understand potential risk points of target enterprises.
+  Introduces attack surface management functions to help teams better identify and understand potential risk points of target enterprises.
 
-We hope the above information and this guide will help you better understand VIPER. Our goal is that both novice and experienced security professionals can find powerful features suitable for themselves in **VIPER**.
+## Product Comparison Table
 
-## Next Steps
+|                        | VIPER                       | Cobalt Strike     | NightHawk         | BruteRatel       |
+|------------------------|-----------------------------|-------------------|-------------------|------------------|
+| Multi-platform Support | Windows<br/>Linux<br/>MacOS | Windows           | Windows           | Windows          |
+| Visual UI              | ✅                           | ✅                 | ✅                 | ✅                |
+| Pivot Graph            | ✅                           | ✅                 | ✅                 | ✅                |
+| Custom Plugin          | Python                      | CNA               | ❌                 | ❌                |
+| Built-in Evasion       | ✅                           | ❌                 | ✅                 | ✅                |
+| Automation             | ✅                           | ❌                 | ✅                 | ❌                |
+| Team Collaboration     | ✅                           | ✅                 | ❌                 | ❌                |
+| LLM Agent              | ✅                           | ❌                 | ❌                 | ❌                |
+| Price                  | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
 
-+ Read [Quick Start](getting_start.md) to install and experience VIPER.
-+ Take a quick look at VIPER's functions through [Platform Screenshots](screenshots.md).
-+ Refer to [Blog](../blog/index) to get familiar with VIPER.
+<small>\* VIPER Basic version is free for a limited time. The subsequent Pro version is $39 user/month.</small>
+
+## Next steps
+
++ Read [Quick Start](getting_start.md) to install and experience VIPER
++ Browse VIPER functions quickly through [Platform screenshots](screenshots.md)
++ Familiarize with VIPER by referring to [Blog](../blog/index)
