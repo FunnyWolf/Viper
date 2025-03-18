@@ -56,7 +56,7 @@ Try it? Jump to [Quick Start](./getting_start).
 | LLM Agent              | ✅                           | ❌                 | ❌                 | ❌                |
 | Price                  | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
 
-<small>\* VIPER Basic version is free for a limited time. The subsequent Pro version is $39 user/month.</small>
+<small>\* VIPER Basic version is free for a limited time.</small>
 
 ## Next steps
 

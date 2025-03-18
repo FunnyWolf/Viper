@@ -42,8 +42,6 @@
 
   引入攻击面管理功能，帮助团队更好地识别和理解目标企业潜在的风险点。
 
-
-
 ## 产品对比
 
 | 功能特性      | VIPER                       | Cobalt Strike | NightHawk    | BruteRatel  |
@@ -58,7 +56,7 @@
 | LLM Agent | ✅                           | ❌             | ❌            | ❌           |
 | 价格        | 免费*                         | $12,600 用户/年  | $10,000 用户/年 | $3,000 用户/年 |
 
-<small>\* VIPER Basic版本限时免费，后续Pro版本为$39 用户/月。</small>
+<small>\* VIPER Basic版本</small>
 
 ## 下一步行动
 
