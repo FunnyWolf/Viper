@@ -29,6 +29,12 @@ Viper Red Team Platform is a cybersecurity solution designed for:
 | Basic | Core emulation tools   | Non-commercial | Free Trial           |
 | Pro   | Full operational suite | Commercial     | Subscription License |
 
+
+### Refund Policy
+
+- Pro Edition Refund: If the purchased Pro Edition License has not been activated or used, a refund can be applied for. The refund amount will be calculated based on the price at the time of purchase.
+- Basic Edition Refund: The Basic Edition License is free to use and does not require a refund.
+
 ---
 
 ## 3. User Obligations
