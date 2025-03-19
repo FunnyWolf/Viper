@@ -15,7 +15,8 @@ export const en = defineConfig({
             '/guide/': {base: '/guide/', items: sidebarGuide()},
             '/module/': {base: '/module/', items: sidebarReference()},
             '/training/': {base: '/training/', items: sidebarTraining()},
-            '/blog/': {base: '/blog/', items: sidebarBlog()}
+            '/blog/': {base: '/blog/', items: sidebarBlog()},
+            '/policies/': {base: '/policies/', items: sidebarPolicies()}
         },
 
         // editLink: {
@@ -24,7 +25,7 @@ export const en = defineConfig({
         // },
 
         footer: {
-            // message: 'Released under the MIT License.',
+            message: '<a href="./policies/terms_of_service">Terms</a> · <a href="./policies/privacy_policy">Privacy</a>',
             copyright: `Copyright © 2020-${new Date().getFullYear()} Viper Red Team Platform`
         }
     }
@@ -78,7 +79,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Getting Start', link: 'getting_start'},
                 {text: 'Login', link: 'login'},
                 {text: 'Screenshots', link: 'screenshots'},
-                {text: '', link: ''},
+                {text: 'Pricing', link: 'pricing'},
+
             ]
         },
         {
@@ -401,7 +403,10 @@ function sidebarTraining(): DefaultTheme.SidebarItem[] {
 
 function sidebarBlog(): DefaultTheme.SidebarItem[] {
     return [
-        {text: 'Viper Open Source Graphical Intranet Penetration Tool Installation and Beginner Guide', link: 'viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide'},
+        {
+            text: 'Viper Open Source Graphical Intranet Penetration Tool Installation and Beginner Guide',
+            link: 'viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide'
+        },
         {text: 'Viper Semi-automated Intranet Information Gathering', link: 'viper_semi_automated_intranet_information_gathering'},
         {text: 'Invisible Wings: MSF Using DNS Tunnel for Online', link: 'invisible_wings_msf_using_dns_tunnel_for_online'},
         {text: 'MSF Execute Assembly and CobaltStrike Execute Assembly', link: 'msfexecute_assembly_and_cobaltstrikeexecute_assembly'},
@@ -416,5 +421,12 @@ function sidebarBlog(): DefaultTheme.SidebarItem[] {
         {text: 'Offensive Cybersecurity Intelligent Agent', link: 'offensive_cybersecurity_intelligent_agent'},
         {text: 'Intelligent Epoch: AI Large Model Driven Red Team Attack Techniques', link: 'intelligent_epoch_ai_large_model_driven_red_team_attack_techniques'},
         {text: 'Intelligent Epoch: AI Large Model Driven Red Team Attack Techniques II', link: 'intelligent_epoch_ai_large_model_driven_red_team_attack_techniques_ii'},
+    ]
+}
+
+function sidebarPolicies(): DefaultTheme.SidebarItem[] {
+    return [
+        {text: 'Privacy Policy', link: 'privacy_policy'},
+        {text: 'Terms of Service', link: 'terms_of_service'},
     ]
 }

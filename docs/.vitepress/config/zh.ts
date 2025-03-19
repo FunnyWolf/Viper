@@ -15,7 +15,8 @@ export const zh = defineConfig({
             '/zh/guide/': {base: '/zh/guide/', items: sidebarGuide()},
             '/zh/module/': {base: '/zh/module/', items: sidebarReference()},
             '/zh/training/': {base: '/zh/training/', items: sidebarTraining()},
-            '/zh/blog/': {base: '/zh/blog/', items: sidebarBlog()}
+            '/zh/blog/': {base: '/zh/blog/', items: sidebarBlog()},
+            '/zh/policies/': {base: '/zh//policies/', items: sidebarPolicies()}
         },
 
         // editLink: {
@@ -24,7 +25,7 @@ export const zh = defineConfig({
         // },
 
         footer: {
-            // message: '基于 MIT 许可发布',
+            message: '<a href="./policies/terms_of_service">Terms</a> · <a href="./policies/privacy_policy">Privacy</a>',
             copyright: `版权所有 © 2020-${new Date().getFullYear()} Viper Red Team Platform`
         },
 
@@ -103,7 +104,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '快速开始', link: 'getting_start'},
                 {text: '登录', link: 'login'},
                 {text: '平台截图', link: 'screenshots'},
-                {text: '', link: ''},
+                {text: '定价', link: 'pricing'},
             ]
         },
         {
@@ -458,6 +459,14 @@ function sidebarBlog(): DefaultTheme.SidebarItem[] {
         {text: '智能纪元AI大模型驱动的红队攻击技术II', link: 'intelligent_epoch_ai_large_model_driven_red_team_attack_techniques_ii'},
     ]
 }
+
+function sidebarPolicies(): DefaultTheme.SidebarItem[] {
+    return [
+        {text: '隐私权条款', link: 'privacy_policy'},
+        {text: '服务协议', link: 'terms_of_service'},
+    ]
+}
+
 
 export const search: DefaultTheme.AlgoliaSearchOptions['locales'] = {
     zh: {
