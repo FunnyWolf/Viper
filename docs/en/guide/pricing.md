@@ -1,5 +1,8 @@
 # Pricing
 
+Viper offers free download and deployment, with a Basic License included in the platform, which can be used for personal learning and testing purposes.
+For commercial use or to unlock more features, please visit the official store to purchase a Pro License
+
 | Feature/Version           | Basic          | Pro            |
 |---------------------------|----------------|----------------|
 | Session Run Time          | 30min          | Unlimited      |
