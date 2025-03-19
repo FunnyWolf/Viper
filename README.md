@@ -42,12 +42,4 @@ efficiently completing cybersecurity assessment tasks.
 
 [www.viperrtp.com](https://www.viperrtp.com)
 
-# Issues
 
-[https://github.com/FunnyWolf/Viper/issues](https://github.com/FunnyWolf/Viper/issues)
-
-# 404StarLink 2.0 - Galaxy
-
-![](https://github.com/knownsec/404StarLink-Project/raw/master/logo.png)
-
-Viper has joined 404Team [404StarLink 2.0 - Galaxy](https://github.com/knownsec/404StarLink2.0-Galaxy)

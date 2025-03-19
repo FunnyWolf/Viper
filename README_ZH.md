@@ -48,29 +48,3 @@
 ## 官方网站
 
 [https://www.viperrtp.com/zh/](https://www.viperrtp.com/zh/)
-
-## 问题反馈
-
-[https://github.com/FunnyWolf/Viper/issues](https://github.com/FunnyWolf/Viper/issues)
-
-## 致谢
-
-Edward_Snowdeng exp
-[Fnzer0](https://github.com/Fnzer0)
-[qingyun00](https://github.com/qingyun00)
-脸谱 NoobFTW Somd5-小宇
-[timwhitez](https://github.com/timwhitez)
-[ViCrack](https://github.com/ViCrack)
-[xiaobei97](https://github.com/xiaobei97)
-[yumusb](https://github.com/yumusb)
-[Tokisaki-Galaxy](https://github.com/Tokisaki-Galaxy)
-[helinze](https://github.com/helinze)
-
-## 404StarLink 2.0 - Galaxy
-
-![](https://github.com/knownsec/404StarLink-Project/raw/master/logo.png)
-
-Viper Red Team Platform 是 404Team [星链计划2.0](https://github.com/knownsec/404StarLink2.0-Galaxy)中的一环，如果对Viper有任何疑问又或是想要找小伙伴交流，可以参考星链计划的加群方式。
-
-- [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
-
