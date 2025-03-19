@@ -6,7 +6,7 @@
 
 ## 1. Acceptance of Terms
 
-By accessing or using Viper Red Team Platform ("Service") at [https://www.viperrtp.com](https://www.viperrtp.com), you agree to be legally bound by these Terms of Service ("ToS").
+By accessing or using Viper Red Team Platform ("Service") at [https://www.viperrtp.com](https://www.viperrtp.com) that was created by Zhao Chengyu, you agree to be legally bound by these Terms of Service ("ToS").
 If you represent an entity, you confirm you have authority to bind that entity. Continued use constitutes acceptance of any revised terms.
 
 ---

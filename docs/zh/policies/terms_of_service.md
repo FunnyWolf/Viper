@@ -8,7 +8,7 @@
 
 ### 第1条 协议接受
 
-通过访问或使用位于[www.viperrtp.com](https://www.viperrtp.com)的Viper红队平台（以下简称"本平台"），即视为您已充分阅读、理解并同意受本协议约束。如您代表法人实体，需确保具备签订本协议的法定授权。
+通过访问或使用位于[www.viperrtp.com](https://www.viperrtp.com)由开发者Zhao Chengyu创建的Viper红队平台（以下简称"本平台"），即视为您已充分阅读、理解并同意受本协议约束。如您代表法人实体，需确保具备签订本协议的法定授权。
 
 ---
 
