@@ -79,7 +79,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Getting Start', link: 'getting_start'},
                 {text: 'Login', link: 'login'},
                 {text: 'Screenshots', link: 'screenshots'},
-                {text: 'Pricing Plans', link: 'pricing',base: '/policies/'},
+                {text: 'Pricing Plans', link: 'pricing', base: '/policies/'},
 
             ]
         },
@@ -160,6 +160,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Change Password', link: 'change_password'},
                 {text: 'OS Optimization', link: 'os_optimization'},
                 {text: 'Installation Directory', link: 'installation_directory_introduction'},
+                {text: 'Open Source Software', link: 'open_source_software'},
                 {text: 'Known Issues', link: 'issues'},
                 {text: '', link: ''},
             ]

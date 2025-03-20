@@ -188,6 +188,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '操作系统优化配置', link: 'os_optimization'},
                 {text: '国内安装Docker', link: 'install_docker_in_china'},
                 {text: '安装目录介绍', link: 'installation_directory_introduction'},
+                {text: '开源软件', link: 'open_source_software'},
                 {text: '问题汇总/下载日志', link: 'issues'},
                 {text: '', link: ''},
             ]
