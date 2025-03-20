@@ -79,7 +79,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Getting Start', link: 'getting_start'},
                 {text: 'Login', link: 'login'},
                 {text: 'Screenshots', link: 'screenshots'},
-                {text: 'Pricing', link: 'pricing'},
+                {text: 'Pricing Plans', link: 'pricing',base: '/policies/'},
 
             ]
         },
@@ -428,5 +428,7 @@ function sidebarPolicies(): DefaultTheme.SidebarItem[] {
     return [
         {text: 'Privacy Policy', link: 'privacy_policy'},
         {text: 'Terms of Service', link: 'terms_of_service'},
+        {text: 'Refund Policy', link: 'refund_policy'},
+        {text: 'Pricing Plans', link: 'pricing'},
     ]
 }
