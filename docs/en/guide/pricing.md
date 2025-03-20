@@ -1,14 +1,29 @@
-# Pricing
+# Pricing Plans
 
-Viper offers free download and deployment, with a Basic License included in the platform, which can be used for personal learning and testing purposes.
-For commercial use or to unlock more features, please visit the official store to purchase a Pro License
+## 🆓 Basic License (Free Forever)
 
-| Feature/Version           | Basic          | Pro            |
-|---------------------------|----------------|----------------|
-| Session Run Time          | 30min          | Unlimited      |
-| Number of Sessions        | 2              | Unlimited      |
-| Number of Handlers        | 2              | Unlimited      |
-| Built-in Advanced Modules | Part           | Full           |
-| Custom Plugins            | Not Supported  | Supported      |
-| Commercial Use            | Non-commercial | Commercial     |
-| Price                     | Free           | $39 User/Month |
+**$0/month**  
+For personal education and testing environments
+
+### Included Features:
+
+- ✅ Session runtime: 30 minutes
+- ✅ Concurrent sessions: 2 max
+- ✅ Handlers limit: 2 max
+- ❌ Custom plugin development
+- ❌ Priority ticket support
+
+## ⚡ Pro License (Premium Features)
+
+**$39/month per user**  
+Monthly billing with instant cancellation
+
+### Enhanced Capabilities:
+
+- ✅ **Unlimited** session duration
+- ✅ **Unrestricted** concurrent sessions
+- ✅ **Unlimited** handler creation
+- ✅ Custom plugin framework
+- ✅ 24/7 priority technical support
+
+*All prices in USD. Local taxes may apply. Full refund available if license is not activated.*
