@@ -1,4 +1,4 @@
-![img.webp](.\webp\img.webp)
+![img.webp](.\webp\img.png)
 <p style="text-align: center;">
   Pivot Graph
 </p>
@@ -10,7 +10,7 @@
 
 ![img_2.webp](.\webp\img_2.webp)
 <p style="text-align: center;">
-    Target File Explorer
+    Session File Explorer
 </p>
 
 ![img_3.webp](.\webp\img_3.webp)
@@ -25,5 +25,5 @@
 
 ![img_5.webp](.\webp\img_5.webp)
 <p style="text-align: center;">
-  Support Command-line Control
+  Support Advanced Console
 </p>

@@ -14,8 +14,11 @@
 ```shell
 su root
 ```
+
 > Unknown issues may occur when installing with sudo.
+
 - **Optimize the operating system configuration.**
+
 ```shell
 sysctl -w net.ipv4.tcp_timestamps=0 
 sysctl -w net.ipv4.tcp_tw_reuse=1 
@@ -45,23 +48,28 @@ ulimit -SHn 65535
 
 sysctl -w vm.max_map_count=262144
 ```
+
 - **Install docker**
+
 ```shell
-curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+curl -fsSL https://get.docker.com | bash -s docker
 service docker start
 ```
 
-- **Set/generate/enter the installation directory**
+- **Set/Generate/Enter the installation directory**
+
 ```shell
 export VIPER_DIR=/root/VIPER
 mkdir -p $VIPER_DIR && cd $VIPER_DIR
 ```
+
 - **Generate docker-compose.yml**
+
 ```shell
 tee docker-compose.yml <<-'EOF'
 services:
   viper:
-    image: registry.cn-shenzhen.aliyuncs.com/toys/viper:latest
+    image: viperplatform/viper:latest
     container_name: viper-c
     network_mode: "host"
     restart: always
@@ -83,19 +91,20 @@ services:
 EOF
 ```
 - **Set the login password**
-> **Viper does not allow the use of the default password. Replace diypassword with a custom password.**
 
 ```shell
-export VIPER_PASSWORD=diypassword
+export VIPER_PASSWORD=yourpassword
 ```
+> **Replace yourpassword with a custom password.**
 
-+ **Write the password to docker-compose.yml**
+
+- **Write the password to docker-compose.yml**
 
 ```shell
 sed -i "s/VIPER_PASSWORD/$VIPER_PASSWORD/g" docker-compose.yml
 ```
 
-+ **Start Viper**
+-**Start Viper**
 
 ```shell
 cd $VIPER_DIR
@@ -103,14 +112,16 @@ cd $VIPER_DIR
 docker compose up -d
 ```
 
-+ Wait for 30 seconds for the system to ready, then visit [https://your-vps-ip:60000](https://vpsip:60000/#/user/login) to log in. Username: root Password: Custom password
+- Wait for 1min the system to ready, then visit [https://your-vps-ip:60000](https://vpsip:60000/#/user/login) to log in. 
+- Username: **root**   Password: **Custom password**
+
 
 > All docker compose commands must be executed in the installation directory to take effect.
-
+>
 > When deploying Viper using a VPS, please confirm that the firewall of the VPS has port 60000 and subsequent ports required for handler open.
-
+>
 > When using VIPER in a red team, it is recommended to configure [Anti Tracing](./avoid_tracing).
-
+> 
 > You can familiarize yourself with the relevant functions of Viper through [Get Started](./try_viper).
-
+>
 > For Mac installation, refer to [issues](./issues).

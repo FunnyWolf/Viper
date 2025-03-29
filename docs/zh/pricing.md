@@ -1,84 +1,94 @@
-# Pricing Plans
+---
+layout: page
+aside: false
+sidebar: false
+---
 
 <div class="pricing-comparison">
   <div class="pricing-table">
     <div class="pricing-column basic">
       <div class="plan-header">
-        <h3>Basic</h3>
+        <h3>BASIC</h3>
         <div class="price">
           <span class="amount">$0</span>
-          <span class="period">/month</span>
+          <span class="period">/月</span>
         </div>
-        <p class="description">For personal education and testing environments</p>
-        <a href="#" class="cta-button">Start for Free</a>
+        <p class="description">核心功能免费试用</p>
+        <a href="/guide/getting_start" class="cta-button">免费开始</a>
       </div>
       <div class="features">
         <div class="feature-item">
           <span class="check">✓</span>
-          <span>30 minutes session runtime</span>
+          <span>30分钟session运行时长</span>
         </div>
         <div class="feature-item">
           <span class="check">✓</span>
-          <span>2 concurrent sessions</span>
+          <span>2个并发session</span>
         </div>
         <div class="feature-item">
           <span class="check">✓</span>
-          <span>2 concurrent handlers</span>
+          <span>2个并发handler</span>
         </div>
         <div class="feature-item disabled">
           <span class="cross">✕</span>
-          <span>Custom plugin development</span>
+          <span>自定义插件框架</span>
         </div>
         <div class="feature-item disabled">
           <span class="cross">✕</span>
-          <span>Priority ticket support</span>
+          <span>优先技术支持</span>
         </div>
       </div>
     </div>
     <div class="pricing-column pro">
-      <div class="popular-tag">Most Popular</div>
+      <div class="popular-tag">最受欢迎</div>
       <div class="plan-header">
-        <h3>Pro</h3>
+        <h3>PROFESSIONAL</h3>
         <div class="price">
-          <span class="amount">$99</span>
-          <span class="period">/month per user</span>
+          <span class="amount">$9</span>
+          <span class="period">/月</span>
         </div>
-        <p class="description">For professional red teams and enterprises</p>
-        <a href="#" class="cta-button primary">Upgrade Now</a>
+        <p class="description">适用于专业红队和企业</p>
+        <a href="https://www.creem.io/checkout/prod_50tkiXWWYeOfBOXPV83eei/ch_4RCvgrmKeH1dLv7flsTjHe" target="_blank" class="cta-button primary">立即升级</a>
       </div>
       <div class="features">
         <div class="feature-item">
           <span class="check">✓</span>
-          <span>Unlimited session runtime</span>
+          <span>无限session时长</span>
         </div>
         <div class="feature-item">
           <span class="check">✓</span>
-          <span>Unlimited concurrent sessions</span>
+          <span>无限并发session</span>
         </div>
         <div class="feature-item">
           <span class="check">✓</span>
-          <span>Unlimited concurrent handler</span>
+          <span>无限并发handler</span>
         </div>
         <div class="feature-item">
           <span class="check">✓</span>
-          <span>Custom plugin framework</span>
+          <span>自定义插件框架</span>
         </div>
         <div class="feature-item">
           <span class="check">✓</span>
-          <span>24/7 priority technical support</span>
+          <span>优先技术支持</span>
         </div>
       </div>
     </div>
   </div>
+  <p class="pricing-disclaimer">所有价格以美元计。如果许可证未激活，可全额退款。</p>
 </div>
-
-*All prices in USD. Local taxes may apply. Full refund available if license is not activated.*
-
 
 <style>
 .pricing-comparison {
   padding: 2rem 0;
   font-family: var(--vp-font-family-base);
+}
+
+.pricing-disclaimer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+  margin-top: 2rem;
+  font-style: italic;
 }
 
 .pricing-table {
@@ -127,8 +137,12 @@
 
 .plan-header h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: var(--vp-c-text-1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--vp-c-divider);
 }
 
 .price {

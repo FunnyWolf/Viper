@@ -1,6 +1,11 @@
 # Welcome to VIPER
 
-**VIPER** is a powerful and flexible red team platform. The platform integrates the core tools and functions required for adversary simulation and red team operations.
+Where Red Teaming Builds Cyber Resilience.
+
+As a community-vetted cybersecurity platform, VIPER unifies threat modeling, adversary simulation and red team operations into one collaborative workspace. Conduct
+full-spectrum security stress tests with 90% less tool fragmentation, enabling red/blue teams to validate defenses 3x faster. Trusted by leading enterprises worldwide to transform
+red
+team insights into actionable defense strategies - because true security starts with seeing through the attacker's lens.
 
 <div class="tip custom-block" style="padding-top: 8px">
 
@@ -42,7 +47,7 @@ Try it? Jump to [Quick Start](./getting_start).
 
   Introduces attack surface management functions to help teams better identify and understand potential risk points of target enterprises.
 
-## Product Comparison Table
+## Product Comparison
 
 |                        | VIPER                       | Cobalt Strike     | NightHawk         | BruteRatel       |
 |------------------------|-----------------------------|-------------------|-------------------|------------------|
@@ -56,10 +61,11 @@ Try it? Jump to [Quick Start](./getting_start).
 | LLM Agent              | ✅                           | ❌                 | ❌                 | ❌                |
 | Price                  | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
 
-<small>\* VIPER Basic version is free for a limited time.</small>
+<small>\* Basic version is free to use. Pro version is $9 user/month</small>
 
 ## Next steps
 
 + Read [Quick Start](getting_start.md) to install and experience VIPER
 + Browse VIPER functions quickly through [Screenshots](screenshots.md)
 + Adversary simulation with VIPER by referring to [Blog](../blog/index)
++ Unlock more premium features by [subscribing](../policies/pricing)

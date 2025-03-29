@@ -56,7 +56,7 @@
 | LLM Agent | ✅                           | ❌             | ❌            | ❌           |
 | 价格        | 免费*                         | $12,600 用户/年  | $10,000 用户/年 | $3,000 用户/年 |
 
-<small>\* VIPER Basic限时免费</small>
+<small>\* VIPER Basic免费使用</small>
 
 ## 下一步行动
 

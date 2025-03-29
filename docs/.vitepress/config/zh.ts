@@ -78,6 +78,11 @@ function nav(): DefaultTheme.NavItem[] {
             link: '/zh/blog/index',
             activeMatch: '/zh/blog/'
         },
+        {
+            text: '定价',
+            link: '/zh/pricing',
+            activeMatch: '/zh/pricing'
+        },
         // {
         //   text: pkg.version,
         //   items: [
@@ -104,7 +109,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '快速开始', link: 'getting_start'},
                 {text: '登录', link: 'login'},
                 {text: '平台截图', link: 'screenshots'},
-                {text: '定价', link: 'pricing'},
             ]
         },
         {

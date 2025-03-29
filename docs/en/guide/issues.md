@@ -1,8 +1,6 @@
 # Issues
 
-# Installation Problem Summary
-
-## redis fails to start
+## Redis fails to start
 
 - Low docker version
   It is recommended to use version 24 or higher. You can use `docker version` to check.

@@ -25,7 +25,7 @@ export const en = defineConfig({
         // },
 
         footer: {
-            message: '<a href="./policies/terms_of_service">Terms</a> · <a href="./policies/privacy_policy">Privacy</a>',
+            message: '<a href="./policies/terms_of_service">Terms Of Service</a> · <a href="./policies/privacy_policy">Privacy Policy</a> · <a href="mailto:support@viperrtp.com">Support</a>',
             copyright: `Copyright © 2020-${new Date().getFullYear()} Viper Red Team Platform`
         }
     }
@@ -53,6 +53,11 @@ function nav(): DefaultTheme.NavItem[] {
             link: '/blog/index',
             activeMatch: '/blog/'
         },
+        {
+            text: 'Pricing',
+            link: '/pricing',
+            activeMatch: '/pricing'
+        },
         // {
         //   text: pkg.version,
         //   items: [
@@ -79,8 +84,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Getting Start', link: 'getting_start'},
                 {text: 'Login', link: 'login'},
                 {text: 'Screenshots', link: 'screenshots'},
-                {text: 'Pricing Plans', link: 'pricing', base: '/policies/'},
-
             ]
         },
         {
@@ -126,8 +129,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Credential', link: 'credential'},
                 {text: 'Automation', link: 'automation'},
                 {text: 'Msfconsole', link: 'msfconsole'},
-                {text: 'Network Scanning', link: 'internet_scan'},
-                {text: 'Passive Scanning', link: 'passive_scan'},
+                // {text: 'Network Scanning', link: 'internet_scan'},
+                // {text: 'Passive Scanning', link: 'passive_scan'},
                 {text: '', link: ''},
             ]
         },
@@ -135,18 +138,19 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: 'Platform Settings',
             collapsed: false,
             items: [
+                {text: 'License', link: 'license'},
                 {text: 'User Management', link: 'user_management'},
                 {text: 'General Config', link: 'common_config'},
                 {text: 'OPENAI API', link: 'openai_api'},
                 {text: 'SMTP Config', link: 'smtp_config'},
                 {text: 'DingDing Bot', link: 'dingding_bot'},
                 {text: 'ServerChan Bot', link: 'server_bot'},
-                {text: 'Aiqicha API', link: 'aiqicha_api'},
-                {text: 'FOFA API', link: 'fofa_api'},
-                {text: 'Hunter API', link: 'hunter_api'},
-                {text: 'Quake API', link: 'quake_api'},
                 {text: 'Telegram Bot', link: 'telegram_bot'},
-                {text: 'Zoomeye API', link: 'zoomeye_api'},
+                // {text: 'Aiqicha API', link: 'aiqicha_api'},
+                // {text: 'FOFA API', link: 'fofa_api'},
+                // {text: 'Hunter API', link: 'hunter_api'},
+                // {text: 'Quake API', link: 'quake_api'},
+                // {text: 'Zoomeye API', link: 'zoomeye_api'},
                 {text: 'About Viper', link: 'about_viper'},
                 {text: '', link: ''},
             ]

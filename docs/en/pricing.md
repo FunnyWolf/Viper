@@ -1,16 +1,20 @@
-# Pricing Plans
+---
+layout: page
+aside: false
+sidebar: false
+---
 
 <div class="pricing-comparison">
   <div class="pricing-table">
     <div class="pricing-column basic">
       <div class="plan-header">
-        <h3>Basic</h3>
+        <h3>BASIC</h3>
         <div class="price">
           <span class="amount">$0</span>
           <span class="period">/month</span>
         </div>
-        <p class="description">For personal education and testing environments</p>
-        <a href="#" class="cta-button">Start for Free</a>
+        <p class="description">Free Trial of Core Capabilities</p>
+        <a href="/guide/getting_start" class="cta-button">Start for Free</a>
       </div>
       <div class="features">
         <div class="feature-item">
@@ -38,13 +42,13 @@
     <div class="pricing-column pro">
       <div class="popular-tag">Most Popular</div>
       <div class="plan-header">
-        <h3>Pro</h3>
+        <h3>PROFESSIONAL</h3>
         <div class="price">
-          <span class="amount">$99</span>
+          <span class="amount">$9</span>
           <span class="period">/month per user</span>
         </div>
         <p class="description">For professional red teams and enterprises</p>
-        <a href="#" class="cta-button primary">Upgrade Now</a>
+        <a href="https://www.creem.io/checkout/prod_50tkiXWWYeOfBOXPV83eei/ch_4RCvgrmKeH1dLv7flsTjHe" target="_blank" class="cta-button primary">Upgrade Now</a>
       </div>
       <div class="features">
         <div class="feature-item">
@@ -65,20 +69,26 @@
         </div>
         <div class="feature-item">
           <span class="check">✓</span>
-          <span>24/7 priority technical support</span>
+          <span>Priority technical support</span>
         </div>
       </div>
     </div>
   </div>
+  <p class="pricing-disclaimer">All prices in USD. Full refund available if license is not activated.</p>
 </div>
-
-*All prices in USD. Local taxes may apply. Full refund available if license is not activated.*
-
 
 <style>
 .pricing-comparison {
   padding: 2rem 0;
   font-family: var(--vp-font-family-base);
+}
+
+.pricing-disclaimer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+  margin-top: 2rem;
+  font-style: italic;
 }
 
 .pricing-table {
@@ -127,8 +137,12 @@
 
 .plan-header h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: var(--vp-c-text-1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--vp-c-divider);
 }
 
 .price {
