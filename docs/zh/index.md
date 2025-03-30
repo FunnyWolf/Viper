@@ -10,7 +10,7 @@ hero:
   tagline: 一个平台满足对手仿真和红队行动的所有需求
   actions:
     - theme: brand
-      text: 什么是 VIPER?
+      text: VIPER是什么
       link: /zh/guide/welcome_to_viper
     - theme: alt
       text: 快速开始
@@ -20,8 +20,8 @@ hero:
       link: /zh/guide/screenshots
 
   image:
-      src: /viper.svg
-      alt: VIPER
+    src: /viper.svg
+    alt: VIPER
 
 features:
   - icon: 😄

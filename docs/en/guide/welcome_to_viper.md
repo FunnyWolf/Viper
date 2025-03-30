@@ -61,11 +61,11 @@ Try it? Jump to [Quick Start](./getting_start).
 | LLM Agent              | ✅                           | ❌                 | ❌                 | ❌                |
 | Price                  | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
 
-<small>\* Basic version is free to use. Pro version is $9 user/month</small>
+<small>\* Community edition is free to use</small>
 
 ## Next steps
 
 + Read [Quick Start](getting_start.md) to install and experience VIPER
 + Browse VIPER functions quickly through [Screenshots](screenshots.md)
 + Adversary simulation with VIPER by referring to [Blog](../blog/index)
-+ Unlock more premium features by [subscribing](../policies/pricing)
++ Unlock more premium features by [subscribing](../pricing)

@@ -8,7 +8,7 @@ sidebar: false
   <div class="pricing-table">
     <div class="pricing-column basic">
       <div class="plan-header">
-        <h3>BASIC</h3>
+        <h3>COMMUNITY</h3>
         <div class="price">
           <span class="amount">$0</span>
           <span class="period">/month</span>
@@ -74,7 +74,7 @@ sidebar: false
       </div>
     </div>
   </div>
-  <p class="pricing-disclaimer">All prices in USD. Full refund available if license is not activated.</p>
+  <p class="pricing-disclaimer">License will be sent via email after purchase. Full refund available if license is not activated.</p>
 </div>
 
 <style>

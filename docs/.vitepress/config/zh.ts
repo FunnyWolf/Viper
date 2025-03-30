@@ -83,19 +83,15 @@ function nav(): DefaultTheme.NavItem[] {
             link: '/zh/pricing',
             activeMatch: '/zh/pricing'
         },
-        // {
-        //   text: pkg.version,
-        //   items: [
-        //     {
-        //       text: '更新日志',
-        //       link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md'
-        //     },
-        //     {
-        //       text: '参与贡献',
-        //       link: 'https://github.com/vuejs/vitepress/blob/main/.github/contributing.md'
-        //     }
-        //   ]
-        // }
+        {
+            text: "更新日志",
+            items: [
+                {
+                    text: '3.1.1 - 混乱是阶梯',
+                    link: '/zh/release/3_1_1_Chaos_is_a_ladder'
+                }
+            ]
+        }
     ]
 }
 

@@ -8,7 +8,7 @@ sidebar: false
   <div class="pricing-table">
     <div class="pricing-column basic">
       <div class="plan-header">
-        <h3>BASIC</h3>
+        <h3>社区版</h3>
         <div class="price">
           <span class="amount">$0</span>
           <span class="period">/月</span>
@@ -42,7 +42,7 @@ sidebar: false
     <div class="pricing-column pro">
       <div class="popular-tag">最受欢迎</div>
       <div class="plan-header">
-        <h3>PROFESSIONAL</h3>
+        <h3>专业版</h3>
         <div class="price">
           <span class="amount">$9</span>
           <span class="period">/月</span>
@@ -74,7 +74,7 @@ sidebar: false
       </div>
     </div>
   </div>
-  <p class="pricing-disclaimer">所有价格以美元计。如果许可证未激活，可全额退款。</p>
+  <p class="pricing-disclaimer">购买后license会通过邮件发送.如许可证未激活,可全额退款.</p>
 </div>
 
 <style>

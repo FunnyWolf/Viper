@@ -58,19 +58,16 @@ function nav(): DefaultTheme.NavItem[] {
             link: '/pricing',
             activeMatch: '/pricing'
         },
-        // {
-        //   text: pkg.version,
-        //   items: [
-        //     {
-        //       text: 'Changelog',
-        //       link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md'
-        //     },
-        //     {
-        //       text: 'Contributing',
-        //       link: 'https://github.com/vuejs/vitepress/blob/main/.github/contributing.md'
-        //     }
-        //   ]
-        // }
+        {
+            text: "Changelog",
+            items: [
+                {
+                    text: '3.1.1 - Chaos is a Ladder',
+                    link: '/release/3_1_1_Chaos_is_a_ladder'
+                }
+            ]
+        }
+
     ]
 }
 

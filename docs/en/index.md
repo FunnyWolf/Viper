@@ -7,10 +7,10 @@ titleTemplate: Powerful and Flexible Red Team Platform
 hero:
   name: VIPER
   text: Powerful and Flexible Red Team Platform
-  tagline: Designed for Adversary Emulation and Red Team Operations 
+  tagline: Designed for Adversary Emulation and Red Team Operations
   actions:
     - theme: brand
-      text: What is VIPER?
+      text: What is VIPER
       link: /guide/welcome_to_viper
     - theme: alt
       text: QuickStart
@@ -18,7 +18,7 @@ hero:
     - theme: alt
       text: Screenshot
       link: /guide/screenshots
-      
+
   image:
     src: /viper.svg
     alt: VIPER
