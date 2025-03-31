@@ -92,7 +92,7 @@ export const shared = defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/FunnyWolf/Viper' },
       { icon: 'twitter', link: 'https://x.com/viperrtp' },
-
+      { icon: 'discord', link: 'https://discord.gg/nrBzMm2t' },
     ],
 
     search: {

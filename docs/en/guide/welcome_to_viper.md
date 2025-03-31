@@ -49,17 +49,17 @@ Try it? Jump to [Quick Start](./getting_start).
 
 ## Product Comparison
 
-|                        | VIPER                       | Cobalt Strike     | NightHawk         | BruteRatel       |
-|------------------------|-----------------------------|-------------------|-------------------|------------------|
-| Multi-platform Support | Windows<br/>Linux<br/>MacOS | Windows           | Windows           | Windows          |
-| Visual UI              | ✅                           | ✅                 | ✅                 | ✅                |
-| Pivot Graph            | ✅                           | ✅                 | ✅                 | ✅                |
-| Custom Plugin          | Python                      | CNA               | ❌                 | ❌                |
-| Built-in Evasion       | ✅                           | ❌                 | ✅                 | ✅                |
-| Automation             | ✅                           | ❌                 | ✅                 | ❌                |
-| Team Collaboration     | ✅                           | ✅                 | ❌                 | ❌                |
-| LLM Agent              | ✅                           | ❌                 | ❌                 | ❌                |
-| Price                  | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
+|                    | VIPER                       | Cobalt Strike     | NightHawk         | BruteRatel       |
+|--------------------|-----------------------------|-------------------|-------------------|------------------|
+| Implants           | Windows<br/>Linux<br/>MacOS | Windows           | Windows           | Windows          |
+| Visual UI          | ✅                           | ✅                 | ✅                 | ✅                |
+| Pivot Graph        | ✅                           | ✅                 | ✅                 | ✅                |
+| Custom Plugin      | Python                      | CNA               | ❌                 | ❌                |
+| Built-in Evasion   | ✅                           | ❌                 | ✅                 | ✅                |
+| Automation         | ✅                           | ❌                 | ✅                 | ❌                |
+| Team Collaboration | ✅                           | ✅                 | ❌                 | ❌                |
+| LLM Agent          | ✅                           | ❌                 | ❌                 | ❌                |
+| Price              | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
 
 <small>\* Community edition is free to use</small>
 

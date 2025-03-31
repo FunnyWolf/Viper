@@ -53,7 +53,6 @@ efficiently completing cybersecurity assessment tasks.
 - **Custom Extensibility**  
   Supports Python-based custom module development to meet specialized requirements or add extended functionalities.
 
-
 ![img.webp](./docs/en/guide/webp/img.webp)
 ![img_1.webp](./docs/en/guide/webp/img_1.webp)
 ![img_2.webp](./docs/en/guide/webp/img_2.webp)
@@ -63,17 +62,17 @@ efficiently completing cybersecurity assessment tasks.
 
 ## Product Comparison
 
-|                        | VIPER                       | Cobalt Strike     | NightHawk         | BruteRatel       |
-|------------------------|-----------------------------|-------------------|-------------------|------------------|
-| Multi-platform Support | Windows<br/>Linux<br/>MacOS | Windows           | Windows           | Windows          |
-| Visual UI              | ✅                           | ✅                 | ✅                 | ✅                |
-| Pivot Graph            | ✅                           | ✅                 | ✅                 | ✅                |
-| Custom Plugin          | Python                      | CNA               | ❌                 | ❌                |
-| Built-in Evasion       | ✅                           | ❌                 | ✅                 | ✅                |
-| Automation             | ✅                           | ❌                 | ✅                 | ❌                |
-| Team Collaboration     | ✅                           | ✅                 | ❌                 | ❌                |
-| LLM Agent              | ✅                           | ❌                 | ❌                 | ❌                |
-| Price                  | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
+|                    | VIPER                       | Cobalt Strike     | NightHawk         | BruteRatel       |
+|--------------------|-----------------------------|-------------------|-------------------|------------------|
+| Implants           | Windows<br/>Linux<br/>MacOS | Windows           | Windows           | Windows          |
+| Visual UI          | ✅                           | ✅                 | ✅                 | ✅                |
+| Pivot Graph        | ✅                           | ✅                 | ✅                 | ✅                |
+| Custom Plugin      | Python                      | CNA               | ❌                 | ❌                |
+| Built-in Evasion   | ✅                           | ❌                 | ✅                 | ✅                |
+| Automation         | ✅                           | ❌                 | ✅                 | ❌                |
+| Team Collaboration | ✅                           | ✅                 | ❌                 | ❌                |
+| LLM Agent          | ✅                           | ❌                 | ❌                 | ❌                |
+| Price              | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
 
 <small>\* Community edition is free to use</small>
 
