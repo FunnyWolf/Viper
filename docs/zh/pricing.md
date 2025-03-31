@@ -48,7 +48,7 @@ sidebar: false
           <span class="period">/月</span>
         </div>
         <p class="description">适用于专业红队和企业</p>
-        <a href="https://www.creem.io/checkout/prod_50tkiXWWYeOfBOXPV83eei/ch_4RCvgrmKeH1dLv7flsTjHe" target="_blank" class="cta-button primary">立即升级</a>
+        <a href="https://www.creem.io/payment/prod_50tkiXWWYeOfBOXPV83eei" target="_blank" class="cta-button primary">立即升级</a>
       </div>
       <div class="features">
         <div class="feature-item">

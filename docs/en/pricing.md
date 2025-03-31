@@ -48,7 +48,7 @@ sidebar: false
           <span class="period">/month per user</span>
         </div>
         <p class="description">For professional red teams and enterprises</p>
-        <a href="https://www.creem.io/checkout/prod_50tkiXWWYeOfBOXPV83eei/ch_4RCvgrmKeH1dLv7flsTjHe" target="_blank" class="cta-button primary">Upgrade Now</a>
+        <a href="https://www.creem.io/payment/prod_50tkiXWWYeOfBOXPV83eei" target="_blank" class="cta-button primary">Upgrade Now</a>
       </div>
       <div class="features">
         <div class="feature-item">
