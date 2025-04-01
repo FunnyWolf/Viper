@@ -1,8 +1,34 @@
+![cover-v5-optimized](./docs/public/viper-og.png)
+
 <p align="center">
-  <img src="docs/public/viper.svg" alt="Viper Icon" width="200">
+  <a href="https://www.viperrtp.com/guide/getting_start">Getting-started</a> ·
+  <a href="https://www.viperrtp.com/guide/welcome_to_viper">Documentation</a>
 </p>
 
-简体中文 | [English](./README_ZH)
+<p align="center">
+    <a href="https://www.viperrtp.com/" target="_blank">
+        <img alt="Static Badge" src="https://img.shields.io/badge/Product-F04438"></a>
+    <a href="https://www.viperrtp.com/pricing" target="_blank">
+        <img alt="Static Badge" src="https://img.shields.io/badge/free-pricing?logo=free&color=%20%23155EEF&label=pricing&labelColor=%20%23528bff"></a>
+    <a href="https://discord.gg/nrBzMm2t" target="_blank">
+        <img src="https://img.shields.io/badge/Community-blue?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
+            alt="chat on Discord"></a>
+    <a href="https://twitter.com/intent/follow?screen_name=viperrtp" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/viperrtp?logo=X&color=%20%23f5f5f5"
+            alt="follow on X(Twitter)"></a>
+    <a href="https://hub.docker.com/u/viperplatform" target="_blank">
+        <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/viperplatform/viper?labelColor=%20%23FDB062&color=%20%23f79009"></a>
+    <a href="https://github.com/funnywolf/viper/graphs/commit-activity" target="_blank">
+        <img alt="Commits last month" src="https://img.shields.io/github/commit-activity/m/funnywolf/viper?labelColor=%20%2332b583&color=%20%2312b76a"></a>
+    <a href="https://github.com/funnywolf/viper/" target="_blank">
+        <img alt="Issues closed" src="https://img.shields.io/github/issues-search?query=repo%3Afunnywolf%2Fviper%20is%3Aclosed&label=issues%20closed&labelColor=%20%237d89b0&color=%20%235d6b98"></a>
+</p>
+
+<p align="center">
+  <a href="./README.md"><img alt="README in English" src="https://img.shields.io/badge/English-d9d9d9"></a>
+  <a href="./README_ZH.md"><img alt="简体中文版自述文件" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
+</p>
+
 
 **VIPER** 是一个强大且灵活的红队平台.平台集成对手模拟及红队行动所需的核心工具和功能,帮助您高效完成网络安全评估工作。
 
@@ -44,6 +70,22 @@
 ![img_3.webp](./docs/zh/guide/webp/img_3.webp)
 ![img_4.webp](./docs/zh/guide/webp/img_4.webp)
 ![img_5.webp](./docs/zh/guide/webp/img_5.webp)
+
+## 产品对比
+
+| 功能特性      | VIPER                       | Cobalt Strike | NightHawk    | BruteRatel  |
+|-----------|-----------------------------|---------------|--------------|-------------|
+| 植入物       | Windows<br/>Linux<br/>MacOS | Windows       | Windows      | Windows     |
+| 可视化UI     | ✅                           | ✅             | ✅            | ✅           |
+| 多级控制      | ✅                           | ✅             | ✅            | ✅           |
+| 自定义插件     | Python                      | CNA           | ❌            | ❌           |
+| 内置免杀      | ✅                           | ❌             | ✅            | ✅           |
+| 自动编排      | ✅                           | ❌             | ✅            | ❌           |
+| 多用户协作     | ✅                           | ✅             | ❌            | ❌           |
+| LLM Agent | ✅                           | ❌             | ❌            | ❌           |
+| 价格        | 免费*                         | $12,600 用户/年  | $10,000 用户/年 | $3,000 用户/年 |
+
+<small>\* 社区版免费使用</small>
 
 ## 官方网站
 
