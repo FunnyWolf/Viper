@@ -7,7 +7,7 @@ Trusted by leading enterprises worldwide to transform red team insights into act
 
 <div class="tip custom-block" style="padding-top: 8px">
 
-Try it? Jump to [Quick Start](./getting_start).
+Install and try VIPER in 5 minutes? Jump to [Quick Start](./getting_start).
 
 </div>
 
@@ -68,7 +68,7 @@ Try it? Jump to [Quick Start](./getting_start).
 
 ## Next steps
 
-+ Read [Quick Start](getting_start.md) to install and experience VIPER
++ Read [Quick Start](getting_start.md) to install and try VIPER
 + Browse VIPER functions quickly through [Screenshots](screenshots.md)
 + Adversary simulation with VIPER by referring to [Blog](../blog/index)
 + Unlock more premium features by [subscribing](../pricing)

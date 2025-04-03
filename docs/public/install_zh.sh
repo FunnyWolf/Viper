@@ -53,7 +53,8 @@ check_environment() {
 install_docker() {
     if ! command -v docker &>/dev/null; then
         color_echo "[提示] 未找到 Docker，正在安装..." yellow
-        curl -fsSL https://get.docker.com | bash -s docker
+        export DOWNLOAD_URL="https://mirrors.tuna.tsinghua.edu.cn/docker-ce"
+        curl -fsSL https://viperrtp.com/docker.sh | bash -s docker
         if [ $? -eq 0 ]; then
             color_echo "[OK] Docker 安装成功"
         else
@@ -61,7 +62,7 @@ install_docker() {
             exit 1
         fi
     else
-        color_echo "[OK] Docker 已安装（版本：$(docker --version | cut -d' ' -f3 | tr -d ','））"
+        color_echo "[OK] Docker 已安装（版本：$(docker --version | cut -d' ' -f3 | tr -d ',')）"
     fi
 
     if ! systemctl is-active docker &>/dev/null; then
