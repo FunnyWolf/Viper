@@ -9,7 +9,7 @@
 ## Automatic Installation (Recommended)
 
 ```shell
-curl -fsSL https://viperrtp.com/install.sh | bash
+bash <(curl -fsSL https://viperrtp.com/install.sh)
 ```
 
 Follow the prompts provided by the script to proceed.

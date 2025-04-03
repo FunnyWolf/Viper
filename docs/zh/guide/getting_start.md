@@ -10,7 +10,7 @@
 ## 自动安装 (推荐)
 
 ```shell
-curl -fsSL https://viperrtp.com/install_zh.sh | bash
+bash <(curl -fsSL https://viperrtp.com/install_zh.sh)
 ```
 
 按照脚本提示进行操作即可。
