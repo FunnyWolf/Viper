@@ -149,6 +149,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 // {text: 'Quake API', link: 'quake_api'},
                 // {text: 'Zoomeye API', link: 'zoomeye_api'},
                 {text: 'About Viper', link: 'about_viper'},
+                {text: 'Avoid Tracing', link: 'avoid_tracing'},
                 {text: '', link: ''},
             ]
         },

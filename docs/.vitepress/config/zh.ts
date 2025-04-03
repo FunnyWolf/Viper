@@ -190,7 +190,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '安装目录介绍', link: 'installation_directory_introduction'},
                 {text: '开源软件', link: 'open_source_software'},
                 {text: '问题汇总/下载日志', link: 'issues'},
-                {text: '', link: ''},
+                {text: '反溯源', link: 'avoid_tracing'},
             ]
         }
     ]

@@ -75,11 +75,6 @@ export const shared = defineConfig({
     ['meta', { name: 'twitter:title', content: 'Viper | Powerful and Flexible Red Team Platform' }],
     ['meta', { name: 'twitter:description', content: 'A Unified Platform Designed for Adversary Emulation and Red Team Operations' }],
     ['meta', { name: 'twitter:image:src', content: 'https://www.viperrtp.com/viper-og.png' }],
-    // ['script', {
-    //   async: 'async',
-    //   src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4907153636177535',
-    //   crossorigin: 'anonymous',
-    // }]
   ],
 
   async transformHead(context: TransformContext) {
