@@ -1,12 +1,19 @@
 # Quick Start
 
 ## Performance Requirements
-- The minimum performance requires 2U4G.
-- Supported OS versions:
-  - Ubuntu 22.04 and above.
-  - Kali Linux 2024.4 and above.
-  - Debian 11 and above.
-  - CentOS is not recommended.
+
++ Minimum performance requires 2U4G
++ 5G hard disk space
++ Linux kernel 5.X and above (Ubuntu 22.04/kali Linux 2024.4/Debian 11)
+
+## Automatic Installation (Recommended)
+
+```shell
+curl -fsSL https://viperrtp.com/install.sh | bash
+```
+
+Follow the prompts provided by the script to proceed.
+
 
 ## Manual Installation
 - **Prepare a VPS with a Linux system.**

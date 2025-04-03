@@ -2,10 +2,8 @@
 
 Where Red Teaming Builds Cyber Resilience.
 
-As a community-vetted cybersecurity platform, VIPER unifies threat modeling, adversary simulation and red team operations into one collaborative workspace. Conduct
-full-spectrum security stress tests with 90% less tool fragmentation, enabling red/blue teams to validate defenses 3x faster. Trusted by leading enterprises worldwide to transform
-red
-team insights into actionable defense strategies - because true security starts with seeing through the attacker's lens.
+As a community-vetted cybersecurity platform, VIPER unifies threat modeling, adversary simulation and red team operations into one collaborative workspace.
+Trusted by leading enterprises worldwide to transform red team insights into actionable defense strategies.
 
 <div class="tip custom-block" style="padding-top: 8px">
 
@@ -25,19 +23,23 @@ Try it? Jump to [Quick Start](./getting_start).
 
 - **Out-of-the-box red team tools**
 
-  The functional design covers all stages of the MITRE ATT&CK framework and provides users with a comprehensive attack simulation solution.
+  The functional design covers all stages of the MITRE ATT&CK framework and provides users with a comprehensive attack
+  simulation solution.
 
 - **Integrated LLM Agent**
 
-  Built-in large language model intelligent agent to enhance automated processing capabilities and intelligent decision support.
+  Built-in large language model intelligent agent to enhance automated processing capabilities and intelligent decision
+  support.
 
 - **Automated workflow**
 
-  Supports automated orchestration and notification mechanisms, enabling red teams to monitor target status around the clock.
+  Supports automated orchestration and notification mechanisms, enabling red teams to monitor target status around the
+  clock.
 
 - **Diverse modules**
 
-  Integrates multiple types including post-penetration modules, passive scanning modules, and whole-network scanning modules to meet the needs in different scenarios.
+  Integrates multiple types including post-penetration modules, passive scanning modules, and whole-network scanning
+  modules to meet the needs in different scenarios.
 
 - **Custom extension ability**
 
@@ -45,7 +47,8 @@ Try it? Jump to [Quick Start](./getting_start).
 
 - **Attack surface management (Beta)**
 
-  Introduces attack surface management functions to help teams better identify and understand potential risk points of target enterprises.
+  Introduces attack surface management functions to help teams better identify and understand potential risk points of
+  target enterprises.
 
 ## Product Comparison
 

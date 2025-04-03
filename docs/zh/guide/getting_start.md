@@ -3,9 +3,17 @@
 ## 配置要求
 
 + 最低配置需要2U4G
-+ 支持的OS版本
-    - Ubuntu22.04及以上版本
-    - 不建议使用centos
++ 5G硬盘空间
++ Linux内核5.X以上(Ubuntu 22.04/kali Linux 2024.4/Debian 11)
+
+
+## 自动安装 (推荐)
+
+```shell
+curl -fsSL https://viperrtp.com/install_zh.sh | bash
+```
+
+按照脚本提示进行操作即可。
 
 ## 手动安装
 
@@ -94,7 +102,8 @@ services:
 EOF
 ```
 
-> 国外VPS也可以将registry.cn-shenzhen.aliyuncs.com/toys/viper:latest替换成registry.cn-hongkong.aliyuncs.com/toys/viper:latest
+> 国外VPS也可以将registry.cn-shenzhen.aliyuncs.com/toys/viper:latest替换成registry.cn-hongkong.aliyuncs.com/toys/viper:
+> latest
 
 + **设置登录密码**
 
