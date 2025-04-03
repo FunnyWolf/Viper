@@ -11,7 +11,6 @@ After configuring anti-tracking:
 + Defenders cannot manually confirm whether the VPS has VIPER installed
 + Threat intelligence platforms cannot identify VIPER tags
 
-
 ## Adding Anti-Tracking
 
 + **Install Viper and start it**
@@ -20,10 +19,7 @@ After configuring anti-tracking:
 
 ```shell
 cd /root/VIPER/nginxconfig    # /root/VIPER is the Viper installation directory
-
-chmod 755 nobody.sh
-
-./nobody.sh                  # Follow the prompts to run, remember the password
+sh nobody.sh                  # Follow the prompts to run, remember the password
 ```
 
 + Visit [https://yourvpsip:newport](https://vpsip:60000/#/user/login) to log in.
@@ -31,15 +27,11 @@ chmod 755 nobody.sh
 
 > The page authentication password and the VIPER login password are independent of each other; they can be the same or different
 
-
 ## Clearing Anti-Tracking
 
 + Log in to the server where Viper is located and execute the following commands
 
 ```shell
 cd /root/VIPER/nginxconfig    # /root/VIPER is the Viper installation directory
-
-chmod 755 nobody.sh
-
-./nobody.sh                  # Follow the prompts and press Enter directly
+sh nobody.sh                  # Follow the prompts and press Enter directly
 ```
