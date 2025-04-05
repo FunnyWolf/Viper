@@ -15,6 +15,11 @@ bash <(curl -fsSL https://viperrtp.com/install_zh.sh)
 
 按照脚本提示进行操作即可。
 
+> 配置[反溯源](./avoid_tracing),避免被威胁情报平台标记
+> 
+> 通过[使用 VIPER](./try_viper) 熟悉Viper的相关功能
+
+
 ## 手动安装
 
 + **准备一台linux系统的VPS**
@@ -61,11 +66,9 @@ sysctl -w vm.max_map_count=262144
 + **安装 docker**
 
 ```shell
-curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
-service docker start
+export DOWNLOAD_URL="https://mirrors.tuna.tsinghua.edu.cn/docker-ce"
+curl -fsSL https://viperrtp.com/docker.sh | bash -s docker
 ```
-
-> 国内VPS安装Docker参考如下文档 [国内安装Docker](./install_docker_in_china)
 
 + **设置/生成/进入安装目录**
 
@@ -130,11 +133,11 @@ docker compose up -d
 + 等待15s系统启动,访问 [https://yourvpsip:60000](https://vpsip:60000/#/user/login) 登录. 用户名:root 密码:自定义密码
 
 > 所有的docker compose命令必须在安装目录执行才会有效果
-
+> 
 > 使用VPS部署Viper,请确认VPS的防火墙开放了60000端口及后续监听需要的端口
-
-> 在红队中使用VIPER,建议配置 [反溯源](./avoid_tracing)
-
-> 可通过[开始使用](./try_viper) 熟悉Viper的相关功能
-
+>
+> 配置[反溯源](./avoid_tracing),避免被威胁情报平台标记
+>
+> 通过[使用 VIPER](./try_viper) 熟悉Viper的相关功能
+> 
 > Mac安装参考 [issues](issues)

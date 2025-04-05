@@ -23,7 +23,8 @@ sh nobody.sh                  # Follow the prompts to run, remember the password
 ```
 
 + Visit [https://yourvpsip:newport](https://vpsip:60000/#/user/login) to log in.
-+ Username: root Password: custom password
++ An authentication pop-up appears, username: root password: the page authentication password set in the previous step
++ After passing the authentication, the VIPER login interface appears, enter the username: root password: Viper login password
 
 > The page authentication password and the VIPER login password are independent of each other; they can be the same or different
 

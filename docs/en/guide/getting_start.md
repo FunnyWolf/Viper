@@ -12,8 +12,11 @@
 bash <(curl -fsSL https://viperrtp.com/install.sh)
 ```
 
-Follow the prompts provided by the script to proceed.
+Follow the prompts provided by the script.
 
+> Configure [anti-tracing](./avoid_tracing) to avoid being flagged by threat intelligence platforms.
+>
+> Get familiar with Viper's related features through [Try Viper](./try_viper).
 
 ## Manual Installation
 - **Prepare a VPS with a Linux system.**
@@ -127,8 +130,8 @@ docker compose up -d
 >
 > When deploying Viper using a VPS, please confirm that the firewall of the VPS has port 60000 and subsequent ports required for handler open.
 >
-> When using VIPER in a red team, it is recommended to configure [Anti Tracing](./avoid_tracing).
-> 
-> You can familiarize yourself with the relevant functions of Viper through [Get Started](./try_viper).
+> Configure [anti-tracing](./avoid_tracing) to avoid being flagged by threat intelligence platforms.
+>
+> Get familiar with Viper's related features through [Try Viper](./try_viper).
 >
 > For Mac installation, refer to [issues](./issues).
