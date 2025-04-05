@@ -40,12 +40,12 @@ features:
     title: 自动化工作流
     details: 支持自动化的编排和通知机制，使红队能够全天候监控目标状态
   - icon: 🔧
-    title: 多样化的模块
-    details: 集成后渗透、被动扫描以及全网扫描多种类型模块
+    title: 丰富的内置模块
+    details: 100+个后渗透模块，覆盖MITRE ATT&CK各个阶段。
   - icon: ⚙️
     title: 自定义扩展能力
     details: 支持通过 Python 编写自定义插件，满足特定需求或添加额外功能
   - icon: 🛸
-    title: 攻击面管理（Beta）
-    details: 帮助团队更好地识别和理解目标企业潜在的风险点
+    title: 更多高级功能
+    details: 内置反溯源/回连过滤/防御规避/多级代理/自动化通知等功能
 ---

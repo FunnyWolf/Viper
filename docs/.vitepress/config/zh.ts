@@ -388,23 +388,6 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
                 {text: '信息收集智能体', link: 'AI_Agent_Session_LangGraph_Discovery'},
                 {text: '平台操作智能体', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
             ]
-        },
-        {
-            text: '攻击面管理',
-            collapsed: false,
-            items: [
-                {text: '自动化信息收集(通过公司名称)', link: 'Web_Auto_CollectByCompanyName'},
-                {text: '爱企查关键字搜索', link: 'Web_Company_AiqichaSearchByKeyword'},
-                {text: '爱企查搜索备案/公众号/App信息', link: 'Web_Company_AiqichaSearchICPWechatAPP'},
-                {text: 'CDN识别', link: 'Web_CyberSecurity_CDNCheck'},
-                {text: 'nuclei 扫描', link: 'Web_CyberSecurity_Nuclei'},
-                {text: 'wafw00f WAF识别', link: 'Web_CyberSecurity_Wafw00f'},
-                {text: 'wafw00f WAF识别 (当前项目)', link: 'Web_CyberSecurity_Wafw00f_by_project'},
-                {text: '360 Quake子域名信息收集', link: 'Web_Network_360QuakeSearchByDomain'},
-                {text: '360 Quake端口扫描', link: 'Web_Network_360QuakeSearchByIP'},
-                {text: '360 Quake搜索语句执行', link: 'Web_Network_360QuakeSearchBySPL'},
-                {text: 'nmap端口扫描', link: 'Web_Network_nmap'},
-            ]
         }
     ]
 }

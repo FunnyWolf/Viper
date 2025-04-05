@@ -9,8 +9,3 @@
 [信息收集](../training/information_collection)
 
 [横向渗透](../training/lateral_movement)
-
-## 攻击面管理
-
-[信息收集(互联网)](../training/Information_collection_Internet)
-
