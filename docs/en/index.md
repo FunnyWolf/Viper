@@ -40,12 +40,12 @@ features:
     title: Automated Workflows
     details: Supports automated orchestration and notification mechanisms for 24/7 target monitoring
   - icon: 🔧
-    title: Dozens of Modules
-    details: Integrates post-exploitation, passive scanning, and network-wide scanning modules
+    title: Rich Built-in Modules
+    details: Over 100 post-exploitation modules covering all stages of the MITRE ATT&CK framework.
   - icon: ⚙️
     title: Customize and Extension
     details: Supports custom plugin development in Python to meet specific needs or add additional functionality
   - icon: 🛸
-    title: Attack Surface Management (Beta)
-    details: Helps teams better identify and understand potential risk points in target organizations
+    title: More Advanced Features
+    details: Includes built-in anti-tracing/return filtering/defense evasion/multi-level proxy/automated notification functions
 ---

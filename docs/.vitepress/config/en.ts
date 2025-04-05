@@ -352,23 +352,6 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
                 {text: 'Reconnaissance Agent', link: 'AI_Agent_Session_LangGraph_Discovery'},
                 {text: 'Viper Operations Agent', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
             ]
-        },
-        {
-            text: 'Attack Surface Management',
-            collapsed: false,
-            items: [
-                {text: 'Automated Recon (by Company Name)', link: 'Web_Auto_CollectByCompanyName'},
-                {text: 'Aiqicha Keyword Search', link: 'Web_Company_AiqichaSearchByKeyword'},
-                {text: 'Aiqicha ICP/WeChat/App Search', link: 'Web_Company_AiqichaSearchICPWechatAPP'},
-                {text: 'CDN Detection', link: 'Web_CyberSecurity_CDNCheck'},
-                {text: 'Nuclei Scanner', link: 'Web_CyberSecurity_Nuclei'},
-                {text: 'WAF Detection (wafw00f)', link: 'Web_CyberSecurity_Wafw00f'},
-                {text: 'WAF Detection (Current Project)', link: 'Web_CyberSecurity_Wafw00f_by_project'},
-                {text: '360 Quake Subdomain Enumeration', link: 'Web_Network_360QuakeSearchByDomain'},
-                {text: '360 Quake Port Scan', link: 'Web_Network_360QuakeSearchByIP'},
-                {text: '360 Quake SPL Query', link: 'Web_Network_360QuakeSearchBySPL'},
-                {text: 'Nmap Port Scanning', link: 'Web_Network_nmap'},
-            ]
         }
     ]
 }

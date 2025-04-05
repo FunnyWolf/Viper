@@ -36,19 +36,17 @@ Install and try VIPER in 5 minutes? Jump to [Quick Start](./getting_start).
   Supports automated orchestration and notification mechanisms, enabling red teams to monitor target status around the
   clock.
 
-- **Diverse modules**
+- **Rich Built-in Modules**
 
-  Integrates multiple types including post-penetration modules, passive scanning modules, and whole-network scanning
-  modules to meet the needs in different scenarios.
+  Integrates more than 100 post-exploitation modules, covering all stages of MITRE ATT&CK, meeting the needs of different scenarios.
 
 - **Custom extension ability**
 
   Supports writing custom modules in Python to meet specific needs or add additional functions.
 
-- **Attack surface management (Beta)**
+- **More Advanced Features**
 
-  Introduces attack surface management functions to help teams better identify and understand potential risk points of
-  target enterprises.
+  Includes built-in anti-tracing/handler firewall/defense evasion/pivot graph/notification functions.
 
 ## Product Comparison
 

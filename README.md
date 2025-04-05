@@ -47,11 +47,14 @@ efficiently completing cybersecurity assessment tasks.
 - **Automated Workflows**  
   Supports orchestration and notification mechanisms for 24/7 monitoring of target environments.
 
-- **Diverse Module Ecosystem**  
-  Includes post-exploitation modules, passive scanning modules, network-wide scanning modules, and more to address diverse scenarios.
+- **Rich Built-in Modules**
+  Integrates over 100 post-exploitation modules covering all stages of the MITRE ATT&CK framework, meeting the needs of different scenarios.
 
 - **Custom Extensibility**  
   Supports Python-based custom module development to meet specialized requirements or add extended functionalities.
+
+- **More Advanced Features**
+  Includes built-in anti-tracing/handler firewall/defense evasion/pivot graph/automated notification functions.
 
 ![img.webp](./docs/en/guide/webp/img.webp)
 ![img_1.webp](./docs/en/guide/webp/img_1.webp)
