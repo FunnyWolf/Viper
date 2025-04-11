@@ -1,4 +1,10 @@
-# Hiding C2 Server Using Heroku (Simple/Zero Cost)
+---
+title: Hide C2 Server Using Heroku (Simple/Zero Cost)
+description: Learn how to hide your Metasploit Framework C2 server using Heroku - a simple and zero-cost solution compared to domain fronting, CDN, and redirector methods.
+cover: /img/utilize_heroku_to_hide_c2_server_simple_zero_cost/1.webp
+---
+
+# Hide C2 Server Using Heroku (Simple/Zero Cost)
 
 # Preface
 
