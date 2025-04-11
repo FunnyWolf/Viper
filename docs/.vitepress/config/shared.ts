@@ -80,7 +80,7 @@ export const shared = defineConfig({
   async transformHead(context: TransformContext) {
     return handleHeadMeta(context)
   },
-
+  appearance: 'force-dark',
   themeConfig: {
     logo: { src: '/viper.svg', width: 24, height: 24 },
 
