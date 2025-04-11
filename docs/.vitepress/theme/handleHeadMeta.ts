@@ -32,7 +32,6 @@ export function handleHeadMeta(context: TransformContext) {
     const twitterTitle: HeadConfig = ["meta", { name: "twitter:title", content: title }]
     const twitterDescription: HeadConfig = ["meta", { name: "twitter:description", content: curDesc }]
     const twitterImage: HeadConfig = ["meta", { name: "twitter:image", content: cover }]
-    const twitterImageAlt: HeadConfig = ["meta", { name: "twitter:image:alt", content: title }]
     const twitterSite: HeadConfig = ["meta", { name: "twitter:site", content: "@viperrtp" }]
     const twitterCreator: HeadConfig = ["meta", { name: "twitter:creator", content: "@viperrtp" }]
 
@@ -41,7 +40,7 @@ export function handleHeadMeta(context: TransformContext) {
         ogUrl, ogTitle, ogDescription, ogImage, ogType, ogSiteName,
         ogImageAlt, ogImageWidth, ogImageHeight,
         twitterCard, twitterTitle, twitterDescription, twitterImage,
-        twitterImageAlt, twitterSite, twitterCreator
+        twitterSite, twitterCreator
     ]
 }
 
