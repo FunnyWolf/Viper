@@ -27,7 +27,7 @@ export function handleHeadMeta(context: TransformContext) {
     const twitterCard: HeadConfig = ["meta", {name: "twitter:card", content: cardType}]
     const twitterTitle: HeadConfig = ["meta", {name: "twitter:title", content: title}]
     const twitterDescription: HeadConfig = ["meta", {name: "twitter:description", content: curDesc}]
-    const twitterImage: HeadConfig = ["meta", {name: "twitter:image", content: cover}]
+    const twitterImage: HeadConfig = ["meta", {name: "twitter:image:src", content: cover}]
     const twitterSite: HeadConfig = ["meta", {name: "twitter:site", content: "@viperrtp"}]
     const twitterCreator: HeadConfig = ["meta", {name: "twitter:creator", content: "@viperrtp"}]
 
