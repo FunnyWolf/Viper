@@ -62,6 +62,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "Changelog",
             items: [
                 {
+                    text: '3.1.2 - Pentest Agent and MCP Server',
+                    link: '/release/3_1_2_Pentest_Agent_and_MCP_server'
+                },
+                {
                     text: '3.1.1 - Chaos is a Ladder',
                     link: '/release/3_1_1_Chaos_is_a_ladder'
                 }
