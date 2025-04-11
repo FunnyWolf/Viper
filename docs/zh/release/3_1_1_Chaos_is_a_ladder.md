@@ -1,6 +1,6 @@
 # 3.1.1 - 混乱是阶梯
 
-![img.png](img.png)
+![img.png](3_1_1_Chaos_is_a_ladder/img.png)
 
 ## 介绍
 

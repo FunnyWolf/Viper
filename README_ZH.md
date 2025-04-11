@@ -64,12 +64,12 @@
 
   内置反溯源/回连过滤/防御规避/多级代理/自动化通知等功能。
 
-![img.webp](./docs/zh/guide/webp/img.webp)
-![img_1.webp](./docs/zh/guide/webp/img_1.webp)
-![img_2.webp](./docs/zh/guide/webp/img_2.webp)
-![img_3.webp](./docs/zh/guide/webp/img_3.webp)
-![img_4.webp](./docs/zh/guide/webp/img_4.webp)
-![img_5.webp](./docs/zh/guide/webp/img_5.webp)
+![img.webp](docs/zh/guide/webp/screenshots/img.webp)
+![img_1.webp](docs/zh/guide/webp/screenshots/img_1.webp)
+![img_2.webp](docs/zh/guide/webp/screenshots/img_2.webp)
+![img_3.webp](docs/zh/guide/webp/screenshots/img_3.webp)
+![img_4.webp](docs/zh/guide/webp/screenshots/img_4.webp)
+![img_5.webp](docs/zh/guide/webp/screenshots/img_5.webp)
 
 ## 产品对比
 

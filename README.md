@@ -56,12 +56,12 @@ efficiently completing cybersecurity assessment tasks.
 - **More Advanced Features**
   Includes built-in anti-tracing/handler firewall/defense evasion/pivot graph/automated notification functions.
 
-![img.webp](./docs/en/guide/webp/img.webp)
-![img_1.webp](./docs/en/guide/webp/img_1.webp)
-![img_2.webp](./docs/en/guide/webp/img_2.webp)
-![img_3.webp](./docs/en/guide/webp/img_3.webp)
-![img_4.webp](./docs/en/guide/webp/img_4.webp)
-![img_5.webp](./docs/en/guide/webp/img_5.webp)
+![img.webp](docs/en/guide/webp/screenshots/img.webp)
+![img_1.webp](docs/en/guide/webp/screenshots/img_1.webp)
+![img_2.webp](docs/en/guide/webp/screenshots/img_2.webp)
+![img_3.webp](docs/en/guide/webp/screenshots/img_3.webp)
+![img_4.webp](docs/en/guide/webp/screenshots/img_4.webp)
+![img_5.webp](docs/en/guide/webp/screenshots/img_5.webp)
 
 ## Product Comparison
 

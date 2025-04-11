@@ -1,6 +1,6 @@
 # 3.1.1 - Chaos is a Ladder
 
-![img.png](img.png)
+![img.png](3_1_1_Chaos_is_a_ladder/img.png)
 
 ## Introduction
 
