@@ -3,8 +3,10 @@
     <div v-for="(feature, index) in features"
          :key="index"
          :class="['feature-section', `gradient-${index + 1}`]">
-      <div class="feature-title">{{ feature.title }}</div>
-      <div class="feature-details">{{ feature.details }}</div>
+      <div class="feature-content">
+        <div class="feature-title">{{ feature.title }}</div>
+        <div class="feature-details">{{ feature.details }}</div>
+      </div>
       <div class="feature-image">
         <img :src="feature.image" :alt="feature.title">
       </div>
@@ -54,15 +56,15 @@ const features = [
 
 <style scoped>
 .feature-section {
-  padding: 6rem 0;
+  padding: 4rem 0 2rem 0;  /* 减小底部内边距 */
   text-align: center;
   position: relative;
-  margin: 4rem auto;
+  margin: 3rem auto 1.5rem auto;  /* 减小底部外边距 */
   border-radius: 24px;
   overflow: hidden;
   background-size: 400% 400%;
   animation: gradientBg 15s ease infinite;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 @keyframes gradientBg {
@@ -80,22 +82,23 @@ const features = [
 .feature-title {
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;  /* 减小标题底部边距 */
   color: var(--vp-c-text-1);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .feature-details {
   font-size: 1.2rem;
-  max-width: 800px;
-  margin: 0 auto 3rem;
+  max-width: 900px;
+  margin: 0 auto 1rem;  /* 减小描述文字底部边距 */
   line-height: 1.6;
   color: var(--vp-c-text-1);
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .feature-image {
-  max-width: 900px;
+  max-width: 1200px;
+  width: 95%;
   margin: 0 auto;
   border-radius: 16px;
   overflow: hidden;
@@ -111,31 +114,31 @@ const features = [
 }
 
 .gradient-1 {
-  background: linear-gradient(-45deg, #FF6B6B, #4ECDC4, #45B7D1, #96E6A1);
+  background: linear-gradient(-45deg, #992929, #2a7571, #264d5a, #3d5a41);
 }
 
 .gradient-2 {
-  background: linear-gradient(-45deg, #FFD93D, #FF8E9E, #6C5CE7, #A8E6CF);
+  background: linear-gradient(-45deg, #997f25, #995459, #362e8a, #456354);
 }
 
 .gradient-3 {
-  background: linear-gradient(-45deg, #00F5A0, #00D9F5, #9D50BB, #6E48AA);
+  background: linear-gradient(-45deg, #008c5e, #00818f, #5c2f70, #412c65);
 }
 
 .gradient-4 {
-  background: linear-gradient(-45deg, #FF61D2, #FE9090, #FFF46E, #64B3F4);
+  background: linear-gradient(-45deg, #993a7e, #975656, #999642, #3b6b92);
 }
 
 .gradient-5 {
-  background: linear-gradient(-45deg, #72EDF2, #5151E5, #FF9D9E, #FFD280);
+  background: linear-gradient(-45deg, #448e91, #2f2f89, #995e5f, #997a4d);
 }
 
 .gradient-6 {
-  background: linear-gradient(-45deg, #F6D242, #FF52E5, #4364F7, #42FCDB);
+  background: linear-gradient(-45deg, #937e28, #993189, #283c94, #279483);
 }
 
 .gradient-7 {
-  background: linear-gradient(-45deg, #FFF720, #3CD500, #FF43E5, #00F5A0);
+  background: linear-gradient(-45deg, #999413, #237800, #992689, #008c5e);
 }
 
 :deep(.dark) .feature-section {
@@ -149,13 +152,47 @@ const features = [
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6); /* 增加暗度 */
   pointer-events: none;
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem; /* 减小容器左右内边距 */
+}
+
+.feature-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-bottom: 1rem;  /* 减小内容区域底部边距 */
+}
+
+/* 添加响应式调整 */
+@media (max-width: 960px) {
+  .feature-section {
+    padding: 3rem 0 1.5rem 0;  /* 减小移动端底部内边距 */
+    margin: 2rem auto 1rem auto;  /* 减小移动端底部外边距 */
+  }
+
+  .feature-image {
+    width: 98%; /* 在小屏幕上增加宽度占比 */
+  }
+}
+
+@media (max-width: 640px) {
+  .feature-section {
+    padding: 2rem 0 1rem 0;  /* 进一步减小小屏幕底部内边距 */
+    margin: 1.5rem auto 0.75rem auto;  /* 进一步减小小屏幕底部外边距 */
+  }
+
+  .feature-content {
+    padding: 0 0.5rem;
+  }
+
+  .feature-image {
+    width: 100%;
+  }
 }
 </style>
