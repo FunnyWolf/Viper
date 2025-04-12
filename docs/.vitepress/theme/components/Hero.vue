@@ -2,20 +2,24 @@
   <div class="hero-container">
     <div class="hero-section gradient-hero">
       <div class="main">
-        <div class="text">
-          <h1 class="name">强大且灵活的红队平台</h1>
-          <p class="tagline">一个平台满足对手仿真和红队行动的所有需求</p>
-          <div class="actions">
-            <a v-for="action in actions"
-               :key="action.text"
-               :href="action.link"
-               :class="['action', `theme-${action.theme}`]">
-              {{ action.text }}
-            </a>
+        <div class="content">
+          <div class="text">
+            <h1 class="name">强大且灵活的红队平台</h1>
+            <p class="tagline">一个平台满足对手仿真和红队行动的所有需求</p>
+            <div class="actions">
+              <a v-for="action in actions"
+                 :key="action.text"
+                 :href="action.link"
+                 :class="['action', `theme-${action.theme}`]">
+                {{ action.text }}
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="preview-image">
-          <img src="./guide/screenshots/img.webp" alt="VIPER Preview">
+          <div class="preview-container">
+            <div class="preview-image">
+              <img src="../../../en/guide/webp/screenshots/img.webp" alt="VIPER Preview">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -38,16 +42,16 @@ const actions = [
 .hero-section {
   height: calc(100vh - var(--vp-nav-height) - 4rem);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
   background-size: 200% 200%;
   animation: gradientBg 30s ease infinite;
-  position: relative;
   backdrop-filter: blur(10px);
   border-radius: 24px;
+  padding: 2rem;
 }
 
 .gradient-hero {
@@ -118,34 +122,55 @@ const actions = [
 .main {
   max-width: 1400px;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 48px;
-  padding: 0 24px;
+  gap: 0;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
 }
 
 .text {
-  flex: 1;
+  width: 100%;
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  background: transparent;
 }
 
 .name {
-  font-size: 6rem;
-  line-height: 1.2;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  line-height: 1;
   font-weight: 700;
   color: var(--vp-c-text-1);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 
 .tagline {
-  font-size: 2rem;
-  line-height: 1.6;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  line-height: 1.4;
   color: var(--vp-c-text-1);
-  margin-bottom: 2rem;
+  margin: 0 auto;
   max-width: 800px;
-  margin: 0 auto 2rem;
 }
 
 .actions {
@@ -153,7 +178,7 @@ const actions = [
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .action {
@@ -190,17 +215,29 @@ const actions = [
   transform: translateY(-2px);
 }
 
-.preview-image {
+.preview-container {
+  position: relative;
+  width: 100%;
   flex: 1;
+  min-height: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  margin-bottom: -2rem;
+}
+
+.preview-image {
+  position: absolute;
+  inset: 0;
+  padding: 0 1rem;
+  overflow: hidden;
 }
 
 .preview-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 16px 16px 0 0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
@@ -210,53 +247,43 @@ const actions = [
   }
 
   .hero-section {
-    height: calc(100vh - var(--vp-nav-height) - 2rem);
-    border-radius: 20px; /* 中等屏幕稍微减小圆角 */
-  }
-
-  .main {
-    flex-direction: column;
-    text-align: center;
+    height: auto;
+    min-height: calc(100vh - var(--vp-nav-height) - 2rem);
+    padding: 2rem;
   }
 
   .name {
-    font-size: 4rem;
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    white-space: normal;
   }
 
-  .tagline {
-    font-size: 1.5rem;
+  .text {
+    padding: 0;
+    padding-bottom: 2rem;
+    gap: 1.2rem;
   }
 
-  .actions {
-    justify-content: center;
+  .preview-container {
+    margin-bottom: -2rem;
   }
 
-  .preview-image {
-    margin-top: 2rem;
+  .preview-image img {
+    border-radius: 16px 16px 0 0;
   }
 }
 
 @media (max-width: 640px) {
   .hero-container {
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
   }
 
   .hero-section {
-    height: calc(100vh - var(--vp-nav-height) - 1rem);
-    border-radius: 16px; /* 小屏幕进一步减小圆角 */
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    border-radius: 16px;
   }
 
-  .name {
-    font-size: 3rem;
-  }
-
-  .tagline {
-    font-size: 1.25rem;
-  }
-
-  .action {
-    width: 100%;
-    justify-content: center;
+  .content {
+    gap: 1rem;
   }
 }
 
