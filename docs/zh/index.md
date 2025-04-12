@@ -2,6 +2,11 @@
 layout: page
 ---
 
-<Hero />
+<script setup>
+import { heroConfig } from '../.vitepress/config/hero.zh'
+import { featuresConfig } from '../.vitepress/config/features.zh'
+</script>
 
-<Features />
+<Hero :config="heroConfig" />
+
+<Features :features="featuresConfig" />

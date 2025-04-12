@@ -4,10 +4,10 @@
       <div class="main">
         <div class="content">
           <div class="text">
-            <h1 class="name">强大且灵活的红队平台</h1>
-            <p class="tagline">一个平台满足对手仿真和红队行动的所有需求</p>
+            <h1 class="name">{{ config.name }}</h1>
+            <p class="tagline">{{ config.tagline }}</p>
             <div class="actions">
-              <a v-for="action in actions"
+              <a v-for="action in config.actions"
                  :key="action.text"
                  :href="action.link"
                  :class="['action', `theme-${action.theme}`]">
@@ -27,11 +27,12 @@
 </template>
 
 <script setup>
-const actions = [
-  {text: 'VIPER是什么', link: '/zh/guide/welcome_to_viper', theme: 'brand'},
-  {text: '快速开始', link: '/zh/guide/getting_start', theme: 'alt'},
-  {text: '功能预览', link: '/zh/guide/screenshots', theme: 'alt'}
-]
+defineProps({
+  config: {
+    type: Object,
+    required: true
+  }
+})
 </script>
 
 <style scoped>
@@ -57,25 +58,25 @@ const actions = [
 .gradient-hero {
   background: 
     /* 左上角 */
-    radial-gradient(circle at 0% 0%, rgba(255, 0, 92, 0.5) 0%, transparent 25%),
+    radial-gradient(circle at 0% 0%, rgba(255, 71, 71, 0.8) 0%, transparent 25%),
     /* 右上角 */
-    radial-gradient(circle at 100% 0%, rgba(90, 0, 190, 0.5) 0%, transparent 25%),
+    radial-gradient(circle at 100% 0%, rgba(123, 97, 255, 0.8) 0%, transparent 25%),
     /* 上边中间 */
-    radial-gradient(circle at 50% 0%, rgba(255, 120, 0, 0.3) 0%, transparent 25%),
+    radial-gradient(circle at 50% 0%, rgba(255, 105, 180, 0.6) 0%, transparent 25%),
     /* 左边中间 */
-    radial-gradient(circle at 0% 50%, rgba(0, 180, 180, 0.3) 0%, transparent 25%),
+    radial-gradient(circle at 0% 50%, rgba(0, 255, 255, 0.6) 0%, transparent 25%),
     /* 右边中间 */
-    radial-gradient(circle at 100% 50%, rgba(180, 0, 180, 0.3) 0%, transparent 25%),
+    radial-gradient(circle at 100% 50%, rgba(191, 64, 255, 0.6) 0%, transparent 25%),
     /* 中心 */
-    radial-gradient(circle at 50% 50%, rgba(255, 100, 255, 0.2) 0%, transparent 35%),
+    radial-gradient(circle at 50% 50%, rgba(255, 64, 255, 0.5) 0%, transparent 35%),
     /* 左下角 */
-    radial-gradient(circle at 0% 100%, rgba(0, 150, 70, 0.4) 0%, transparent 25%),
+    radial-gradient(circle at 0% 100%, rgba(0, 255, 128, 0.7) 0%, transparent 25%),
     /* 右下角 */
-    radial-gradient(circle at 100% 100%, rgba(0, 90, 190, 0.5) 0%, transparent 25%),
+    radial-gradient(circle at 100% 100%, rgba(64, 166, 255, 0.8) 0%, transparent 25%),
     /* 下边中间 */
-    radial-gradient(circle at 50% 100%, rgba(255, 180, 0, 0.3) 0%, transparent 25%),
+    radial-gradient(circle at 50% 100%, rgba(255, 234, 0, 0.6) 0%, transparent 25%),
     /* 整体底色 */
-    linear-gradient(45deg, rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.92));
+    linear-gradient(45deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.90));
   background-size: 150% 150%;
   animation: gradientFlow 30s ease infinite;
   backdrop-filter: blur(100px);
@@ -135,7 +136,7 @@ const actions = [
   flex-direction: column;
   align-items: center;
   gap: 0;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   height: 100%;
 }
@@ -155,22 +156,28 @@ const actions = [
 }
 
 .name {
-  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-size: clamp(4.2rem, 8.5vw, 7.8rem);
   line-height: 1;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   white-space: nowrap;
   margin: 0;
   padding: 0;
+  letter-spacing: -0.02em;
 }
 
 .tagline {
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: clamp(1rem, 1.6vw, 1.4rem);
   line-height: 1.4;
-  color: var(--vp-c-text-1);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1200px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .actions {
@@ -190,6 +197,7 @@ const actions = [
   font-weight: 600;
   transition: all 0.3s ease;
   text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .theme-brand {
@@ -253,8 +261,9 @@ const actions = [
   }
 
   .name {
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-size: clamp(3.5rem, 7vw, 5.6rem);
     white-space: normal;
+    text-align: center;
   }
 
   .text {
@@ -269,6 +278,12 @@ const actions = [
 
   .preview-image img {
     border-radius: 16px 16px 0 0;
+  }
+
+  .tagline {
+    font-size: clamp(0.9rem, 1.4vw, 1.2rem);
+    white-space: normal;
+    text-align: center;
   }
 }
 

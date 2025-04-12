@@ -2,69 +2,51 @@
   <div class="container">
     <div v-for="(feature, index) in features"
          :key="index"
-         :class="['feature-section', `gradient-${index + 1}`]">
+         class="feature-wrapper">
       <div class="feature-content">
         <div class="feature-title">{{ feature.title }}</div>
         <div class="feature-details">{{ feature.details }}</div>
       </div>
-      <div class="feature-image">
-        <img :src="feature.image" :alt="feature.title">
+      <div :class="['feature-section', `gradient-${index + 1}`]">
+        <div class="feature-image">
+          <img :src="feature.image" :alt="feature.title">
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-const features = [
-  {
-    title: '直观的操作界面',
-    details: '提供简洁明了的用户体验，便于快速上手。通过清晰的布局和直观的操作流程，让红队成员能够快速适应并开展工作。',
-    image: './guide/webp/screenshots/img.webp'
-  },
-  {
-    title: '多平台支持',
-    details: '全面支持Windows、Linux、macOS和Android等多个操作系统的红队评估工作。无论目标环境如何，都能完美适配。',
-    image: './guide/webp/screenshots/img_1.webp'
-  },
-  {
-    title: 'LLM Agent智能体',
-    details: '内置大型语言模型智能体，提供智能化的决策支持和自动化处理能力，让红队工作更加高效。',
-    image: './guide/webp/screenshots/img_2.webp'
-  },
-  {
-    title: '自动化工作流',
-    details: '强大的自动化编排和通知机制，支持全天候监控目标状态，提高红队工作效率。',
-    image: './guide/webp/screenshots/img_3.webp'
-  },
-  {
-    title: '丰富的内置模块',
-    details: '超过100个后渗透模块，全面覆盖MITRE ATT&CK框架各个阶段，满足各类渗透测试场景需求。',
-    image: './guide/webp/screenshots/img_4.webp'
-  },
-  {
-    title: '自定义扩展能力',
-    details: '支持通过Python编写自定义插件，灵活扩展平台功能，满足特定场景需求。',
-    image: './guide/webp/screenshots/img_5.webp'
-  },
-  {
-    title: '更多高级功能',
-    details: '内置反溯源、回连过滤、防御规避、多级代理等多项高级功能，全方位保障红队行动安全。',
-    image: './guide/webp/screenshots/img_6.webp'
+defineProps({
+  features: {
+    type: Array,
+    required: true
   }
-]
+})
 </script>
 
 <style scoped>
+.feature-wrapper {
+  margin: 4rem 0;
+}
+
+.feature-content {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+
 .feature-section {
-  padding: 4rem 0 2rem 0;  /* 减小底部内边距 */
+  padding: 2rem 0;
   text-align: center;
   position: relative;
-  margin: 3rem auto 1.5rem auto;  /* 减小底部外边距 */
   border-radius: 24px;
   overflow: hidden;
   background-size: 400% 400%;
   animation: gradientBg 15s ease infinite;
-  max-width: 1400px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @keyframes gradientBg {
@@ -114,31 +96,31 @@ const features = [
 }
 
 .gradient-1 {
-  background: linear-gradient(-45deg, #992929, #2a7571, #264d5a, #3d5a41);
+  background: linear-gradient(-45deg, #FF6B6B, #FF8E9E, #FF61D2, #FF52E5);
 }
 
 .gradient-2 {
-  background: linear-gradient(-45deg, #997f25, #995459, #362e8a, #456354);
+  background: linear-gradient(-45deg, #4ECDC4, #00D9F5, #42FCDB, #72EDF2);
 }
 
 .gradient-3 {
-  background: linear-gradient(-45deg, #008c5e, #00818f, #5c2f70, #412c65);
+  background: linear-gradient(-45deg, #6C5CE7, #5151E5, #4364F7, #3CD500);
 }
 
 .gradient-4 {
-  background: linear-gradient(-45deg, #993a7e, #975656, #999642, #3b6b92);
+  background: linear-gradient(-45deg, #FFD93D, #FFF46E, #FFD280, #F6D242);
 }
 
 .gradient-5 {
-  background: linear-gradient(-45deg, #448e91, #2f2f89, #995e5f, #997a4d);
+  background: linear-gradient(-45deg, #9D50BB, #6E48AA, #FF43E5, #FF52E5);
 }
 
 .gradient-6 {
-  background: linear-gradient(-45deg, #937e28, #993189, #283c94, #279483);
+  background: linear-gradient(-45deg, #00F5A0, #42FCDB, #72EDF2, #64B3F4);
 }
 
 .gradient-7 {
-  background: linear-gradient(-45deg, #999413, #237800, #992689, #008c5e);
+  background: linear-gradient(-45deg, #FF9D9E, #FF8E9E, #FE9090, #FF61D2);
 }
 
 :deep(.dark) .feature-section {
@@ -160,13 +142,6 @@ const features = [
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem; /* 减小容器左右内边距 */
-}
-
-.feature-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  margin-bottom: 1rem;  /* 减小内容区域底部边距 */
 }
 
 /* 添加响应式调整 */
