@@ -3,19 +3,19 @@
     <div class="hero-section gradient-hero">
       <div class="main">
         <div class="text">
-          <h1 class="name">VIPER</h1>
+          <h1 class="name">强大且灵活的红队平台</h1>
           <p class="tagline">一个平台满足对手仿真和红队行动的所有需求</p>
           <div class="actions">
             <a v-for="action in actions"
                :key="action.text"
                :href="action.link"
-        :class="['action', `theme-${action.theme}`]">
+               :class="['action', `theme-${action.theme}`]">
               {{ action.text }}
             </a>
           </div>
         </div>
-        <div class="image">
-          <img src="/viper.svg" alt="VIPER">
+        <div class="preview-image">
+          <img src="./guide/screenshots/img.webp" alt="VIPER Preview">
         </div>
       </div>
     </div>
@@ -190,28 +190,18 @@ const actions = [
   transform: translateY(-2px);
 }
 
-.image {
+.preview-image {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image img {
+.preview-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 960px) {
@@ -240,6 +230,10 @@ const actions = [
   .actions {
     justify-content: center;
   }
+
+  .preview-image {
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -261,8 +255,8 @@ const actions = [
   }
 
   .action {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
+    width: 100%;
+    justify-content: center;
   }
 }
 
