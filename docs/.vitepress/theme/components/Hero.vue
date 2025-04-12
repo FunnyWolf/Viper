@@ -52,38 +52,66 @@ const actions = [
 
 .gradient-hero {
   background: 
-    /* 左上角 - 暗红色流动 */
-    radial-gradient(circle at 0% 0%, rgba(128, 0, 32, 0.7) 0%, transparent 50%),
-    /* 右上角 - 暗紫色流动 */
-    radial-gradient(circle at 100% 0%, rgba(75, 0, 130, 0.7) 0%, transparent 50%),
-    /* 中心 - 暗粉色流动 */
-    radial-gradient(circle at 50% 50%, rgba(255, 20, 147, 0.5) 0%, transparent 40%),
-    /* 左下角 - 暗绿色流动 */
-    radial-gradient(circle at 0% 100%, rgba(0, 100, 0, 0.6) 0%, transparent 50%),
-    /* 右下角 - 暗蓝色流动 */
-    radial-gradient(circle at 100% 100%, rgba(0, 0, 128, 0.7) 0%, transparent 50%),
-    /* 整体黑色渐变底色 */
-    linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
-  background-size: 200% 200%;
-  animation: gradientFlow 20s ease infinite;
+    /* 左上角 */
+    radial-gradient(circle at 0% 0%, rgba(255, 0, 92, 0.5) 0%, transparent 25%),
+    /* 右上角 */
+    radial-gradient(circle at 100% 0%, rgba(90, 0, 190, 0.5) 0%, transparent 25%),
+    /* 上边中间 */
+    radial-gradient(circle at 50% 0%, rgba(255, 120, 0, 0.3) 0%, transparent 25%),
+    /* 左边中间 */
+    radial-gradient(circle at 0% 50%, rgba(0, 180, 180, 0.3) 0%, transparent 25%),
+    /* 右边中间 */
+    radial-gradient(circle at 100% 50%, rgba(180, 0, 180, 0.3) 0%, transparent 25%),
+    /* 中心 */
+    radial-gradient(circle at 50% 50%, rgba(255, 100, 255, 0.2) 0%, transparent 35%),
+    /* 左下角 */
+    radial-gradient(circle at 0% 100%, rgba(0, 150, 70, 0.4) 0%, transparent 25%),
+    /* 右下角 */
+    radial-gradient(circle at 100% 100%, rgba(0, 90, 190, 0.5) 0%, transparent 25%),
+    /* 下边中间 */
+    radial-gradient(circle at 50% 100%, rgba(255, 180, 0, 0.3) 0%, transparent 25%),
+    /* 整体底色 */
+    linear-gradient(45deg, rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.92));
+  background-size: 150% 150%;
+  animation: gradientFlow 30s ease infinite;
   backdrop-filter: blur(100px);
 }
 
 @keyframes gradientFlow {
   0% {
-    background-position: 0% 0%, 100% 0%, 50% 50%, 0% 100%, 100% 100%, 0% 0%;
+    background-position: 
+      0% 0%, 100% 0%, 50% 0%,
+      0% 50%, 100% 50%, 50% 50%,
+      0% 100%, 100% 100%, 50% 100%,
+      0% 0%;
   }
   25% {
-    background-position: 50% 25%, 75% 25%, 25% 75%, 25% 75%, 75% 75%, 25% 25%;
+    background-position: 
+      15% 15%, 85% 15%, 65% 15%,
+      15% 50%, 85% 50%, 35% 65%,
+      15% 85%, 85% 85%, 35% 85%,
+      15% 15%;
   }
   50% {
-    background-position: 100% 50%, 50% 50%, 50% 100%, 50% 50%, 50% 50%, 50% 50%;
+    background-position: 
+      25% 25%, 75% 25%, 75% 25%,
+      25% 50%, 75% 50%, 50% 75%,
+      25% 75%, 75% 75%, 50% 75%,
+      25% 25%;
   }
   75% {
-    background-position: 75% 75%, 25% 75%, 75% 25%, 75% 25%, 25% 25%, 75% 75%;
+    background-position: 
+      15% 85%, 85% 85%, 65% 85%,
+      15% 50%, 85% 50%, 35% 35%,
+      15% 15%, 85% 15%, 35% 15%,
+      15% 85%;
   }
   100% {
-    background-position: 0% 0%, 100% 0%, 50% 50%, 0% 100%, 100% 100%, 0% 0%;
+    background-position: 
+      0% 0%, 100% 0%, 50% 0%,
+      0% 50%, 100% 50%, 50% 50%,
+      0% 100%, 100% 100%, 50% 100%,
+      0% 0%;
   }
 }
 
