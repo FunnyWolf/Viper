@@ -17,7 +17,7 @@
           </div>
           <div class="preview-container">
             <div class="preview-image">
-              <img src="../../../en/guide/webp/screenshots/img.webp" alt="VIPER Preview">
+              <img :src=config.image alt="VIPER Preview">
             </div>
           </div>
         </div>
