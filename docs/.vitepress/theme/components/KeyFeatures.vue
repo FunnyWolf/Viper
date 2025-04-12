@@ -47,18 +47,18 @@ defineProps({
 }
 
 .header-title {
-  font-size: 3.5rem; /* 增大字体大小 */
-  font-weight: 700; /* 加粗 */
-  margin-bottom: 1.2rem;
-  color: rgba(255, 255, 255, 0.95); /* 改为白色 */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加文字阴影提高可读性 */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: var(--vp-c-text-1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-description {
-  font-size: 1.4rem; /* 稍微增大描述文字 */
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 640px;
+  font-size: 1.2rem;
+  max-width: 900px;
   line-height: 1.6;
+  color: var(--vp-c-text-1);
 }
 
 .learn-more {
@@ -283,11 +283,11 @@ defineProps({
 /* 移动端适配 */
 @media (max-width: 768px) {
   .header-title {
-    font-size: 2.8rem; /* 移动端稍微缩小字体 */
+    font-size: 2rem;
   }
 
   .header-description {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 </style> 
