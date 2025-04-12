@@ -1,5 +1,14 @@
 <template>
   <div class="key-features-container">
+    <div class="features-header">
+      <div class="header-content">
+        <h2 class="header-title">更强大的红队能力</h2>
+        <p class="header-description">智能、高效且专业，VIPER 是 AI 红队行动的最佳选择。</p>
+      </div>
+      <a href="/zh/guide/features" class="learn-more">
+        了解更多特性 →
+      </a>
+    </div>
     <div class="features-grid">
       <div v-for="(feature, index) in features" 
            :key="index"
@@ -16,26 +25,26 @@
 
 <script setup>
 const features = [
-  {
-    title: "AI智能助手",
-    description: "集成多款LLM模型,提供渗透测试、社工邮件等智能化功能,大幅提升红队效率。",
-    icon: "i-carbon-ai-status"
-  },
-  {
-    title: "自动化工作流",
-    description: "强大的自动化编排和通知机制,支持全天候监控和多级联动响应。",
-    icon: "i-carbon-flow"
-  },
-  {
-    title: "多平台兼容",
-    description: "全面支持Windows、Linux、macOS和Android,提供Docker等多种部署方案。",
-    icon: "i-carbon-devices"
-  },
-  {
-    title: "渗透测试套件",
-    description: "集成100+个后渗透模块和主流安全工具,覆盖ATT&CK全流程。",
-    icon: "i-carbon-application"
-  },
+  // {
+  //   title: "AI智能助手",
+  //   description: "集成多款LLM模型,提供渗透测试、社工邮件等智能化功能,大幅提升红队效率。",
+  //   icon: "i-carbon-ai-status"
+  // },
+  // {
+  //   title: "自动化工作流",
+  //   description: "强大的自动化编排和通知机制,支持全天候监控和多级联动响应。",
+  //   icon: "i-carbon-flow"
+  // },
+  // {
+  //   title: "多平台兼容",
+  //   description: "全面支持Windows、Linux、macOS和Android,提供Docker等多种部署方案。",
+  //   icon: "i-carbon-devices"
+  // },
+  // {
+  //   title: "渗透测试套件",
+  //   description: "集成100+个后渗透模块和主流安全工具,覆盖ATT&CK全流程。",
+  //   icon: "i-carbon-application"
+  // },
   {
     title: "安全防护",
     description: "内置反溯源、多级代理、防御规避等红队专用防护机制。",
@@ -71,11 +80,11 @@ const features = [
     description: "无缝集成nmap、nuclei等主流安全工具,支持自然语言调用。",
     icon: "i-carbon-tools"
   },
-  {
-    title: "场景模拟",
-    description: "内置多种攻击场景模板,快速构建真实的渗透测试环境。",
-    icon: "i-carbon-template"
-  },
+  // {
+  //   title: "场景模拟",
+  //   description: "内置多种攻击场景模板,快速构建真实的渗透测试环境。",
+  //   icon: "i-carbon-template"
+  // },
   {
     title: "多级控制",
     description: "支持多层级的Payload控制,灵活管理大规模渗透测试任务。",
@@ -90,6 +99,51 @@ const features = [
 </script>
 
 <style scoped>
+/* 添加新的样式 */
+.features-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.header-title {
+  font-size: 3.5rem; /* 增大字体大小 */
+  font-weight: 700; /* 加粗 */
+  margin-bottom: 1.2rem;
+  color: rgba(255, 255, 255, 0.95); /* 改为白色 */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加文字阴影提高可读性 */
+}
+
+.header-description {
+  font-size: 1.4rem; /* 稍微增大描述文字 */
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.learn-more {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background: white;
+  color: #1a1a1a;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.learn-more:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 保持原有的其他样式不变 */
 .key-features-container {
   padding: 4rem 2rem;
   max-width: 1400px;
@@ -289,6 +343,29 @@ const features = [
   
   .feature-card {
     height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .header-description {
+    margin: 0 auto;
+  }
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2.8rem; /* 移动端稍微缩小字体 */
+  }
+  
+  .header-description {
+    font-size: 1.2rem;
   }
 }
 </style> 
