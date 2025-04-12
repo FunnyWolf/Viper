@@ -4,12 +4,12 @@
       <h2 class="header-title">深受全球红队专家信赖</h2>
       <p class="header-description">来自世界各地的安全工程师都在使用 Viper 进行红队评估</p>
     </div>
-    
+
     <div class="testimonials-columns">
       <div v-for="columnIndex in 4" :key="columnIndex" class="testimonial-column">
         <div class="scroll-container" :class="columnIndex % 2 === 0 ? 'scroll-up' : 'scroll-down'">
-          <div v-for="(testimonial, index) in getColumnTestimonials(columnIndex)" 
-               :key="index" 
+          <div v-for="(testimonial, index) in getColumnTestimonials(columnIndex)"
+               :key="index"
                class="testimonial-card">
             <div class="testimonial-content">
               <p class="testimonial-text">{{ testimonial.text }}</p>
@@ -24,8 +24,8 @@
             <div class="gradient-border"></div>
           </div>
           <!-- 复制第一组卡片到底部以实现无缝滚动 -->
-          <div v-for="(testimonial, index) in getColumnTestimonials(columnIndex)" 
-               :key="`duplicate-${index}`" 
+          <div v-for="(testimonial, index) in getColumnTestimonials(columnIndex)"
+               :key="`duplicate-${index}`"
                class="testimonial-card">
             <div class="testimonial-content">
               <p class="testimonial-text">{{ testimonial.text }}</p>

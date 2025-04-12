@@ -3,14 +3,14 @@
     <div class="features-header">
       <div class="header-content">
         <h2 class="header-title">更强大的红队能力</h2>
-        <p class="header-description">智能、高效且专业，VIPER 是 AI 红队行动的最佳选择。</p>
+        <p class="header-description">智能、高效且专业，VIPER 是使用AI进行红队行动的最佳选择。</p>
       </div>
-      <a href="/zh/guide/features" class="learn-more">
-        了解更多特性 →
+      <a href="/zh/guide/welcome_to_viper" class="learn-more">
+        了解更多特性
       </a>
     </div>
     <div class="features-grid">
-      <div v-for="(feature, index) in features" 
+      <div v-for="(feature, index) in features"
            :key="index"
            :class="['feature-card', `gradient-${index % 7}`]">
         <div class="feature-content">
@@ -25,30 +25,30 @@
 
 <script setup>
 const features = [
-  // {
-  //   title: "AI智能助手",
-  //   description: "集成多款LLM模型,提供渗透测试、社工邮件等智能化功能,大幅提升红队效率。",
-  //   icon: "i-carbon-ai-status"
-  // },
-  // {
-  //   title: "自动化工作流",
-  //   description: "强大的自动化编排和通知机制,支持全天候监控和多级联动响应。",
-  //   icon: "i-carbon-flow"
-  // },
-  // {
-  //   title: "多平台兼容",
-  //   description: "全面支持Windows、Linux、macOS和Android,提供Docker等多种部署方案。",
-  //   icon: "i-carbon-devices"
-  // },
-  // {
-  //   title: "渗透测试套件",
-  //   description: "集成100+个后渗透模块和主流安全工具,覆盖ATT&CK全流程。",
-  //   icon: "i-carbon-application"
-  // },
   {
-    title: "安全防护",
+    title: "一键部署",
+    description: "支持Docker容器化部署方案,便捷高效。",
+    icon: "i-carbon-cloud-satellite"
+  },
+  {
+    title: "溯源防护",
     description: "内置反溯源、多级代理、防御规避等红队专用防护机制。",
     icon: "i-carbon-security"
+  },
+  {
+    title: "团队协作",
+    description: "支持多用户协同作业,内置角色权限管理和操作记录功能。",
+    icon: "i-carbon-collaboration"
+  },
+  {
+    title: "多模型支持",
+    description: "支持OpenAI、Deepseek等多个AI模型,根据任务智能分配最适合的模型。",
+    icon: "i-carbon-machine-learning"
+  },
+  {
+    title: "MCP服务",
+    description: "独立运行的MCP服务器，集成nmap、nuclei等安全工具，支持自然语言调用。",
+    icon: "i-carbon-cloud-services"
   },
   {
     title: "开放扩展",
@@ -56,45 +56,36 @@ const features = [
     icon: "i-carbon-code"
   },
   {
-    title: "一键部署",
-    description: "支持Docker容器化和云函数等多种快速部署方案,便捷高效。",
-    icon: "i-carbon-cloud-satellite"
-  },
-  {
-    title: "实时监控",
-    description: "可视化展示网络拓扑、任务状态,支持多人协作和实时通知。",
-    icon: "i-carbon-dashboard"
-  },
-  {
-    title: "智能钓鱼",
-    description: "基于LLM的智能钓鱼邮件生成,支持HTML模板定制和自动化发送。",
-    icon: "i-carbon-email"
-  },
-  {
-    title: "多模型支持",
-    description: "支持OpenAI、Claude等多个AI模型,根据任务智能分配最适合的模型。",
-    icon: "i-carbon-machine-learning"
-  },
-  {
-    title: "工具集成",
-    description: "无缝集成nmap、nuclei等主流安全工具,支持自然语言调用。",
-    icon: "i-carbon-tools"
-  },
-  // {
-  //   title: "场景模拟",
-  //   description: "内置多种攻击场景模板,快速构建真实的渗透测试环境。",
-  //   icon: "i-carbon-template"
-  // },
-  {
     title: "多级控制",
-    description: "支持多层级的Payload控制,灵活管理大规模渗透测试任务。",
+    description: "支持多层级的Payload控制,灵活管理大型网络红队任务。",
     icon: "i-carbon-hierarchy"
   },
   {
-    title: "团队协作",
-    description: "支持多用户协同作业,内置角色权限管理和操作审计功能。",
-    icon: "i-carbon-collaboration"
-  }
+    title: "原生命令行",
+    description: "完整复制msfconsole操作体验，支持智能提示、快捷键操作和实时输出。",
+    icon: "i-carbon-terminal"
+  },
+  {
+    title: "网络穿透",
+    description: "集成内网路由、端口转发、Socks代理等功能，轻松处理复杂网络环境。",
+    icon: "i-carbon-network"
+  },
+  {
+    title: "红队武器库",
+    description: "内置WebDelivery、凭证获取等红队常用功能，使用更加便捷。",
+    icon: "i-carbon-security"
+  },
+  {
+    title: "完善的文档",
+    description: "提供中英双语技术文档，包含详细的使用教程和原理解析，助力快速上手。",
+    icon: "i-carbon-document"
+  },
+  {
+    title: "自动化通知",
+    description: "支持钉钉、Server酱等多种通知方式，可配置Session上线、任务完成等自动推送。",
+    icon: "i-carbon-notification"
+  },
+
 ]
 </script>
 
@@ -123,7 +114,7 @@ const features = [
 .header-description {
   font-size: 1.4rem; /* 稍微增大描述文字 */
   color: rgba(255, 255, 255, 0.8);
-  max-width: 600px;
+  max-width: 640px;
   line-height: 1.6;
 }
 
@@ -205,75 +196,64 @@ const features = [
 
 /* 渐变背景系列 */
 .gradient-0 {
-  background: 
-    /* 左下角 */
-    radial-gradient(circle at 0% 100%, rgba(255, 71, 71, 0.8) 0%, transparent 50%),
-    /* 右下角 */
-    radial-gradient(circle at 100% 100%, rgba(123, 97, 255, 0.8) 0%, transparent 50%),
-    /* 下边中间 */
-    radial-gradient(circle at 50% 100%, rgba(255, 105, 180, 0.6) 0%, transparent 50%),
-    /* 整体底色 */
-    linear-gradient(to top, 
+  background: /* 左下角 */ radial-gradient(circle at 0% 100%, rgba(255, 71, 71, 0.8) 0%, transparent 50%),
+    /* 右下角 */ radial-gradient(circle at 100% 100%, rgba(123, 97, 255, 0.8) 0%, transparent 50%),
+    /* 下边中间 */ radial-gradient(circle at 50% 100%, rgba(255, 105, 180, 0.6) 0%, transparent 50%),
+    /* 整体底色 */ linear-gradient(to top,
       rgba(18, 18, 18, 0.8) 0%,
       rgba(18, 18, 18, 0.95) 50%);
 }
 
 .gradient-1 {
-  background: 
-    radial-gradient(circle at 0% 100%, rgba(97, 255, 206, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(97, 210, 255, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 50% 100%, rgba(255, 97, 210, 0.6) 0%, transparent 50%),
-    linear-gradient(to top, 
+  background: radial-gradient(circle at 0% 100%, rgba(97, 255, 206, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 100% 100%, rgba(97, 210, 255, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 50% 100%, rgba(255, 97, 210, 0.6) 0%, transparent 50%),
+  linear-gradient(to top,
       rgba(18, 18, 18, 0.8) 0%,
       rgba(18, 18, 18, 0.95) 50%);
 }
 
 .gradient-2 {
-  background: 
-    radial-gradient(circle at 0% 100%, rgba(255, 185, 97, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(255, 97, 210, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 50% 100%, rgba(123, 97, 255, 0.6) 0%, transparent 50%),
-    linear-gradient(to top, 
+  background: radial-gradient(circle at 0% 100%, rgba(255, 185, 97, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 100% 100%, rgba(255, 97, 210, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 50% 100%, rgba(123, 97, 255, 0.6) 0%, transparent 50%),
+  linear-gradient(to top,
       rgba(18, 18, 18, 0.8) 0%,
       rgba(18, 18, 18, 0.95) 50%);
 }
 
 .gradient-3 {
-  background: 
-    radial-gradient(circle at 0% 100%, rgba(97, 255, 142, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(97, 255, 206, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 50% 100%, rgba(97, 210, 255, 0.6) 0%, transparent 50%),
-    linear-gradient(to top, 
+  background: radial-gradient(circle at 0% 100%, rgba(97, 255, 142, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 100% 100%, rgba(97, 255, 206, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 50% 100%, rgba(97, 210, 255, 0.6) 0%, transparent 50%),
+  linear-gradient(to top,
       rgba(18, 18, 18, 0.8) 0%,
       rgba(18, 18, 18, 0.95) 50%);
 }
 
 .gradient-4 {
-  background: 
-    radial-gradient(circle at 0% 100%, rgba(123, 97, 255, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(255, 97, 210, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 50% 100%, rgba(97, 255, 206, 0.6) 0%, transparent 50%),
-    linear-gradient(to top, 
+  background: radial-gradient(circle at 0% 100%, rgba(123, 97, 255, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 100% 100%, rgba(255, 97, 210, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 50% 100%, rgba(97, 255, 206, 0.6) 0%, transparent 50%),
+  linear-gradient(to top,
       rgba(18, 18, 18, 0.8) 0%,
       rgba(18, 18, 18, 0.95) 50%);
 }
 
 .gradient-5 {
-  background: 
-    radial-gradient(circle at 0% 100%, rgba(255, 97, 210, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(97, 255, 206, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 50% 100%, rgba(123, 97, 255, 0.6) 0%, transparent 50%),
-    linear-gradient(to top, 
+  background: radial-gradient(circle at 0% 100%, rgba(255, 97, 210, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 100% 100%, rgba(97, 255, 206, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 50% 100%, rgba(123, 97, 255, 0.6) 0%, transparent 50%),
+  linear-gradient(to top,
       rgba(18, 18, 18, 0.8) 0%,
       rgba(18, 18, 18, 0.95) 50%);
 }
 
 .gradient-6 {
-  background: 
-    radial-gradient(circle at 0% 100%, rgba(97, 210, 255, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(123, 97, 255, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 50% 100%, rgba(255, 97, 210, 0.6) 0%, transparent 50%),
-    linear-gradient(to top, 
+  background: radial-gradient(circle at 0% 100%, rgba(97, 210, 255, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 100% 100%, rgba(123, 97, 255, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 50% 100%, rgba(255, 97, 210, 0.6) 0%, transparent 50%),
+  linear-gradient(to top,
       rgba(18, 18, 18, 0.8) 0%,
       rgba(18, 18, 18, 0.95) 50%);
 }
@@ -294,9 +274,9 @@ const features = [
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.2)
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.2)
   );
   pointer-events: none;
 }
@@ -307,15 +287,14 @@ const features = [
   border-radius: 16px;
   padding: 1px;
   background: linear-gradient(
-    45deg,
-    rgba(255, 97, 210, 0.3),
-    rgba(123, 97, 255, 0.3),
-    rgba(97, 255, 206, 0.3),
-    rgba(255, 97, 210, 0.3)
+      45deg,
+      rgba(255, 97, 210, 0.3),
+      rgba(123, 97, 255, 0.3),
+      rgba(97, 255, 206, 0.3),
+      rgba(255, 97, 210, 0.3)
   );
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+  linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
@@ -340,7 +319,7 @@ const features = [
   .features-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .feature-card {
     height: 240px;
   }
@@ -352,7 +331,7 @@ const features = [
     text-align: center;
     gap: 1.5rem;
   }
-  
+
   .header-description {
     margin: 0 auto;
   }
@@ -363,7 +342,7 @@ const features = [
   .header-title {
     font-size: 2.8rem; /* 移动端稍微缩小字体 */
   }
-  
+
   .header-description {
     font-size: 1.2rem;
   }

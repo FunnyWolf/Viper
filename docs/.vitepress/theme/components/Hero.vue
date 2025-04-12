@@ -173,7 +173,7 @@ defineProps({
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1400px;
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
