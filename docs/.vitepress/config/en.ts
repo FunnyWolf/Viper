@@ -83,7 +83,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             items: [
                 {text: 'Welcome to Viper', link: 'welcome_to_viper'},
                 {text: 'Getting Start', link: 'getting_start'},
-                {text: 'Login', link: 'login'},
                 {text: 'Screenshots', link: 'screenshots'},
             ]
         },
@@ -117,6 +116,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: 'Platform Features',
             collapsed: false,
             items: [
+                {text: 'Login', link: 'login'},
                 {text: 'Host&Session', link: 'host_and_session_list'},
                 {text: 'RunModule', link: 'run_module'},
                 {text: 'Realtime', link: 'realtime'},
@@ -147,14 +147,14 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'DingDing Bot', link: 'dingding_bot'},
                 {text: 'ServerChan Bot', link: 'server_bot'},
                 {text: 'Telegram Bot', link: 'telegram_bot'},
+                {text: 'About Viper', link: 'about_viper'},
+                {text: 'Avoid Tracing', link: 'avoid_tracing'},
+                {text: 'MCP Server', link: 'mcpserver'},
                 // {text: 'Aiqicha API', link: 'aiqicha_api'},
                 // {text: 'FOFA API', link: 'fofa_api'},
                 // {text: 'Hunter API', link: 'hunter_api'},
                 // {text: 'Quake API', link: 'quake_api'},
                 // {text: 'Zoomeye API', link: 'zoomeye_api'},
-                {text: 'About Viper', link: 'about_viper'},
-                {text: 'Avoid Tracing', link: 'avoid_tracing'},
-                {text: 'MCP Server', link: 'mcpserver'},
                 {text: '', link: ''},
             ]
         },

@@ -69,7 +69,7 @@ function nav(): DefaultTheme.NavItem[] {
             activeMatch: '/zh/module/'
         },
         {
-            text: '培训',
+            text: '教程',
             link: '/zh/training/index',
             activeMatch: '/zh/training/'
         },
@@ -105,9 +105,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: '简介',
             collapsed: false,
             items: [
-                {text: '欢迎使用 Viper', link: 'welcome_to_viper'},
+                {text: '欢迎使用', link: 'welcome_to_viper'},
                 {text: '快速开始', link: 'getting_start'},
-                {text: '登录', link: 'login'},
                 {text: '平台截图', link: 'screenshots'},
             ]
         },
@@ -142,6 +141,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: '平台功能',
             collapsed: false,
             items: [
+                {text: '登录', link: 'login'},
                 {text: '主机&权限', link: 'host_and_session_list'},
                 {text: '运行模块', link: 'run_module'},
                 {text: '实时输出', link: 'realtime'},
