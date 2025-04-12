@@ -363,14 +363,8 @@ and the lack of signing by the parties hereto to execute these Legal Terms.
 
 In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:
 
-**Zhao Chengyu**
+**ViperRTP**
 
 **Viper Red Team Platform**
-
-**DaDong District**
-
-**ShenYang 11000**
-
-**China**
 
 **business@viperrtp.com**
