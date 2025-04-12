@@ -69,7 +69,7 @@ const getColumnTestimonials = (columnIndex) => {
 <style scoped>
 /* 新增标题和描述的样式 */
 .testimonials-header {
-  max-width: 800px;
+  max-width: 1200px; /* 增加最大宽度 */
   margin: 0 auto 2rem;
   text-align: center;
   padding: 0 2rem;
@@ -81,6 +81,7 @@ const getColumnTestimonials = (columnIndex) => {
   margin-bottom: 0.75rem;
   color: var(--vp-c-text-1);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* 防止换行 */
 }
 
 .header-description {
@@ -272,6 +273,7 @@ const getColumnTestimonials = (columnIndex) => {
 @media (max-width: 768px) {
   .header-title {
     font-size: 2rem;
+    white-space: normal; /* 在移动端允许换行 */
   }
 
   .header-description {
