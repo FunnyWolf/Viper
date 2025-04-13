@@ -3,21 +3,28 @@
     <div class="pricing-table">
       <div class="pricing-column basic">
         <div class="inner-column">
-          <div class="plan-type">{{ config.basic.title }}</div>
-          <div class="price">
-            <span class="free">{{ config.basic.freeLabel }}</span>
+          <div class="header-section">
+            <div class="plan-type">{{ config.basic.title }}</div>
+            <div class="price">
+              <span class="free">{{ config.basic.freeLabel }}</span>
+              <span class="period">/{{ config.basic.period }}</span>
+            </div>
+            <div class="divider"></div>
+            <p class="description">{{ config.basic.description }}</p>
           </div>
-          <div class="divider"></div>
-          <p class="description">{{ config.basic.description }}</p>
-          <div class="features">
-            <div v-for="(feature, index) in config.basic.features"
-                 :key="index"
-                 :class="['feature-item', { disabled: !feature.enabled }]">
-              <span :class="feature.enabled ? 'check' : 'cross'">{{ feature.enabled ? '✓' : '✕' }}</span>
-              <span>{{ feature.text }}</span>
+          <div class="content-section">
+            <div class="features">
+              <div v-for="(feature, index) in config.basic.features"
+                   :key="index"
+                   :class="['feature-item', { disabled: !feature.enabled }]">
+                <span :class="feature.enabled ? 'check' : 'cross'">{{ feature.enabled ? '✓' : '✕' }}</span>
+                <span>{{ feature.text }}</span>
+              </div>
             </div>
           </div>
-          <a :href="config.basic.ctaLink" class="cta-button">{{ config.basic.ctaText }}</a>
+          <div class="action-section">
+            <a :href="config.basic.ctaLink" class="cta-button">{{ config.basic.ctaText }}</a>
+          </div>
         </div>
       </div>
 
@@ -495,5 +502,126 @@ defineProps({
 /* 暗色主题优化 */
 :root.dark .gradient-content::before {
   opacity: 0.95;
+}
+
+/* 统一的基础样式 */
+.header-section {
+  margin-bottom: 0.5rem;
+}
+
+.content-section {
+  flex-grow: 1;
+  margin: 0.5rem 0;
+}
+
+.action-section {
+  margin-top: 0.5rem;
+}
+
+/* 社区版特定样式 */
+.pricing-column.basic .inner-column {
+  position: relative;
+  z-index: 1;
+  background: var(--vp-c-bg);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-column.basic .plan-type {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.5rem;
+}
+
+.pricing-column.basic .price {
+  text-align: left;
+  margin-bottom: 0.25rem;
+  line-height: 0.9;
+}
+
+.pricing-column.basic .free {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: var(--vp-c-brand);
+  line-height: 1;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.pricing-column.basic .period {
+  font-size: 1.25rem;
+  color: var(--vp-c-text-2);
+  vertical-align: bottom;
+  line-height: 1;
+}
+
+.pricing-column.basic .description {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.pricing-column.basic .features {
+  margin: 0.25rem 0;
+}
+
+.pricing-column.basic .feature-item {
+  margin-bottom: 0.25rem;
+  padding: 0.15rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pricing-column.basic .feature-item.disabled {
+  opacity: 0.5;
+}
+
+.pricing-column.basic .check {
+  color: var(--vp-c-brand);
+}
+
+.pricing-column.basic .cross {
+  color: var(--vp-c-text-2);
+}
+
+/* 社区版按钮样式 */
+.pricing-column.basic .cta-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid var(--vp-c-brand);
+  color: var(--vp-c-brand);
+  background: transparent;
+}
+
+.pricing-column.basic .cta-button:hover {
+  background: var(--vp-c-brand-dimm);
+}
+
+/* 分隔线样式 */
+.pricing-column.basic .divider {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--vp-c-brand) 50%,
+    transparent 100%
+  );
+  opacity: 0.5;
+  margin: 0.5rem 0;
 }
 </style>
