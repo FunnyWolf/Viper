@@ -240,9 +240,16 @@ defineProps({
 }
 
 .free {
-  text-align: left;
-  margin-bottom: 0.25rem;
-  line-height: 0.9;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--vp-c-brand);
+  line-height: 1;
+  background: linear-gradient(135deg,
+    var(--vp-c-brand) 0%,
+    var(--vp-c-brand-dark) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .amount {
