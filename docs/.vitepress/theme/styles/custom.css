@@ -1,11 +1,16 @@
 /* 调整导航栏链接字号 */
 /*.VPNavBarMenuLink {*/
-/*  font-size: 18px !important;  !* 按需调整数值 *!*/
+/*  font-size: 16px !important;  !* 按需调整数值 *!*/
 /*}*/
 
-/* 调整导航栏标题（logo旁文字）字号 */
+/*.VPNavBarMenuGroup .title {*/
+/*  font-size: 16px !important;*/
+/*  font-weight: 500;*/
+/*}*/
+
+
 /*.VPNavBarTitle .title {*/
-/*  font-size: 20px !important;*/
+/*  font-size: 18px !important;*/
 /*}*/
 /*.VPNavBarTitle .logo {*/
 /*  height: 28px !important;*/

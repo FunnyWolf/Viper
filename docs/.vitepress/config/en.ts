@@ -15,7 +15,6 @@ export const en = defineConfig({
             '/guide/': {base: '/guide/', items: sidebarGuide()},
             '/module/': {base: '/module/', items: sidebarModule()},
             '/training/': {base: '/training/', items: sidebarTraining()},
-            '/blog/': {base: '/blog/', items: sidebarBlog()},
             '/policies/': {base: '/policies/', items: sidebarPolicies()}
         },
 
@@ -34,32 +33,27 @@ export const en = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
     return [
         {
-            text: 'Guide',
+            text: 'GUIDE',
             link: '/guide/welcome_to_viper',
             activeMatch: '/guide/'
         },
         {
-            text: 'Module',
+            text: 'MODULE',
             link: '/module/index',
             activeMatch: '/module/'
         },
         {
-            text: 'Training',
+            text: 'TRAINING',
             link: '/training/index',
             activeMatch: '/training/'
         },
         {
-            text: 'Blog',
-            link: '/blog/index',
-            activeMatch: '/blog/'
-        },
-        {
-            text: 'Pricing',
+            text: 'PRICING',
             link: '/pricing',
             activeMatch: '/pricing'
         },
         {
-            text: "Changelog",
+            text: "CHANGELOG",
             items: [
                 {
                     text: '3.1.2 - Pentest Agent and MCP Server',
@@ -391,32 +385,34 @@ function sidebarTraining(): DefaultTheme.SidebarItem[] {
                 {text: 'Behinder and Viper Collaboration', link: 'Behinder_and_Viper_collaborate'},
                 {text: 'cthun3 and Viper Collaboration', link: 'cthun3_and_viper_collaborate'},
             ]
-        }
+        },
+        {
+            text: 'Blog',
+            collapsed: false,
+            items: [
+                {
+                    text: 'Viper Open Source Graphical Intranet Penetration Tool Installation and Beginner Guide',
+                    link: 'viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide'
+                },
+                {text: 'Viper Semi-automated Intranet Information Gathering', link: 'viper_semi_automated_intranet_information_gathering'},
+                {text: 'Invisible Wings: MSF Using DNS Tunnel for Online', link: 'invisible_wings_msf_using_dns_tunnel_for_online'},
+                {text: 'MSF Execute Assembly and CobaltStrike Execute Assembly', link: 'msfexecute_assembly_and_cobaltstrikeexecute_assembly'},
+                {text: 'MSF Sleep and CobaltStrike Sleep', link: 'msfsleep_and_cobaltstrikesleep'},
+                {text: 'New Ideas for Building Intranet Tunnels Without Internet', link: 'no_internet_intranet_tunnel_construction_new_ideas'},
+                {text: 'Two Ways of Automated Process Injection', link: 'two_ways_of_automated_process_injection'},
+                {text: 'Simple Zero-cost Way to Hide C2 Server Using Heroku', link: 'utilize_heroku_to_hide_c2_server_simple_zero_cost'},
+                {text: 'How to Efficiently Use Cloud Functions in MSF', link: 'how_to_use_cloud_functions_efficiently_in_msf'},
+                {text: 'How to Make MSF Meterpreter as Stable as CS Beacon', link: 'how_to_transform_msf_meterpreter_as_stable_as_cs_beacon'},
+                {text: 'FRP and Cloud Functions for Intranet Penetration', link: 'frp_and_cloud_functions_for_intranet_penetration'},
+                {text: 'Building Log4j Passive Scanner from Scratch', link: 'build_log4j_passive_scanner_from_scratch'},
+                {text: 'Offensive Cybersecurity Intelligent Agent', link: 'offensive_cybersecurity_intelligent_agent'},
+                {text: 'Intelligent Epoch: AI Large Model Driven Red Team Attack Techniques', link: 'intelligent_epoch_ai_large_model_driven_red_team_attack_techniques'},
+                {text: 'Intelligent Epoch: AI Large Model Driven Red Team Attack Techniques II', link: 'intelligent_epoch_ai_large_model_driven_red_team_attack_techniques_ii'},
+            ]
+        },
     ]
 }
 
-function sidebarBlog(): DefaultTheme.SidebarItem[] {
-    return [
-        {
-            text: 'Viper Open Source Graphical Intranet Penetration Tool Installation and Beginner Guide',
-            link: 'viper_open_source_graphical_intrAnet_penetration_tool_installation_and_beginner_guide'
-        },
-        {text: 'Viper Semi-automated Intranet Information Gathering', link: 'viper_semi_automated_intranet_information_gathering'},
-        {text: 'Invisible Wings: MSF Using DNS Tunnel for Online', link: 'invisible_wings_msf_using_dns_tunnel_for_online'},
-        {text: 'MSF Execute Assembly and CobaltStrike Execute Assembly', link: 'msfexecute_assembly_and_cobaltstrikeexecute_assembly'},
-        {text: 'MSF Sleep and CobaltStrike Sleep', link: 'msfsleep_and_cobaltstrikesleep'},
-        {text: 'New Ideas for Building Intranet Tunnels Without Internet', link: 'no_internet_intranet_tunnel_construction_new_ideas'},
-        {text: 'Two Ways of Automated Process Injection', link: 'two_ways_of_automated_process_injection'},
-        {text: 'Simple Zero-cost Way to Hide C2 Server Using Heroku', link: 'utilize_heroku_to_hide_c2_server_simple_zero_cost'},
-        {text: 'How to Efficiently Use Cloud Functions in MSF', link: 'how_to_use_cloud_functions_efficiently_in_msf'},
-        {text: 'How to Make MSF Meterpreter as Stable as CS Beacon', link: 'how_to_transform_msf_meterpreter_as_stable_as_cs_beacon'},
-        {text: 'FRP and Cloud Functions for Intranet Penetration', link: 'frp_and_cloud_functions_for_intranet_penetration'},
-        {text: 'Building Log4j Passive Scanner from Scratch', link: 'build_log4j_passive_scanner_from_scratch'},
-        {text: 'Offensive Cybersecurity Intelligent Agent', link: 'offensive_cybersecurity_intelligent_agent'},
-        {text: 'Intelligent Epoch: AI Large Model Driven Red Team Attack Techniques', link: 'intelligent_epoch_ai_large_model_driven_red_team_attack_techniques'},
-        {text: 'Intelligent Epoch: AI Large Model Driven Red Team Attack Techniques II', link: 'intelligent_epoch_ai_large_model_driven_red_team_attack_techniques_ii'},
-    ]
-}
 
 function sidebarPolicies(): DefaultTheme.SidebarItem[] {
     return [
