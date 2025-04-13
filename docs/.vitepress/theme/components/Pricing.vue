@@ -7,7 +7,6 @@
             <div class="plan-type">{{ config.basic.title }}</div>
             <div class="price">
               <span class="free">{{ config.basic.freeLabel }}</span>
-              <span class="period">/{{ config.basic.period }}</span>
             </div>
             <div class="divider"></div>
             <p class="description">{{ config.basic.description }}</p>
@@ -49,7 +48,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="action-section">
             <a :href="config.pro.ctaLink" target="_blank" class="cta-button primary">{{ config.pro.ctaText }}</a>
           </div>
@@ -92,15 +91,63 @@ defineProps({
   transition: transform 0.3s ease;
 }
 
-.pricing-column::before {
+.pricing-column.basic::before {
   content: '';
   position: absolute;
   inset: 0;
   padding: 2px;
   background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.05)
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 16px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+  linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.pricing-column.basic .inner-column {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.pricing-column.basic .inner-column::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 100%, rgba(95, 103, 238, 0.9) 0%, transparent 50%),
+  radial-gradient(circle at 0% 100%, rgba(95, 103, 238, 0.8) 0%, transparent 40%),
+  radial-gradient(circle at 100% 100%, rgba(65, 209, 255, 0.8) 0%, transparent 40%),
+  radial-gradient(circle at 0% 70%, rgba(95, 103, 238, 0.4) 0%, transparent 30%),
+  radial-gradient(circle at 100% 70%, rgba(65, 209, 255, 0.4) 0%, transparent 30%),
+  linear-gradient(to top,
+      rgba(18, 18, 18, 0.2) 0%,
+      rgba(18, 18, 18, 0.7) 30%,
+      rgba(18, 18, 18, 0.9) 60%,
+      rgba(18, 18, 18, 0.95) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientFlow 15s ease infinite;
+  z-index: -1;
+  filter: blur(20px);
+  opacity: 0.9;
+}
+
+.pricing-column.pro::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
   );
   border-radius: 16px;
   -webkit-mask: linear-gradient(#fff 0 0) content-box,
@@ -114,11 +161,11 @@ defineProps({
   z-index: 1;
   background: var(--vp-c-bg);
   border-radius: 12px;
-  padding: 1.25rem 1.5rem;  /* 减小内边距 */
+  padding: 1.25rem 1.5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
-  text-align: left; /* 所有内容左对齐 */
+  text-align: left;
 }
 
 .gradient-content {
@@ -134,23 +181,17 @@ defineProps({
   content: '';
   position: absolute;
   inset: 0;
-  background: 
-    /* 底部主要光源 */
-    radial-gradient(circle at 50% 100%, rgba(255, 0, 255, 0.9) 0%, transparent 50%),
-    radial-gradient(circle at 0% 100%, rgba(255, 0, 128, 0.8) 0%, transparent 40%),
-    radial-gradient(circle at 100% 100%, rgba(0, 255, 255, 0.8) 0%, transparent 40%),
-    
-    /* 中部过渡 */
-    radial-gradient(circle at 0% 70%, rgba(255, 128, 0, 0.4) 0%, transparent 30%),
-    radial-gradient(circle at 100% 70%, rgba(0, 255, 128, 0.4) 0%, transparent 30%),
-    
-    /* 整体底色渐变 - 从底部明亮过渡到顶部暗色 */
-    linear-gradient(to top,
-      rgba(18, 18, 18, 0.2) 0%,    /* 底部较透明 */
-      rgba(18, 18, 18, 0.7) 30%,   /* 渐变过渡 */
-      rgba(18, 18, 18, 0.9) 60%,   /* 渐变过渡 */
-      rgba(18, 18, 18, 0.95) 100%  /* 顶部接近全黑 */
-    );
+  background: radial-gradient(circle at 50% 100%, rgba(255, 0, 255, 0.9) 0%, transparent 50%),
+  radial-gradient(circle at 0% 100%, rgba(255, 0, 128, 0.8) 0%, transparent 40%),
+  radial-gradient(circle at 100% 100%, rgba(0, 255, 255, 0.8) 0%, transparent 40%),
+  radial-gradient(circle at 0% 70%, rgba(255, 128, 0, 0.4) 0%, transparent 30%),
+  radial-gradient(circle at 100% 70%, rgba(0, 255, 128, 0.4) 0%, transparent 30%),
+  linear-gradient(to top,
+      rgba(18, 18, 18, 0.2) 0%,
+      rgba(18, 18, 18, 0.7) 30%,
+      rgba(18, 18, 18, 0.9) 60%,
+      rgba(18, 18, 18, 0.95) 100%
+  );
   background-size: 200% 200%;
   animation: gradientFlow 15s ease infinite;
   z-index: -1;
@@ -172,46 +213,46 @@ defineProps({
 
 .header-section {
   text-align: center;
-  margin-bottom: 0.5rem;  /* 减小头部区域底部间距 */
+  margin-bottom: 0.5rem;
 }
 
 .content-section {
   flex-grow: 1;
-  margin: 0.5rem 0;  /* 减小内容区域上下间距 */
+  margin: 0.5rem 0;
 }
 
 .action-section {
-  margin-top: 0.5rem;  /* 减小按钮区域顶部间距 */
+  margin-top: 0.5rem;
 }
 
 .plan-type {
   font-size: 1.75rem;
-  font-weight: 800; /* 加粗 */
+  font-weight: 800;
   color: var(--vp-c-text-1);
-  margin-bottom: 0.5rem;  /* 减小标题下方间距 */
+  margin-bottom: 0.5rem;
   text-align: left;
 }
 
 .price {
   text-align: left;
-  margin-bottom: 0.25rem;  /* 减小价格下方间距 */
-  line-height: 0.9;  /* 调整行高使价格更紧凑 */
+  margin-bottom: 0.25rem;
+  line-height: 0.9;
 }
 
 .free {
-  font-size: 3.5rem; /* 调大字体 */
-  font-weight: 900; /* 更粗 */
-  color: var(--vp-c-brand);
+  text-align: left;
+  margin-bottom: 0.25rem;
+  line-height: 0.9;
 }
 
 .amount {
-  font-size: 4rem; /* 调大字体 */
-  font-weight: 900; /* 更粗 */
+  font-size: 4rem;
+  font-weight: 900;
   color: var(--vp-c-brand);
   line-height: 1;
   background: linear-gradient(135deg,
-    var(--vp-c-brand) 0%,
-    var(--vp-c-brand-dark) 100%
+  var(--vp-c-brand) 0%,
+  var(--vp-c-brand-dark) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -226,14 +267,14 @@ defineProps({
 .divider {
   height: 2px;
   background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--vp-c-brand) 50%,
-    transparent 100%
+      90deg,
+      transparent 0%,
+      var(--vp-c-brand) 50%,
+      transparent 100%
   );
   opacity: 0.5;
   animation: dividerFlow 3s ease infinite;
-  margin: 0.5rem 0;  /* 减小分隔线上下间距 */
+  margin: 0.5rem 0;
 }
 
 @keyframes dividerFlow {
@@ -246,19 +287,19 @@ defineProps({
 }
 
 .description {
-  font-size: 1.25rem; /* 调大描述文字 */
-  font-weight: 600; /* 加粗 */
+  font-size: 1.25rem;
+  font-weight: 600;
   color: var(--vp-c-text-1);
-  margin-bottom: 0.5rem;  /* 减小描述下方间距 */
-  line-height: 1.3;  /* 调整行高 */
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
   text-align: left;
 }
 
 .features {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;  /* 减小特性项之间的间距 */
-  margin: 0.25rem 0;  /* 减小特性列表整体间距 */
+  gap: 0.5rem;
+  margin: 0.25rem 0;
 }
 
 .feature-item {
@@ -266,7 +307,7 @@ defineProps({
   align-items: center;
   color: var(--vp-c-text-1);
   font-size: 1.0625rem;
-  padding: 0.15rem 0;  /* 减小特性项内部间距 */
+  padding: 0.15rem 0;
   position: relative;
   transition: transform 0.2s ease;
 }
@@ -283,10 +324,10 @@ defineProps({
   width: 100%;
   height: 1px;
   background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(var(--vp-c-brand-rgb), 0.2),
-    transparent
+      90deg,
+      transparent,
+      rgba(var(--vp-c-brand-rgb), 0.2),
+      transparent
   );
 }
 
@@ -332,8 +373,8 @@ defineProps({
 .cta-button {
   display: block;
   width: 100%;
-  padding: 0.75rem;  /* 减小按钮内部间距 */
-  margin-top: 0.5rem;  /* 减小按钮顶部间距 */
+  padding: 0.75rem;
+  margin-top: 0.5rem;
   border-radius: 8px;
   font-weight: 600;
   font-size: 1.125rem;
@@ -351,7 +392,7 @@ defineProps({
 
 .cta-button.primary {
   background: white;
-  color: #000;  /* 黑色文字 */
+  color: #000;
   font-weight: 700;
   border: none;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
@@ -366,8 +407,8 @@ defineProps({
 
 .price .amount {
   background: linear-gradient(135deg,
-    var(--vp-c-brand) 0%,
-    var(--vp-c-brand-dark) 100%
+  var(--vp-c-brand) 0%,
+  var(--vp-c-brand-dark) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -412,13 +453,13 @@ defineProps({
 
 /* Pro版本特殊样式 */
 .pricing-column.pro .description {
-  font-size: 1.35rem; /* 更大的描述文字 */
-  font-weight: 700; /* 更粗 */
-  color: white; /* 确保在深色背景上清晰可见 */
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: white;
 }
 
 .pricing-column.pro .feature-item {
-  color: rgba(255, 255, 255, 0.9); /* 提高特性文字对比度 */
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* 确保在暗色主题下的可读性 */
@@ -435,7 +476,7 @@ defineProps({
   .pricing-table {
     grid-template-columns: 1fr;
   }
-  
+
   .pricing-column {
     max-width: 400px;
     margin: 0 auto;
@@ -444,7 +485,7 @@ defineProps({
   .pro {
     transform: scale(1);
   }
-  
+
   .pro:hover {
     transform: scale(1.02);
   }
@@ -472,7 +513,7 @@ defineProps({
 /* 修改按钮文字颜色 */
 .cta-button.primary {
   background: white;
-  color: #000;  /* 黑色文字 */
+  color: #000; /* 黑色文字 */
   font-weight: 700;
   border: none;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
@@ -537,27 +578,16 @@ defineProps({
   margin-bottom: 0.5rem;
 }
 
-.pricing-column.basic .price {
-  text-align: left;
-  margin-bottom: 0.25rem;
-  line-height: 0.9;
-}
 
 .pricing-column.basic .free {
   font-size: 4.5rem;
   font-weight: 900;
-  color: var(--vp-c-brand);
+
   line-height: 1;
   display: inline-block;
   margin-right: 4px;
 }
 
-.pricing-column.basic .period {
-  font-size: 1.25rem;
-  color: var(--vp-c-text-2);
-  vertical-align: bottom;
-  line-height: 1;
-}
 
 .pricing-column.basic .description {
   font-size: 1.35rem;
@@ -616,10 +646,10 @@ defineProps({
 .pricing-column.basic .divider {
   height: 2px;
   background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--vp-c-brand) 50%,
-    transparent 100%
+      90deg,
+      transparent 0%,
+      var(--vp-c-brand) 50%,
+      transparent 100%
   );
   opacity: 0.5;
   margin: 0.5rem 0;

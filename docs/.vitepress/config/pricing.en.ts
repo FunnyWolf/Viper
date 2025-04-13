@@ -2,7 +2,6 @@ export const pricingConfig = {
   basic: {
     title: 'Community',
     freeLabel: 'Free',
-    period: 'month',
     description: 'Try core features for free',
     ctaText: 'Get Started',
     ctaLink: '/guide/getting_start',

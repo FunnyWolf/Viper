@@ -2,7 +2,6 @@ export const pricingConfig = {
   basic: {
     title: '社区版',
     freeLabel: '免费',
-    period: '月',
     description: '核心功能免费试用',
     ctaText: '免费开始',
     ctaLink: '/zh/guide/getting_start',
