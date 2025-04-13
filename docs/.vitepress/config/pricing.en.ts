@@ -21,7 +21,7 @@ export const pricingConfig = {
     title: 'Professional',
     popularTag: 'Most Popular',
     price: '9',
-    period: 'month',
+    period: 'user/month',
     description: 'For professional red teams and enterprises',
     ctaText: 'Upgrade Now',
     ctaLink: 'https://www.creem.io/payment/prod_50tkiXWWYeOfBOXPV83eei',

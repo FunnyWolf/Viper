@@ -21,7 +21,7 @@ export const pricingConfig = {
     title: '专业版',
     popularTag: '最受欢迎',
     price: '9',
-    period: '月',
+    period: '用户/月',
     description: '适用于专业红队和企业',
     ctaText: '立即升级',
     ctaLink: 'https://www.creem.io/payment/prod_50tkiXWWYeOfBOXPV83eei',
