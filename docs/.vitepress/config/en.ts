@@ -13,7 +13,7 @@ export const en = defineConfig({
 
         sidebar: {
             '/guide/': {base: '/guide/', items: sidebarGuide()},
-            '/module/': {base: '/module/', items: sidebarReference()},
+            '/module/': {base: '/module/', items: sidebarModule()},
             '/training/': {base: '/training/', items: sidebarTraining()},
             '/blog/': {base: '/blog/', items: sidebarBlog()},
             '/policies/': {base: '/policies/', items: sidebarPolicies()}
@@ -83,7 +83,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             items: [
                 {text: 'Welcome to Viper', link: 'welcome_to_viper'},
                 {text: 'Getting Start', link: 'getting_start'},
-                {text: 'Screenshots', link: 'screenshots'},
+
             ]
         },
         {
@@ -169,14 +169,25 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Installation Directory', link: 'installation_directory_introduction'},
                 {text: 'Open Source Software', link: 'open_source_software'},
                 {text: 'Known Issues', link: 'issues'},
+                {text: 'Screenshots', link: 'screenshots'},
                 {text: '', link: ''},
             ]
         }
     ]
 }
 
-function sidebarReference(): DefaultTheme.SidebarItem[] {
+function sidebarModule(): DefaultTheme.SidebarItem[] {
     return [
+        {
+            text: 'AI Agent',
+            collapsed: false,
+            items: [
+                {text: 'Pentest Agent', link: 'AI_Agent_Session_LangGraph_Pentest'},
+                {text: 'Phishing Agent', link: 'AI_Agent_Phishing_LangGraph_Mail'},
+                // {text: 'Reconnaissance Agent', link: 'AI_Agent_Session_LangGraph_Discovery'},
+                {text: 'Viper Operations Agent', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
+            ]
+        },
         {
             text: 'Resource Deployment',
             collapsed: false,
@@ -349,15 +360,7 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
                 {text: 'Log4j2 CVE-2021-44228 Scan', link: 'HttpProxyScan_Log4J2'},
             ]
         },
-        {
-            text: 'AI Agents',
-            collapsed: false,
-            items: [
-                {text: 'Phishing Email Generator/Sender', link: 'AI_Agent_Phishing_LangGraph_Mail'},
-                {text: 'Reconnaissance Agent', link: 'AI_Agent_Session_LangGraph_Discovery'},
-                {text: 'Viper Operations Agent', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
-            ]
-        }
+
     ]
 }
 

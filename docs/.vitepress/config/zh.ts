@@ -13,7 +13,7 @@ export const zh = defineConfig({
 
         sidebar: {
             '/zh/guide/': {base: '/zh/guide/', items: sidebarGuide()},
-            '/zh/module/': {base: '/zh/module/', items: sidebarReference()},
+            '/zh/module/': {base: '/zh/module/', items: sidebarModule()},
             '/zh/training/': {base: '/zh/training/', items: sidebarTraining()},
             '/zh/blog/': {base: '/zh/blog/', items: sidebarBlog()},
             '/zh/policies/': {base: '/zh//policies/', items: sidebarPolicies()}
@@ -107,7 +107,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             items: [
                 {text: '欢迎使用', link: 'welcome_to_viper'},
                 {text: '快速开始', link: 'getting_start'},
-                {text: '平台截图', link: 'screenshots'},
+
             ]
         },
         {
@@ -196,13 +196,23 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '开源软件', link: 'open_source_software'},
                 {text: '问题汇总/下载日志', link: 'issues'},
                 {text: '反溯源', link: 'avoid_tracing'},
+                {text: '平台截图', link: 'screenshots'},
             ]
         }
     ]
 }
 
-function sidebarReference(): DefaultTheme.SidebarItem[] {
+function sidebarModule(): DefaultTheme.SidebarItem[] {
     return [
+        {
+            text: '智能体',
+            collapsed: false,
+            items: [
+                {text: '渗透测试智能体', link: 'AI_Agent_Session_LangGraph_Pentest'},
+                {text: '钓鱼邮件智能体', link: 'AI_Agent_Phishing_LangGraph_Mail'},
+                {text: '平台操作智能体', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
+            ]
+        },
         {
             text: '资源部署',
             collapsed: false,
@@ -382,16 +392,6 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
             items: [
 
                 {text: 'Log4j2 CVE-2021-44228 扫描', link: 'HttpProxyScan_Log4J2'},
-            ]
-        },
-        {
-            text: '智能助手',
-            collapsed: false,
-            items: [
-
-                {text: '邮件生成/发送智能体', link: 'AI_Agent_Phishing_LangGraph_Mail'},
-                {text: '信息收集智能体', link: 'AI_Agent_Session_LangGraph_Discovery'},
-                {text: '平台操作智能体', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
             ]
         }
     ]
