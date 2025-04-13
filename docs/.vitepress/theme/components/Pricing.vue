@@ -707,7 +707,7 @@ defineProps({
   }
 }
 
-/* 调整 basic features 样式以完全匹配 pro */
+/* 确保 basic features 样式完全匹配 pro */
 .pricing-column.basic .features {
   display: flex;
   flex-direction: column;
@@ -723,28 +723,41 @@ defineProps({
   padding: 0.15rem 0;
   position: relative;
   transition: transform 0.2s ease;
+  gap: 0.5rem; /* 添加图标和文字之间的间距 */
 }
 
 .pricing-column.basic .feature-item:hover {
   transform: translateX(5px);
 }
 
-/* 移除之前添加的分隔线 */
-.pricing-column.basic .feature-item::after {
-  display: none;
-}
-
 .pricing-column.basic .feature-item.disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.pricing-column.basic .check,
+.pricing-column.basic .cross {
+  width: 1.25rem; /* 确保图标宽度一致 */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .pricing-column.basic .check {
   color: var(--vp-c-brand);
-  margin-right: 0.5rem;
 }
 
 .pricing-column.basic .cross {
   color: rgba(255, 255, 255, 0.5);
-  margin-right: 0.5rem;
+}
+
+/* 确保内容区域的间距一致 */
+.pricing-column.basic .content-section {
+  flex-grow: 1;
+  margin: 0.5rem 0;
+}
+
+/* 移除任何可能影响对齐的额外边距 */
+.pricing-column.basic .feature-item > span {
+  margin: 0;
 }
 </style>
