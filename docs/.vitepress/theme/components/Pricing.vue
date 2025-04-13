@@ -654,4 +654,56 @@ defineProps({
   opacity: 0.5;
   margin: 0.5rem 0;
 }
+
+/* 调整 basic 的大小和动画效果 */
+.pricing-column.basic {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  padding: 8px;
+  border-radius: 16px;
+  background: var(--vp-c-bg);
+}
+
+.pricing-column.basic:hover {
+  transform: scale(1.08);
+}
+
+.pricing-column.basic .inner-column {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 2rem; /* 与 pro 相同的内边距 */
+}
+
+/* 调整 basic 的文字大小以匹配 pro */
+.pricing-column.basic .plan-type {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.pricing-column.basic .free {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.pricing-column.basic .description {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: white;
+}
+
+.pricing-column.basic .feature-item {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .pricing-column.basic {
+    transform: scale(1);
+  }
+
+  .pricing-column.basic:hover {
+    transform: scale(1.02);
+  }
+}
 </style>
