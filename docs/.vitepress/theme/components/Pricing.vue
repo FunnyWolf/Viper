@@ -32,7 +32,6 @@
             <div class="divider"></div>
             <p class="description">{{ config.pro.description }}</p>
           </div>
-          
           <div class="content-section">
             <div class="features">
               <div v-for="(feature, index) in config.pro.features"
@@ -108,10 +107,11 @@ defineProps({
   z-index: 1;
   background: var(--vp-c-bg);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.5rem;  /* 减小内边距 */
   height: 100%;
   display: flex;
   flex-direction: column;
+  text-align: left; /* 所有内容左对齐 */
 }
 
 .gradient-content {
@@ -163,47 +163,55 @@ defineProps({
 
 .header-section {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* 减小段落间距 */
 }
 
 .content-section {
   flex-grow: 1;
-  margin: 2rem 0;
+  margin: 1rem 0; /* 减小内容区间距 */
 }
 
 .action-section {
   margin-top: auto;
-  padding-top: 2rem;
+  padding-top: 1rem; /* 减小按钮区域上边距 */
 }
 
 .plan-type {
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 800; /* 加粗 */
   color: var(--vp-c-text-1);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* 减小间距 */
+  text-align: left;
 }
 
 .price {
-  text-align: center;
-  margin-bottom: 1rem;
+  text-align: left;
+  margin-bottom: 0.75rem; /* 减小间距 */
 }
 
 .free {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3.5rem; /* 调大字体 */
+  font-weight: 900; /* 更粗 */
   color: var(--vp-c-brand);
 }
 
 .amount {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 4rem; /* 调大字体 */
+  font-weight: 900; /* 更粗 */
   color: var(--vp-c-brand);
   line-height: 1;
+  background: linear-gradient(135deg,
+    var(--vp-c-brand) 0%,
+    var(--vp-c-brand-dark) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .period {
   font-size: 1.25rem;
   color: var(--vp-c-text-2);
+  margin-left: 4px;
 }
 
 .divider {
@@ -216,6 +224,7 @@ defineProps({
   );
   opacity: 0.5;
   animation: dividerFlow 3s ease infinite;
+  margin: 0.75rem 0; /* 减小间距 */
 }
 
 @keyframes dividerFlow {
@@ -228,16 +237,18 @@ defineProps({
 }
 
 .description {
-  color: var(--vp-c-text-2);
-  font-size: 1.125rem;
-  line-height: 1.5;
-  margin: 1rem 0;
+  font-size: 1.25rem; /* 调大描述文字 */
+  font-weight: 600; /* 加粗 */
+  color: var(--vp-c-text-1);
+  margin-bottom: 1rem; /* 减小间距 */
+  text-align: left;
 }
 
 .features {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin: 1rem 0; /* 减小间距 */
 }
 
 .feature-item {
@@ -245,7 +256,7 @@ defineProps({
   align-items: center;
   color: var(--vp-c-text-1);
   font-size: 1.0625rem;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0; /* 减小特性项间距 */
   position: relative;
   transition: transform 0.2s ease;
 }
@@ -311,7 +322,8 @@ defineProps({
 .cta-button {
   display: block;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
   border-radius: 8px;
   font-weight: 600;
   font-size: 1.125rem;
@@ -328,22 +340,18 @@ defineProps({
 }
 
 .cta-button.primary {
-  background: linear-gradient(135deg, 
-    var(--vp-c-brand) 0%, 
-    var(--vp-c-brand-dark) 100%
-  );
+  background: white;
+  color: #000;  /* 黑色文字 */
+  font-weight: 700;
   border: none;
-  box-shadow: 0 4px 15px rgba(var(--vp-c-brand-rgb), 0.3);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 .cta-button.primary:hover {
-  background: linear-gradient(135deg, 
-    var(--vp-c-brand-dark) 0%, 
-    var(--vp-c-brand) 100%
-  );
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(var(--vp-c-brand-rgb), 0.4);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
 .price .amount {
@@ -392,6 +400,26 @@ defineProps({
   opacity: 0.8;
 }
 
+/* Pro版本特殊样式 */
+.pricing-column.pro .description {
+  font-size: 1.35rem; /* 更大的描述文字 */
+  font-weight: 700; /* 更粗 */
+  color: white; /* 确保在深色背景上清晰可见 */
+}
+
+.pricing-column.pro .feature-item {
+  color: rgba(255, 255, 255, 0.9); /* 提高特性文字对比度 */
+}
+
+/* 确保在暗色主题下的可读性 */
+:root.dark .pricing-column.pro .description {
+  color: white;
+}
+
+:root.dark .pricing-column.pro .feature-item {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
   .pricing-table {
@@ -410,5 +438,68 @@ defineProps({
   .pro:hover {
     transform: scale(1.02);
   }
+}
+
+/* 修复价格显示 */
+.pricing-column.pro .amount {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: white;
+  background: none;
+  -webkit-text-fill-color: white;
+  line-height: 1;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.pricing-column.pro .period {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  vertical-align: bottom;
+}
+
+/* 修改按钮文字颜色 */
+.cta-button.primary {
+  background: white;
+  color: #000;  /* 黑色文字 */
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.cta-button.primary:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* 调整间距 */
+.header-section {
+  margin-bottom: 0.75rem;  /* 减小底部间距 */
+}
+
+.content-section {
+  margin: 0.75rem 0;  /* 上下间距都减小 */
+}
+
+.action-section {
+  margin-top: 0.75rem;  /* 减小顶部间距 */
+}
+
+/* 确保内容区域紧凑 */
+.features {
+  margin: 0.5rem 0;
+}
+
+.feature-item {
+  margin-bottom: 0.5rem;  /* 减小特性项之间的间距 */
+  padding: 0.25rem 0;
+}
+
+/* 确保价格区域紧凑 */
+.price {
+  margin-bottom: 0.5rem;
+  line-height: 1;
 }
 </style>
