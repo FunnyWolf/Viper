@@ -1,5 +1,9 @@
 <template>
   <div class="pricing-comparison">
+    <div class="pricing-header">
+      <h2 class="pricing-title">Pricing</h2>
+      <p class="pricing-subtitle">Choose the plan that works for you</p>
+    </div>
     <div class="pricing-table">
       <div class="pricing-column basic">
         <div class="inner-column">
@@ -49,7 +53,7 @@
             </div>
           </div>
           <div class="action-section">
-            <a :href="config.pro.ctaLink" target="_blank" class="cta-button primary">{{ config.pro.ctaText }}</a>
+            <a :href="config.pro.ctaLink" target="_blank" class="cta-button">{{ config.pro.ctaText }}</a>
           </div>
         </div>
       </div>
@@ -78,7 +82,7 @@ defineProps({
 .pricing-table {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 6rem;
   margin-bottom: 2rem;
 }
 
@@ -179,12 +183,12 @@ defineProps({
 
 .price {
   text-align: left;
-  margin-bottom: 0.25rem;
+  margin: 1.5rem 0;
   line-height: 0.9;
 }
 
 .amount {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 900;
   color: white;
   line-height: 1;
@@ -307,31 +311,20 @@ defineProps({
   width: 100%;
   padding: 0.75rem;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.125rem;
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
-  border: 2px solid var(--vp-c-brand);
-  color: var(--vp-c-brand);
-  background: transparent;
-}
-
-.cta-button:hover {
-  background: var(--vp-c-brand-dimm);
-  transform: translateY(-2px);
-}
-
-.cta-button.primary {
   background: white;
   color: #000;
-  font-weight: 700;
   border: none;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
-.cta-button.primary:hover {
+.cta-button:hover {
   background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
@@ -390,5 +383,24 @@ defineProps({
   .pricing-column:hover {
     transform: scale(1.02);
   }
+}
+
+.pricing-header {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.pricing-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.pricing-subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
 }
 </style>
