@@ -7,6 +7,7 @@ import Features from './components/Features.vue'
 import Hero from './components/Hero.vue'
 import KeyFeatures from "./components/KeyFeatures.vue";
 import Testimonials from "./components/Testimonials.vue";
+import Pricing from "./components/Pricing.vue";
 
 export default {
     extends: DefaultTheme,
@@ -16,6 +17,7 @@ export default {
         app.component('Hero', Hero)
         app.component('KeyFeatures', KeyFeatures)
         app.component('Testimonials', Testimonials)
+        app.component('Pricing', Pricing)
         googleAnalytics({
             id: 'G-8MSHMM5T8X',
         });
