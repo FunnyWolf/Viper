@@ -22,26 +22,23 @@
       </div>
 
       <div class="pricing-column pro">
-        <div class="popular-tag">{{ config.pro.popularTag }}</div>
-        <div class="inner-column">
+        <div class="inner-column gradient-content">
           <div class="plan-type">{{ config.pro.title }}</div>
           <div class="price">
             <span class="amount">${{ config.pro.price }}</span>
             <span class="period">/{{ config.pro.period }}</span>
           </div>
           <div class="divider"></div>
-          <div class="gradient-content">
-            <p class="description">{{ config.pro.description }}</p>
-            <div class="features">
-              <div v-for="(feature, index) in config.pro.features"
-                   :key="index"
-                   class="feature-item">
-                <span class="check">✓</span>
-                <span>{{ feature.text }}</span>
-              </div>
+          <p class="description">{{ config.pro.description }}</p>
+          <div class="features">
+            <div v-for="(feature, index) in config.pro.features"
+                 :key="index"
+                 class="feature-item">
+              <span class="check">✓</span>
+              <span>{{ feature.text }}</span>
             </div>
-            <a :href="config.pro.ctaLink" target="_blank" class="cta-button primary">{{ config.pro.ctaText }}</a>
           </div>
+          <a :href="config.pro.ctaLink" target="_blank" class="cta-button primary">{{ config.pro.ctaText }}</a>
         </div>
       </div>
     </div>
@@ -263,7 +260,7 @@ defineProps({
   z-index: 1;
   overflow: hidden;
   border-radius: 12px;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -323,6 +320,22 @@ defineProps({
 /* 确保渐变效果不会影响其他元素 */
 .pricing-column.pro .inner-column {
   overflow: hidden;
+}
+
+/* 修改一些样式以适应新的结构 */
+.pricing-column.pro .inner-column {
+  padding: 0;
+}
+
+.pricing-column.pro .gradient-content {
+  height: 100%;
+}
+
+/* 确保按钮在渐变背景上可见 */
+.pricing-column.pro .cta-button {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {
