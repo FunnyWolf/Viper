@@ -107,7 +107,7 @@ defineProps({
   z-index: 1;
   background: var(--vp-c-bg);
   border-radius: 12px;
-  padding: 1.5rem;  /* 减小内边距 */
+  padding: 1.25rem 1.5rem;  /* 减小内边距 */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -163,30 +163,30 @@ defineProps({
 
 .header-section {
   text-align: center;
-  margin-bottom: 1rem; /* 减小段落间距 */
+  margin-bottom: 0.5rem;  /* 减小头部区域底部间距 */
 }
 
 .content-section {
   flex-grow: 1;
-  margin: 1rem 0; /* 减小内容区间距 */
+  margin: 0.5rem 0;  /* 减小内容区域上下间距 */
 }
 
 .action-section {
-  margin-top: auto;
-  padding-top: 1rem; /* 减小按钮区域上边距 */
+  margin-top: 0.5rem;  /* 减小按钮区域顶部间距 */
 }
 
 .plan-type {
   font-size: 1.75rem;
   font-weight: 800; /* 加粗 */
   color: var(--vp-c-text-1);
-  margin-bottom: 1rem; /* 减小间距 */
+  margin-bottom: 0.5rem;  /* 减小标题下方间距 */
   text-align: left;
 }
 
 .price {
   text-align: left;
-  margin-bottom: 0.75rem; /* 减小间距 */
+  margin-bottom: 0.25rem;  /* 减小价格下方间距 */
+  line-height: 0.9;  /* 调整行高使价格更紧凑 */
 }
 
 .free {
@@ -224,7 +224,7 @@ defineProps({
   );
   opacity: 0.5;
   animation: dividerFlow 3s ease infinite;
-  margin: 0.75rem 0; /* 减小间距 */
+  margin: 0.5rem 0;  /* 减小分隔线上下间距 */
 }
 
 @keyframes dividerFlow {
@@ -240,15 +240,16 @@ defineProps({
   font-size: 1.25rem; /* 调大描述文字 */
   font-weight: 600; /* 加粗 */
   color: var(--vp-c-text-1);
-  margin-bottom: 1rem; /* 减小间距 */
+  margin-bottom: 0.5rem;  /* 减小描述下方间距 */
+  line-height: 1.3;  /* 调整行高 */
   text-align: left;
 }
 
 .features {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin: 1rem 0; /* 减小间距 */
+  gap: 0.5rem;  /* 减小特性项之间的间距 */
+  margin: 0.25rem 0;  /* 减小特性列表整体间距 */
 }
 
 .feature-item {
@@ -256,7 +257,7 @@ defineProps({
   align-items: center;
   color: var(--vp-c-text-1);
   font-size: 1.0625rem;
-  padding: 0.25rem 0; /* 减小特性项间距 */
+  padding: 0.15rem 0;  /* 减小特性项内部间距 */
   position: relative;
   transition: transform 0.2s ease;
 }
@@ -322,8 +323,8 @@ defineProps({
 .cta-button {
   display: block;
   width: 100%;
-  padding: 1rem;
-  margin-top: 1rem;
+  padding: 0.75rem;  /* 减小按钮内部间距 */
+  margin-top: 0.5rem;  /* 减小按钮顶部间距 */
   border-radius: 8px;
   font-weight: 600;
   font-size: 1.125rem;
@@ -456,6 +457,7 @@ defineProps({
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.9);
   vertical-align: bottom;
+  line-height: 1;
 }
 
 /* 修改按钮文字颜色 */
@@ -472,34 +474,5 @@ defineProps({
   color: #000;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
-}
-
-/* 调整间距 */
-.header-section {
-  margin-bottom: 0.75rem;  /* 减小底部间距 */
-}
-
-.content-section {
-  margin: 0.75rem 0;  /* 上下间距都减小 */
-}
-
-.action-section {
-  margin-top: 0.75rem;  /* 减小顶部间距 */
-}
-
-/* 确保内容区域紧凑 */
-.features {
-  margin: 0.5rem 0;
-}
-
-.feature-item {
-  margin-bottom: 0.5rem;  /* 减小特性项之间的间距 */
-  padding: 0.25rem 0;
-}
-
-/* 确保价格区域紧凑 */
-.price {
-  margin-bottom: 0.5rem;
-  line-height: 1;
 }
 </style>
