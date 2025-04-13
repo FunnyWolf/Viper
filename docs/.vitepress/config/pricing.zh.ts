@@ -1,4 +1,8 @@
 export const pricingConfig = {
+  header: {
+    title: '定价',
+    subtitle: '选择适合您的方案'
+  },
   basic: {
     title: '社区版',
     freeLabel: '免费',

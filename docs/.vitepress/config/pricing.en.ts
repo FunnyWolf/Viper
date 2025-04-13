@@ -1,4 +1,8 @@
 export const pricingConfig = {
+  header: {
+    title: 'Pricing',
+    subtitle: 'Choose the plan that works for you'
+  },
   basic: {
     title: 'Community',
     freeLabel: 'Free',

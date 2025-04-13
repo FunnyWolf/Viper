@@ -1,8 +1,8 @@
 <template>
   <div class="pricing-comparison">
     <div class="pricing-header">
-      <h2 class="pricing-title">Pricing</h2>
-      <p class="pricing-subtitle">Choose the plan that works for you</p>
+      <h2 class="pricing-title">{{ config.header.title }}</h2>
+      <p class="pricing-subtitle">{{ config.header.subtitle }}</p>
     </div>
     <div class="pricing-table">
       <div class="pricing-column basic">
