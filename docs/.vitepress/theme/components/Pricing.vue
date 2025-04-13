@@ -128,12 +128,37 @@ defineProps({
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 0% 0%, rgba(255, 0, 128, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 100% 0%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(255, 0, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 0% 100%, rgba(255, 255, 0, 0.15) 0%, transparent 50%);
+    /* 左上角 */ radial-gradient(circle at 0% 0%, rgba(255, 0, 128, 0.8) 0%, transparent 50%),
+    /* 右上角 */ radial-gradient(circle at 100% 0%, rgba(0, 255, 255, 0.8) 0%, transparent 50%),
+    /* 右下角 */ radial-gradient(circle at 100% 100%, rgba(255, 0, 255, 0.8) 0%, transparent 50%),
+    /* 左下角 */ radial-gradient(circle at 0% 100%, rgba(255, 255, 0, 0.6) 0%, transparent 50%),
+    /* 左边中间 */ radial-gradient(circle at 0% 50%, rgba(255, 128, 0, 0.6) 0%, transparent 50%),
+    /* 右边中间 */ radial-gradient(circle at 100% 50%, rgba(0, 255, 128, 0.6) 0%, transparent 50%),
+    /* 整体底色渐变 */ linear-gradient(to top,
+      rgba(18, 18, 18, 0.4) 0%,
+      rgba(18, 18, 18, 0.95) 100%);
+  background-size: 200% 200%;
+  animation: gradientFlow 15s ease infinite;
   z-index: -1;
   filter: blur(20px);
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .header-section {
@@ -184,12 +209,22 @@ defineProps({
 .divider {
   height: 2px;
   background: linear-gradient(
-    to right,
-    transparent,
-    var(--vp-c-divider),
-    transparent
+    90deg,
+    transparent 0%,
+    var(--vp-c-brand) 50%,
+    transparent 100%
   );
-  margin: 1.5rem 0;
+  opacity: 0.5;
+  animation: dividerFlow 3s ease infinite;
+}
+
+@keyframes dividerFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .description {
@@ -211,6 +246,27 @@ defineProps({
   color: var(--vp-c-text-1);
   font-size: 1.0625rem;
   padding: 0.5rem 0;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(5px);
+}
+
+.feature-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(var(--vp-c-brand-rgb), 0.2),
+    transparent
+  );
 }
 
 .feature-item.disabled {
@@ -230,8 +286,21 @@ defineProps({
 }
 
 .check {
-  color: var(--vp-c-brand);
-  background: var(--vp-c-brand-dimm);
+  background: linear-gradient(135deg, var(--vp-c-brand) 0%, var(--vp-c-brand-dark) 100%);
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--vp-c-brand-rgb), 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--vp-c-brand-rgb), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--vp-c-brand-rgb), 0);
+  }
 }
 
 .cross {
@@ -259,13 +328,41 @@ defineProps({
 }
 
 .cta-button.primary {
-  background: var(--vp-c-brand);
-  color: var(--vp-c-bg);
+  background: linear-gradient(135deg, 
+    var(--vp-c-brand) 0%, 
+    var(--vp-c-brand-dark) 100%
+  );
+  border: none;
+  box-shadow: 0 4px 15px rgba(var(--vp-c-brand-rgb), 0.3);
+  transition: all 0.3s ease;
 }
 
 .cta-button.primary:hover {
-  background: var(--vp-c-brand-dark);
-  border-color: var(--vp-c-brand-dark);
+  background: linear-gradient(135deg, 
+    var(--vp-c-brand-dark) 0%, 
+    var(--vp-c-brand) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(var(--vp-c-brand-rgb), 0.4);
+}
+
+.price .amount {
+  background: linear-gradient(135deg,
+    var(--vp-c-brand) 0%,
+    var(--vp-c-brand-dark) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: priceGlow 3s ease-in-out infinite;
+}
+
+@keyframes priceGlow {
+  0%, 100% {
+    filter: brightness(100%) drop-shadow(0 0 2px rgba(var(--vp-c-brand-rgb), 0.2));
+  }
+  50% {
+    filter: brightness(120%) drop-shadow(0 0 4px rgba(var(--vp-c-brand-rgb), 0.4));
+  }
 }
 
 .pricing-disclaimer {
@@ -276,6 +373,26 @@ defineProps({
   font-style: italic;
 }
 
+.pro {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.pro:hover {
+  transform: scale(1.08);
+}
+
+.pro .inner-column {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* 确保渐变动画在暗色主题下更加明显 */
+:root.dark .gradient-content::before {
+  opacity: 0.8;
+}
+
+/* 响应式调整 */
 @media (max-width: 768px) {
   .pricing-table {
     grid-template-columns: 1fr;
@@ -284,6 +401,14 @@ defineProps({
   .pricing-column {
     max-width: 400px;
     margin: 0 auto;
+  }
+
+  .pro {
+    transform: scale(1);
+  }
+  
+  .pro:hover {
+    transform: scale(1.02);
   }
 }
 </style>
