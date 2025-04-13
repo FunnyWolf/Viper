@@ -6,14 +6,14 @@ export const pricingConfig = {
   basic: {
     title: '社区版',
     freeLabel: '免费',
-    description: '核心功能免费试用',
+    description: '核心功能免费使用',
     ctaText: '免费开始',
     ctaLink: '/zh/guide/getting_start',
     features: [
       { text: '30分钟session运行时长', enabled: true },
       { text: '2个并发session', enabled: true },
       { text: '2个并发handler', enabled: true },
-      { text: '自定义插件框架', enabled: false },
+      { text: '自定义插件', enabled: false },
       { text: '优先技术支持', enabled: false }
     ]
   },
@@ -29,7 +29,7 @@ export const pricingConfig = {
       { text: '无限session时长', enabled: true },
       { text: '无限并发session', enabled: true },
       { text: '无限并发handler', enabled: true },
-      { text: '自定义插件框架', enabled: true },
+      { text: '自定义插件', enabled: true },
       { text: '优先技术支持', enabled: true }
     ]
   },

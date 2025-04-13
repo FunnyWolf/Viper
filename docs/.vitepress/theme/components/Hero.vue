@@ -201,25 +201,28 @@ defineProps({
 }
 
 .theme-brand {
-  background: var(--vp-c-bg);
-  color: var(--vp-c-brand);
-  border: 2px solid var(--vp-c-brand);
+  background: var(--vp-c-white);
+  color: var(--vp-c-black);
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 .theme-brand:hover {
-  background: var(--vp-c-brand);
-  color: var(--vp-c-bg);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--vp-c-black);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
 .theme-alt {
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-1);
-  border: 1px solid var(--vp-c-divider);
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--vp-c-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .theme-alt:hover {
-  background: var(--vp-c-bg-mute);
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
 }
 

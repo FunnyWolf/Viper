@@ -13,7 +13,7 @@ export const pricingConfig = {
       { text: '30 minutes session duration', enabled: true },
       { text: '2 concurrent sessions', enabled: true },
       { text: '2 concurrent handlers', enabled: true },
-      { text: 'Custom plugin framework', enabled: false },
+      { text: 'Custom plugin', enabled: false },
       { text: 'Priority support', enabled: false }
     ]
   },
@@ -29,7 +29,7 @@ export const pricingConfig = {
       { text: 'Unlimited session duration', enabled: true },
       { text: 'Unlimited concurrent sessions', enabled: true },
       { text: 'Unlimited concurrent handlers', enabled: true },
-      { text: 'Custom plugin framework', enabled: true },
+      { text: 'Custom plugin', enabled: true },
       { text: 'Priority support', enabled: true }
     ]
   },
