@@ -706,4 +706,45 @@ defineProps({
     transform: scale(1.02);
   }
 }
+
+/* 调整 basic features 样式以完全匹配 pro */
+.pricing-column.basic .features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.25rem 0;
+}
+
+.pricing-column.basic .feature-item {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.0625rem;
+  padding: 0.15rem 0;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.pricing-column.basic .feature-item:hover {
+  transform: translateX(5px);
+}
+
+/* 移除之前添加的分隔线 */
+.pricing-column.basic .feature-item::after {
+  display: none;
+}
+
+.pricing-column.basic .feature-item.disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pricing-column.basic .check {
+  color: var(--vp-c-brand);
+  margin-right: 0.5rem;
+}
+
+.pricing-column.basic .cross {
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 0.5rem;
+}
 </style>
