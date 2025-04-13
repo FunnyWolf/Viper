@@ -128,36 +128,38 @@ defineProps({
   position: absolute;
   inset: 0;
   background: 
-    /* 左上角 */ radial-gradient(circle at 0% 0%, rgba(255, 0, 128, 0.8) 0%, transparent 50%),
-    /* 右上角 */ radial-gradient(circle at 100% 0%, rgba(0, 255, 255, 0.8) 0%, transparent 50%),
-    /* 右下角 */ radial-gradient(circle at 100% 100%, rgba(255, 0, 255, 0.8) 0%, transparent 50%),
-    /* 左下角 */ radial-gradient(circle at 0% 100%, rgba(255, 255, 0, 0.6) 0%, transparent 50%),
-    /* 左边中间 */ radial-gradient(circle at 0% 50%, rgba(255, 128, 0, 0.6) 0%, transparent 50%),
-    /* 右边中间 */ radial-gradient(circle at 100% 50%, rgba(0, 255, 128, 0.6) 0%, transparent 50%),
-    /* 整体底色渐变 */ linear-gradient(to top,
-      rgba(18, 18, 18, 0.4) 0%,
-      rgba(18, 18, 18, 0.95) 100%);
+    /* 底部主要光源 */
+    radial-gradient(circle at 50% 100%, rgba(255, 0, 255, 0.9) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(255, 0, 128, 0.8) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(0, 255, 255, 0.8) 0%, transparent 40%),
+    
+    /* 中部过渡 */
+    radial-gradient(circle at 0% 70%, rgba(255, 128, 0, 0.4) 0%, transparent 30%),
+    radial-gradient(circle at 100% 70%, rgba(0, 255, 128, 0.4) 0%, transparent 30%),
+    
+    /* 整体底色渐变 - 从底部明亮过渡到顶部暗色 */
+    linear-gradient(to top,
+      rgba(18, 18, 18, 0.2) 0%,    /* 底部较透明 */
+      rgba(18, 18, 18, 0.7) 30%,   /* 渐变过渡 */
+      rgba(18, 18, 18, 0.9) 60%,   /* 渐变过渡 */
+      rgba(18, 18, 18, 0.95) 100%  /* 顶部接近全黑 */
+    );
   background-size: 200% 200%;
   animation: gradientFlow 15s ease infinite;
   z-index: -1;
   filter: blur(20px);
+  opacity: 0.9;
 }
 
 @keyframes gradientFlow {
   0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 100% 0%;
+    background-position: 50% 100%;
   }
   50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
+    background-position: 50% 80%;
   }
   100% {
-    background-position: 0% 0%;
+    background-position: 50% 100%;
   }
 }
 
@@ -474,5 +476,24 @@ defineProps({
   color: #000;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* 增强Pro版本的内容可见度 */
+.pricing-column.pro .inner-column {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* 确保文字在渐变背景上清晰可见 */
+.pricing-column.pro .description,
+.pricing-column.pro .feature-item,
+.pricing-column.pro .amount,
+.pricing-column.pro .period {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 暗色主题优化 */
+:root.dark .gradient-content::before {
+  opacity: 0.95;
 }
 </style>
