@@ -23,4 +23,4 @@
 
 ## Reverse_dns Go Online
 
-[reverse_dns](../blog/invisible_wings_msf_using_dns_tunnel_for_online.md)
+[reverse_dns](../training/invisible_wings_msf_using_dns_tunnel_for_online.md)

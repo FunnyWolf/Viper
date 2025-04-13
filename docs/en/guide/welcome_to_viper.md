@@ -68,5 +68,5 @@ Install and try VIPER in 5 minutes? Jump to [Quick Start](./getting_start).
 
 + Read [Quick Start](getting_start.md) to install and try VIPER
 + Browse VIPER functions quickly through [Screenshots](screenshots.md)
-+ Adversary simulation with VIPER by referring to [Blog](../blog/index)
++ Adversary simulation with VIPER by referring to [Training](../training/index)
 + Unlock more premium features by [subscribing](../pricing)

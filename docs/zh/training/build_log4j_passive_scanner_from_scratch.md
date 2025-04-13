@@ -295,9 +295,7 @@ if __name__ == "__main__":
 
 ![](img\build_log4j_passive_scanner_from_scratch\3.webp)
 
-Readme教程链接
 
-[https://www.yuque.com/vipersec/blog/lgrqm4](https://www.yuque.com/vipersec/blog/lgrqm4)
 
 
 

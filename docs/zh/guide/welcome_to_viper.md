@@ -62,4 +62,4 @@
 
 + 阅读[快速开始](getting_start.md)安装并体验VIPER
 + 通过[平台截图](screenshots.md)速览VIPER功能
-+ 参考[博客](../blog/index)熟悉VIPER
++ 参考[教程](../training/index)熟悉VIPER
