@@ -32,11 +32,22 @@ check_environment() {
 
     # Check memory
     mem_total=$(grep MemTotal /proc/meminfo | awk '{print $2}')
-    if [[ $mem_total -lt $((2 * 1024 * 1024)) ]]; then
-        color_echo "Error: Memory less than 2GB (Available: $((mem_total/1024))MB)" red >&2
+    mem_gb=$(echo "scale=2; $mem_total/1024/1024" | bc)
+    
+    if (( $(echo "$mem_gb < 1.5" | bc -l) )); then
+        color_echo "Error: Memory less than 1.5GB (Available: ${mem_gb}GB)" red >&2
+        color_echo "VIPER requires at least 1.5GB RAM to function properly" red >&2
         exit 1
+    elif (( $(echo "$mem_gb < 2.0" | bc -l) )); then
+        color_echo "Warning: Memory less than recommended 2GB (Available: ${mem_gb}GB)" yellow >&2
+        color_echo "VIPER may experience performance issues with current memory" yellow >&2
+        read -p "Continue with installation? [y/N] " continue_install
+        if [[ ! "$continue_install" =~ ^[Yy]$ ]]; then
+            color_echo "Installation cancelled by user" red
+            exit 1
+        fi
     else
-        color_echo "[OK] Memory sufficient (Available: $((mem_total/1024))MB)"
+        color_echo "[OK] Memory sufficient (Available: ${mem_gb}GB)"
     fi
 
     # Check kernel version
