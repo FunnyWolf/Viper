@@ -32,11 +32,22 @@ check_environment() {
 
     # 检查内存
     mem_total=$(grep MemTotal /proc/meminfo | awk '{print $2}')
-    if [[ $mem_total -lt $((2 * 1024 * 1024)) ]]; then
-        color_echo "错误：内存不足 2GB（可用：$((mem_total/1024))MB）" red >&2
+    mem_gb=$(echo "scale=2; $mem_total/1024/1024" | bc)
+    
+    if (( $(echo "$mem_gb < 1.5" | bc -l) )); then
+        color_echo "错误：内存小于 1.5GB（可用：${mem_gb}GB）" red >&2
+        color_echo "VIPER 需要至少 1.5GB 内存才能正常运行" red >&2
         exit 1
+    elif (( $(echo "$mem_gb < 2.0" | bc -l) )); then
+        color_echo "警告：内存小于推荐的 2GB（可用：${mem_gb}GB）" yellow >&2
+        color_echo "当前内存配置可能会导致 VIPER 性能问题" yellow >&2
+        read -p "是否继续安装？[y/N] " continue_install
+        if [[ ! "$continue_install" =~ ^[Yy]$ ]]; then
+            color_echo "安装已取消" red
+            exit 1
+        fi
     else
-        color_echo "[OK] 内存充足（可用：$((mem_total/1024))MB）"
+        color_echo "[OK] 内存充足（可用：${mem_gb}GB）"
     fi
 
     # 检查内核版本
@@ -192,6 +203,64 @@ services:
         hard: 65534
     command: ["$viper_pass"]
 EOF
+
+    # 创建 nginxconfig 目录
+    mkdir -p "${viper_dir}/nginxconfig"
+    cd "${viper_dir}/nginxconfig"
+
+    # 生成 SSL 证书
+    Rand_Name() {
+        openssl rand -base64 8 | md5sum | cut -c1-8
+    }
+
+    Gen_Cert() {
+        color_echo "正在生成 /root/.rnd 随机文件"
+        openssl rand -writerand /root/.rnd
+        color_echo "正在生成随机名称"
+        rndca=$(Rand_Name)
+        rndserver=$(Rand_Name)
+        rndclient=$(Rand_Name)
+
+        color_echo "正在生成 SSL 证书"
+        openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes \
+            -out server.crt -keyout server.key \
+            -subj "/C=SI/ST=$rndca/L=$rndca/O=$rndca/OU=$rndca/CN=$rndca"
+    }
+    Gen_Cert
+
+    # 询问 VIPER 端口
+    read -p "请输入 VIPER 端口（默认：60000）：" viper_port
+    viper_port=${viper_port:-60000}
+
+    # 询问是否配置基本认证
+    read -p "是否配置基本认证？（推荐）[Y/n]：" configure_auth
+    configure_auth=${configure_auth:-Y}
+
+    if [[ "$configure_auth" =~ ^[Yy]$ ]]; then
+        # 生成 htpasswd 文件
+        encrypted_pass=$(openssl passwd -apr1 "$viper_pass")
+        echo "root:$encrypted_pass" > htpasswd
+
+        # 生成带基本认证的 nginx 配置
+        cat > viper.conf <<EOF
+listen $viper_port;
+location / {
+    root /root/viper/dist;
+    auth_basic "root";
+    auth_basic_user_file /root/viper/Docker/nginxconfig/htpasswd;
+}
+EOF
+    else
+        # 生成不带基本认证的 nginx 配置
+        cat > viper.conf <<EOF
+listen $viper_port;
+location / {
+    root /root/viper/dist;
+}
+EOF
+    fi
+
+    cd "$viper_dir"
 
     # 显示配置摘要
     color_echo "\n准备启动 VIPER 容器，请确认：" yellow
