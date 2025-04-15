@@ -1,20 +1,25 @@
-# 主面板
+# 主机&权限
+
+![img.png](webp/host_and_session_list/img.png)
 
 ## 运行模块
 
-点击后分别会展示`无需Session的模块列表`和`所有模块列表`
++ 点击后显示模块列表
+
+![img_1.png](webp/host_and_session_list/img_1.png)
+![img_2.png](webp/host_and_session_list/img_2.png)
 
 ## 主机操作入口
 
-点击主机IP会弹出主机操作的选择框
++ 点击主机IP会弹出主机操作的选择框
 
 ## 主机标签/备注
 
-点击主机的标签会打开主机标签备注修改功能
++ 点击主机的标签会打开主机标签备注修改功能
 
 ## 权限操作入口
 
-点击主机条目,会展开/缩放主机下所有的Session，点击Session条目会展示权限操作功能列表
++ 点击主机条目,会展开/缩放主机下所有的Session，点击Session条目会展示权限操作功能列表
 
 ## 权限信息提示
 

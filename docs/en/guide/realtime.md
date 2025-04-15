@@ -1,4 +1,6 @@
-# Real-time Output
+# Real-time
+
+![img.png](img.png)
 
 ## Module Results
 + The result information of the running module is displayed on the left side of the panel.

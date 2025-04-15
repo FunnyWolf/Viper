@@ -1,8 +1,10 @@
 # Running Modules
 
+![img.png](webp/run_module/img.png)
+
 ## Modules Requiring Session Module / Modules Not Requiring Session Module
 
-+ When clicking "Run Module" on a line with an existing session, all available modules will be displayed, including those that require a session and those that do not.
++ When clicking "Run Module" on a line with an existing session, all available modules will be displayed.
 
 + If clicking on a line without a session, by default, only modules that do not require a session will be displayed.
 
@@ -27,6 +29,6 @@
 
 + Clicking the delete button will manually terminate the background operation of the module.
 
-> The "Platform Log" will display **the module entering the background**, **the logs output during the module's operation**, and **the prompt after the module finishes running**.
->
+> The "Platform Log" will display **the module entering the background** **the logs output during the module's operation**, and **the prompt after the module finishes running**.
+
 > The "Module Results" shows the running results of the module, including **the end time of the run**, **the host IP**, **the module name**, **the module parameters**, **the output of the module results**, etc. 

@@ -1,7 +1,8 @@
 # Login
-+ After successfully installing Viper, visit [https://vpsip:60000](http://10.10.10.10:60000) to open the login interface.
+![img.png](webp/login/img.png)
+
++ After successfully installing Viper, visit [https://your_server_ip:60000](http://your_server_ip:60000) to open the login page.
 
 + Username: root, Password: **Custom password**
-> There is a password restriction in the program background. You cannot use "diypassword" as the password.
 
-+ After successful login, you will enter the main interface of Viper.
++ After successful login, you will enter the main page of Viper.
