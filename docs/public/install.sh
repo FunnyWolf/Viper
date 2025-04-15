@@ -192,6 +192,64 @@ services:
     command: ["$viper_pass"]
 EOF
 
+    # Create nginxconfig directory
+    mkdir -p "${viper_dir}/nginxconfig"
+    cd "${viper_dir}/nginxconfig"
+
+    # Generate SSL certificates
+    Rand_Name() {
+        openssl rand -base64 8 | md5sum | cut -c1-8
+    }
+
+    Gen_Cert() {
+        color_echo "Generating /root/.rnd random file"
+        openssl rand -writerand /root/.rnd
+        color_echo "Generating random names"
+        rndca=$(Rand_Name)
+        rndserver=$(Rand_Name)
+        rndclient=$(Rand_Name)
+
+        color_echo "Generating SSL certificates"
+        openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes \
+            -out server.crt -keyout server.key \
+            -subj "/C=SI/ST=$rndca/L=$rndca/O=$rndca/OU=$rndca/CN=$rndca"
+    }
+    Gen_Cert
+
+    # Ask for VIPER port
+    read -p "Enter VIPER port (default: 60000): " viper_port
+    viper_port=${viper_port:-60000}
+
+    # Ask for basic auth configuration
+    read -p "Configure basic authentication? (Recommended) [Y/n]: " configure_auth
+    configure_auth=${configure_auth:-Y}
+
+    if [[ "$configure_auth" =~ ^[Yy]$ ]]; then
+        # Generate htpasswd file
+        encrypted_pass=$(openssl passwd -apr1 "$viper_pass")
+        echo "root:$encrypted_pass" > htpasswd
+
+        # Generate nginx config with basic auth
+        cat > viper.conf <<EOF
+listen $viper_port;
+location / {
+    root /root/viper/dist;
+    auth_basic "root";
+    auth_basic_user_file /root/viper/Docker/nginxconfig/htpasswd;
+}
+EOF
+    else
+        # Generate nginx config without basic auth
+        cat > viper.conf <<EOF
+listen $viper_port;
+location / {
+    root /root/viper/dist;
+}
+EOF
+    fi
+
+    cd "$viper_dir"
+
     # Show configuration summary
     color_echo "\nReady to launch VIPER container. Please confirm:" yellow
     echo "----------------------------------------"
