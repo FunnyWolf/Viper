@@ -1,10 +1,10 @@
 # 快速开始
+
 ## 配置要求
 
-+ 最低配置需要2U4G
++ 2G空闲内存
 + 5G硬盘空间
 + Linux内核5.X以上(Ubuntu 22.04/kali Linux 2024.4/Debian 11)
-
 
 ## 自动安装 (推荐)
 
@@ -12,16 +12,10 @@
 bash <(curl -fsSL https://viperrtp.com/install_zh.sh)
 ```
 
-按照脚本提示进行操作即可。
-
-> 配置[反溯源](./avoid_tracing),避免被威胁情报平台标记
-> 
 > 通过[使用 VIPER](./try_viper) 熟悉Viper的相关功能
-
 
 ## 手动安装
 
-+ **准备一台linux系统的VPS**
 + **切换到root用户**
 
 ```shell
@@ -132,11 +126,11 @@ docker compose up -d
 + 等待15s系统启动,访问 [https://yourvpsip:60000](https://vpsip:60000/#/user/login) 登录. 用户名:root 密码:自定义密码
 
 > 所有的docker compose命令必须在安装目录执行才会有效果
-> 
+>
 > 使用VPS部署Viper,请确认VPS的防火墙开放了60000端口及后续监听需要的端口
 >
 > 配置[反溯源](./avoid_tracing),避免被威胁情报平台标记
 >
 > 通过[使用 VIPER](./try_viper) 熟悉Viper的相关功能
-> 
+>
 > Mac安装参考 [issues](issues)

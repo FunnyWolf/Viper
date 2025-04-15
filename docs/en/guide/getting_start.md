@@ -2,7 +2,7 @@
 
 ## Performance Requirements
 
-+ Minimum performance requires 2U4G
++ 2G free memory
 + 5G hard disk space
 + Linux kernel 5.X and above (Ubuntu 22.04/kali Linux 2024.4/Debian 11)
 
@@ -12,15 +12,12 @@
 bash <(curl -fsSL https://viperrtp.com/install.sh)
 ```
 
-Follow the prompts provided by the script.
-
-> Configure [anti-tracing](./avoid_tracing) to avoid being flagged by threat intelligence platforms.
->
 > Get familiar with Viper's related features through [Try Viper](./try_viper).
 
 ## Manual Installation
-- **Prepare a VPS with a Linux system.**
+
 - **Switch to the root user.**
+
 ```shell
 su root
 ```
@@ -100,13 +97,14 @@ services:
     command: ["VIPER_PASSWORD"]
 EOF
 ```
+
 - **Set the login password**
 
 ```shell
 export VIPER_PASSWORD=yourpassword
 ```
-> **Replace yourpassword with a custom password.**
 
+> **Replace yourpassword with a custom password.**
 
 - **Write the password to docker-compose.yml**
 
@@ -122,9 +120,8 @@ cd $VIPER_DIR
 docker compose up -d
 ```
 
-- Wait for 1min the system to ready, then visit [https://your-vps-ip:60000](https://vpsip:60000/#/user/login) to log in. 
+- Wait for 1min the system to ready, then visit [https://your-vps-ip:60000](https://vpsip:60000/#/user/login) to log in.
 - Username: **root**   Password: **Custom password**
-
 
 > All docker compose commands must be executed in the installation directory to take effect.
 >
