@@ -3,7 +3,7 @@
 # Main Function
 Achieve persistence by writing scheduled tasks through the Windows API
 
-# Precautions
+# Note
 In most cases, it can bypass anti - virus software. It is a recommended persistence method
 
 # Operation Method
@@ -11,4 +11,4 @@ In most cases, it can bypass anti - virus software. It is a recommended persiste
 + Obtain a Session
 + Execute the module
 
-![](img\Persistence_ScheduledTask_Windows\1.webp)
+![](img/Persistence_ScheduledTask_Windows/1.webp)

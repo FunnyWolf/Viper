@@ -5,7 +5,7 @@ The module achieves persistence by writing the path of the Trojan file into the 
 - HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run
 - HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 
-## Precautions
+## Note
 It is not anti-detection.
 
 ## Operation Method

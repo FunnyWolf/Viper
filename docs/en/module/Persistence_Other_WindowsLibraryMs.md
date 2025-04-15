@@ -4,7 +4,7 @@
 The Trojan DLL file is written into the Documents.library-ms configuration file and Junction Folders are created.
 It takes effect when the user logs in or browses the desktop.
 
-# Precautions
+# Note
 It is not anti-detection.
 
 # Operation Method

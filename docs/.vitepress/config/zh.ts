@@ -109,24 +109,23 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 {text: '主机信息', link: 'information'},
-                {text: '端口服务', link: 'portservice'},
-                {text: '主机漏洞', link: 'vulnerability'},
+                {text: '开放端口', link: 'portservice'},
+                {text: '已知漏洞', link: 'vulnerability'},
                 {text: '删除主机', link: 'delete'},
                 {text: '', link: ''},
-
             ]
         },
         {
             text: '权限操作',
             collapsed: false,
             items: [
-                {text: '运行信息', link: 'dashboard'},
-                {text: '内网路由', link: 'route'},
-                {text: '命令终端', link: 'console'},
-                {text: '端口转发', link: 'portfwd'},
-                {text: '文件管理', link: 'explorer'},
                 {text: '权限信息', link: 'session'},
+                {text: '文件管理', link: 'explorer'},
+                {text: '内网路由', link: 'route'},
+                {text: '端口转发', link: 'portfwd'},
                 {text: '传输协议', link: 'transport'},
+                {text: '命令终端', link: 'console'},
+                {text: '运行信息', link: 'dashboard'},
                 {text: '删除权限', link: 'terminate'},
                 {text: '', link: ''},
             ]

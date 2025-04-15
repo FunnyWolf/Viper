@@ -3,7 +3,7 @@
 # Main Functions
 Achieve persistence by writing the path of the Trojan file in the registry key HKEY_CURRENT_USER\Software\Microsoft\Office test\Special\Perf. Whenever an Office program is run (such as opening a Word document), the Trojan file will be automatically executed.
 
-# Precautions
+# Note
 This method is not undetectable.
 
 # Operation Method

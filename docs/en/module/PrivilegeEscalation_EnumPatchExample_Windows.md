@@ -9,5 +9,5 @@ Obtain the patches currently installed on Windows
 
 ![](img\PrivilegeEscalation_EnumPatchExample_Windows\1.webp)
 
-# Precautions
+# Note
 This module is mainly used to demonstrate how to call Metasploit Framework (MSF) modules within Viper modules.

@@ -8,5 +8,5 @@ Generate anti-detection EXE
 + Open the module and select the corresponding https listener.
 + After running the module, a zip file will be generated in "File Management", which contains the anti-detection EXE payload and the corresponding C++ code.
 
-# Precautions
+# Note
 + Can bypass Windows Defender (20210611)

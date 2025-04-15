@@ -12,7 +12,7 @@ If a penetration test engineer breaks into the internal network through the meth
 ## Running Principle
 PrependMigrate is one of the advanced parameters of Payload in Metasploit-framework. After entering the payload module, you can view this parameter by using `advanced`.
 
-![](img\two_ways_of_automated_process_injection\1.webp)
+![](img/two_ways_of_automated_process_injection/1.webp)
 
 From the description of the parameters, when this parameter is set to true, a new system process will be automatically created, and the shellcode will be injected into the new process. You can specify which system process to inject into by the PrependMigrateProc parameter.
 
@@ -136,11 +136,11 @@ It can be summarized that its function is mainly realized through assembly langu
 ## Running Effect
 After correctly configuring this parameter in the payload, the corresponding shellcode is generated. When the loader is used to load the generated shellcode, a new system process will be automatically created and the shellcode will be injected into the new process.
 
-![](img\two_ways_of_automated_process_injection\2.webp)
+![](img/two_ways_of_automated_process_injection/2.webp)
 
-![](img\two_ways_of_automated_process_injection\3.webp)
+![](img/two_ways_of_automated_process_injection/3.webp)
 
-## Precautions
+## Note
 As can be seen from the previous analysis, PrependMigrate realizes by embedding assembly code into the shellcode of the payload. Its advantages are early execution stage and stable operation. The following two points need to be noted:
 
 + PrependMigrate can only be applied to Payload and cannot be applied to Handler because PrependMigrate runs in the stager1 stage before connecting to the handler.
@@ -154,7 +154,7 @@ This method is the method introduced in various tutorials on the network. Its im
 
 There are two parameters for automatic execution scripts, `InitialAutoRunScript` and `AutoRunScript`. The parameter information is as follows:
 
-![](img\two_ways_of_automated_process_injection\4.webp)
+![](img/two_ways_of_automated_process_injection/4.webp)
 
 It can be seen that their functions are to automatically execute scripts (changed to post-type modules in msf5) after the Session is created. `InitialAutoRunScript` is executed before `AutoRunScript`.
 
@@ -306,11 +306,11 @@ The basic process is as follows:
 ## Running Effect
 After correctly configuring the parameters in the Handler, all Sessions that use this Handler to go online will take effect. After the Session is initialized, it will automatically migrate to the specified process.
 
-![](img\two_ways_of_automated_process_injection\5.webp)
+![](img/two_ways_of_automated_process_injection/5.webp)
 
-![](img\two_ways_of_automated_process_injection\6.webp)
+![](img/two_ways_of_automated_process_injection/6.webp)
 
-## Precautions
+## Note
 As can be seen from the previous analysis, InitialAutoRunScript + migrate starts to run after the Session is initialized. The following points need to be noted:
 
 + InitialAutoRunScript + migrate can only be applied to Handler and cannot be applied to Payload. Because when it is executed, the Payload has been executed.

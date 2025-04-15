@@ -1,13 +1,17 @@
 # Delete Hosts
 
-You can delete host information, and you can also perform batch deletion in "Host Management".
+![img.png](webp/delete/img.png)
 
-## Frequently Asked Questions
+- You can batch delete hosts in `Route&Proxy`
 
-+ Why can't I delete a host?
+![img_1.png](webp/delete/img_1.png)
 
-If there is an active Session for the current host, Viper will automatically create new host information.
+## Common Issues
+
++ Why does a deleted host reappear?
+
+If the host has an active Session, Viper will automatically create new host information.
 
 + Why does the Session still exist after deleting the host?
 
-Deleting a host only removes the host-related information stored in the database. Viper will not close the corresponding session. 
+Deleting a host only removes the host information and does not close the corresponding session.

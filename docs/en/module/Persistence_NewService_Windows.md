@@ -5,7 +5,7 @@ The module achieves persistent control by registering the uploaded Payload file 
 
 This module requires Session system privileges or administrator privileges.
 
-# Precautions
+# Note
 Administrator privileges or System privileges are required, and it is not anti-detection.
 
 # Operation Method

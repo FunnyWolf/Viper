@@ -8,11 +8,11 @@ Generate anti-detection ELF
 + Open the module and select the corresponding listener
 + After running the module, a zip file will be generated in the "File Management", containing the anti-detection ELF payload and the corresponding C++ code
 
-![](img\Execution_UserExecution_LinuxSplitShellcodeLoader\1.webp)
+![](img/Execution_UserExecution_LinuxSplitShellcodeLoader/1.webp)
 
-![](img\Execution_UserExecution_LinuxSplitShellcodeLoader\2.webp)
+![](img/Execution_UserExecution_LinuxSplitShellcodeLoader/2.webp)
 
-# Precautions
+# Note
 The module is currently only compatible with the following payloads:
 
 linux/x86/meterpreter/reverse_tcp 
