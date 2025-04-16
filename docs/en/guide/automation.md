@@ -15,7 +15,11 @@ If the `Automatic Orchestration` includes modules that generate new privileges (
 
 After configuring this parameter, if the system determines that the number of privileges corresponding to a single host (same internal network IP) exceeds the configured number, it will automatically skip the automatic orchestration module.
 
+![img_1.png](webp/automation/img_1.png)
+
 ## Session Scheduled Task Module
 
 + Sessions will automatically execute modules at scheduled times according to the configuration information.
-+ Can `Pause Execution`/`Resume Operation`.
++ Can `Pause`/`Resume`.
+
+![img.png](webp/automation/img.png)

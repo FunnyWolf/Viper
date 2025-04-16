@@ -1,5 +1,9 @@
 # 端口转发
 
+![img.png](webp/portfwd/img_1.png)
+
+![img.png](webp/portfwd/img.png)
+
 ## 正向转发
 
 + 正向转发是将VPS的网络端口转发到Session所在内网的某IP某端口.常用于连接内网的某服务,如RDP,SSH等.

@@ -1,26 +1,29 @@
-# Handler & Payloads
+# Handler and Payload
+
+![img_1.png](webp/handler_and_payload/img_1.png)
 
 ## Virtual Handler
 
-+ In some scenarios of internal network penetration (such as injecting shellcode, spawning processes, and AB network positive handers), only a quick call to the existing handler configuration is required, without actually establishing a network listener or network connection. This can be achieved by creating a virtual listener. Virtual listeners and actual listeners can be converted into each other.
-+ "Virtual handler" means storing the input listening configuration options in the cache, but not creating an actually running listener in the server. The listening configuration can be quickly selected when running modules/transport protocols later.
-+ "Virtual listeners" still exist after the system restarts and can be used in scenarios such as spear phishing and persistence.
-+ Real listeners are represented by green icons, and virtual listeners are represented by gray icons.
-+ Virtual listeners and actual listeners can be converted into each other through "Generate Virtual Listener" and "Generate Real Listener".
++ In certain internal network penetration scenarios (such as shellcode injection, spawn process, AB network forward handler), you may only need to quickly call existing handler configurations without establishing actual network listeners or connections. This can be achieved through creating virtual handlers
++ Virtual handlers and real handlers can be converted to each other
++ A `virtual handler` refers to storing the input handler configuration options in cache without establishing an actual running handler on the server. The handler configuration can be quickly selected when running modules/transport protocols later
++ `Virtual handlers` persist after system restart and can be used in scenarios such as phishing simulation and persistence
++ Real handlers are indicated by green icons, while virtual handlers are indicated by gray icons
++ Virtual and real handlers can be converted to each other through `To Virtual` and `To Real` options
 
-## HTTPS Certificates
+## HTTPS Certificate
 
-+ Viper comes with an ssl certificate `www.example.com.pem` by default. It can be directly used for https encryption when in use. Users can also upload a certificate in pem format by themselves. Note that the certificate must contain both the public key and the private key. For the specific format, refer to the `www.example.com.pem` file.
++ Viper comes with a built-in SSL certificate `www.example.com.pem` that can be used directly for HTTPS encryption. Users can also upload their own PEM format certificates. Note that the certificate must contain both public and private keys. Refer to the `www.example.com.pem` file for the specific format
 
 ## Generate PE/ELF
 
-+ You can click the "Generate PE/ELF" button in the listener to quickly generate payloads. The Windows-type payload is a source code compilation version, and the Linux-type payload is of the elf type.
++ You can quickly generate payloads by clicking the `Generate PE/ELF` button in the handler
 
-## Generate Payloads
+## Generate Payload
 
-+ Select the "Generate Payload" button to manually enter configurations to generate payloads.
-+ Select the "Auto-Listen" option to automatically add the listener corresponding to the payload after the payload generation is completed.
++ Select the `Generate Payload` button to manually input configuration to generate payloads
++ Select the `Auto Handler` option to automatically add the corresponding handler after generating the payload
 
-## Reverse_dns Go Online
+## Reverse_dns Connection
 
 [reverse_dns](../training/invisible_wings_msf_using_dns_tunnel_for_online.md)

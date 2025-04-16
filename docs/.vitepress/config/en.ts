@@ -3,7 +3,7 @@ import {type DefaultTheme, defineConfig} from 'vitepress'
 
 export const en = defineConfig({
     lang: 'en-US',
-    description: 'A Powerful And Flexible Red Team Platform.',
+    description: 'The AI Red Team Platform.',
 
     themeConfig: {
         nav: nav(),
@@ -120,7 +120,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Route&Proxy', link: 'routeproxy'},
                 {text: 'Credential', link: 'credential'},
                 {text: 'Automation', link: 'automation'},
-                {text: 'Msfconsole', link: 'msfconsole'},
+                {text: 'AI Agent', link: 'ai_agent'},
+                {text: 'MsfConsole', link: 'msfconsole'},
                 // {text: 'Network Scanning', link: 'internet_scan'},
                 // {text: 'Passive Scanning', link: 'passive_scan'},
                 {text: '', link: ''},
@@ -139,7 +140,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'ServerChan Bot', link: 'server_bot'},
                 {text: 'Telegram Bot', link: 'telegram_bot'},
                 {text: 'About Viper', link: 'about_viper'},
-                {text: 'Avoid Tracing', link: 'avoid_tracing'},
                 {text: 'MCP Server', link: 'mcpserver'},
                 // {text: 'Aiqicha API', link: 'aiqicha_api'},
                 // {text: 'FOFA API', link: 'fofa_api'},
@@ -158,6 +158,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Change Password', link: 'change_password'},
                 {text: 'OS Optimization', link: 'os_optimization'},
                 {text: 'Installation Directory', link: 'installation_directory_introduction'},
+                {text: 'Avoid Tracing', link: 'avoid_tracing'},
                 {text: 'Open Source Software', link: 'open_source_software'},
                 {text: 'Known Issues', link: 'issues'},
                 {text: 'Screenshots', link: 'screenshots'},

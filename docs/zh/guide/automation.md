@@ -15,7 +15,11 @@
 
 在配置了该参数之后,如果系统判断单一主机(同一个内网IP)对应的权限数量大于配置数量,则自动跳过自动编排模块.
 
+![img.png](webp/automation/img.png)
+
 ## Session定时任务模块
 
 + Session会按照配置信息自动化定时执行模块
 + 可以`暂停执行`/`恢复运行`
+
+![img_1.png](webp/automation/img_1.png)

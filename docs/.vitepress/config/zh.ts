@@ -3,7 +3,7 @@ import {type DefaultTheme, defineConfig} from 'vitepress'
 
 export const zh = defineConfig({
     lang: 'zh-Hans',
-    description: '强大且灵活的红队平台',
+    description: 'AI红队平台',
 
     themeConfig: {
         nav: nav(),
@@ -139,16 +139,14 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '监听载荷', link: 'handler_and_payload'},
                 {text: '回连过滤', link: 'handler_firewall'},
                 {text: 'WebDelivery', link: 'web_delivery'},
-                {text: '自动编排', link: 'automation'},
-                {text: '凭证管理', link: 'credential'},
                 {text: '文件列表', link: 'file_explorer'},
-                {text: '内网代理', link: 'routeproxy'},
-                {text: 'Msfconsole', link: 'msfconsole'},
                 {text: '网络拓扑', link: 'pivotgraph'},
-                {text: '全网扫描', link: 'internet_scan'},
-                {text: '被动扫描', link: 'passive_scan'},
+                {text: '内网代理', link: 'routeproxy'},
+                {text: '凭证管理', link: 'credential'},
+                {text: '自动编排', link: 'automation'},
+                {text: '智能体', link: 'ai_agent'},
+                {text: 'MsfConsole', link: 'msfconsole'},
                 {text: '', link: ''},
-
             ]
         },
 
@@ -156,20 +154,21 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: '平台配置',
             collapsed: false,
             items: [
+                {text: '许可管理', link: 'license'},
                 {text: '用户管理', link: 'user_management'},
                 {text: '通用配置', link: 'common_config'},
                 {text: 'OPENAI API', link: 'openai_api'},
                 {text: 'SMTP配置', link: 'smtp_config'},
-                {text: '钉钉机器人', link: 'dingding_bot'},
+                {text: 'DingDing Bot', link: 'dingding_bot'},
                 {text: 'Server酱 Bot', link: 'server_bot'},
                 {text: 'Telegram Bot', link: 'telegram_bot'},
+                {text: '关于Viper', link: 'about_viper'},
+                {text: 'MCP服务器', link: 'mcpserver'},
                 // {text: '爱企查API', link: 'aiqicha_api'},
                 // {text: 'Quake API', link: 'quake_api'},
                 // {text: 'FOFA API', link: 'fofa_api'},
                 // {text: 'Hunter API', link: 'hunter_api'},
                 // {text: 'Zoomeye API', link: 'zoomeye_api'},
-                {text: '关于Viper', link: 'about_viper'},
-                {text: 'MCP服务器', link: 'mcpserver'},
                 {text: '', link: ''},
             ]
         },

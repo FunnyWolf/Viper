@@ -1,5 +1,9 @@
 # Port Forwarding
 
+![img_1.png](webp/portfwd/img_1.png)
+
+![img.png](webp/portfwd/img.png)
+
 ## Forward Forwarding
 
 - Forward forwarding is to forward the network port of the VPS to a specific IP and port within the intranet where the Session is located. It is often used to connect to certain services within the intranet, such as RDP, SSH, etc.

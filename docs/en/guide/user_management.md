@@ -1,7 +1,9 @@
 # User Management
 
-### Supplementary Instructions
+![img_1.png](webp/user_management/img_1.png)
 
-All users have the same permissions and can perform any operation on the platform (including deleting other users).
+## Instructions
 
-The root user cannot be deleted.
+- All users have the same permissions and can perform any operation on the platform (including deleting other users).
+
+- The root user cannot be deleted.

@@ -1,6 +1,6 @@
 # 实时输出
 
-![img.png](img.png)
+![img.png](webp/realtime/img.png)
 
 ## 模块结果
 
