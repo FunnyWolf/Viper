@@ -10,7 +10,7 @@
         <img alt="Static Badge" src="https://img.shields.io/badge/Product-F04438"></a>
     <a href="https://www.viperrtp.com/pricing" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/free-pricing?logo=free&color=%20%23155EEF&label=pricing&labelColor=%20%23528bff"></a>
-    <a href="https://discord.gg/nrBzMm2t" target="_blank">
+    <a href="https://discord.gg/3R9yZvQueT" target="_blank">
         <img src="https://img.shields.io/badge/Community-blue?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
     <a href="https://twitter.com/intent/follow?screen_name=viperrtp" target="_blank">
