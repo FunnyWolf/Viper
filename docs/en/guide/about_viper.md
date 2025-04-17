@@ -1,17 +1,24 @@
 # About VIPER
 
-## Experimental Features
+![img.png](webp/about_viper/img.png)
 
-Enabling this switch will allow you to use features that are currently in Beta status, without affecting existing functionalities.
+## Latest Version
+The browser will check Github for Viper's latest version information
+
+> Github has query rate limits based on IP. If the query fails, please switch your browser proxy and try again
+
+## Backend Service
+
+Update the backend MSF service status
 
 ## Reload All Modules
 
-After uploading or modifying custom modules, click this button to use the modified modules without needing to restart the platform.
+After uploading or modifying custom modules, click this button to use the modified modules without restarting the platform.
 
 ## Clear RPCMSG
 
-RPCMSG is used to record messages generated during the agent scanning process (e.g., dnslog). This function can be used to clear historical records.
+RPCMSG is used to record messages generated during proxy scanning (such as dnslog). This function can be used to clear historical records.
 
 ## Download Logs
 
-Download all log files of the Viper platform in a package.
+Download a package containing all Viper platform log files.

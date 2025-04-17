@@ -136,8 +136,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'General Config', link: 'common_config'},
                 {text: 'OPENAI API', link: 'openai_api'},
                 {text: 'SMTP Config', link: 'smtp_config'},
-                {text: 'DingDing Bot', link: 'dingding_bot'},
                 {text: 'ServerChan Bot', link: 'server_bot'},
+                {text: 'DingDing Bot', link: 'dingding_bot'},
                 {text: 'Telegram Bot', link: 'telegram_bot'},
                 {text: 'About Viper', link: 'about_viper'},
                 {text: 'MCP Server', link: 'mcpserver'},
@@ -156,12 +156,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Update Version', link: 'update_version'},
                 {text: 'Shutdown Restart', link: 'shutdown_restart'},
                 {text: 'Change Password', link: 'change_password'},
-                {text: 'OS Optimization', link: 'os_optimization'},
                 {text: 'Installation Directory', link: 'installation_directory_introduction'},
                 {text: 'Avoid Tracing', link: 'avoid_tracing'},
                 {text: 'Open Source Software', link: 'open_source_software'},
                 {text: 'Known Issues', link: 'issues'},
-                {text: 'Screenshots', link: 'screenshots'},
                 {text: '', link: ''},
             ]
         }
