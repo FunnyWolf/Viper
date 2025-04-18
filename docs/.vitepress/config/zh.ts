@@ -159,9 +159,9 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '通用配置', link: 'common_config'},
                 {text: 'OPENAI API', link: 'openai_api'},
                 {text: 'SMTP配置', link: 'smtp_config'},
+                {text: 'Telegram Bot', link: 'telegram_bot'},
                 {text: 'Server酱 Bot', link: 'server_bot'},
                 {text: 'DingDing Bot', link: 'dingding_bot'},
-                {text: 'Telegram Bot', link: 'telegram_bot'},
                 {text: '关于Viper', link: 'about_viper'},
                 {text: 'MCP服务器', link: 'mcpserver'},
                 // {text: '爱企查API', link: 'aiqicha_api'},
@@ -181,7 +181,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '修改密码', link: 'change_password'},
                 {text: '国内安装Docker', link: 'install_docker_in_china'},
                 {text: '安装目录介绍', link: 'installation_directory_introduction'},
-                {text: '开源软件', link: 'open_source_software'},
                 {text: '问题汇总/下载日志', link: 'issues'},
                 {text: '反溯源', link: 'avoid_tracing'},
             ]

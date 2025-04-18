@@ -136,9 +136,9 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'General Config', link: 'common_config'},
                 {text: 'OPENAI API', link: 'openai_api'},
                 {text: 'SMTP Config', link: 'smtp_config'},
+                {text: 'Telegram Bot', link: 'telegram_bot'},
                 {text: 'ServerChan Bot', link: 'server_bot'},
                 {text: 'DingDing Bot', link: 'dingding_bot'},
-                {text: 'Telegram Bot', link: 'telegram_bot'},
                 {text: 'About Viper', link: 'about_viper'},
                 {text: 'MCP Server', link: 'mcpserver'},
                 // {text: 'Aiqicha API', link: 'aiqicha_api'},
@@ -158,7 +158,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'Change Password', link: 'change_password'},
                 {text: 'Installation Directory', link: 'installation_directory_introduction'},
                 {text: 'Avoid Tracing', link: 'avoid_tracing'},
-                {text: 'Open Source Software', link: 'open_source_software'},
                 {text: 'Known Issues', link: 'issues'},
                 {text: '', link: ''},
             ]
