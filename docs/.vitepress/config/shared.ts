@@ -7,6 +7,8 @@ import {
 } from 'vitepress-plugin-group-icons'
 import lightbox from "vitepress-plugin-lightbox"
 import {handleHeadMeta} from "../theme/handleHeadMeta";
+import minipic from 'vite-plugin-minipic'
+
 export const shared = defineConfig({
   title: 'VIPER',
 
@@ -113,6 +115,27 @@ export const shared = defineConfig({
           ),
           // firebase: 'logos:firebase'
         }
+      }),
+      minipic({
+        sharpOptions: {
+          avif: {
+            quality: 80
+          },
+          png: {
+            quality: 80
+          },
+          jpeg: {
+            quality: 80
+          },
+          jpg: {
+            quality: 80
+          },
+          webp: {
+            quality: 80
+          },
+          gif: {}
+        },
+        cache: true // Enable caching for better performance
       })
     ]
   }
