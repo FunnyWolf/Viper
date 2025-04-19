@@ -361,25 +361,25 @@ function sidebarModule(): DefaultTheme.SidebarItem[] {
                 {text: '分卷压缩目录/文件(7z)', link: 'Collection_ArchiveCollectedData_ArchiveViaCustomMethod_7z'},
             ]
         },
-        {
-            text: '全网扫描',
-            collapsed: false,
-            items: [
-
-                {text: 'Gitlab ExifTool RCE', link: 'Bot_MSF_Exp_GitlabExifRce'},
-                {text: 'SSH暴力破解', link: 'Bot_MSF_Exp_SSHBruteForce'},
-                {text: 'vbulletin widget模板命令执行', link: 'Bot_MSF_Exp_VbulletinWidgetTemplateRce'},
-                {text: 'VMware Horizon Log4j Rce', link: 'Bot_Python_Poc_Log4j2_VMwareHorizon'},
-            ]
-        },
-        {
-            text: '被动扫描',
-            collapsed: false,
-            items: [
-
-                {text: 'Log4j2 CVE-2021-44228 扫描', link: 'HttpProxyScan_Log4J2'},
-            ]
-        }
+        // {
+        //     text: '全网扫描',
+        //     collapsed: false,
+        //     items: [
+        //
+        //         {text: 'Gitlab ExifTool RCE', link: 'Bot_MSF_Exp_GitlabExifRce'},
+        //         {text: 'SSH暴力破解', link: 'Bot_MSF_Exp_SSHBruteForce'},
+        //         {text: 'vbulletin widget模板命令执行', link: 'Bot_MSF_Exp_VbulletinWidgetTemplateRce'},
+        //         {text: 'VMware Horizon Log4j Rce', link: 'Bot_Python_Poc_Log4j2_VMwareHorizon'},
+        //     ]
+        // },
+        // {
+        //     text: '被动扫描',
+        //     collapsed: false,
+        //     items: [
+        //
+        //         {text: 'Log4j2 CVE-2021-44228 扫描', link: 'HttpProxyScan_Log4J2'},
+        //     ]
+        // }
     ]
 }
 

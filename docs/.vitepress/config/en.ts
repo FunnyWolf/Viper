@@ -332,23 +332,23 @@ function sidebarModule(): DefaultTheme.SidebarItem[] {
                 {text: 'Split Archive via 7z', link: 'Collection_ArchiveCollectedData_ArchiveViaCustomMethod_7z'},
             ]
         },
-        {
-            text: 'Internet Scanning',
-            collapsed: false,
-            items: [
-                {text: 'GitLab ExifTool RCE', link: 'Bot_MSF_Exp_GitlabExifRce'},
-                {text: 'SSH Brute Force', link: 'Bot_MSF_Exp_SSHBruteForce'},
-                {text: 'vBulletin Widget Template RCE', link: 'Bot_MSF_Exp_VbulletinWidgetTemplateRce'},
-                {text: 'VMware Horizon Log4j RCE', link: 'Bot_Python_Poc_Log4j2_VMwareHorizon'},
-            ]
-        },
-        {
-            text: 'Passive Scanning',
-            collapsed: false,
-            items: [
-                {text: 'Log4j2 CVE-2021-44228 Scan', link: 'HttpProxyScan_Log4J2'},
-            ]
-        },
+        // {
+        //     text: 'Internet Scanning',
+        //     collapsed: false,
+        //     items: [
+        //         {text: 'GitLab ExifTool RCE', link: 'Bot_MSF_Exp_GitlabExifRce'},
+        //         {text: 'SSH Brute Force', link: 'Bot_MSF_Exp_SSHBruteForce'},
+        //         {text: 'vBulletin Widget Template RCE', link: 'Bot_MSF_Exp_VbulletinWidgetTemplateRce'},
+        //         {text: 'VMware Horizon Log4j RCE', link: 'Bot_Python_Poc_Log4j2_VMwareHorizon'},
+        //     ]
+        // },
+        // {
+        //     text: 'Passive Scanning',
+        //     collapsed: false,
+        //     items: [
+        //         {text: 'Log4j2 CVE-2021-44228 Scan', link: 'HttpProxyScan_Log4J2'},
+        //     ]
+        // },
 
     ]
 }
