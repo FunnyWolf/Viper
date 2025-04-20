@@ -16,18 +16,17 @@ Oh, and we tweaked the AI functionality a bit too.
 
 ## New Telegram Bot
 
-We've redesigned the Telegram Bot functionality in this version. Users no longer need to create their own bot - just open the official Viperrtp bot and send your chat_id to receive
-messages.
+We've redesigned the Telegram Bot functionality in this version. Users no longer need to create their own bot - just open the official Viperrtp bot and send your chat_id to receive messages.
 
-[Telegram Bot Documentation](../../en/guide/telegram_bot.md)
+[Telegram Bot Documentation](../guide/telegram_bot.md)
 
-[Create a Free Telegram Bot in Ten Minutes](../../en/training/create_free_telegram_bot_in_ten_minutes.md)
+[Create a Free Telegram Bot in Ten Minutes](../training/create_free_telegram_bot_in_ten_minutes.md)
 
 ## One-Click Deployment of nmap/python3.12/socat to Internal Hosts
 
 Added the new `Deploy Kit Suite to Target Host` module for quickly deploying common tools and Python environment on compromised Linux hosts in internal networks.
 
-[Deploy Kit Suite to Target Host Documentation](../../en/module/Execution_CommandAndScriptingInterpreter_DeployKit.md)
+[Deploy Kit Suite to Target Host Documentation](../module/Execution_CommandAndScriptingInterpreter_DeployKit.md)
 
 One-click deployment of Nmap+Python3 to create a dual-channel for internal network reconnaissance and penetration.
 
