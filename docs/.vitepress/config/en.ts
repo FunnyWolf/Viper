@@ -201,6 +201,7 @@ function sidebarModule(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 {text: 'Upload & Execute Executable', link: 'Execution_CommandAndScriptingInterpreter_UploadAndExec'},
+                {text: 'Deploy Kit Suite to Target Host', link: 'Execution_CommandAndScriptingInterpreter_DeployKit'},
                 {text: 'AV Bypass via CreateThreadpoolWait', link: 'Execution_UserExecution_CallbackCreateThreadpoolWait'},
                 {text: 'AV Bypass via CreateTimerQueue', link: 'Execution_UserExecution_CallbackCreateTimerQueue'},
                 {text: 'AV Bypass via EnumChildWindows', link: 'Execution_UserExecution_CallbackEnumChildWindows'},
