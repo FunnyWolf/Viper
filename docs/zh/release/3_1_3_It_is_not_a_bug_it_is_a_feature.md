@@ -1,6 +1,6 @@
 ---
 title: 3.1.3 - 这不是一个Bug,这是一个特性
-description: Telegram Bot,一键植入nmap+python3+socat,大量优化及文档更新.当然,还有很多`特性`被修复了.
+description: 新的Telegram Bot,一键植入nmap/python3/socat,大量优化及文档更新.当然,还有很多`特性`被修复了.
 cover: /og/img_2.png
 ---
 
@@ -8,13 +8,20 @@ cover: /og/img_2.png
 
 ![img_2.png](../../public/og/img_2.png)
 
-## Telegram Bot
+## 新的Telegram Bot
+
+我在新版本中的重新设计了Telegram Bot的功能,当前无需用户自己创建Bot,只需要打开Viperrtp官方的机器人,发送chat_id即可接收消息.
+
+[Telegram Bot 文档](../../zh/guide/telegram_bot.md)
 
 
 
-十分钟零成本创建Telegram Bot机器人
 
-## 部署Kit套件到目标主机
+## 一键部署nmap/python3.12/socat到内网主机
+
+新版本加入了`部署Kit套件到目标主机`模块,用于在内网已控Linux主机中快速部署常用工具和Python环境
+
+[部署Kit套件到目标主机 文档](../../zh/module/Execution_CommandAndScriptingInterpreter_DeployKit.md)
 
 一键植入Nmap+Python3打造内网侦察-渗透双通道
 
