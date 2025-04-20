@@ -78,13 +78,18 @@ function nav(): DefaultTheme.NavItem[] {
             text: "更新日志",
             items: [
                 {
+                    text: '3.1.2 - 这不是Bug,这是特性',
+                    link: '/zh/release/3_1_3_It_is_not_a_bug_it_is_a_feature'
+                },
+                {
                     text: '3.1.2 - 渗透测试智能体和MCP服务器',
                     link: '/zh/release/3_1_2_Pentest_Agent_and_MCP_server'
                 },
                 {
                     text: '3.1.1 - 混乱是阶梯',
                     link: '/zh/release/3_1_1_Chaos_is_a_ladder'
-                }
+                },
+
             ]
         }
     ]
