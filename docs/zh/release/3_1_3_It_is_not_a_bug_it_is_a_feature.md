@@ -4,18 +4,23 @@ description: 新的Telegram Bot,一键植入nmap/python3/socat,大量优化及�
 cover: /og/img_2.png
 ---
 
-# 3.1.3 - 这不是Bug,这是特性
+# 3.1.3 - 这不是Bug,这是特性 !
 
-![img_2.png](../../public/og/img_2.png)
+![img_2.png](/og/img_2.png)
+
+新版本主要进行文档的更新和 ~~Bug的修复~~ 特性优化😅.
+
+当然,忙里偷闲也添加了两个功能.
+
+额,AI的功能也更新了一点.
 
 ## 新的Telegram Bot
 
-我在新版本中的重新设计了Telegram Bot的功能,当前无需用户自己创建Bot,只需要打开Viperrtp官方的机器人,发送chat_id即可接收消息.
+新版本中的重新设计了Telegram Bot的功能,当前无需用户自己创建Bot,只需要打开Viperrtp官方的机器人,发送chat_id即可接收消息.
 
 [Telegram Bot 文档](../../zh/guide/telegram_bot.md)
 
-
-
+[十分钟零成本创建Telegram Bot](../../zh/training/create_free_telegram_bot_in_ten_minutes.md)
 
 ## 一键部署nmap/python3.12/socat到内网主机
 
@@ -43,29 +48,29 @@ cover: /og/img_2.png
 - 添加Open AI配置时,如果选中function calling选项,后台会检查是否支持function calling
 - `渗透测试智能体`和`MCP服务器`当前支持调用本地terminal
 
-![img_5.png](img_5.png)
+![img_5.png](3_1_3_It_is_not_a_bug_it_is_a_feature/img_5.png)
 
 > 现在可能没啥用,但后续集成更多红队命令行工具就有用了,在做了,在做了 (进度 0%)
 
 - 智能体运行过程中如未发现符合要求的大模型配置,会在界面发送错误提示
 
-![img.png](img.png)
+![img.png](3_1_3_It_is_not_a_bug_it_is_a_feature/img.png)
 
 - Session的Console新增Meterpreter/Shell切换功能
 
-![img_2.png](img_2.png)
+![img_2.png](3_1_3_It_is_not_a_bug_it_is_a_feature/img_2.png)
 
 - 用户发送消息时会使用不同的颜色
 
-![img_1.png](img_1.png)
+![img_1.png](3_1_3_It_is_not_a_bug_it_is_a_feature/img_1.png)
 
 - 更新`网络拓扑`展示组件,更好的区分网络通讯与Session绑定逻辑
 
-![img_3.png](img_3.png)
+![img_3.png](3_1_3_It_is_not_a_bug_it_is_a_feature/img_3.png)
 
 - 优化`端口转发`提示信息
 
-![img_4.png](img_4.png)
+![img_4.png](3_1_3_It_is_not_a_bug_it_is_a_feature/img_4.png)
 
 ## Bug修复
 

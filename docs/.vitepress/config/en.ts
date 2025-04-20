@@ -53,6 +53,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "CHANGELOG",
             items: [
                 {
+                    text: '3.1.3 - It\'s Not a Bug, It\'s a Feature !',
+                    link: '/release/3_1_3_It_is_not_a_bug_it_is_a_feature'
+                },
+                {
                     text: '3.1.2 - Pentest Agent and MCP Server',
                     link: '/release/3_1_2_Pentest_Agent_and_MCP_server'
                 },
