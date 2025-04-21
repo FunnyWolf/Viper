@@ -12,7 +12,9 @@ cover: /og/img_3.png
 
 ## 为什么我需要Telegram Bot
 
-[Viper](https://www.viperrtp.com/)在早期版本就集成了Telegram Bot的功能,用于给用户发送系统通知.在先前版本中用户配置该功能需要以下步骤:
+[Viper](https://www.viperrtp.com/)在早期版本就集成了Telegram Bot的功能,用于给用户发送系统通知.
+
+在先前版本中用户配置该功能需要以下步骤:
 
 - 用户向Telegram的BotFather发送/newbot创建bot
 - 用户填写bot的name/username
@@ -89,5 +91,5 @@ curl -F "url=https://XXX.YYY.workers.dev" https://api.telegram.org/bot<YOUR_BOT_
 
 如果你的目标用户和telegram用户重叠(比如[Viper](https://www.viperrtp.com/)就是),telegram bot和cloudflare worker组合基本可以满足绝大部分需求.
 
-cloudflare作为互联网著名的 **赛博佛祖**,worker每天有100W免费访问请求,对于交互类请求根本用不完.如果有数据库的需求还可以使用cloudflare D1或者supabase.
+cloudflare作为互联网著名的**赛博佛祖**,worker每天有100W免费访问请求,对于交互类请求根本用不完.如果有数据库的需求还可以使用cloudflare D1或者supabase.
 
