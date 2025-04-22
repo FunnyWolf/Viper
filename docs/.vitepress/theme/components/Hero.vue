@@ -7,11 +7,15 @@
             <h1 class="name">{{ config.name }}</h1>
             <p class="tagline">{{ config.tagline }}</p>
             <div class="actions">
-              <a v-for="action in config.actions"
-                 :key="action.text"
-                 :href="action.link"
-                 :class="['action', `theme-${action.theme}`]">
-                {{ action.text }}
+              <a class="action theme-brand" :href="config.actions[0].link">
+                <svg class="docker-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1004.544 466.08a161.504 161.504 0 0 0-119.52-10.816 158.88 158.88 0 0 0-64.608-101.216l-12.8-10.08-10.848 12.16a133.888 133.888 0 0 0-25.28 96.32 123.552 123.552 0 0 0 24.128 64.704 187.648 187.648 0 0 1-34.752 15.296A232.416 232.416 0 0 1 689.216 544H13.568l-1.44 15.136a282.656 282.656 0 0 0 23.776 147.2l9.248 18.336 1.056 1.728c63.52 104.896 190.24 159.232 311.808 159.232 235.392 0 414.368-112.352 503.552-328.224 59.584 3.04 120.544-14.112 149.696-69.408l7.424-14.112-14.144-7.936z" fill="currentColor"/>
+                  <path d="M210.464 658.432a27.808 27.808 0 1 0 28.608 27.84 28.224 28.224 0 0 0-28.608-27.84M64 416h96v96H64z m128 0h96v96h-96z m0-128h96v96h-96z m128 0h96v96h-96z m0 128h96v96h-96z m128 0h96v96h-96zM448 288h96v96h-96z m0-128h96v96h-96z" fill="currentColor"/>
+                </svg>
+                {{ config.actions[0].text }}
+              </a>
+              <a class="action theme-alt" :href="config.actions[1].link">
+                {{ config.actions[1].text }}
               </a>
             </div>
           </div>
@@ -369,5 +373,22 @@ defineProps({
 /* 移除之前的暗色主题叠加层 */
 :deep(.dark) .hero-section::after {
   display: none;
+}
+
+.docker-icon {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+  transition: transform 0.3s ease;
+}
+
+.action.theme-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.action.theme-brand:hover .docker-icon {
+  transform: scale(1.1);
 }
 </style>
