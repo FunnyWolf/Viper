@@ -189,7 +189,7 @@ function sidebarModule(): DefaultTheme.SidebarItem[] {
                 {text: 'DNSLOG Server', link: 'ResourceDevelopment_Server_DNSLog'},
                 {text: 'LDAP Server', link: 'ResourceDevelopment_Server_LDAPServer'},
                 {text: 'TCPLOG Server', link: 'ResourceDevelopment_Server_TCPLogServer'},
-                {text: 'C2 via Tencent API Gateway', link: 'ResourceDevelopment_WebServices_TencentAPIGateway'},
+                {text: 'C2 via Tencent API Gateway', link: 'ResourceDevelopment_WebServices_APIGateway'},
             ]
         },
         {

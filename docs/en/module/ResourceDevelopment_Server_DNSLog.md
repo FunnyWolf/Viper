@@ -1,14 +1,12 @@
-# DNSLOG Service
+# DNSLog Service
+Provides DNSLog service
 
-# Main Functions
-Provide DNSLog service
-
-# Operation Methods
-### Configure DNS
+# Operation Method
+### DNS Configuration
 + Purchase a domain name
 + Customize DNS Host
 
-> Alibaba Cloud
+> Aliyun
 >
 
 ![](img\ResourceDevelopment_Server_DNSLog\1.webp)
@@ -17,39 +15,29 @@ Provide DNSLog service
 
 ![](img\ResourceDevelopment_Server_DNSLog\3.webp)
 
-> godaddy
->
-
-
+> GoDaddy
 
 ![](img\ResourceDevelopment_Server_DNSLog\4.webp)
 
 ![](img\ResourceDevelopment_Server_DNSLog\5.webp)
-
-
 
 ### Run the Module
 ![](img\ResourceDevelopment_Server_DNSLog\6.webp)
 
 ![](img\ResourceDevelopment_Server_DNSLog\7.webp)
 
-### Test the Configuration
-+ Custom DNS servers usually take 24 hours to take effect, but we can use the `nslookup` command to determine whether the configuration is correct in a timely manner.
-+ Execute the following command on the local PC
+### Test Configuration
++ DNS server changes typically take 24 hours to propagate, but we can verify the configuration immediately using the nslookup command
++ Execute the following command on your local PC:
 
 ```plain
 nslookup justfortest.XXX.top 47.111.111.109
 ```
 
-+ VIPER Output
++ VIPER output:
 
 ![](img\ResourceDevelopment_Server_DNSLog\8.webp)
 
-### Execution Effect
-
-
-
+### Running Effect
 
 ![](img\ResourceDevelopment_Server_DNSLog\9.webp)
-
-

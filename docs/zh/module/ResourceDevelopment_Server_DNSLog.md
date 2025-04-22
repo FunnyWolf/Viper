@@ -1,9 +1,9 @@
 # DNSLOG服务
-
-# 主要功能
 提供DNSLog服务
 
 # 操作方法
+- 服务器后台运行时会在`任务列表`显示
+- 如需关闭服务器,在`任务列表`删除任务即可
 ### 配置DNS
 + 购买一个域名
 + 自定义DNS Host
@@ -18,9 +18,6 @@
 ![](img\ResourceDevelopment_Server_DNSLog\3.webp)
 
 > godaddy
->
-
-
 
 ![](img\ResourceDevelopment_Server_DNSLog\4.webp)
 
@@ -46,9 +43,6 @@ nslookup justfortest.XXX.top 47.111.111.109
 ![](img\ResourceDevelopment_Server_DNSLog\8.webp)
 
 ### 执行效果
-
-
-
 
 ![](img\ResourceDevelopment_Server_DNSLog\9.webp)
 

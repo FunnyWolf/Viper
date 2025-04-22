@@ -213,7 +213,7 @@ function sidebarModule(): DefaultTheme.SidebarItem[] {
                 {text: 'DNSLOG服务器', link: 'ResourceDevelopment_Server_DNSLog'},
                 {text: 'LDAP服务器', link: 'ResourceDevelopment_Server_LDAPServer'},
                 {text: 'TCPLOG服务器', link: 'ResourceDevelopment_Server_TCPLogServer'},
-                {text: '利用云函数上线(腾讯API网关)', link: 'ResourceDevelopment_WebServices_TencentAPIGateway'},
+                {text: '云函数上线', link: 'ResourceDevelopment_WebServices_APIGateway'},
             ]
         },
         {

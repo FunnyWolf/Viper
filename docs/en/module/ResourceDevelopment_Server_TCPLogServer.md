@@ -1,7 +1,9 @@
-# TCPLog Service (wait)
+# TCPLog Server
 
-# Main Functions
-xxx
+Start a TCPLog server
 
-# Operation Methods
-+ xxx
+# Operation Method
+
+- When the server is running in the background, it will be displayed in the `Task List`
+- To stop the server, simply delete the task from the `Task List`
+- TCP callbacks will be shown in `Real-time Output`
