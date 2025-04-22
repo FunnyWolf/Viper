@@ -42,6 +42,7 @@ defineProps({
 
 .hero-section {
   height: calc(100vh - var(--vp-nav-height) - 4rem);
+  min-height: 800px; /* 添加最小高度 */
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -58,25 +59,25 @@ defineProps({
 .gradient-hero {
   background: 
     /* 左上角 */
-    radial-gradient(circle at 0% 0%, rgba(255, 71, 71, 0.8) 0%, transparent 25%),
+    radial-gradient(circle at 0% 0%, rgba(255, 71, 71, 0.85) 0%, transparent 25%),
     /* 右上角 */
-    radial-gradient(circle at 100% 0%, rgba(123, 97, 255, 0.8) 0%, transparent 25%),
+    radial-gradient(circle at 100% 0%, rgba(123, 97, 255, 0.85) 0%, transparent 25%),
     /* 上边中间 */
-    radial-gradient(circle at 50% 0%, rgba(255, 105, 180, 0.6) 0%, transparent 25%),
+    radial-gradient(circle at 50% 0%, rgba(255, 105, 180, 0.7) 0%, transparent 25%),
     /* 左边中间 */
-    radial-gradient(circle at 0% 50%, rgba(0, 255, 255, 0.6) 0%, transparent 25%),
+    radial-gradient(circle at 0% 50%, rgba(0, 255, 255, 0.7) 0%, transparent 25%),
     /* 右边中间 */
-    radial-gradient(circle at 100% 50%, rgba(191, 64, 255, 0.6) 0%, transparent 25%),
+    radial-gradient(circle at 100% 50%, rgba(191, 64, 255, 0.7) 0%, transparent 25%),
     /* 中心 */
-    radial-gradient(circle at 50% 50%, rgba(255, 64, 255, 0.5) 0%, transparent 35%),
-    /* 左下角 */
-    radial-gradient(circle at 0% 100%, rgba(0, 255, 128, 0.7) 0%, transparent 25%),
+    radial-gradient(circle at 50% 50%, rgba(255, 64, 255, 0.6) 0%, transparent 35%),
+    /* 左下角 - 增加亮绿色 */
+    radial-gradient(circle at 0% 100%, rgba(72, 255, 0, 0.8) 0%, transparent 25%),
     /* 右下角 */
-    radial-gradient(circle at 100% 100%, rgba(64, 166, 255, 0.8) 0%, transparent 25%),
-    /* 下边中间 */
-    radial-gradient(circle at 50% 100%, rgba(255, 234, 0, 0.6) 0%, transparent 25%),
-    /* 整体底色 */
-    linear-gradient(45deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.90));
+    radial-gradient(circle at 100% 100%, rgba(64, 166, 255, 0.85) 0%, transparent 25%),
+    /* 下边中间 - 增加亮黄色 */
+    radial-gradient(circle at 50% 100%, rgba(255, 251, 0, 0.75) 0%, transparent 25%),
+    /* 整体底色 - 稍微调亮 */
+    linear-gradient(45deg, rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.87));
   background-size: 150% 150%;
   animation: gradientFlow 30s ease infinite;
   backdrop-filter: blur(100px);
@@ -198,8 +199,50 @@ defineProps({
   transition: all 0.3s ease;
   text-decoration: none;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative; /* 添加相对定位 */
 }
 
+/* 添加外环基础样式 */
+.action::before {
+  content: '';
+  position: absolute;
+  inset: -4px; /* 减小外环距离 */
+  border-radius: 13px; /* 相应调整圆角 */
+  padding: 1px; /* 减小外环粗细 */
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  background-size: 200% 200%;
+  animation: none;
+  opacity: 0.4; /* 稍微降低默认透明度 */
+  transition: opacity 0.3s ease;
+}
+
+/* 鼠标悬停时激活流光动画 */
+.action:hover::before {
+  animation: shine 2s linear infinite;
+  opacity: 1;
+}
+
+/* 流光动画 */
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* 修改现有的主题按钮样式 */
 .theme-brand {
   background: var(--vp-c-white);
   color: var(--vp-c-black);
@@ -258,8 +301,7 @@ defineProps({
   }
 
   .hero-section {
-    height: auto;
-    min-height: calc(100vh - var(--vp-nav-height) - 2rem);
+    min-height: 500px; /* 中等屏幕的最小高度 */
     padding: 2rem;
   }
 
@@ -296,6 +338,7 @@ defineProps({
   }
 
   .hero-section {
+    min-height: 450px; /* 小屏幕的最小高度 */
     padding: 1.5rem 1.5rem 0 1.5rem;
     border-radius: 16px;
   }
