@@ -1,9 +1,9 @@
 # Session Cloning
 
-# Main Functions
+
 Copy the Session to ensure that permissions are not lost when a Session drops, or use it to migrate permissions to Cobalt Strike.
 
-# Operation Methods
+## Operation Method
 ## Session Cloning
 - There is a Windows - type Session (both x64 and x86 are acceptable).
 

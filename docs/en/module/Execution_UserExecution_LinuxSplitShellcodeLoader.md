@@ -1,9 +1,9 @@
 # Basic LoaderShellcode Separation Anti-detection (Linux)
 
-# Main Functions
+
 Generate anti-detection ELF
 
-# Operation Methods
+## Operation Method
 + Create a new listener (Linux)
 + Open the module and select the corresponding listener
 + After running the module, a zip file will be generated in the "File Management", containing the anti-detection ELF payload and the corresponding C++ code

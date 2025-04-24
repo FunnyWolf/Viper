@@ -7,7 +7,7 @@ The functionality is the same as uploading and executing files in `File Manageme
 + Add this module in `Automatic Orchestration` and specify a binary file (such as ligolo, frp, nps or other intranet penetration tools or customized trojans)
 + When a privileged session comes online, it will automatically upload the binary file to the target machine and execute it
 
-# Operation Method
+## Operation Method
 
 Introducing usage with `Automatic Orchestration`
 

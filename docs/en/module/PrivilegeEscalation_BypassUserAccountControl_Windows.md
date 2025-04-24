@@ -1,6 +1,6 @@
 # Windows UAC Bypass
 
-# Main Functions
+
 Built-in with multiple methods to bypass the system UAC and obtain administrator privileges.
 
 + Automatic Mode: Automatically select the bypass technique and execute.

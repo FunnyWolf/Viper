@@ -1,9 +1,9 @@
 # Anti-detection of Basic ShellcodeLoader (Linux)
 
-# Main Functions
+
 Generate anti-detection ELF
 
-# Operation Methods
+## Operation Method
 + Create a new listener (Linux)
 + Open the module and select the corresponding listener
 + After running the module, a ZIP file will be generated in "File Management", which contains the anti-detection ELF payload and the corresponding C++ code

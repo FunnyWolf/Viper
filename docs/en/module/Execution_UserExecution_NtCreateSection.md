@@ -1,7 +1,7 @@
 # NtCreateSection Process Injection (wait)
 
-# Main Functions
+
 XXX
 
-# Operation Methods
+## Operation Method
 + XXX

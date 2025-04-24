@@ -1,11 +1,11 @@
 # Hijacking Windows Digital Signature Authentication
 
-# Main Functions
+
 Modify the default Windows digital certificate authentication file to make the system default to authenticate all digital signatures as valid. This module affects the running signature authentication of all EXEs in the system. Use it with caution.
 
 
 
-# Operation Methods
+## Operation Method
 - Select a session.
 - Execute the module.
 

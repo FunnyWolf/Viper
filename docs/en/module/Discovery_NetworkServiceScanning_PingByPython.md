@@ -1,9 +1,9 @@
 # Intranet Ping Scanning
 
-# Main Functions
+
 Obtain information about live hosts in the intranet through the ICMP protocol (Ping).
 
-# Operation Method
+## Operation Method
 ![](img\Discovery_NetworkServiceScanning_PingByPython\1.webp)
 
 

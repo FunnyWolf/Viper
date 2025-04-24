@@ -1,12 +1,12 @@
 # Adding Local Accounts/Domain Accounts in Windows
 
-# Main Functions
+
 Add users to a local computer or domain through the Windows API.
 
 # Note
 When filling in the user group, note that the Session must have the operation permission for this user group. When adding a domain user, note that the user to which the Session belongs must be in the domain and have the operation permission for the corresponding user group.
 
-# Operation Methods
+## Operation Method
 - Obtain the Session
 - Fill in the parameters
 

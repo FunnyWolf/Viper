@@ -1,9 +1,9 @@
 # Windows Registry Run Key Persistence (C#)
 
-# Main Function
+
 Write the payload directory to the Registry Run key value by executing SharpHide in memory.
 
-# Operation Method
+## Operation Method
 + Generate a listener.
 + Obtain a session.
 + Use the listener configuration to generate an anti - detection payload.

@@ -1,6 +1,6 @@
 # Inject into Windows System Processes
 
-## Main Functions
+
 Attempt to inject the process where the Session is located into a native system process. 
 
 The module will attempt to inject into processes such as services, wininit, svchost, lsm, lsass, winlogon, etc. 

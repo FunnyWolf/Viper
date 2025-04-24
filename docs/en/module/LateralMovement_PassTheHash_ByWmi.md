@@ -1,6 +1,6 @@
 # WMI Pass-the-Hash
 
-## Main Functions
+
 Execute payloads on the target host via WMI using the Session's Token or known username and password. 
 
 The module uploads dswmiexec.exe to the current host and invokes powershell.exe on the target host through dswmiexec.exe. AV active defense may prompt a risk.

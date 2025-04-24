@@ -1,7 +1,7 @@
 # vbulletin widget Template Command Execution (wait)
 
-# Main Functions
+
 To be supplemented
 
-# Operation Methods
+## Operation Method
 To be supplemented

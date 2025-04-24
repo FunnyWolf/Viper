@@ -1,9 +1,9 @@
 # Clone HTTPS Certificate
 
-# Main Functions
+
 Clone the SSL certificate of the target website, which can be used for reverse_https type of listening.
 
-# Operation Methods
+## Operation Method
 + Run the module and enter the target website.
 
 ![](img\DefenseEvasion_SubvertTrustControls_CloneSSLPem\1.webp)

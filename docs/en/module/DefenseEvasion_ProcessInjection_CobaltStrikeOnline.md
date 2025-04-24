@@ -1,9 +1,11 @@
 # Migrate Permissions to Cobalt Strike
 
-## Main Functions
+
+
 Used to migrate Session permissions to the beacon of Cobalt Strike.
 
-## Operation Methods
+## Operation Method
+
 - First, ensure that there is a Windows - type Session (both x64 and X86 are acceptable) in Viper.
 
 ![](img\DefenseEvasion_ProcessInjection_CobaltStrikeOnline\1.webp)

@@ -1,7 +1,7 @@
 # Gitlab ExifTool RCE(wait)
 
-# Main Functions
+
 To be supplemented
 
-# Operation Methods
+## Operation Method
 To be supplemented

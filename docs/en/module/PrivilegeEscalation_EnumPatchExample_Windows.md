@@ -1,9 +1,9 @@
 # Obtain Windows Patch List
 
-# Main Function
+
 Obtain the patches currently installed on Windows
 
-# Operation Method
+## Operation Method
 + Select the session
 + Run the module
 

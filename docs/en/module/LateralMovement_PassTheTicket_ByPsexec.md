@@ -1,9 +1,9 @@
 # PSEXEC Plaintext/Hash Passing
 
-# Main Functions
+
 Perform lateral movement using hashes and passwords.
 
-# Operation Methods
+## Operation Method
 ![](img\LateralMovement_PassTheTicket_ByPsexec\1.webp)
 
 ![](img\LateralMovement_PassTheTicket_ByPsexec\2.webp)

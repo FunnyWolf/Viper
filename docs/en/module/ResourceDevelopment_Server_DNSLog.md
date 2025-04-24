@@ -1,7 +1,7 @@
 # DNSLog Service
 Provides DNSLog service
 
-# Operation Method
+## Operation Method
 ### DNS Configuration
 + Purchase a domain name
 + Customize DNS Host

@@ -1,12 +1,12 @@
 # Winlogon Helper DLL Persistence
 
-## Main Functions
+
 Achieve persistence through HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
 
 ## Note
 It is not undetectable and requires administrator privileges.
 
-## Operation Methods
+## Operation Method
 - Generate a listener.
 - Obtain a Session with administrator privileges.
 - Run the module and fill in the listener configuration.
