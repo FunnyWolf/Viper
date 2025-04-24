@@ -1,23 +1,23 @@
-# Office Macro Phishing Documents
+# Office Macro Phishing Document
 
-# Main Functions
 Generate phishing documents
 
-# Operation Methods
-+ First, add the listening configuration.
-+ Run the module and select the corresponding listener.
+# Operation Method
 
-> It is recommended to select a real listener.
++ First add listener configuration
++ Run the module and select the corresponding listener
+
+> It is recommended to select a real listener
 >
 
 ![](img\InitialAccess_SpearphishingAttachment_Windows\1.webp)
 
-+ The file list will generate the corresponding phishing documents.
++ The phishing document will be generated in the file list
 
 ![](img\InitialAccess_SpearphishingAttachment_Windows\2.webp)
 
 ![](img\InitialAccess_SpearphishingAttachment_Windows\3.webp)
 
-+ Once the user opens the document and enables the macro, they can go online.
++ After the user opens the document and enables macros, the session will go online
 
 ![](img\InitialAccess_SpearphishingAttachment_Windows\4.webp)

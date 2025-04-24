@@ -1,9 +1,9 @@
 # 伪造成Word文档的exe文件
 
-# 主要功能
 生成带有Word图标的exe文件,exe运行后自动释放内置的word文档,自拷贝到%User%\Documents目录并启动,然后删除自身
 
 # 操作方法
+
 + 新建监听
 + 运行模块
 
@@ -32,11 +32,10 @@
 
 ![](img\InitialAccess_SpearphishingAttachment_FakeWordDoc\7.webp)
 
-
-
 + 通过鱼叉邮件发送到对方
 
 # 运行效果
+
 + 双击exe后会在本地释放一个docx文件并打开,然后删除自身(exe文件)
 
 ![](img\InitialAccess_SpearphishingAttachment_FakeWordDoc\8.webp)
