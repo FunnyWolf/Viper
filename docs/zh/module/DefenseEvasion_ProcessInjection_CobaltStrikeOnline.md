@@ -1,9 +1,9 @@
 # 迁移权限到CobaltStrike
 
-# 主要功能
+
 用于将Session权限迁移到CobaltStrike的beacon
 
-# 操作方法
+## 操作方法
 + 首先确保Viper中有Windows类型的Session(x64与X86都可以)
 
 ![](img\DefenseEvasion_ProcessInjection_CobaltStrikeOnline\1.webp)

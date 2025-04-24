@@ -1,9 +1,9 @@
 # Session克隆
 
-# 主要功能
+
 复制Session,确保一个Session掉线后权限不丢失,或者用于迁移权限到CobaltStrike
 
-# 操作方法
+## 操作方法
 ## Session克隆
 + 存在Windows类型的Session(x64与X86都可以)
 

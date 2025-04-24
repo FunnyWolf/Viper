@@ -1,12 +1,14 @@
-# Reverse_https Direct Connection Anti-detection
+# Direct Connect Reverse HTTPS Payload Generation
 
-# Main Functions
-Generate anti-detection EXE
+Generates an antivirus-evasion exe file and its source code.
 
-# Operation Methods
-+ Create a new reverse_https listener.
-+ Open the module and select the corresponding https listener.
-+ After running the module, a zip file will be generated in "File Management", which contains the anti-detection EXE payload and the corresponding C++ code.
+# Operation Method
 
-# Note
++ Create a new reverse_https listener
++ Open the module, select the corresponding https listener
++ After running the module, a zip file will be generated in `File Management`, containing the antivirus-evasion exe payload and corresponding C++ code
++ You can customize and compile the source code using Visual Studio
+
+# Notes
+
 + Can bypass Windows Defender (20210611)

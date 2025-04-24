@@ -1,9 +1,9 @@
-# Callback Anti - Detection (EnumWindows)
+# Callback Anti-Detection (EnumWindows)
 
-# Main Function
-Generate anti - detection EXE
+Generate anti-detection exe and its source code
 
-# Operation Method
+# Operation Methods
 + Create a new listener
 + Open the module and select the corresponding listener
-+ After running the module, a zip file will be generated in the `File Management`, which contains the anti - detection EXE payload and the corresponding C++ code
++ After running the module, a zip file will be generated in `File Management`, which contains the anti-detection exe payload and the corresponding C++ code
++ You can customize and compile the source code using Visual Studio
