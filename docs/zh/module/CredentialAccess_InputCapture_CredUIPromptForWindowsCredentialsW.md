@@ -1,16 +1,11 @@
 # UI提示框获取用户输入的密码
 
-
 通过在UI界面弹出输入密码提示框,获取用户密码.
 
 ## 操作方法
-![](img\CredentialAccess_InputCapture_CredUIPromptForWindowsCredentialsW\1.webp)
 
-![](img\CredentialAccess_InputCapture_CredUIPromptForWindowsCredentialsW\2.webp)
-
-![](img\CredentialAccess_InputCapture_CredUIPromptForWindowsCredentialsW\3.webp)
-
-![](img\CredentialAccess_InputCapture_CredUIPromptForWindowsCredentialsW\4.webp)
+- 模块运行后会在目标主机弹出输入密码的提示框
+- 用户如果通过提示框输入密码,会将密码文件保存到C:\\windows\temp\cred.log
 
 
 

@@ -1,6 +1,6 @@
 # Obtain Windows Memory Passwords
 
-Kiwi captures the plaintext passwords of Windows users in memory and saves them to the credential list.
+Kiwi captures the plaintext passwords of Windows users in memory and saves them to the `credential list`.
 
 ## Operation Method
 

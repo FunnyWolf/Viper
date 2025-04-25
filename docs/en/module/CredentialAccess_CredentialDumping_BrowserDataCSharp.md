@@ -1,9 +1,9 @@
-# Obtain Windows Browser Passwords (C#)
+# Get Windows Browser Passwords (C#)
 
-
-Obtain browser passwords, cookies, browsing history, and bookmarks for Chrome and IE.
+Retrieves passwords, cookies, history, and bookmarks from Chrome and IE browsers.
 
 ## Operation Method
-Execute directly without parameters.
+
+No parameters needed, just execute directly
 
 ![](img\CredentialAccess_CredentialDumping_BrowserDataCSharp\1.webp)
