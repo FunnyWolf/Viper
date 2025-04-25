@@ -1,32 +1,31 @@
 # Windows UAC Bypass
 
+Built-in multiple methods to bypass system UAC to obtain administrator privileges.
 
-Built-in with multiple methods to bypass the system UAC and obtain administrator privileges.
++ Automatic Mode: Automatically select bypass technique and execute
++ Manual Mode: Manually select a specific bypass technique and execute
++ Detection Mode: Automatically detect which bypass techniques are suitable for the Session (without execution)
 
-+ Automatic Mode: Automatically select the bypass technique and execute.
-+ Manual Mode: Manually select a certain bypass technique and execute.
-+ Detection Mode: Automatically detect which bypass techniques are applicable to the Session (without execution)
+## Notes
 
++ The module requires Session integrity level to be medium or above and be in the administrators group
++ Automatic mode will run multiple sub-modules to attempt UAC bypass, which may be blocked by antivirus software
++ It is recommended to use detection mode to get the list of applicable sub-modules, then run them manually one by one
 
+## Operation Method
 
-# Note
-+ The module requires the Session integrity privilege to be at medium or above and be in the administrator group.
-+ The automatic mode will run multiple sub-modules to attempt to BypassUAC, and anti-virus software may intercept.
-+ It is recommended to use the detection mode to obtain the list of applicable sub-modules, and then run them manually one by one.
-
-# Operating Methods
-+ Obtain the Session.
-+ View the Session information to confirm that **the Session integrity privilege is at medium or above**, **it is in the administrator group, and the UAC level is the default**.
++ Get Session
++ Check Session information, confirm Session integrity level is medium or above, in administrators group, and UAC level is default
 
 ![](img/PrivilegeEscalation_BypassUserAccountControl_Windows/1.webp)
 
-+ Run the detection mode to view which modules are available.
++ Run detection mode to see which modules are available
 
 ![](img/PrivilegeEscalation_BypassUserAccountControl_Windows/2.webp)
 
 ![](img/PrivilegeEscalation_BypassUserAccountControl_Windows/3.webp)
 
-+ According to the detection results, run the sub-modules separately, or use the automatic mode.
++ Based on detection results, run sub-modules individually or use automatic mode
 
 ![](img/PrivilegeEscalation_BypassUserAccountControl_Windows/4.webp)
 

@@ -1,14 +1,15 @@
 # Windows System Privilege Escalation
 
+Attempt to obtain system privileges using multiple techniques
 
-Attempt to obtain system privileges using a variety of techniques.
+## Notes
 
-# Note
-This is not anti-detection. It is required that the Session has administrative privileges with UAC bypassed.
+This is not anti-detection. Requires a Session with administrative privileges and UAC already bypassed
 
 ## Operation Method
-+ Obtain the Session.
-+ Select the privilege escalation technique (automation is recommended).
-+ Run the module.
 
-![](img/PrivilegeEscalation_ProcessInjection_Getsystem/1.webp)
++ Get a Session
++ Select privilege escalation technique (automation recommended)
++ Run the module
+
+![](img\PrivilegeEscalation_ProcessInjection_Getsystem\1.webp)
