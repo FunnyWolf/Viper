@@ -1,17 +1,15 @@
-# Execute C# Executable in Memory
+# Execute C# Executable Files in Memory
 
+The module loads C# executable files into memory and executes them using CLR.
 
+The controlled host needs to have .NET 2.0 (installed by default on Windows 2008) or .NET 4.0 (installed by default on Windows 2012).
 
-The module loads an exe file written in C# into memory and then executes it using the CLR.
+The executable file must match the .NET version of the controlled host.
 
-The compromised host needs to have.NET 2.0 (installed by default on Windows 2008) or.NET 4.0 (installed by default on Windows 2012) installed.
-
-The executable file needs to be of the same.NET version as that of the compromised host.
-
-The function is similar to "execute-assembly" in Cobalt Strike. When the C# program requires input parameters, make sure to fill in the parameters.
+The functionality is similar to CS's execute-assembly. When C# requires input parameters, make sure to fill in the parameters.
 
 ## Operation Method
 
-![](img\DefenseEvasion_ProcessInjection_CsharpAssemblyLoader\1.webp)
+![](img/DefenseEvasion_ProcessInjection_CsharpAssemblyLoader/1.webp)
 
-![](img\DefenseEvasion_ProcessInjection_CsharpAssemblyLoader\2.webp)
+![](img/DefenseEvasion_ProcessInjection_CsharpAssemblyLoader/2.webp)
