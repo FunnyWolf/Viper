@@ -1,18 +1,19 @@
-# Adding Local Accounts/Domain Accounts in Windows
+# Add Local/Domain Account in Windows
 
+Add users to local computer or domain through Windows API.
 
-Add users to a local computer or domain through the Windows API.
+## Note
 
-# Note
-When filling in the user group, note that the Session must have the operation permission for this user group. When adding a domain user, note that the user to which the Session belongs must be in the domain and have the operation permission for the corresponding user group.
+When filling in user groups, ensure that the Session has the necessary permissions to operate on that user group. When adding domain users, ensure that the Session's user is in the domain and has the corresponding user group operation permissions.
 
 ## Operation Method
-- Obtain the Session
-- Fill in the parameters
+
++ Get Session
++ Fill in parameters
 
 ![](img/Persistence_AccountManipulation_Windows/1.webp)
 
-- Run the module
++ Run module
 
 ![](img/Persistence_AccountManipulation_Windows/2.webp)
 

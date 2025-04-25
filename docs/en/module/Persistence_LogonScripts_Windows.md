@@ -1,9 +1,8 @@
 # Windows Login Script Persistence
 
-
 Achieve persistence by writing the Trojan file path in the registry HKCU\Environment\UserInitMprLogonScript.
 
-# Note
+## Note
 This method is not anti-detection.
 
 ## Operation Method
