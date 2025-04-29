@@ -11,6 +11,20 @@ color_echo() {
     fi
 }
 
+# 添加用户输入验证函数
+get_user_confirm() {
+    local prompt="$1"
+    local response
+    while true; do
+        read -p "$prompt [y/n]: " response
+        case "$response" in
+            [yY]) return 0 ;;
+            [nN]) return 1 ;;
+            *) echo "请输入 y 或 n" ;;
+        esac
+    done
+}
+
 # 环境检查
 check_environment() {
     # 检查是否为 root 用户
@@ -41,8 +55,7 @@ check_environment() {
     elif (( $(echo "$mem_gb < 2.0" | bc -l) )); then
         color_echo "警告：内存小于推荐的 2GB（可用：${mem_gb}GB）" yellow >&2
         color_echo "当前内存配置可能会导致 VIPER 性能问题" yellow >&2
-        read -p "是否继续安装？[y/N] " continue_install
-        if [[ ! "$continue_install" =~ ^[Yy]$ ]]; then
+        if ! get_user_confirm "是否继续安装？"; then
             color_echo "安装已取消" red
             exit 1
         fi
@@ -108,8 +121,7 @@ optimize_system() {
     echo "并高效处理更多并发连接。"
     echo "----------------------------------------"
 
-    read -p "是否应用系统优化？[Y/n] " optimize_confirm
-    if [[ "$optimize_confirm" =~ ^[Nn]$ ]]; then
+    if ! get_user_confirm "是否应用系统优化？"; then
         color_echo "跳过系统优化" yellow
         return
     fi
@@ -275,9 +287,7 @@ EOF
     echo "  - $viper_dir/nginxconfig"
     echo "----------------------------------------"
 
-    # 用户确认
-    read -p "是否继续启动 VIPER 容器？[y/N] " confirm
-    if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
+    if ! get_user_confirm "是否继续启动 VIPER 容器？"; then
         color_echo "安装已取消" red
         exit 0
     fi

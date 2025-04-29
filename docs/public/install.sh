@@ -11,6 +11,20 @@ color_echo() {
     fi
 }
 
+# Add user input validation function
+get_user_confirm() {
+    local prompt="$1"
+    local response
+    while true; do
+        read -p "$prompt [y/n]: " response
+        case "$response" in
+            [yY]) return 0 ;;
+            [nN]) return 1 ;;
+            *) echo "Please enter y or n" ;;
+        esac
+    done
+}
+
 # Environment checks
 check_environment() {
     # Check root user
@@ -41,8 +55,7 @@ check_environment() {
     elif (( $(echo "$mem_gb < 2.0" | bc -l) )); then
         color_echo "Warning: Memory less than recommended 2GB (Available: ${mem_gb}GB)" yellow >&2
         color_echo "VIPER may experience performance issues with current memory" yellow >&2
-        read -p "Continue with installation? [y/N] " continue_install
-        if [[ ! "$continue_install" =~ ^[Yy]$ ]]; then
+        if ! get_user_confirm "Continue with installation?"; then
             color_echo "Installation cancelled by user" red
             exit 1
         fi
@@ -107,9 +120,8 @@ optimize_system() {
     echo "and handle more concurrent connections efficiently."
     echo "----------------------------------------"
 
-    read -p "Apply system optimizations? [Y/n] " optimize_confirm
-    if [[ "$optimize_confirm" =~ ^[Nn]$ ]]; then
-        color_echo "Skipping system optimizations" yellow
+    if ! get_user_confirm "Apply system optimizations?"; then
+        color_echo "Skipping system optimization" yellow
         return
     fi
 
@@ -262,7 +274,7 @@ EOF
     cd "$viper_dir"
 
     # Show configuration summary
-    color_echo "\nReady to launch VIPER container. Please confirm:" yellow
+    color_echo "\nPreparing to launch VIPER container, please confirm:" yellow
     echo "----------------------------------------"
     echo "Installation directory: $viper_dir"
     echo "Network mode: host"
@@ -274,9 +286,7 @@ EOF
     echo "  - $viper_dir/nginxconfig"
     echo "----------------------------------------"
 
-    # User confirmation
-    read -p "Proceed with VIPER container launch? [y/N] " confirm
-    if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
+    if ! get_user_confirm "Continue launching VIPER container?"; then
         color_echo "Installation cancelled" red
         exit 0
     fi
