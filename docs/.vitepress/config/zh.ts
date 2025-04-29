@@ -69,11 +69,11 @@ function nav(): DefaultTheme.NavItem[] {
             link: '/zh/training/index',
             activeMatch: '/zh/training/'
         },
-        {
-            text: '定价',
-            link: '/zh/pricing',
-            activeMatch: '/zh/pricing'
-        },
+        // {
+        //     text: '定价',
+        //     link: '/zh/pricing',
+        //     activeMatch: '/zh/pricing'
+        // },
         {
             text: "更新日志",
             items: [

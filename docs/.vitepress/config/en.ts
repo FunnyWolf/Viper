@@ -44,11 +44,11 @@ function nav(): DefaultTheme.NavItem[] {
             link: '/training/index',
             activeMatch: '/training/'
         },
-        {
-            text: 'PRICING',
-            link: '/pricing',
-            activeMatch: '/pricing'
-        },
+        // {
+        //     text: 'PRICING',
+        //     link: '/pricing',
+        //     activeMatch: '/pricing'
+        // },
         {
             text: "CHANGELOG",
             items: [
