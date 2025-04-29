@@ -46,21 +46,23 @@ check_environment() {
 
     # 检查内存
     mem_total=$(grep MemTotal /proc/meminfo | awk '{print $2}')
-    mem_gb=$(echo "scale=2; $mem_total/1024/1024" | bc)
-    
-    if (( $(echo "$mem_gb < 1.5" | bc -l) )); then
-        color_echo "错误：内存小于 1.5GB（可用：${mem_gb}GB）" red >&2
+    # Convert to MB for integer comparison (1.5GB = 1536MB, 2GB = 2048MB)
+    mem_mb=$((mem_total/1024))
+    mem_gb_human=$(awk "BEGIN {printf \"%.2f\", $mem_total/1024/1024}")
+
+    if [ $mem_mb -lt 1536 ]; then
+        color_echo "错误：内存小于 1.5GB（可用：${mem_gb_human}GB）" red >&2
         color_echo "VIPER 需要至少 1.5GB 内存才能正常运行" red >&2
         exit 1
-    elif (( $(echo "$mem_gb < 2.0" | bc -l) )); then
-        color_echo "警告：内存小于推荐的 2GB（可用：${mem_gb}GB）" yellow >&2
+    elif [ $mem_mb -lt 2048 ]; then
+        color_echo "警告：内存小于推荐的 2GB（可用：${mem_gb_human}GB）" yellow >&2
         color_echo "当前内存配置可能会导致 VIPER 性能问题" yellow >&2
         if ! get_user_confirm "是否继续安装？"; then
             color_echo "安装已取消" red
             exit 1
         fi
     else
-        color_echo "[OK] 内存充足（可用：${mem_gb}GB）"
+        color_echo "[OK] 内存充足（可用：${mem_gb_human}GB）"
     fi
 
     # 检查内核版本
@@ -245,7 +247,7 @@ EOF
     viper_port=${viper_port:-60000}
 
     # 询问是否配置基本认证
-    read -p "是否配置基本认证？（默认: Y）[Y/n]：" configure_auth
+    read -p "是否配置基本认证？（默认: y）[y/n]：" configure_auth
     configure_auth=${configure_auth:-Y}
 
     if [[ "$configure_auth" =~ ^[Yy]$ ]]; then
