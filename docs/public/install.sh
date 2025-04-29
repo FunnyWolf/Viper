@@ -170,7 +170,7 @@ install_viper() {
 
     # Interactive password input
     while true; do
-        read -sp "Enter VIPER admin password (input hidden): " viper_pass
+        read -sp "Enter VIPER admin password: " viper_pass
         echo
         read -sp "Confirm password: " viper_pass_confirm
         echo
@@ -244,7 +244,7 @@ EOF
     viper_port=${viper_port:-60000}
 
     # Ask for basic auth configuration
-    read -p "Configure basic authentication? (Recommended) [Y/n]: " configure_auth
+    read -p "Configure basic authentication? (default: Y) [Y/n]: " configure_auth
     configure_auth=${configure_auth:-Y}
 
     if [[ "$configure_auth" =~ ^[Yy]$ ]]; then

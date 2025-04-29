@@ -171,7 +171,7 @@ install_viper() {
 
     # 交互式密码输入
     while true; do
-        read -sp "请输入 VIPER 管理员密码（输入隐藏）：" viper_pass
+        read -sp "请输入 VIPER 管理员密码：" viper_pass
         echo
         read -sp "确认密码：" viper_pass_confirm
         echo
@@ -245,7 +245,7 @@ EOF
     viper_port=${viper_port:-60000}
 
     # 询问是否配置基本认证
-    read -p "是否配置基本认证？（推荐）[Y/n]：" configure_auth
+    read -p "是否配置基本认证？（默认: Y）[Y/n]：" configure_auth
     configure_auth=${configure_auth:-Y}
 
     if [[ "$configure_auth" =~ ^[Yy]$ ]]; then
