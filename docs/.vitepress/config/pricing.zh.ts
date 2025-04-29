@@ -7,7 +7,7 @@ export const pricingConfig = {
     title: '社区版',
     freeLabel: '免费',
     description: '核心功能免费使用',
-    ctaText: '免费开始',
+    ctaText: '开始使用',
     ctaLink: '/zh/guide/getting_start',
     features: [
       { text: '30分钟session运行时长', enabled: true },
