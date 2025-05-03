@@ -6,16 +6,14 @@ cover: /og/img_2.png
 
 # 3.1.4 - 劳动节快乐
 
-![img_2.png](/og/img_2.png)
+![img_4.png](/og/img_4.png)
 
 
-## 新的Telegram Bot
+## 文档优化
 
-新版本中的重新设计了Telegram Bot的功能,当前无需用户自己创建Bot,只需要打开Viperrtp官方的机器人,发送chat_id即可接收消息.
+官网中所有的文档文字说明都已更新,模块/教程部分的图片在新版本更新完成.
 
-[Telegram Bot 文档](../../zh/guide/telegram_bot.md)
-
-[十分钟零成本创建Telegram Bot](../../zh/training/create_free_telegram_bot_in_ten_minutes.md)
+> 更新100+模块文档真是...
 
 ## 一键部署nmap/python3.12/socat到内网主机
 
@@ -24,10 +22,14 @@ cover: /og/img_2.png
 ## 优化
 
 - 大量的UI/UX优化 (22 git commit)
-
-
+- 更新内置的Windows CVE数据库
+- 内网扫描类模块当前会将对应主机的信息存储到`主机信息`中
 
 ## Bug修复
 
-- 修复`端口转发`反向转发时不必要的端口占用检查
+- 修复免杀模块低概率生成的源码无法编译问题
+- 修复MSF模块快速结束时后台无法回调问题
+- 修复`WMI哈希传递`拒绝运行问题
+- 修复`获取Windows浏览器密码(C#)`超时问题
+- 修复模块中无法正确处理CIDR的问题
 
