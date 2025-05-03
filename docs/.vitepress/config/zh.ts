@@ -78,6 +78,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "更新日志",
             items: [
                 {
+                    text: '3.1.4 - 劳动节快乐',
+                    link: '/zh/release/3_1_4_happy_international_workers_day'
+                },
+                {
                     text: '3.1.3 - 这不是Bug,这是特性 !',
                     link: '/zh/release/3_1_3_It_is_not_a_bug_it_is_a_feature'
                 },
