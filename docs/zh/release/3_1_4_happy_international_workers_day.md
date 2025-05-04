@@ -13,6 +13,8 @@ cover: /og/img_4.png
 - 智能体已支持MSF相关功能的调用
 - 智能体当前可通过调用多个内置工具进行自动化渗透测试
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114444319334312&bvid=BV1xdGRz2E2R&cid=29772089454&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 > 当前智能体的自动化能力处于概念验证阶段
 
 ## AI 智能体
