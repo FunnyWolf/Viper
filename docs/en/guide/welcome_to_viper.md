@@ -1,52 +1,42 @@
 # Welcome to VIPER
 
-Where Red Teaming Builds Cyber Resilience.
-
-As a community-vetted cybersecurity platform, VIPER unifies threat modeling, adversary simulation and red team operations into one collaborative workspace.
-Trusted by leading enterprises worldwide to transform red team insights into actionable defense strategies.
+**VIPER** is a powerful and flexible red team platform. It integrates core tools and functions needed for adversary simulation and red team operations, with built-in modules covering various stages. Through deep integration of AI and red team tools, VIPER helps you efficiently complete cybersecurity assessments.
 
 <div class="tip custom-block" style="padding-top: 8px">
 
-Install and try VIPER in 5 minutes? Jump to [Quick Start](./getting_start).
+🚀 Want to get started quickly? [5-minute Quick Start](./getting_start) to deploy your first VIPER instance!
 
 </div>
 
 ## Why VIPER?
 
-- **Easy-to-use operation interface**
+- **Simple and efficient interface** 📊
 
-  Provides an easy-to-learn user interface, allowing red team members to quickly start their security assessment tasks.
+  Get started quickly and conduct security assessments without complex training.
 
-- **Multi-platform support**
+- **Comprehensive multi-platform support** 💻
 
-  Supports red team assessment for multiple operating systems, including Windows, Linux, and macOS.
+  Seamlessly supports Windows, Linux, and macOS operating systems, meeting various penetration testing scenarios.
 
-- **Out-of-the-box red team tools**
+- **AI-driven intelligent assistance** 🧠
 
-  The functional design covers all stages of the MITRE ATT&CK framework and provides users with a comprehensive attack
-  simulation solution.
+  Built-in large language model agent (LLM Agent) provides intelligent decision support, greatly improving work efficiency.
 
-- **Integrated LLM Agent**
+- **Rich built-in module library** 🛠️
 
-  Built-in large language model intelligent agent to enhance automated processing capabilities and intelligent decision
-  support.
+  Integrates 100+ post-exploitation modules, fully covering all stages of the MITRE ATT&CK framework, from initial access to lateral movement.
 
-- **Automated workflow**
+- **Powerful automation capabilities** ⚙️
 
-  Supports automated orchestration and notification mechanisms, enabling red teams to monitor target status around the
-  clock.
+  Supports automated orchestration and notification mechanisms, reducing repetitive work and letting you focus on creative penetration testing.
 
-- **Rich Built-in Modules**
+- **Flexible extensibility** 🔌
 
-  Integrates more than 100 post-exploitation modules, covering all stages of MITRE ATT&CK, meeting the needs of different scenarios.
+  Supports writing custom modules in Python to easily meet specific needs or add additional functions.
 
-- **Custom extension ability**
+- **Professional protection mechanisms** 🛡️
 
-  Supports writing custom modules in Python to meet specific needs or add additional functions.
-
-- **More Advanced Features**
-
-  Includes built-in anti-tracing/handler firewall/defense evasion/pivot graph/notification functions.
+  Built-in anti-tracking, connection filtering, defense evasion, multi-level proxy, and other professional protection mechanisms to ensure operational security.
 
 ## Product Comparison
 
@@ -54,7 +44,7 @@ Install and try VIPER in 5 minutes? Jump to [Quick Start](./getting_start).
 |--------------------|-----------------------------|-------------------|-------------------|------------------|
 | Implants           | Windows<br/>Linux<br/>MacOS | Windows           | Windows           | Windows          |
 | Visual UI          | ✅                           | ✅                 | ✅                 | ✅                |
-| Pivot Graph        | ✅                           | ✅                 | ✅                 | ✅                |
+| Multi-level Control| ✅                           | ✅                 | ✅                 | ✅                |
 | Custom Plugin      | Python                      | CNA               | ❌                 | ❌                |
 | Built-in Evasion   | ✅                           | ❌                 | ✅                 | ✅                |
 | Automation         | ✅                           | ❌                 | ✅                 | ❌                |
@@ -64,9 +54,8 @@ Install and try VIPER in 5 minutes? Jump to [Quick Start](./getting_start).
 
 <small>\* Community edition is free to use</small>
 
-## Next steps
+## Start your VIPER journey now
 
-+ Read [Quick Start](getting_start.md) to install and try VIPER
-+ Browse VIPER functions quickly through [Screenshots](screenshots.md)
-+ Adversary simulation with VIPER by referring to [Training](../training/index)
-+ Unlock more premium features by [subscribing](../pricing)
++ 📚 [Quick Start](getting_start.md) - Deploy and experience VIPER in 5 minutes
++ 🎓 [Training](../training/index) - Master advanced VIPER techniques
++ 💼 [Pricing](../pricing) - Differences between community and professional editions
