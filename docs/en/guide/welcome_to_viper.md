@@ -1,6 +1,7 @@
 # Welcome to VIPER
 
-**VIPER** is a powerful and flexible red team platform. It integrates core tools and functions needed for adversary simulation and red team operations, with built-in modules covering various stages. Through deep integration of AI and red team tools, VIPER helps you efficiently complete cybersecurity assessments.
+**VIPER** is a powerful and flexible red team platform. It integrates core tools and functions needed for adversary simulation and red team operations, with built-in modules
+covering various stages. Through deep integration of AI and red team tools, VIPER helps you efficiently complete cybersecurity assessments.
 
 <div class="tip custom-block" style="padding-top: 8px">
 
@@ -40,17 +41,17 @@
 
 ## Product Comparison
 
-|                    | VIPER                       | Cobalt Strike     | NightHawk         | BruteRatel       |
-|--------------------|-----------------------------|-------------------|-------------------|------------------|
-| Implants           | Windows<br/>Linux<br/>MacOS | Windows           | Windows           | Windows          |
-| Visual UI          | ✅                           | ✅                 | ✅                 | ✅                |
-| Multi-level Control| ✅                           | ✅                 | ✅                 | ✅                |
-| Custom Plugin      | Python                      | CNA               | ❌                 | ❌                |
-| Built-in Evasion   | ✅                           | ❌                 | ✅                 | ✅                |
-| Automation         | ✅                           | ❌                 | ✅                 | ❌                |
-| Team Collaboration | ✅                           | ✅                 | ❌                 | ❌                |
-| LLM Agent          | ✅                           | ❌                 | ❌                 | ❌                |
-| Price              | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
+|                     | VIPER                       | Cobalt Strike     | NightHawk         | BruteRatel       |
+|---------------------|-----------------------------|-------------------|-------------------|------------------|
+| Implants            | Windows<br/>Linux<br/>MacOS | Windows           | Windows           | Windows          |
+| Visual UI           | ✅                           | ✅                 | ✅                 | ✅                |
+| Multi-level Control | ✅                           | ✅                 | ✅                 | ✅                |
+| Custom Plugin       | Python                      | CNA               | ❌                 | ❌                |
+| Built-in Evasion    | ✅                           | ❌                 | ✅                 | ✅                |
+| Automation          | ✅                           | ❌                 | ✅                 | ❌                |
+| Team Collaboration  | ✅                           | ✅                 | ❌                 | ❌                |
+| LLM Agent           | ✅                           | ❌                 | ❌                 | ❌                |
+| Price               | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
 
 <small>\* Community edition is free to use</small>
 
