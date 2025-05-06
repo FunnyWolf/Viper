@@ -399,10 +399,9 @@ function sidebarTraining(): DefaultTheme.SidebarItem[] {
             text: '熟悉Viper',
             collapsed: false,
             items: [
-                {text: '获取权限', link: 'first_session'},
+                {text: '获取权限', link: 'first_session/first_session'},
                 {text: '信息收集', link: 'information_collection'},
                 {text: '横向渗透', link: 'lateral_movement'},
-                {text: '信息收集(互联网)', link: 'Information_collection_Internet'},
             ]
         },
         {

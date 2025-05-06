@@ -371,7 +371,6 @@ function sidebarTraining(): DefaultTheme.SidebarItem[] {
                 {text: 'Get Permission', link: 'first_session'},
                 {text: 'Information Collection', link: 'information_collection'},
                 {text: 'Lateral Movement', link: 'lateral_movement'},
-                {text: 'Information Collection (Internet)', link: 'Information_collection_Internet'},
             ]
         },
         {

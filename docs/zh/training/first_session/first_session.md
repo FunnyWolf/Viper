@@ -1,58 +1,55 @@
-# 获取权限
+# 第一滴血
 
-## 生成监听
+对手模拟和红队行动也通常称为后渗透或内网渗透,所测试的目标也通常是企业内部网络.
 
-+ 选择 **监听载荷-新增监听** ,进入新增监听页面
+本篇文章介绍如何通过Viper获取第一个权限(Session).
 
-![](img\first_session\1.webp)
+## 回连地址
 
-+ 以 reverse_tcp 为例
++ `平台设置` -> `通用配置` -> `回连地址` ,填写VPS的互联网IP地址或虚拟机IP
 
-![](img\first_session\2.webp)
+![img.png](img.png)
 
-> 请注意 LHOST 填写为 VPS 的外网 IP 地址,Viper会自动提示
+> 回连地址用于监听/载荷/端口转发等自动填写LHOST
+> 与Webshell或者RDP等方式不同,当前C2通常使用反向连接,即植入物->C2,既能保证C2的集中控制,也能适配现代企业网络的NAT模式
+
+## 新增监听
+
++ `监听载荷` -> `新增监听`
+
+![img_1.png](img_1.png)
+
+![img_2.png](img_2.png)
+
+> 图中为windows的reverse_https类型的监听,LHOST会自动填写为回连地址,点击新增后会在8000端口启动监听(确保8000端口未被占用)
 >
-> 如果使用国内的 vps 如京东云,阿里云等,请使用 reverse_https 并配置证书,绕过流量检测
->
+>后续章节会更详细的介绍各个payload的优缺点和使用场景
 
 ## 生成载荷
 
-+ 点击对应监听的 **生成载荷** ,浏览器会自动下载一个免杀的exe或elf
++ 点击监听的 `生成PE/ELF`,浏览器会自动下载一个exe或elf,具体取决于监听的类型(windows或linux)
 
-![](img\first_session\3.webp)
+![img_3.png](img_3.png)
 
-> 免杀载荷可能由于杀毒软件厂商添加 md5 标签而失效
->
-> viper会持续更新以对抗杀软
->
+## 第一滴血
 
-## First Session
++ 将生成的exe上传到目标主机中,然后执行
++ 控制台即获取了第一个Session
 
-+ 将生成的exe上传到要控制主机中,然后执行
+![img_4.png](img_4.png)
 
-![](img\first_session\4.webp)![](img\first_session\5.webp)
+## Session
+
++ 控制台中的Session通过不同图标展示Session的配置信息
 
 
 
-> 以冰蝎 webshell 为例,Session 是一种增强版的 Shell,后续 Session 统称为权限
->
-
-+ 此时控制台已经获取了一个 Session
-
-![](img\first_session\6.webp)
-
-## 主机和 Session
-
-![](img\first_session\7.webp)
 
 控制台中显示权限及主机的重要信息,从左到右分别介绍各个图标的含义.
 
 + 点击执行模块按钮会显示所有可用的模块
 
 > 平台会根据当前目标是否有 session 权限来自动过滤适用的模块
->
-
-![](img\first_session\8.webp)
 
 + 彩色长方形标签表示 session 最后的心跳时间
 
@@ -89,11 +86,8 @@
 
 + 点击权限中的任意标签会弹出针对对权限的所有可用操作
 
-![](img\first_session\9.webp)
 
 + 点击主机中的任意标签中可以操作/查看/修改/更新以主机 IP 为 ID 的信息集
-
-![](img\first_session\10.webp)
 
 ## 常见问题
 
