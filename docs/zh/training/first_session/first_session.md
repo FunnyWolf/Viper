@@ -40,37 +40,32 @@
 
 ## Session
 
-+ 控制台中的Session通过不同图标展示Session的配置信息
++ 控制台中的Session通过不同图标展示Session的配置信息,从左到右依次为`运行模块` `心跳` `Session ID` `监听 ID` `网络连接` `Arch` `OS版本` `主机名/当前用户` `PID` `通信通道`
+  ![img_5.png](img_5.png)
 
-
-
-
-控制台中显示权限及主机的重要信息,从左到右分别介绍各个图标的含义.
-
-+ 点击执行模块按钮会显示所有可用的模块
++ 点击`运行模块`按钮会显示所有可用的模块
 
 > 平台会根据当前目标是否有 session 权限来自动过滤适用的模块
 
-+ 彩色长方形标签表示 session 最后的心跳时间
++ `心跳`标签表示 session 最后的心跳时间
 
-> 心跳时间超过 1 分钟后图标会变成红色,此时 VIPER 后台认为该 session 很可能已经失效,但是对于tcp类型的 payload,在长时间不操作时可能处于休眠状态导致心跳超过 1 分钟,对 session 重新操作即可唤醒
-> session
->
+> 心跳时间超过 1 分钟后图标会变成红色,此时 VIPER 后台认为该 session 很可能已经失效
+> 对于tcp类型的 payload,在长时间不操作时可能处于休眠状态导致心跳超过 1 分钟,对 session 重新操作即可唤醒 session
 
-+ 带有编号的紫色标签是 sid,用于标注 session.
-+ IP 的长方形标签表示 session 在互联网测的连接端口,
++ `Session ID`用于标注 session,是Session的唯一标识.
+
++ `监听 ID`展示Session使用的监听ID
+
++ `网络连接`表示 session 的源IP端口及目的IP端口,
 
 > 此 ip 地址一般为企业出口路由器的公网 IP
->
 > 此时鼠标移动到该标签上方会显示 session 完整网络连接信息及 GeoIP(地理位置信息)
->
 
-+ x64 及 x86 标签表示 session 的 arch,x64 及 x86 颜色不同
++ `Arch`标签表示 session 的 arch,x64 及 x86 颜色不同
 
 > arch 表示 session 进程的 arch,并不表示操作系统的 arch,操作系统的 arch 可以在主机信息里面查看
->
 
-+ 带图标的长方形标签标识 session 是 windows 系统还是 linux 系统及系统版本
++ `OS版本`标识 session 是 windows 系统还是 linux 系统及系统版本
 + 长方形标签展示主机名,当前用户等信息.
 
 > 其中白色的表示该 session 是普通用户权限,金色表示 session 是管理员权限(已过 uac),便于直观判断
