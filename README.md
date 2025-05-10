@@ -1,13 +1,13 @@
-![cover-v5-optimized](./docs/public/viper-og.png)
+![cover-v5-optimized](./docs/public/og/img_0.png)
 
 <p align="center">
-  <a href="https://www.viperrtp.com/guide/getting_start">Getting-started</a> ·
+  <a href="https://www.viperrtp.com/guide/getting_start">Getting-Started</a> ·
   <a href="https://www.viperrtp.com/guide/welcome_to_viper">Documentation</a>
 </p>
 
 <p align="center">
     <a href="https://www.viperrtp.com/" target="_blank">
-        <img alt="Static Badge" src="https://img.shields.io/badge/Product-F04438"></a>
+        <img alt="Static Badge" src="https://img.shields.io/badge/Website-F04438"></a>
     <a href="https://www.viperrtp.com/pricing" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/free-pricing?logo=free&color=%20%23155EEF&label=pricing&labelColor=%20%23528bff"></a>
     <a href="https://discord.gg/3R9yZvQueT" target="_blank">
@@ -56,12 +56,12 @@ efficiently completing cybersecurity assessment tasks.
 - **More Advanced Features**
   Includes built-in anti-tracing/handler firewall/defense evasion/pivot graph/automated notification functions.
 
-![img.webp](docs/en/guide/webp/screenshots/img.webp)
-![img_1.webp](docs/en/guide/webp/screenshots/img_1.webp)
-![img_2.webp](docs/en/guide/webp/screenshots/img_2.webp)
-![img_3.webp](docs/en/guide/webp/screenshots/img_3.webp)
-![img_4.webp](docs/en/guide/webp/screenshots/img_4.webp)
-![img_5.webp](docs/en/guide/webp/screenshots/img_5.webp)
+![img.webp](docs/public/hero/en/img.png)
+![img_1.webp](docs/public/hero/en/img_1.png)
+![img_2.webp](docs/public/hero/en/img_2.png)
+![img_3.webp](docs/public/hero/en/img_3.png)
+![img_4.webp](docs/public/hero/en/img_4.png)
+![img_5.webp](docs/public/hero/en/img_5.png)
 
 ## Product Comparison
 
