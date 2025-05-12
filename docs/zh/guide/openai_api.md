@@ -66,3 +66,11 @@ ollama serve
 + 勾选easy和function_calling(reasoning字段当前未使用)
 
 ![img.png](webp/openai_api/img_2.png)
+
+### Google Gemini
+
++ 登录https://aistudio.google.com/apikey获取apikey
+
++ 在Viper中填写配置,base_url为https://generativelanguage.googleapis.com/v1beta/openai/,api_key为上一步获取的key,model为gemini-2.0-flash
+
++ 勾选easy和function_calling(reasoning字段当前未使用)

@@ -63,4 +63,12 @@ ollama serve
 
 + Check the easy and function_calling options (the reasoning field is currently not in use)
 
-![img.png](webp/openai_api/img_2.png)
+![img_2.png](webp/openai_api/img_2.png)
+
+### Google Gemini
+
++ Log in to https://aistudio.google.com/apikey to get your API key
+
++ Fill in the configuration in Viper: base_url should be https://generativelanguage.googleapis.com/v1beta/openai/, api_key should be the key obtained in the previous step, model should be gemini-2.0-flash
+
++ Check the easy and function_calling options (the reasoning field is currently not in use)
