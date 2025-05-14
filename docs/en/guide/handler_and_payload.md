@@ -14,6 +14,7 @@
 ## HTTPS Certificate
 
 + Viper comes with a built-in SSL certificate `www.example.com.pem` that can be used directly for HTTPS encryption. Users can also upload their own PEM format certificates. Note that the certificate must contain both public and private keys. Refer to the `www.example.com.pem` file for the specific format
++ You can use the module [Clone Https Certificate](../module/DefenseEvasion_SubvertTrustControls_CloneSSLPem.md) to clone certificates from any website
 
 ## Generate PE/ELF
 

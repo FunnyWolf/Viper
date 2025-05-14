@@ -14,6 +14,7 @@
 ## HTTPS证书
 
 + Viper默认内置一个ssl证书 `www.example.com.pem`,使用时可直接用于https加密,用户也可以自行上传pem格式证书,注意证书中必须包含公钥和私钥,具体格式参考 `www.example.com.pem`文件
++ 可以使用模块[克隆Https证书](../module/DefenseEvasion_SubvertTrustControls_CloneSSLPem.md)克隆任意网站的证书
 
 ## 生成PE/ELF
 
