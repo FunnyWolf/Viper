@@ -56,7 +56,7 @@ The bot created in telegram can be understood as the Bot's UI interface, used fo
 - Get bot's token (a super long string)
 - Register a command (like chat_id)
 
-![img.png](img.png)
+![img.png](img/create_free_telegram_bot_in_ten_minutes/img.png)
 
 ### Creating Bot Backend Code
 
@@ -78,7 +78,7 @@ Of course, you can also use my already created project [free_telegram_bot](https
 - Open cloudflare worker page, click create
 - Select Import a repository, choose the newly created code repository and click deploy
 
-![img_1.png](img_1.png)
+![img_1.png](img/create_free_telegram_bot_in_ten_minutes/img_1.png)
 
 - Set the bot's webhook to point to the new worker
 

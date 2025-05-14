@@ -55,7 +55,7 @@ telegram创建的bot可以理解为Bot的UI界面,用于通过和Bot对话来进
 - 获取bot的token (一个超长的字符串)
 - 注册一个命令(如chat_id)
 
-![img.png](img.png)
+![img.png](img/create_free_telegram_bot_in_ten_minutes/img.png)
 
 ### 创建Bot后台代码
 
@@ -77,7 +77,7 @@ bot有如下功能
 - 打开cloudflare worker页面,点击 create
 - Import a repository选中新建的代码仓库后点击部署
 
-![img_1.png](img_1.png)
+![img_1.png](img/create_free_telegram_bot_in_ten_minutes/img_1.png)
 
 - 设置bot的webhook指向新建的worker
 
