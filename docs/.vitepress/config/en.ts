@@ -145,6 +145,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'OPENAI API', link: 'openai_api'},
                 {text: 'SMTP Config', link: 'smtp_config'},
                 {text: 'Telegram Bot', link: 'telegram_bot'},
+                {text: 'Bark Bot', link: 'bark_bot'},
                 {text: 'ServerChan Bot', link: 'server_bot'},
                 {text: 'DingDing Bot', link: 'dingding_bot'},
                 {text: 'About Viper', link: 'about_viper'},
