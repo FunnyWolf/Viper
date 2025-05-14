@@ -24,8 +24,12 @@
 + 选择 `生成载荷`按钮可以手动输入配置生成载荷.
 + 选择 `自动监听`选项,在生成载荷完成后自动添加载荷所对应的监听
 
-## Reverse_dns上线
+## 高阶用法
+
+### Reverse_dns上线
 
 [reverse_dns](../training/invisible_wings_msf_using_dns_tunnel_for_online.md)
 
+### CDN上线meterpreter
 
+[online_meterpreter_by_cdn](../training/online_meterpreter_by_cdn/online_meterpreter_by_cdn.md)

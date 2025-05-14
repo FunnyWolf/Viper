@@ -24,6 +24,12 @@
 + Select the `Generate Payload` button to manually input configuration to generate payloads
 + Select the `Auto Handler` option to automatically add the corresponding handler after generating the payload
 
-## Reverse_dns Connection
+## Advanced Usage
+
+### Reverse_dns Connection
 
 [reverse_dns](../training/invisible_wings_msf_using_dns_tunnel_for_online.md)
+
+### CDN Connection for Meterpreter
+
+[online_meterpreter_by_cdn](../training/online_meterpreter_by_cdn/online_meterpreter_by_cdn.md)
