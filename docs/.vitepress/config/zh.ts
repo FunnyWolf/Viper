@@ -78,6 +78,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "更新日志",
             items: [
                 {
+                    text: '3.1.5 - GitHub Issues 之周',
+                    link: '/zh/release/3_1_5_Github_issues_week'
+                },
+                {
                     text: '3.1.4 - 劳动节快乐',
                     link: '/zh/release/3_1_4_happy_international_workers_day'
                 },
