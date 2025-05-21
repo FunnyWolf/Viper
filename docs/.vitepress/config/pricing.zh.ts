@@ -33,5 +33,5 @@ export const pricingConfig = {
       { text: '优先技术支持', enabled: true }
     ]
   },
-  disclaimer: '购买后license会通过邮件发送.如license未激活,可全额退款.'
+  disclaimer: '订阅后license会通过邮件发送.license未激活可全额退款.'
 }

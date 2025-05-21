@@ -33,5 +33,5 @@ export const pricingConfig = {
       { text: 'Priority support', enabled: true }
     ]
   },
-  disclaimer: 'License will be sent via email after purchase. Full refund available if license is not activated.'
+  disclaimer: 'License will be sent via email after subscribing. Full refund available if license is not activated.'
 }
