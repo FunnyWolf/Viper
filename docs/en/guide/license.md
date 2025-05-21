@@ -2,23 +2,28 @@
 
 ![img.png](webp/license/img.png)
 
-## Community edition vs Professional edition
+## Community Edition vs Professional Edition
 
-After installation, Viper defaults to the Community edition. It can be upgraded to the Professional edition after purchasing a subscription. 
-
-For a comparison of version features or purchase a subscription, please refer to the [Pricing](../pricing.md).
+After installation, the default is the Community Edition. After purchasing a subscription, you can upgrade to the Professional Edition. For version feature comparison or Professional Edition purchase, please refer to [Pricing](../pricing.md).
 
 ## Activating Devices
-After purchasing a subscription, the system will send a License code to your email. 
 
-Log in to Viper and enter the License code under `Platform Settings` `License` to activate the Professional edition subscription.
+After purchasing a subscription, the system will send a License code to your email. Log in to Viper and enter the License code in `Platform Settings` > `License Management` to activate the Pro version subscription.
 
-Each License can activate up to 3 devices simultaneously. Devices that are deactivated will not count towards the 3-device limit.
+Each License can activate 3 devices simultaneously. Deactivated devices are not counted toward the 3-device limit.
 
 ## Deactivating Devices
-To deactivate a device, click the `Deactivate` button under `Settings` `License`.
 
-## Subscription Expiration
-After a subscription expires, the system will automatically disable Professional edition features, but you can still use the Community edition features. 
+Click the `Deactivate` button in `Platform Settings` > `License` to cancel activation.
 
-If you wish to continue using Professional edition features, please purchase a subscription.
+## License Expiration
+
+After the License expires, the platform will provide a notification. The Professional Edition can still be used within 7 days after expiration. Please check your subscription email to update the latest License.
+
+## View Subscription Information / Did Not Receive License After Subscription
+
+- Visit [https://www.creem.io/my-orders/login](https://www.creem.io/my-orders/login)
+- Enter the email address you provided during subscription, and you will receive a one-time login link in your email
+- After clicking the link, you can view the current email's subscription information and License
+
+![img.png](webp/license/img_1.png)

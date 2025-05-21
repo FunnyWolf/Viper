@@ -332,7 +332,7 @@ defineProps({
   text-align: center;
   font-size: 0.875rem;
   color: var(--vp-c-text-2);
-  margin-top: 2rem;
+  margin-top: 4rem;
   font-style: italic;
 }
 

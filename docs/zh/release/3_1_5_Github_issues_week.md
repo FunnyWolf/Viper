@@ -1,6 +1,6 @@
 ---
 title: 3.1.5 - GitHub Issues 之周
-description: 渗透测试智能体优化了提示词并新增总结功能,添加Bark消息推送功能,重构部分免杀模块,许可证功能调整避免因网络或未更新许可证导致影响使用,以及大量UI/UX优化
+description: 渗透测试智能体优化了提示词并新增总结功能,添加Bark消息推送功能,重构部分免杀模块,License功能调整避免因网络或未更新License导致影响使用,以及大量UI/UX优化
 cover: /og/img_5.png
 ---
 
@@ -8,7 +8,7 @@ cover: /og/img_5.png
 
 ![img_4.png](/og/img_5.png)
 
-渗透测试智能体优化了提示词并新增总结功能,添加Bark消息推送功能,重构部分免杀模块,许可证功能调整避免因网络或未更新许可证导致影响使用,以及大量UI/UX优化
+渗透测试智能体优化了提示词并新增总结功能,添加Bark消息推送功能,重构部分免杀模块,License功能调整避免因网络或未更新License导致影响使用,以及大量UI/UX优化
 
 ## 渗透测试智能体
 
@@ -34,10 +34,10 @@ cover: /og/img_5.png
 - [Windows基础Shellcode加载器](../module/Execution_UserExecution_ExeSrc.md)
 - [MSBuild执行Shellcode](../module/Execution_UserExecution_MSBuild.md)
 
-## 许可证功能调整
+## License功能调整
 
-- 优化因网络波动(或GFW)而导致无法连接许可证服务器时处理逻辑
-- 许可证过期后,会自动延长7天并进行提醒,方便用户添加新的许可证
+- 优化因网络波动(或GFW)而导致无法连接License服务器时处理逻辑
+- License过期后,会自动延长7天并进行提醒,方便用户添加新的License
 
 ## 优化
 
@@ -64,11 +64,11 @@ Viper发布了3.1.5,很多更新的灵感来自于Github上的issues,所以本�
 
 我在review viper的payload相关代码时,发现很多功能耦合在一起(果然程序员也会骂以前的自己),所以就将很多在框架层中的免杀功能独立成模块,方便用户选择和使用
 
-viper的许可证使用cloudflare的CDN,有时因为GFW的原因总是连不上(不知道为啥之前没问题),所以新版本修改之后只有连续很多次连不上服务器才会验证失败
+viper的License使用cloudflare的CDN,有时因为GFW的原因总是连不上(不知道为啥之前没问题),所以新版本修改之后只有连续很多次连不上服务器才会验证失败
 
-因为上述许可证逻辑的更新,如果许可证激活之后在离线环境使用可以连续使用24小时,每隔24小时联网激活一下就行
+因为上述License逻辑的更新,如果License激活之后在离线环境使用可以连续使用24小时,每隔24小时联网激活一下就行
 
-Viper使用creem的许可证服务,我原本以为license的有效期会根据订阅的时间自动延长,但其实不是,每个月需要用户手动激活新的License(我真无语了)
+Viper使用creem的License服务,我原本以为license的有效期会根据订阅的时间自动延长,但其实不是,每个月需要用户手动激活新的License(我真无语了)
 
 所以在新版本中如果license过期,在7天内只会进行提醒,不会影响使用,方便用户在7天内添加新的license
 
