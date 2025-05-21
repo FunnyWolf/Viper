@@ -127,88 +127,115 @@ defineProps({
 
 @keyframes gradientFlow {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%, 100% 0%, 50% 0%, 0% 0%;
+  }
+  25% {
+    background-position: 15% 15%, 85% 15%, 65% 15%, 15% 15%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 25% 25%, 75% 25%, 75% 25%, 25% 25%;
+  }
+  75% {
+    background-position: 15% 85%, 85% 85%, 65% 85%, 15% 85%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%, 100% 0%, 50% 0%, 0% 0%;
   }
 }
 
-/* 渐变背景系列 */
+/* 渐变背景系列 - 更鲜艳的颜色 */
 .gradient-0 {
-  background: /* 左下角 */ radial-gradient(circle at 0% 100%, rgba(255, 71, 71, 0.8) 0%, transparent 50%),
-    /* 右下角 */ radial-gradient(circle at 100% 100%, rgba(123, 97, 255, 0.8) 0%, transparent 50%),
-    /* 下边中间 */ radial-gradient(circle at 50% 100%, rgba(255, 105, 180, 0.6) 0%, transparent 50%),
-    /* 整体底色 */ linear-gradient(to top,
-      rgba(18, 18, 18, 0.8) 0%,
-      rgba(18, 18, 18, 0.95) 50%);
+  background: 
+    radial-gradient(circle at 0% 100%, rgba(255, 71, 71, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(123, 97, 255, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(255, 105, 180, 0.7) 0%, transparent 50%),
+    linear-gradient(to top,
+      rgba(18, 18, 18, 0.75) 0%,
+      rgba(18, 18, 18, 0.9) 50%);
+  background-size: 150% 150%;
+  animation: gradientFlow 15s ease infinite;
 }
 
 .gradient-1 {
-  background: radial-gradient(circle at 0% 100%, rgba(97, 255, 206, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 100% 100%, rgba(97, 210, 255, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 50% 100%, rgba(255, 97, 210, 0.6) 0%, transparent 50%),
-  linear-gradient(to top,
-      rgba(18, 18, 18, 0.8) 0%,
-      rgba(18, 18, 18, 0.95) 50%);
+  background: 
+    radial-gradient(circle at 0% 100%, rgba(72, 255, 0, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(64, 166, 255, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(255, 251, 0, 0.7) 0%, transparent 50%),
+    linear-gradient(to top,
+      rgba(18, 18, 18, 0.75) 0%,
+      rgba(18, 18, 18, 0.9) 50%);
+  background-size: 150% 150%;
+  animation: gradientFlow 15s ease infinite;
 }
 
 .gradient-2 {
-  background: radial-gradient(circle at 0% 100%, rgba(255, 185, 97, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 100% 100%, rgba(255, 97, 210, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 50% 100%, rgba(123, 97, 255, 0.6) 0%, transparent 50%),
-  linear-gradient(to top,
-      rgba(18, 18, 18, 0.8) 0%,
-      rgba(18, 18, 18, 0.95) 50%);
+  background: 
+    radial-gradient(circle at 0% 100%, rgba(255, 200, 110, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(255, 71, 71, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(140, 120, 255, 0.7) 0%, transparent 50%),
+    linear-gradient(to top,
+      rgba(18, 18, 18, 0.75) 0%,
+      rgba(18, 18, 18, 0.9) 50%);
+  background-size: 150% 150%;
+  animation: gradientFlow 15s ease infinite;
 }
 
 .gradient-3 {
-  background: radial-gradient(circle at 0% 100%, rgba(97, 255, 142, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 100% 100%, rgba(97, 255, 206, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 50% 100%, rgba(97, 210, 255, 0.6) 0%, transparent 50%),
-  linear-gradient(to top,
-      rgba(18, 18, 18, 0.8) 0%,
-      rgba(18, 18, 18, 0.95) 50%);
+  background: 
+    radial-gradient(circle at 0% 100%, rgba(0, 255, 255, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(191, 64, 255, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(255, 64, 255, 0.7) 0%, transparent 50%),
+    linear-gradient(to top,
+      rgba(18, 18, 18, 0.75) 0%,
+      rgba(18, 18, 18, 0.9) 50%);
+  background-size: 150% 150%;
+  animation: gradientFlow 15s ease infinite;
 }
 
 .gradient-4 {
-  background: radial-gradient(circle at 0% 100%, rgba(123, 97, 255, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 100% 100%, rgba(255, 97, 210, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 50% 100%, rgba(97, 255, 206, 0.6) 0%, transparent 50%),
-  linear-gradient(to top,
-      rgba(18, 18, 18, 0.8) 0%,
-      rgba(18, 18, 18, 0.95) 50%);
+  background: 
+    radial-gradient(circle at 0% 100%, rgba(140, 120, 255, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(72, 255, 0, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(110, 255, 220, 0.7) 0%, transparent 50%),
+    linear-gradient(to top,
+      rgba(18, 18, 18, 0.75) 0%,
+      rgba(18, 18, 18, 0.9) 50%);
+  background-size: 150% 150%;
+  animation: gradientFlow 15s ease infinite;
 }
 
 .gradient-5 {
-  background: radial-gradient(circle at 0% 100%, rgba(255, 97, 210, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 100% 100%, rgba(97, 255, 206, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 50% 100%, rgba(123, 97, 255, 0.6) 0%, transparent 50%),
-  linear-gradient(to top,
-      rgba(18, 18, 18, 0.8) 0%,
-      rgba(18, 18, 18, 0.95) 50%);
+  background: 
+    radial-gradient(circle at 0% 100%, rgba(255, 71, 71, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(64, 166, 255, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(255, 251, 0, 0.7) 0%, transparent 50%),
+    linear-gradient(to top,
+      rgba(18, 18, 18, 0.75) 0%,
+      rgba(18, 18, 18, 0.9) 50%);
+  background-size: 150% 150%;
+  animation: gradientFlow 15s ease infinite;
 }
 
 .gradient-6 {
-  background: radial-gradient(circle at 0% 100%, rgba(97, 210, 255, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 100% 100%, rgba(123, 97, 255, 0.8) 0%, transparent 50%),
-  radial-gradient(circle at 50% 100%, rgba(255, 97, 210, 0.6) 0%, transparent 50%),
-  linear-gradient(to top,
-      rgba(18, 18, 18, 0.8) 0%,
-      rgba(18, 18, 18, 0.95) 50%);
+  background: 
+    radial-gradient(circle at 0% 100%, rgba(110, 220, 255, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(255, 71, 71, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(255, 251, 0, 0.7) 0%, transparent 50%),
+    linear-gradient(to top,
+      rgba(18, 18, 18, 0.75) 0%,
+      rgba(18, 18, 18, 0.9) 50%);
+  background-size: 150% 150%;
+  animation: gradientFlow 15s ease infinite;
 }
 
-/* 添加光晕效果 */
+/* 增强光晕效果 */
 .feature-card::before {
   content: '';
   position: absolute;
   inset: 0;
   background: inherit;
   filter: blur(20px);
-  opacity: 0.7;
+  opacity: 0.8;
   z-index: -1;
 }
 
