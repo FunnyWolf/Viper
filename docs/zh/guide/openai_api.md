@@ -67,10 +67,24 @@ ollama serve
 
 ![img.png](webp/openai_api/img_2.png)
 
+### PPIO派欧云
+
++ 注册账号
+
+[PPIO派欧云：一键调用高性价比的开源模型API和GPU容器。注册得¥15免费代金券。](https://ppio.cn/user/register?invited_by=QU4JOA&utm_source=github_viper)
+
++ 获取API的方法可参考[PPIO新手指引](https://ppio.cn/docs/model/get-start)
+
++ 在Viper中填写配置,base_url为 https://api.ppinfra.com/v3/openai
+
++ 勾选easy和function_calling(reasoning字段当前未使用)
+
+![img.png](webp/openai_api/img_3.png)
+
 ### Google Gemini
 
 + 登录https://aistudio.google.com/apikey获取apikey
 
-+ 在Viper中填写配置,base_url为https://generativelanguage.googleapis.com/v1beta/openai/,api_key为上一步获取的key,model为gemini-2.0-flash
++ 在Viper中填写配置,base_url为 https://generativelanguage.googleapis.com/v1beta/openai/ ,api_key为上一步获取的key,model为gemini-2.0-flash
 
 + 勾选easy和function_calling(reasoning字段当前未使用)
