@@ -51,9 +51,7 @@ modules covering all phases and deep AI integration with red team tools, VIPER h
 | Automated Orchestration  | ✅                           | ❌                     | ✅                     | ❌                    |
 | Multi-user Collaboration | ✅                           | ✅                     | ❌                     | ❌                    |
 | LLM Agent                | ✅                           | ❌                     | ❌                     | ❌                    |
-| Price                    | Free*                       | $12,600 per user/year | $10,000 per user/year | $3,000 per user/year |
-
-<small>* Community edition is free to use</small>
+| Price                    | Free                        | $12,600 per user/year | $10,000 per user/year | $3,000 per user/year |
 
 ## Start Your VIPER Journey Now
 

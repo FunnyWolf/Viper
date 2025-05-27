@@ -75,9 +75,9 @@ efficiently completing cybersecurity assessment tasks.
 | Automation         | ✅                           | ❌                 | ✅                 | ❌                |
 | Team Collaboration | ✅                           | ✅                 | ❌                 | ❌                |
 | LLM Agent          | ✅                           | ❌                 | ❌                 | ❌                |
-| Price              | Free*                       | $12,600 user/year | $10,000 user/year | $3,000 user/year |
+| Price              | Free                        | $12,600 user/year | $10,000 user/year | $3,000 user/year |
 
-<small>\* Community edition is free to use</small>
+
 
 # Website
 
