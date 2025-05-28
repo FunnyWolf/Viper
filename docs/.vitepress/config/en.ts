@@ -143,7 +143,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: 'Platform Settings',
             collapsed: false,
             items: [
-                {text: 'License', link: 'license'},
+                // {text: 'License', link: 'license'},
                 {text: 'User Management', link: 'user_management'},
                 {text: 'General Config', link: 'common_config'},
                 {text: 'OPENAI API', link: 'openai_api'},
