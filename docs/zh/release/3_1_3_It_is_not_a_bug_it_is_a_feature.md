@@ -1,7 +1,7 @@
 ---
 title: 3.1.3 - 这不是一个Bug,这是一个特性
 description: 新的Telegram Bot,一键植入nmap/python3/socat,大量优化及文档更新.当然,还有很多`特性`被修复了.
-cover: /og/img_2.png
+#cover: /og/img_2.png
 ---
 
 # 3.1.3 - 这不是Bug,这是特性 !

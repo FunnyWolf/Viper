@@ -1,7 +1,7 @@
 ---
 title: 3.1.4 - Happy International Workers' Day
 description: New penetration testing agent, extensive documentation updates, multiple bug fixes
-cover: /og/img_4.png
+#cover: /og/img_4.png
 ---
 
 # 3.1.4 - Happy International Workers' Day

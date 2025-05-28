@@ -1,7 +1,7 @@
 ---
 title: 3.1.3 - It's Not a Bug, It's a Feature !
 description: New Telegram Bot, one-click deployment of nmap/python3/socat, lots of optimizations and documentation updates. And of course, many "features" have been fixed.
-cover: /og/img_2.png
+#cover: /og/img_2.png
 ---
 
 # 3.1.3 - It's Not a Bug, It's a Feature !
