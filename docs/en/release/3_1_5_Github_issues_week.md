@@ -6,7 +6,7 @@ cover: /og/img_5.png
 
 # 3.1.5 - GitHub Issues Week
 
-![img_4.png](/og/img_5.png)
+![img_4.png](3_1_5_Github_issues_week/img_5.png)
 
 Penetration testing agent optimized prompts and added summary functionality, added Bark message push feature, refactored anti-detection modules, adjusted license functionality to avoid impact due to network issues or outdated licenses, and numerous UI/UX improvements
 

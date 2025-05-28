@@ -6,7 +6,7 @@ cover: /og/img_4.png
 
 # 3.1.4 - Happy International Workers' Day
 
-![img_4.png](/og/img_4.png)
+![img_4.png](3_1_4_happy_international_workers_day/img_4.png)
 
 ## Penetration Testing Agent
 

@@ -6,7 +6,7 @@ cover: /og/img_2.png
 
 # 3.1.3 - 这不是Bug,这是特性 !
 
-![img_2.png](/og/img_2.png)
+![img_2.png](3_1_3_It_is_not_a_bug_it_is_a_feature/img_6.png)
 
 新版本主要进行文档的更新和 ~~Bug的修复~~ 特性优化😅.
 

@@ -6,7 +6,7 @@ cover: /og/img_2.png
 
 # 3.1.3 - It's Not a Bug, It's a Feature !
 
-![img_2.png](/og/img_2.png)
+![img_2.png](3_1_3_It_is_not_a_bug_it_is_a_feature/img_6.png)
 
 This version mainly focuses on documentation updates and ~~bug fixes~~ feature optimizations 😅.
 

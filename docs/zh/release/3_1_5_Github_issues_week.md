@@ -6,7 +6,7 @@ cover: /og/img_5.png
 
 # 3.1.5 - GitHub Issues 之周
 
-![img_4.png](/og/img_5.png)
+![img_4.png](3_1_5_Github_issues_week/img_5.png)
 
 渗透测试智能体优化了提示词并新增总结功能,添加Bark消息推送功能,重构部分免杀模块,License功能调整避免因网络或未更新License导致影响使用,以及大量UI/UX优化
 
