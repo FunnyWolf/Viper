@@ -16,8 +16,6 @@
     <a href="https://twitter.com/intent/follow?screen_name=viperrtp" target="_blank">
         <img src="https://img.shields.io/twitter/follow/viperrtp?logo=X&color=%20%23f5f5f5"
             alt="follow on X(Twitter)"></a>
-    <a href="https://hub.docker.com/u/viperplatform" target="_blank">
-        <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/viperplatform/viper?labelColor=%20%23FDB062&color=%20%23f79009"></a>
     <a href="https://github.com/funnywolf/viper/graphs/commit-activity" target="_blank">
         <img alt="Commits last month" src="https://img.shields.io/github/commit-activity/m/funnywolf/viper?labelColor=%20%2332b583&color=%20%2312b76a"></a>
     <a href="https://github.com/funnywolf/viper/" target="_blank">
