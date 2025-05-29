@@ -1,7 +1,7 @@
 ---
 title: 3.1.5 - GitHub Issues Week
 description: Penetration testing agent optimized prompts and added summary functionality, added Bark message push feature, refactored anti-detection modules, adjusted license functionality to avoid impact due to network issues or outdated licenses, and numerous UI/UX improvements
-#cover: /og/img_5.png
+cover: /og/img_5.png
 ---
 
 # 3.1.5 - GitHub Issues Week

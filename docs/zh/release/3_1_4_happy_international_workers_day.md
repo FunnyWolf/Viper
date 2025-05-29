@@ -1,7 +1,7 @@
 ---
 title: 3.1.4 - 劳动节快乐
 description: 新的渗透测试智能体,大量文档更新,多个Bug修复
-#cover: /og/img_4.png
+cover: /og/img_4.png
 ---
 
 # 3.1.4 - 劳动节快乐
