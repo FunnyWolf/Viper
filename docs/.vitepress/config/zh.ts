@@ -78,6 +78,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "更新日志",
             items: [
                 {
+                    text: '3.1.6 - 安全意识培训智能体和分析智能体',
+                    link: '/zh/release/3_1_6_Awareness_Training_Agent_And_Analysis_Agent'
+                },
+                {
                     text: '3.1.5 - GitHub Issues 之周',
                     link: '/zh/release/3_1_5_Github_issues_week'
                 },

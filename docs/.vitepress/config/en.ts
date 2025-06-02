@@ -53,6 +53,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "CHANGELOG",
             items: [
                 {
+                    text: '3.1.6 - Awareness Training Agent and Analysis Agent',
+                    link: '/release/3_1_6_Awareness_Training_Agent_And_Analysis_Agent'
+                },
+                {
                     text: '3.1.5 - GitHub Issues Week',
                     link: '/release/3_1_5_Github_issues_week'
                 },
