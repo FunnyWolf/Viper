@@ -171,7 +171,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: '平台配置',
             collapsed: false,
             items: [
-                //{text: '许可管理', link: 'license'},
+                {text: '许可管理', link: 'license'},
                 {text: '用户管理', link: 'user_management'},
                 {text: '通用配置', link: 'common_config'},
                 {text: 'OPENAI API', link: 'openai_api'},
