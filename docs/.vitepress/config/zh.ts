@@ -214,7 +214,8 @@ function sidebarModule(): DefaultTheme.SidebarItem[] {
             items: [
                 {text: '渗透测试智能体', link: 'AI_Agent_Session_LangGraph_Pentest'},
                 {text: '钓鱼邮件智能体', link: 'AI_Agent_Phishing_LangGraph_Mail'},
-                {text: '平台操作智能体', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
+                {text: '情报分析智能体', link: 'AI_Agent_Session_LangGraph_Analysis'},
+                //{text: '平台操作智能体', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
             ]
         },
         {
