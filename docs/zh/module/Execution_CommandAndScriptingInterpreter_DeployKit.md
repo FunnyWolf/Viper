@@ -1,4 +1,4 @@
-# 部署Kit套件到目标主机
+# 部署Kit套件到Linux主机
 
 ![img.png](img/Execution_CommandAndScriptingInterpreter_DeployKit/img.png)
 

@@ -18,6 +18,6 @@
 
 ## 操作方法
 
-![img.png](img.png)
+![img.png](img/AI_Agent_Session_LangGraph_Analysis/img.png)
 
-![img_1.png](img_1.png)
+![img_1.png](img/AI_Agent_Session_LangGraph_Analysis/img_1.png)
