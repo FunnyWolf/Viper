@@ -147,7 +147,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: 'Platform Settings',
             collapsed: false,
             items: [
-                // {text: 'License', link: 'license'},
+                {text: 'License', link: 'license'},
                 {text: 'User Management', link: 'user_management'},
                 {text: 'General Config', link: 'common_config'},
                 {text: 'OPENAI API', link: 'openai_api'},
@@ -190,8 +190,9 @@ function sidebarModule(): DefaultTheme.SidebarItem[] {
             items: [
                 {text: 'Pentest Agent', link: 'AI_Agent_Session_LangGraph_Pentest'},
                 {text: 'Phishing Agent', link: 'AI_Agent_Phishing_LangGraph_Mail'},
+                {text: 'Intelligence Analysis Agent', link: 'AI_Agent_Session_LangGraph_Analysis'},
                 // {text: 'Reconnaissance Agent', link: 'AI_Agent_Session_LangGraph_Discovery'},
-                {text: 'Viper Operations Agent', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
+                //{text: 'Viper Operations Agent', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
             ]
         },
         {

@@ -171,7 +171,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: '平台配置',
             collapsed: false,
             items: [
-                //{text: '许可管理', link: 'license'},
+                {text: '许可管理', link: 'license'},
                 {text: '用户管理', link: 'user_management'},
                 {text: '通用配置', link: 'common_config'},
                 {text: 'OPENAI API', link: 'openai_api'},
@@ -214,7 +214,8 @@ function sidebarModule(): DefaultTheme.SidebarItem[] {
             items: [
                 {text: '渗透测试智能体', link: 'AI_Agent_Session_LangGraph_Pentest'},
                 {text: '钓鱼邮件智能体', link: 'AI_Agent_Phishing_LangGraph_Mail'},
-                {text: '平台操作智能体', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
+                {text: '情报分析智能体', link: 'AI_Agent_Session_LangGraph_Analysis'},
+                //{text: '平台操作智能体', link: 'AI_Agent_Session_LangGraph_ViperOperation'},
             ]
         },
         {
