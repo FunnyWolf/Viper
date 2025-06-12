@@ -1,15 +1,15 @@
-# Internal Network Port Scanning
+# Internal Network Port Scan
 
 Port scanning of the target internal network.
 
-The scanning script is executed on the target host, and all network traffic for scanning is within the target internal network.
+The scanning script executes on the target host, and all scanning network traffic remains within the target internal network.
 
-If other modules need to connect to the discovered services, please use this Session to add the corresponding route or use a Socks proxy.
+If other modules need to connect to discovered services, please add corresponding routes or use Socks proxy with this Session.
 
 ## Operation Method
 
-![](img\Discovery_NetworkServiceScanning_PortScanByPython\1.webp)
+- Fill in the scanning parameters and run
+- Scanned IP addresses will be added to the host list
+- View scanned port information through the `Open Ports` option
+- View network discovery status through IP address connections in `Network Topology`
 
-![](img\Discovery_NetworkServiceScanning_PortScanByPython\2.webp)
-
-![](img\Discovery_NetworkServiceScanning_PortScanByPython\3.webp)
