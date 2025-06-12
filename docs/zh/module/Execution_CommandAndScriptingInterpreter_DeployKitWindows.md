@@ -11,3 +11,6 @@ Kit套件当前包含以下工具:
 
 - 模块执行成功后,即可在目标主机中执行kit套件中的工具
 - python3.13
+
+![img.png](img/Execution_CommandAndScriptingInterpreter_DeployKitWindows/img.png)
+![img_1.png](img/Execution_CommandAndScriptingInterpreter_DeployKitWindows/img_1.png)

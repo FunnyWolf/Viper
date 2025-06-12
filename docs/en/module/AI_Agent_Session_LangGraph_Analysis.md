@@ -18,4 +18,4 @@ The agent can query existing information from the system based on user needs, an
 
 ## Operation Method
 
-![img.png](img.png)
+![img.png](img/AI_Agent_Session_LangGraph_Analysis/img.png)

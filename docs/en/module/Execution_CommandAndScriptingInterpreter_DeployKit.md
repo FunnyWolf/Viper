@@ -1,6 +1,6 @@
 # Deploy Kit Suite to Target Host
 
-![img.png](../../zh/module/img/Execution_CommandAndScriptingInterpreter_DeployKit/Execution_CommandAndScriptingInterpreter_DeployKit/img.png)
+![img.png](img/Execution_CommandAndScriptingInterpreter_DeployKit/img.png)
 
 ## Main Features
 
@@ -15,12 +15,12 @@ The Kit suite currently includes the following tools:
 - After successful module execution, you can run the tools from the kit suite on the target host
 - nmap
 
-![img_1.png](../../zh/module/img/Execution_CommandAndScriptingInterpreter_DeployKit/Execution_CommandAndScriptingInterpreter_DeployKit/img_1.png)
+![img_1.png](img/Execution_CommandAndScriptingInterpreter_DeployKit/img_1.png)
 
 - python3.12
 
-![img_2.png](../../zh/module/img/Execution_CommandAndScriptingInterpreter_DeployKit/Execution_CommandAndScriptingInterpreter_DeployKit/img_2.png)
+![img_2.png](img/Execution_CommandAndScriptingInterpreter_DeployKit/img_2.png)
 
 - socat
 
-![img_3.png](../../zh/module/img/Execution_CommandAndScriptingInterpreter_DeployKit/Execution_CommandAndScriptingInterpreter_DeployKit/img_3.png)
+![img_3.png](img/Execution_CommandAndScriptingInterpreter_DeployKit/img_3.png)
