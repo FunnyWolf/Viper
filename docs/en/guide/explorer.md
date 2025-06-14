@@ -20,7 +20,7 @@
 
 + Click the "New Folder" button on the right to create a new folder in the current directory.
 + Click the "Upload" button to open the server file manager, and you can upload server files to the current directory.
-+ Click the `Download` link, and the background automatically creates a file download task. The downloaded files will be stored in `File Management`.
++ Click the `Download` link, and the background automatically creates a file download task. The downloaded files will be stored in `File Explorer`.
 ![img_2.png](webp/explorer/img_2.png)
 
 ## Executing Files

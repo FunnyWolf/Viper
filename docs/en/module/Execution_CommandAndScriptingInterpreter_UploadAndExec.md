@@ -1,7 +1,7 @@
 # Upload and Execute Executable Files
 
 Upload user-specified files to the target machine and execute them.
-The functionality is the same as uploading and executing files in `File Management`. This module is mainly used in conjunction with the `Automatic Orchestration` feature, with usage scenarios as follows:
+The functionality is the same as uploading and executing files in `File Explorer`. This module is mainly used in conjunction with the `Automatic Orchestration` feature, with usage scenarios as follows:
 
 + Generate a listener and deliver its payload to the target through phishing emails
 + Add this module in `Automatic Orchestration` and specify a binary file (such as ligolo, frp, nps or other intranet penetration tools or customized trojans)

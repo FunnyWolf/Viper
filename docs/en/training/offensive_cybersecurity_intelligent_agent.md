@@ -64,7 +64,7 @@ def send_mail_api(
         mail_subject: Annotated[str, "Email title"],
         mail_content: Annotated[str, "Email content"],
         mail_content_subtype: Annotated[Literal['plain', 'html'], "Email content format"],
-        mail_attachment_filenames: Annotated[list, "Email attachments, must be the file names in the `file list`. The user needs to upload them to viper's `file list` in advance"]
+        mail_attachment_filenames: Annotated[list, "Email attachments, must be the file names in the `File Explorer`. The user needs to upload them to viper's `File Explorer` in advance"]
 ) -> Annotated[str, "Whether the email sending is successful"]:
     """
     Call the background API interface to send emails.

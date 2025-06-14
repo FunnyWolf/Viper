@@ -7,7 +7,7 @@ avoid EDR hooks. Please use HTTPS and RC4 type listeners to evade traffic detect
 
 + Create a new listener
 + Open the module and select the corresponding listener
-+ After running the module, a zip file will be generated in `File Management`, containing C++ code
++ After running the module, a zip file will be generated in `File Explorer`, containing C++ code
 + You can customize and compile the source code using Visual Studio
 
 ## Notes

@@ -4,7 +4,7 @@ The module executes the C# version of Ladon's exe in memory. The exe required by
 (Unzip password: k8gege.org) https://github.com/k8gege/Ladon/releases/download/v7.0/Ladon7.0.rar
 
 Since Ladon is not fully open-source, Viper does not guarantee the security of the built-in Ladon-N20.exe and Ladon-N40.exe. It is recommended to upload the corresponding exe to
-the `File List` yourself.
+the `File Explorer` yourself.
 
 ## Operation Method
 

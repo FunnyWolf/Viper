@@ -6,7 +6,7 @@ Generates an antivirus-evasion exe file and its source code.
 
 + Create a new reverse_https listener
 + Open the module, select the corresponding https listener
-+ After running the module, a zip file will be generated in `File Management`, containing the antivirus-evasion exe payload and corresponding C++ code
++ After running the module, a zip file will be generated in `File Explorer`, containing the antivirus-evasion exe payload and corresponding C++ code
 + You can customize and compile the source code using Visual Studio
 
 # Notes

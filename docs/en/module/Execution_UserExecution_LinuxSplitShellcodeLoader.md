@@ -7,7 +7,7 @@ separate files.
 
 + Create a new listener (Linux)
 + Open the module and select the corresponding listener
-+ After running the module, a zip file will be generated in `File Management`, containing the anti-detection ELF payload and the corresponding C++ code
++ After running the module, a zip file will be generated in `File Explorer`, containing the anti-detection ELF payload and the corresponding C++ code
 
 ![](img/Execution_UserExecution_LinuxSplitShellcodeLoader/1.webp)
 

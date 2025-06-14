@@ -6,7 +6,7 @@ Generates an anti-detection ELF file. The process monitors itself and automatica
 
 + Create a new listener (Linux)
 + Open the module and select the corresponding listener
-+ After running the module, a zip file will be generated in `File Management`, containing the anti-detection ELF payload and its corresponding C++ code
++ After running the module, a zip file will be generated in `File Explorer`, containing the anti-detection ELF payload and its corresponding C++ code
 
 ## Notes
 

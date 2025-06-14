@@ -4,7 +4,7 @@
 
 Use Kit's Python interpreter to execute custom Python scripts (Python 3.11).
 
-The script to be executed can be uploaded to the server via the <File List>.
+The script to be executed can be uploaded to the server via the `File Explorer`.
 
 ## How to Operate
 

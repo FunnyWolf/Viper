@@ -39,4 +39,4 @@ Therefore, I developed this module with the following advantages:
 - Invite the employee to send a text message to the target phone
 - Input something like: "Read SMS messages", then "Show SMS content"
 - Input something like: "Read contacts", then "Show contact content"
-- Have the employee hold the phone, then input something like: "Now take a photo with the camera", and display the captured photo in the `File Management` section
+- Have the employee hold the phone, then input something like: "Now take a photo with the camera", and display the captured photo in the `File Explorer` section
