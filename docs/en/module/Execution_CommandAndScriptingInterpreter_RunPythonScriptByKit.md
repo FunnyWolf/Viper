@@ -12,7 +12,7 @@ The script to be executed can be uploaded to the server via the `File Explorer`.
 
 > Run `Deploy Kit Suite to Linux Host` or `Deploy Kit Suite to Windows Host` to deploy
 
-- Upload the Python script you want to execute to the <File List>
+- Upload the Python script you want to execute to the `File Explorer`
 
 > Only single script are supported, and script arguments are not supported
 
