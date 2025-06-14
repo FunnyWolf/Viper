@@ -245,6 +245,7 @@ function sidebarModule(): DefaultTheme.SidebarItem[] {
                 {text: '上传并执行可执行文件', link: 'Execution_CommandAndScriptingInterpreter_UploadAndExec'},
                 {text: '部署Kit套件到Linux主机', link: 'Execution_CommandAndScriptingInterpreter_DeployKit'},
                 {text: '部署Kit套件到Windows主机', link: 'Execution_CommandAndScriptingInterpreter_DeployKitWindows'},
+                {text: '执行Python脚本 (Kit)', link: 'Execution_CommandAndScriptingInterpreter_RunPythonScriptByKit'},
                 {text: 'Callback免杀(CreateThreadpoolWait)', link: 'Execution_UserExecution_CallbackCreateThreadpoolWait'},
                 {text: 'Callback免杀(CreateTimerQueue)', link: 'Execution_UserExecution_CallbackCreateTimerQueue'},
                 {text: 'Callback免杀(EnumChildWindows)', link: 'Execution_UserExecution_CallbackEnumChildWindows'},
