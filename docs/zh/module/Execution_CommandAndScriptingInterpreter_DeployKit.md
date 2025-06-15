@@ -13,6 +13,8 @@ Kit套件当前包含以下工具:
 ## 操作方法
 
 - 模块执行成功后,即可在目标主机中执行kit套件中的工具
+- Kit套件部署后,会自动将Python Interpreter添加到主机信息中,可以在主机信息中查看,运行相关模块时会自动使用该Python Interpreter
+
 - nmap
 
 ![img_1.png](img/Execution_CommandAndScriptingInterpreter_DeployKit/img_1.png)
