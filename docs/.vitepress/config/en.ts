@@ -53,6 +53,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "CHANGELOG",
             items: [
                 {
+                    text: '3.1.7 - Python Is All Your Need',
+                    link: '/release/3_1_7_Python_Is_All_Your_Need'
+                },
+                {
                     text: '3.1.6 - Awareness Training Agent and Analysis Agent',
                     link: '/release/3_1_6_Awareness_Training_Agent_And_Analysis_Agent'
                 },
