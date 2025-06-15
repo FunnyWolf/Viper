@@ -1,6 +1,6 @@
 ---
 title: 3.1.7 - Python Is All You Need
-description: The new version has added multiple Kit suite modules, optimized intelligent agent prompt words, and added command center functionality
+description: The new version has added multiple Kit suite modules, optimized intelligent agent prompt, and added command center functionality
 cover: /og/img_7.png
 ---
 
