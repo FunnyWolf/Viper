@@ -1,6 +1,6 @@
 ---
 title: 3.1.7 - 有Python就够了
-description:
+description: 新版本新增了多个Kit套件模块,优化智能体提示词,并添加了指令中心功能.
 cover: /og/img_7.png
 ---
 
