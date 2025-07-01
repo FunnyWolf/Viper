@@ -13,8 +13,8 @@ export const pricingConfig = {
       { text: '30分钟session运行时长', enabled: true },
       { text: '2个并发session', enabled: true },
       { text: '2个并发handler', enabled: true },
-      { text: '自定义插件', enabled: false },
-      { text: '优先技术支持', enabled: false }
+      // { text: '自定义插件', enabled: false },
+      // { text: '优先技术支持', enabled: false }
     ]
   },
   pro: {
@@ -29,9 +29,9 @@ export const pricingConfig = {
       { text: '无限session时长', enabled: true },
       { text: '无限并发session', enabled: true },
       { text: '无限并发handler', enabled: true },
-      { text: '自定义插件', enabled: true },
-      { text: '优先技术支持', enabled: true }
+      // { text: '自定义插件', enabled: true },
+      // { text: '优先技术支持', enabled: true }
     ]
   },
-  disclaimer: '订阅后license会通过邮件发送.license未激活可全额退款.'
+  disclaimer: '订阅后license会通过邮件发送.支持银联,万事达,Visa,AMEX等信用卡.license未激活可全额退款.'
 }
