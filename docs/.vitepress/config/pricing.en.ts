@@ -14,7 +14,7 @@ export const pricingConfig = {
       { text: '2 concurrent sessions', enabled: true },
       { text: '2 concurrent handlers', enabled: true },
       // { text: 'Custom plugin', enabled: false },
-      // { text: 'Priority support', enabled: false }
+      { text: 'Priority support', enabled: false }
     ]
   },
   pro: {
@@ -30,7 +30,7 @@ export const pricingConfig = {
       { text: 'Unlimited concurrent sessions', enabled: true },
       { text: 'Unlimited concurrent handlers', enabled: true },
       // { text: 'Custom plugin', enabled: true },
-      // { text: 'Priority support', enabled: true }
+      { text: 'Priority support', enabled: false }
     ]
   },
   disclaimer: 'License will be sent via email after subscribing.Support UnionPay, MasterCard, Visa, AMEX.Full refund available if license is not activated.'

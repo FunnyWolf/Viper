@@ -46,8 +46,8 @@
             <div class="features">
               <div v-for="(feature, index) in config.pro.features"
                    :key="index"
-                   class="feature-item">
-                <span class="check">✓</span>
+                   :class="['feature-item', { disabled: !feature.enabled }]">
+                <span :class="feature.enabled ? 'check' : 'cross'">{{ feature.enabled ? '✓' : '✕' }}</span>
                 <span>{{ feature.text }}</span>
               </div>
             </div>

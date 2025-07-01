@@ -14,7 +14,7 @@ export const pricingConfig = {
       { text: '2个并发session', enabled: true },
       { text: '2个并发handler', enabled: true },
       // { text: '自定义插件', enabled: false },
-      // { text: '优先技术支持', enabled: false }
+      { text: '官方技术支持', enabled: false }
     ]
   },
   pro: {
@@ -30,7 +30,7 @@ export const pricingConfig = {
       { text: '无限并发session', enabled: true },
       { text: '无限并发handler', enabled: true },
       // { text: '自定义插件', enabled: true },
-      // { text: '优先技术支持', enabled: true }
+      { text: '官方技术支持', enabled: false }
     ]
   },
   disclaimer: '订阅后license会通过邮件发送.支持银联,万事达,Visa,AMEX等信用卡.license未激活可全额退款.'
