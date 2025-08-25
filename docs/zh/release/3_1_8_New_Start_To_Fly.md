@@ -1,6 +1,6 @@
 ---
 title: 3.1.8 - 新的开始,起"飞"
-description: 新版本添加了
+description: 新版本添加了`代理配置`和`langsmith`两项新功能.
 cover: /og/img_7.png
 ---
 
