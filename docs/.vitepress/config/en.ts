@@ -53,6 +53,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "CHANGELOG",
             items: [
                 {
+                    text: '3.1.8 - New Start To Fly',
+                    link: '/release/3_1_8_New_Start_To_Fly'
+                },
+                {
                     text: '3.1.7 - Python Is All Your Need',
                     link: '/release/3_1_7_Python_Is_All_Your_Need'
                 },
