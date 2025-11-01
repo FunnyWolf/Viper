@@ -159,6 +159,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: 'User Management', link: 'user_management'},
                 {text: 'General Config', link: 'common_config'},
                 {text: 'OPENAI API', link: 'openai_api'},
+                {text: 'Langsmith', link: 'langsmith_config'},
+                {text: 'Proxy Config', link: 'proxy_config'},
                 {text: 'SMTP Config', link: 'smtp_config'},
                 {text: 'Telegram Bot', link: 'telegram_bot'},
                 {text: 'Bark Bot', link: 'bark_bot'},
