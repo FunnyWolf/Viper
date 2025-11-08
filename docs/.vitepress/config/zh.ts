@@ -443,7 +443,7 @@ function sidebarTraining(): DefaultTheme.SidebarItem[] {
                 {text: '使用VIPER扫描Log4j漏洞', link: 'Use_Viper_to_scan_log4j_vulnerabilities'},
                 {text: 'Behinder与Viper联动', link: 'Behinder_and_Viper_collaborate'},
                 {text: 'cthun3与Viper联动', link: 'cthun3_and_viper_collaborate'},
-
+                {text: '手动加载stdapi', link: 'manual_load_stdapi/'},
             ]
         },
         {

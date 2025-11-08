@@ -412,6 +412,7 @@ function sidebarTraining(): DefaultTheme.SidebarItem[] {
                 {text: 'Use VIPER to Scan Log4j Vulnerabilities', link: 'Use_Viper_to_scan_log4j_vulnerabilities'},
                 {text: 'Behinder and Viper Collaboration', link: 'Behinder_and_Viper_collaborate'},
                 {text: 'cthun3 and Viper Collaboration', link: 'cthun3_and_viper_collaborate'},
+                {text: 'Manual Load stdapi Plugin', link: 'manual_load_stdapi/'},
             ]
         },
         {
