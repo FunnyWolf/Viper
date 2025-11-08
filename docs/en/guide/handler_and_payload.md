@@ -37,3 +37,7 @@
 ### CDN Connection for Meterpreter
 
 [online_meterpreter_by_cdn](../training/online_meterpreter_by_cdn/online_meterpreter_by_cdn.md)
+
+### Manually Loading the stdapi Plugin
+
+[manual_load_stdapi](../training/manual_load_stdapi/index.md)

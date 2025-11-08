@@ -34,3 +34,6 @@
 ### CDN上线meterpreter
 
 [online_meterpreter_by_cdn](../training/online_meterpreter_by_cdn/online_meterpreter_by_cdn.md)
+
+### 手动加载 stdapi 插件
+[manual_load_stdapi](../training/manual_load_stdapi/index.md)
