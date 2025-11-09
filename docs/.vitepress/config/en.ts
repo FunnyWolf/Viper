@@ -53,6 +53,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "CHANGELOG",
             items: [
                 {
+                    text: '3.1.9 - Let`s Summarize',
+                    link: '/release/3_1_9_Lets_Summarize/'
+                },
+                {
                     text: '3.1.8 - New Start To Fly',
                     link: '/release/3_1_8_New_Start_To_Fly'
                 },

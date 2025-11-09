@@ -78,6 +78,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "更新日志",
             items: [
                 {
+                    text: '3.1.9 - 让我们总结一下',
+                    link: '/zh/release/3_1_9_Lets_Summarize/'
+                },
+                {
                     text: '3.1.8 - 新的开始,起"飞"',
                     link: '/zh/release/3_1_8_New_Start_To_Fly'
                 },

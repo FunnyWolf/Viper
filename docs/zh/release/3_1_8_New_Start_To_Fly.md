@@ -4,7 +4,7 @@ description: 新版本添加了`代理配置`和`langsmith`两项新功能.
 cover: /og/img_7.png
 ---
 
-# 3.1.7 - 新的开始,起"飞"
+# 3.1.8 - 新的开始,起"飞"
 
 ![img.png](3_1_8_New_Start_To_Fly/img.png)
 
