@@ -53,6 +53,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "CHANGELOG",
             items: [
                 {
+                    text: '3.1.10 - Happy New Year',
+                    link: '/release/3_1_10_Happy_New_Year/'
+                },
+                {
                     text: '3.1.9 - Let`s Summarize',
                     link: '/release/3_1_9_Lets_Summarize/'
                 },

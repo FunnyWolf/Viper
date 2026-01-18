@@ -78,6 +78,10 @@ function nav(): DefaultTheme.NavItem[] {
             text: "更新日志",
             items: [
                 {
+                    text: '3.1.10 - 新年快乐',
+                    link: '/zh/release/3_1_10_Happy_New_Year/'
+                },
+                {
                     text: '3.1.9 - 让我们总结一下',
                     link: '/zh/release/3_1_9_Lets_Summarize/'
                 },
