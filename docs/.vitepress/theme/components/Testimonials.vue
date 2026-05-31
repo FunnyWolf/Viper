@@ -1,45 +1,25 @@
 <template>
   <div class="testimonials-container">
     <div class="testimonials-header">
-      <div class="header-content">
-        <h2 class="header-title">{{ config.header.title }}</h2>
-        <p class="header-description">{{ config.header.description }}</p>
-      </div>
+      <h2 class="header-title">{{ config.header.title }}</h2>
+      <p class="header-description">{{ config.header.description }}</p>
     </div>
-    
-    <div class="testimonials-columns">
-      <div v-for="columnIndex in 4" :key="columnIndex" class="testimonial-column">
-        <div class="scroll-container" :class="columnIndex % 2 === 0 ? 'scroll-up' : 'scroll-down'">
-          <div v-for="(testimonial, index) in getColumnTestimonials(columnIndex)"
-               :key="index"
-               class="testimonial-card">
-            <div class="testimonial-content">
-              <p class="testimonial-text">{{ testimonial.text }}</p>
-              <div class="testimonial-author">
-                <img :src="testimonial.avatar" :alt="testimonial.name" class="author-avatar">
-                <div class="author-info">
-                  <h3 class="author-name">{{ testimonial.name }}</h3>
-                  <p class="author-title">{{ testimonial.title }}</p>
-                </div>
-              </div>
+
+    <div class="testimonials-grid">
+      <div v-for="(testimonial, index) in config.testimonials"
+           :key="index"
+           :class="['testimonial-card', `accent-${index % 6}`]">
+        <div class="card-inner">
+          <div class="author-row">
+            <div class="avatar-ring">
+              <img :src="testimonial.avatar" :alt="testimonial.name" class="author-avatar" loading="lazy">
             </div>
-            <div class="gradient-border"></div>
-          </div>
-          <div v-for="(testimonial, index) in getColumnTestimonials(columnIndex)"
-               :key="`duplicate-${index}`"
-               class="testimonial-card">
-            <div class="testimonial-content">
-              <p class="testimonial-text">{{ testimonial.text }}</p>
-              <div class="testimonial-author">
-                <img :src="testimonial.avatar" :alt="testimonial.name" class="author-avatar">
-                <div class="author-info">
-                  <h3 class="author-name">{{ testimonial.name }}</h3>
-                  <p class="author-title">{{ testimonial.title }}</p>
-                </div>
-              </div>
+            <div class="author-info">
+              <h3 class="author-name">{{ testimonial.name }}</h3>
+              <p class="author-title">{{ testimonial.title }}</p>
             </div>
-            <div class="gradient-border"></div>
           </div>
+          <p class="testimonial-text">{{ testimonial.text }}</p>
         </div>
       </div>
     </div>
@@ -47,28 +27,18 @@
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   config: {
     type: Object,
     required: true
   }
 })
-
-const getColumnTestimonials = (columnIndex) => {
-  const itemsPerColumn = 3;
-  const start = (columnIndex - 1) * itemsPerColumn;
-  const end = start + itemsPerColumn;
-  const testimonials = props.config.testimonials;
-  const wrappedTestimonials = [...testimonials, ...testimonials];
-  return wrappedTestimonials.slice(start, end);
-}
 </script>
 
 <style scoped>
-/* 新增标题和描述的样式 */
 .testimonials-header {
-  max-width: 1200px; /* 增加最大宽度 */
-  margin: 0 auto 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
   text-align: center;
   padding: 0 2rem;
 }
@@ -78,160 +48,91 @@ const getColumnTestimonials = (columnIndex) => {
   font-weight: bold;
   margin-bottom: 0.75rem;
   color: var(--vp-c-text-1);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  white-space: nowrap; /* 防止换行 */
 }
 
 .header-description {
   font-size: 1.2rem;
   max-width: 900px;
-  margin: 0 auto 1rem;
+  margin: 0 auto;
   line-height: 1.6;
-  color: var(--vp-c-text-1);
-  padding: 0 1rem;
-}
-
-/* 保持其他现有样式不变 */
-.testimonial-column {
-  overflow: hidden;
-  height: 500px;
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
+  color: var(--vp-c-text-2);
 }
 
 .testimonials-container {
   padding: 4rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
-.testimonials-columns {
+.testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.scroll-container {
-  position: relative;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-}
-
-.scroll-container:hover {
-  animation-play-state: paused;
-}
-
-.scroll-up {
-  animation-name: scrollUp;
-}
-
-.scroll-down {
-  animation-name: scrollDown;
-}
-
-@keyframes scrollUp {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
-}
-
-@keyframes scrollDown {
-  0% { transform: translateY(-50%); }
-  100% { transform: translateY(0); }
 }
 
 .testimonial-card {
-  background: var(--vp-c-bg-soft);
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  transition: all 0.3s ease;
-  overflow: hidden;
+  border-radius: 12px;
+  padding: 3px;
+  transition: transform 0.2s;
+  will-change: transform;
+  contain: content;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 180px;
 }
 
-/* 其他样式保持不变 */
 .testimonial-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
-.testimonial-card:hover .gradient-border {
-  opacity: 1;
+.accent-0 { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+.accent-1 { background: linear-gradient(135deg, #4ecdc4, #0abde3); }
+.accent-2 { background: linear-gradient(135deg, #a55eea, #8854d0); }
+.accent-3 { background: linear-gradient(135deg, #ffd93d, #f7b731); }
+.accent-4 { background: linear-gradient(135deg, #26de81, #20bf6b); }
+.accent-5 { background: linear-gradient(135deg, #45aaf2, #2d98da); }
+
+.card-inner {
+  background: var(--vp-c-bg-soft);
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.gradient-border {
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  padding: 1px;
-  background: linear-gradient(
-    45deg,
-    #ff3366,
-    #ff6b6b,
-    #4ecdc4,
-    #45b7d1,
-    #96e6a1,
-    #ff3366
-  );
-  background-size: 200% 200%;
-  animation: gradientBorder 3s linear infinite;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-@keyframes gradientBorder {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.testimonial-content {
-  position: relative;
-  z-index: 1;
-}
-
-.testimonial-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--vp-c-text-1);
-  margin-bottom: 1rem;
-}
-
-.testimonial-author {
+.author-row {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
+
+.avatar-ring {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.accent-0 .avatar-ring { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+.accent-1 .avatar-ring { background: linear-gradient(135deg, #4ecdc4, #0abde3); }
+.accent-2 .avatar-ring { background: linear-gradient(135deg, #a55eea, #8854d0); }
+.accent-3 .avatar-ring { background: linear-gradient(135deg, #ffd93d, #f7b731); }
+.accent-4 .avatar-ring { background: linear-gradient(135deg, #26de81, #20bf6b); }
+.accent-5 .avatar-ring { background: linear-gradient(135deg, #45aaf2, #2d98da); }
 
 .author-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid var(--vp-c-bg-soft);
 }
 
 .author-info {
   flex: 1;
+  min-width: 0;
 }
 
 .author-name {
@@ -247,35 +148,30 @@ const getColumnTestimonials = (columnIndex) => {
   margin: 0;
 }
 
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--vp-c-text-1);
+  flex: 1;
+}
+
 @media (max-width: 1200px) {
-  .testimonials-columns {
+  .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  .testimonial-column {
-    height: 400px;
-  }
 }
 
 @media (max-width: 768px) {
-  .testimonials-columns {
+  .testimonials-grid {
     grid-template-columns: 1fr;
   }
-  
-  .testimonial-column {
-    height: 350px;
-  }
-}
 
-/* 添加响应式样式 */
-@media (max-width: 768px) {
   .header-title {
     font-size: 2rem;
-    white-space: normal; /* 在移动端允许换行 */
   }
 
   .header-description {
     font-size: 1.1rem;
   }
 }
-</style> 
+</style>

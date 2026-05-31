@@ -1,3 +1,18 @@
+/* 导航栏透明 + 右侧留空 */
+:root {
+    --vp-nav-bg-color: transparent !important;
+}
+
+.VPNavBar {
+    background-color: rgba(10, 10, 10, 0.6) !important;
+    backdrop-filter: blur(16px) !important;
+    border-bottom: none !important;
+}
+
+.VPNavBar .content-body {
+    padding-right: 32px !important;
+}
+
 /* 调整导航栏链接字号 */
 /*.VPNavBarMenuLink {*/
 /*  font-size: 16px !important;  !* 按需调整数值 *!*/
@@ -336,7 +351,37 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-layout-max-width: 1440px;
+  --vp-layout-max-width: 1680px;
+}
+
+.content-container {
+    max-width: 100% !important;
+}
+
+/* min-width: 1440px same as original min-width: 960px */
+@media (min-width: 1440px) {
+    .VPSidebar {
+        padding-left: 32px !important;
+        width: var(--vp-sidebar-width) !important;
+    }
+
+    .VPContent.has-sidebar {
+        padding-left: var(--vp-sidebar-width) !important;
+        padding-right: 0 !important;
+    }
+}
+
+/* Add additional min-width: 1680px */
+@media (min-width: 1680px) {
+    .VPSidebar {
+        padding-left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2) !important;
+        width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px) !important;
+    }
+
+    .VPContent.has-sidebar {
+        padding-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width)) !important;
+        padding-right: calc((100vw - var(--vp-layout-max-width)) / 2) !important;
+    }
 }
 
 /**
@@ -537,8 +582,8 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-sidebar-width: 272px;
-  --vp-sidebar-bg-color: var(--vp-c-bg-alt);
+  --vp-sidebar-width: 320px;
+  --vp-sidebar-bg-color: transparent;
 }
 
 /**
